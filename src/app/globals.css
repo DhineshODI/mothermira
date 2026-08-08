@@ -1,26 +1,404 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* colors */
+
+.greencolor {
+  color: #004852;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.indicocolor {
+  color: #282731;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.blackcolor {
+  color: #1f2933;
 }
+
+/* colors */
+
+/* Fonts */
+
+@font-face {
+  font-family: "Neue Haas Grotesk thin";
+  src: url("/fonts/NeueHaasGrotDisp-25XThin-Trial.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk normal semibold";
+  src: url("/fonts/NeueHaasGrotDisp-65Medium-Trial.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Bold";
+  src: url("/fonts/NeueHaasGrotDisp-75Bold-Trial.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Bold thin 35";
+  src: url("/fonts/NeueHaasGrotDisp-35Thin-Trial.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Paragraph";
+  src: url("/fonts/NeueHaasGrotDisp-55Roman-Trial.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasGrotDisp-95Black-Trial";
+  src: url("/fonts/NeueHaasGrotDisp-95Black-Trial.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fonts */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Neue Haas Grotesk", sans-serif;
+  padding: 0;
+  margin: 0;
 }
+
+.mainheading {
+  font-family: "Neue Haas Grotesk thin";
+  font-size: 70px;
+  line-height: 80px;
+}
+
+.mainheading strong {
+  font-family: "Neue Haas Grotesk Bold";
+}
+
+.thirdheading {
+  font-family: "Neue Haas Grotesk thin";
+  font-size: 30px;
+}
+
+.thirdheading strong {
+  font-family: "Neue Haas Grotesk Bold";
+}
+
+.fourheading {
+  font-family: Neue Haas Grotesk normal semibold;
+  font-size: 60px;
+  line-height: 70px;
+}
+
+.secondheading {
+  font-family: "Neue Haas Grotesk thin";
+  font-weight: 400;
+  font-size: 90px;
+}
+.secondheading strong {
+  font-family: "Neue Haas Grotesk Bold";
+}
+
+.fifththheading {
+  font-family: Neue Haas Grotesk Bold;
+  font-size: 120px;
+  font-weight: 400;
+  line-height: 110px;
+}
+.fourthheading strong {
+  font-family: "Neue Haas Grotesk Bold";
+}
+
+.subheadingtext {
+  font-family: "Neue Haas Grotesk Bold thin 35";
+  font-size: 32px;
+}
+
+.subheadingtext strong {
+  font-family: "Neue Haas Grotesk Bold";
+}
+
+.paratext {
+  font-family: "Neue Haas Grotesk Paragraph";
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.boldfont {
+  font-family: "Neue Haas Grotesk Bold";
+}
+
+.semibold {
+  font-family: "Neue Haas Grotesk normal semibold";
+}
+
+.addressstyle {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.adressbox {
+  padding: 50px;
+}
+
+.contactform input {
+  height: 60px;
+}
+
+.contactform input::placeholder,
+.contactform textarea::placeholder {
+  font-family: "Neue Haas Grotesk Paragraph";
+  font-size: 18px;
+  color: #1f2933;
+  letter-spacing: 0.5px;
+}
+
+.contactformsections {
+  padding-top: 100px;
+  padding-bottom: 0;
+}
+
+/* footer */
+
+.footerbgsection {
+  height: 900px;
+}
+
+.salesfooterrr {
+  font-family: Neue Haas Grotesk normal semibold;
+  font-size: 48px;
+  line-height: 55px;
+}
+
+.footerrimagefirst {
+  width: 45%;
+}
+.footerrimageSecondd {
+  width: 55%;
+  padding-top: 100px;
+  padding-left: 100px;
+  justify-content: center;
+  gap: 30px;
+}
+
+.copyrightrightsection {
+  margin-top: 50px;
+  padding-top: 55px;
+}
+/* footer */
+
+/* about-us */
+
+/* padding-top: 200px;
+height: 1600px;
+background-color: #ede8d0; */
+
+.aboumiraaboutsection {
+  background-color: #ede8d0;
+  height: 1635px;
+}
+
+.aboutmiraimagepositionn {
+  top: 100px;
+  z-index: 10;
+}
+
+.aboutmiraimagepositionn img {
+  width: 100%;
+}
+
+.builtontrustpara {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.mainheading.missionclasss {
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.missionsecid {
+  padding-top: 20px;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.foundersvoicetext {
+  color: #004852;
+  opacity: 0.3;
+  font-family: NeueHaasGrotDisp-95Black-Trial;
+  font-size: 150px;
+  line-height: 125px;
+  padding-top: 70px;
+}
+
+.webelivepremium {
+  font-family: "Neue Haas Grotesk Bold thin 35";
+  font-size: 40px;
+  line-height: 46px;
+  margin-bottom: 5px;
+}
+
+.accesssible {
+  font-family: Neue Haas Grotesk Bold;
+  font-size: 70px;
+  margin-bottom: 30px;
+  line-height: 75px;
+}
+
+.foundervoicesubtext {
+  font-family: Neue Haas Grotesk normal semibold;
+  font-size: 28px;
+  line-height: 30px;
+}
+
+.landingtextaboutpage {
+  margin-top: 130px;
+}
+
+.apastaphy {
+  position: relative;
+}
+
+.apastaphy::before {
+  content: "";
+  background-image: url("/images/abouticon.png");
+  width: 73px;
+  height: 60px;
+  position: absolute;
+  left: -102px;
+  top: 20px;
+}
+
+.founderwithd {
+  width: 83%;
+}
+/* about-us */
+
+/* ourprojects */
+
+.herobannerheading {
+  font-family: "Neue Haas Grotesk Bold";
+  font-size: 45px;
+  line-height: 50px;
+}
+
+.subheadingherobanner {
+  font-family: "Neue Haas Grotesk Bold";
+  font-size: 24px;
+}
+
+.ourprojectsss {
+  background-color: #fff;
+  padding: 3px 8px 1px 8px;
+}
+
+.premiumvillaamain {
+  font-family: "Neue Haas Grotesk Bold";
+  font-size: 40px;
+}
+
+.buttonpading {
+  padding: 7px 28px 6px 28px;
+}
+
+.ourprojectsimageposition {
+  height: 500px;
+  width: 930px;
+}
+
+.imagedivposition {
+  margin-left: -25px;
+}
+
+.mothermiraourproject {
+  font-family: Neue Haas Grotesk thin;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.motehrmiratextour {
+  margin-left: 15%;
+  margin-bottom: 1.7%;
+}
+
+.motehrmirabuttonour {
+  margin-left: 11%;
+}
+
+.fiftypixel {
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.twentyeightpixel {
+  font-size: 28px;
+  line-height: 30px;
+}
+
+.slimfontthin {
+  font-family: "Neue Haas Grotesk Bold thin 35";
+}
+
+.maxwidthcontent {
+  width: max-content;
+  padding-left: 31%;
+  padding-top: 23%;
+}
+
+.twentyfourpixel {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.paragraphfont {
+  font-family: "Neue Haas Grotesk Paragraph";
+}
+
+.rightsidecolumnlinee {
+  position: relative;
+}
+
+.rightsidecolumnlinee::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: 50%;
+  background-color: #0048523d;
+}
+
+/* .lastborderr:nth-of-type(4),
+.lastborderr:nth-of-type(7) {
+  border: none;
+} */
+
+.imagecordnerr {
+  padding-left: 5.5%;
+}
+
+.imagebordererer {
+  position: relative;
+}
+
+.imagebordererer::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: -1%;
+  background-color: #0048523d;
+}
+
+/* Project Detail */
+
+.proejectdetailbannerer {
+  background-image: url("/images/project-detail/windpage-bg.jpg");
+  height: 1420px;
+}
+
+/* Project Detail */
