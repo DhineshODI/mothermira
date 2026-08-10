@@ -1,5 +1,13 @@
-import React from "react";
+"use client";
+import { useRef, React } from "react";
 import Image from "next/image";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import { StaggerText, TextFadeUp } from "../components/TextFadeUp";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutUs() {
   const strengths = [
@@ -32,6 +40,44 @@ export default function AboutUs() {
       icon: "/images/icons/CustomerSatisfaction.svg",
     },
   ];
+
+  const sectionRef = useRef(null);
+  const rowsRef = useRef([]);
+
+  useGSAP(
+    () => {
+      const rows = rowsRef.current;
+
+      // 1. Initial State: All rows set to low opacity & slightly shifted down
+      gsap.set(rows, { opacity: 0.15, y: 30 });
+
+      // 2. Timeline for Pinned Scroll Sequence
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "+=150%", // Scroll length to complete sequence
+          pin: true, // Pin section while scrolling
+          scrub: 1, // Smooth response to scroll
+        },
+      });
+
+      // 3. Reveal Each Row Sequentially
+      rows.forEach((row, index) => {
+        tl.to(
+          row,
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power2.out",
+          },
+          index * 1.2,
+        );
+      });
+    },
+    { scope: sectionRef },
+  );
   return (
     <>
       <section className="relative w-full min-h-[900px] max-h-[800px] overflow-hidden flex flex-col items-center justify-between">
@@ -92,8 +138,10 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className="relative w-full min-h-[1000px] py-16 sm:py-24 px-4 sm:px-8 lg:px-16 flex flex-col items-center justify-center overflow-hidden missionsecid">
-        {/* 1. Background Image */}
+      <section
+        ref={sectionRef}
+        className="relative w-full min-h-[1000px] py-16 sm:py-24 px-4 sm:px-8 lg:px-16 flex flex-col items-center justify-center overflow-hidden missionsecid"
+      >
         <div className="absolute inset-0 -z-10 w-full h-full">
           <img
             src="/images/aboutsectionmission.jpg"
@@ -101,17 +149,20 @@ export default function AboutUs() {
           />
         </div>
 
-        {/* 2. Soft Gradient Overlay to match cream theme */}
+        {/* <TextFadeUp delay={0.1}> */}
 
-        {/* 3. Section Title */}
-        <div className="text-center z-10 mb-12 sm:mb-16">
-          <h2 className="fifththheading greencolor">Built on Trust Always</h2>
-        </div>
+        <StaggerText delay={0.4}>
+          <div className="text-center z-10 mb-12 sm:mb-16">
+            <h2 className="fifththheading greencolor">Built on Trust Always</h2>
+          </div>
+        </StaggerText>
+        {/* </TextFadeUp> */}
 
-        {/* 4. Content Grid Rows */}
         <div className="z-10 w-full max-w-7xl mx-auto space-y-8">
-          {/* Row 1: OUR VISION */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-start">
+          <div
+            ref={(el) => (rowsRef.current[0] = el)}
+            className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-start"
+          >
             <div className="md:col-span-4">
               <h3 className="mainheading greencolor uppercase missionclasss">
                 OUR <br />
@@ -131,8 +182,10 @@ export default function AboutUs() {
 
           <hr className="border-t border-[#0c3835]/20 my-6" />
 
-          {/* Row 2: OUR MISSION */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-start">
+          <div
+            ref={(el) => (rowsRef.current[1] = el)}
+            className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-start"
+          >
             <div className="md:col-span-4">
               <h3 className="mainheading greencolor uppercase missionclasss">
                 OUR <br />
@@ -152,8 +205,10 @@ export default function AboutUs() {
 
           <hr className="border-t border-[#0c3835]/20 my-6" />
 
-          {/* Row 3: OUR PRINCIPLES */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-start">
+          <div
+            ref={(el) => (rowsRef.current[2] = el)}
+            className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-start"
+          >
             <div className="md:col-span-4">
               <h3 className="mainheading greencolor uppercase missionclasss">
                 OUR <br />

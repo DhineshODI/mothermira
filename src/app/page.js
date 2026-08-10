@@ -1,9 +1,176 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import TestimonialSlider from "./components/TestimonialSlider";
 
 export default function Home() {
+  const strengths = [
+    {
+      title: "INFRASTRUCTURE",
+      description: "Well-planned layouts and essential infrastructure",
+      image: "/images/home/image1.jpg",
+    },
+    {
+      title: "QUALITY",
+      description: "Focused on durable construction standards",
+      image: "/images/home/image2.jpg",
+    },
+    {
+      title: "VALUE",
+      description: "Maximum benefit for your investment",
+      image: "/images/home/image3.jpg",
+    },
+    {
+      title: "CUSTOMER SATISFACTION",
+      description: "Built on transparency & reliability",
+      image: "/images/home/image4.jpg",
+    },
+  ];
+
+  const specs = [
+    { label: "TOTAL UNITS", value: "140 VILLAS" },
+    { label: "SIZE IN SQ. FT.", value: "5.70 ACRES" },
+    { label: "BEDROOMS", value: "3 & 4 BHK" },
+    { label: "SIZE IN SQ. FT.", value: "1200 - 3000" },
+  ];
+
   return (
     <>
-      <>Home</>
+      <section className="py-20 px-6 md:px-12 lg:px-20 bg-[#EEE8D0]">
+        <div className="max-w-7xl mx-auto">
+          {/* Main Heading with Motion Fade-Up */}
+
+          <h2 className="salesfooterrr paragraphfont blackcolor">
+            Key strengths that define{" "}
+            <strong className="greencolor">
+              Mother Mira’s <br />
+              developments
+            </strong>
+            , delivering consistent value <br /> to every customer
+          </h2>
+
+          {/* Strengths Rows List */}
+
+          {/* <div className="max-w-4xl mx-auto"> */}
+          <div className="space-y-12 md:space-y-16 mt-10">
+            {strengths.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{
+                  duration: 0.7,
+                  delay: index * 0.1, // Stagger effect for consecutive rows
+                  ease: [0.25, 0.1, 0.25, 1],
+                }}
+                className="group border-b border-[#0c3835]/15 mb-10"
+              >
+                <div className="max-w-5xl mx-auto">
+                  <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-12 ">
+                    {/* Left Side: Tag Title & Description */}
+                    <div className="md:col-span-5 flex flex-col items-start justify-center">
+                      {/* Badge Tag */}
+                      <span className="inline-block bg-[#004852]  uppercase  px-4 py-1.5 mb-4 twentyfourpixel text-[#fff] semibold">
+                        {item.title}
+                      </span>
+
+                      {/* Description */}
+                      <p className="builtontrustpara blackcolor w-[65%]">
+                        {item.description}
+                      </p>
+                    </div>
+
+                    {/* Right Side: Rounded Card Image */}
+                    <div className="md:col-span-7 flex justify-end">
+                      <div className="relative imageesectionhome ">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          {/* </div> */}
+        </div>
+      </section>
+
+      <section className="relative w-full bg-[#f4f3e8] py-16 px-4 sm:px-8 lg:px-16 overflow-hidden projecthomebannersec">
+        <div className="max-w-7xl mx-auto ">
+          <div className="contenthomepagesection">
+            <div className="w-max">
+              <div>
+                <p className="subheadingtext uppercase blackcolor">PREMIUM</p>
+                <div className="flex gap-1 items-end">
+                  <h2
+                    className="secondheading indicocolor uppercase"
+                    style={{ lineHeight: "90%" }}
+                  >
+                    <strong style={{ lineHeight: "90%" }}>VILLA </strong>
+                  </h2>
+                  <h3 className="subheadingtext">
+                    <strong>COMMUNITY </strong>{" "}
+                  </h3>
+                </div>
+              </div>
+
+              <div className="inline-flex items-center space-x-1.5 bg-[#004852] px-3.5 py-1 mt-[5px] ml-[20px]">
+                <img
+                  className="h-[22px] w-[18px]"
+                  src="/images/home/location-icon.svg"
+                  alt=""
+                />
+                <span
+                  className="ml-[5px] text-[#fff] semibold addressstyle "
+                  style={{ letterSpacing: "6px", lineHeight: "100%" }}
+                >
+                  KOLAPAKKAM, PORUR
+                </span>
+              </div>
+
+              <p className="blackcolor paratext mt-[12px] ml-[20px]">
+                Premium villas with quality construction, gated living, and
+                thoughtfully <br /> planned community infrastructure.
+              </p>
+            </div>
+          </div>
+
+          <div className="leftsidesectioncontent">
+            <h4
+              className="thirdheading w-max text-end"
+              style={{ lineHeight: "100%" }}
+            >
+              <strong>
+                VALUE LIVING <br /> IN PERFECT HOME
+              </strong>
+            </h4>
+            <p className="builtontrustpara blackcolor premisumvillasend">
+              Premium villas in a well-connected and peaceful environment
+            </p>
+            <button  className="bg-[#004852] mt-[15px] !text-[#fff] cursor-pointer rounded-full semibold paratext  buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300" style={{letterSpacing:"1px"}}>
+              VIEW PROJECT
+            </button>
+          </div>
+
+          <div className="text-left space-y-2 pl-2 detailsectionproject">
+            {specs.map((item, idx) => (
+              <div key={idx}>
+                <p className="blackcolor paratext ">{item.label}</p>
+                <p className="builtontrustpara blackcolor uppercase boldfont">
+                  {item.value}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <TestimonialSlider/>
     </>
   );
 }

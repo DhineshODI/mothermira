@@ -1,4 +1,20 @@
 @import "tailwindcss";
+@import "locomotive-scroll/dist/locomotive-scroll.css";
+
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
 
 /* colors */
 
@@ -67,6 +83,10 @@ body {
   font-family: "Neue Haas Grotesk", sans-serif;
   padding: 0;
   margin: 0;
+}
+
+.thinfont {
+  font-family: "Neue Haas Grotesk thin";
 }
 
 .mainheading {
@@ -169,7 +189,6 @@ body {
 }
 
 .salesfooterrr {
-  font-family: Neue Haas Grotesk normal semibold;
   font-size: 48px;
   line-height: 55px;
 }
@@ -298,8 +317,9 @@ background-color: #ede8d0; */
 }
 
 .premiumvillaamain {
-  font-family: "Neue Haas Grotesk Bold";
+  font-family: Neue Haas Grotesk Bold;
   font-size: 40px;
+  line-height: 46px;
 }
 
 .buttonpading {
@@ -402,3 +422,172 @@ background-color: #ede8d0; */
 }
 
 /* Project Detail */
+
+.imageesectionhome img {
+  border: 7px solid #c9c8b3;
+  border-radius: 20px;
+  height: 325px;
+  width: 90%;
+}
+
+.projecthomebannersec {
+  background-image: url("/images/home/homebgproject.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1105px;
+  background-color: #eee8d0;
+}
+
+.contenthomepagesection {
+  justify-content: flex-start;
+  display: flex;
+  margin-top: 18%;
+  margin-left: 48%;
+}
+
+.detailsectionproject {
+  position: absolute;
+  left: 67%;
+  top: 74%;
+}
+
+.leftsidesectioncontent {
+  width: max-content;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  left: 33%;
+  top: 74%;
+}
+
+.premisumvillasend {
+  text-align: end;
+  width: 30%;
+  margin-top: 10px;
+}
+
+/* testimonial section */
+
+.testimonialsection {
+  position: relative;
+}
+
+.testimonial-thumb-slider .slick-list {
+  padding: 10px 0 !important;
+  overflow: hidden;
+}
+
+.testimonial-thumb-slider .slick-slide {
+  outline: none;
+}
+
+.testimonial-thumb-slider .slick-current .thumbnail-card {
+  /* transform: scale(1.05); */
+  box-shadow: 0 10px 20px -5px #0c383526;
+  border-color: #0c3835 !important;
+  /* height: 190px; */
+}
+
+.testimonial-thumb-slider .slick-slide:not(.slick-current) .thumbnail-card {
+  opacity: 0.5;
+  filter: grayscale(40%);
+  transition: all 0.3s ease;
+}
+
+.testimonial-thumb-slider .slick-slide:hover .thumbnail-card {
+  opacity: 0.9;
+  filter: grayscale(0%);
+}
+
+.testimonial-main-slider {
+  position: relative;
+}
+
+.testimonial-main-slider .slick-dots {
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  left: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex !important;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 20;
+}
+
+.testimonial-main-slider .slick-dots li {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0;
+}
+
+.testimonial-main-slider .slick-dots li button {
+  background-color: #0c383533;
+  border-radius: 2px;
+  width: 3.5px;
+  height: 13px;
+  padding: 0;
+  font-size: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.testimonial-main-slider .slick-dots li button:before {
+  display: none;
+}
+
+.testimonial-main-slider .slick-dots li.slick-active button {
+  background-color: #0c3835;
+}
+
+.testimonialsection {
+  background-color: #eee8d0;
+  background-image: url("/images/testimonialbanner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1105px;
+  position: relative;
+}
+
+.tesimonialslidersection {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 5%;
+}
+
+.imagetestisection1 {
+  width: 17%;
+  /* height: 500px;
+  overflow: hidden; */
+}
+.imagetestisection2 {
+  width: 60%;
+}
+
+.imagetestisection2 > div {
+  border: 10px solid #eee8d0cc;
+}
+
+.testimonialcontent {
+  min-height: 220px;
+  padding-top: 35px;
+  padding-right: 40px;
+  font-size: 35px;
+  line-height: 40px;
+  margin-bottom: 45px;
+}
+
+.imagesizetes {
+  height: 150px;
+}
+
+/* testimonial section */

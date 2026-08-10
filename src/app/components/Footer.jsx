@@ -56,12 +56,12 @@ export default function Footer() {
             <div className="space-y-1 pt-2">
               <a
                 href="mailto:sales@mothermira.com"
-                className="salesfooterrr greencolor "
+                className="salesfooterrr greencolor semibold"
               >
                 sales@mothermira.com
               </a>{" "}
               <br />
-              <a href="tel:+919840029535" className="salesfooterrr greencolor ">
+              <a href="tel:+919840029535" className="salesfooterrr greencolor semibold ">
                 +91 98400 29535
               </a>
             </div>
