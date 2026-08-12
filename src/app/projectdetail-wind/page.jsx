@@ -4,6 +4,7 @@ import ProjectSpecifications from "../components/ProjectSpecification";
 import AmenitiesSection from "../components/ProjectAminites";
 import ProjectGallery from "../components/ProjectGallery";
 import ProjectDetailIntro from "../components/ProjectDetailIntro";
+import LivingExperienceBanner from "../components/LivingExperience";
 
 export default function ProjectDetailTheWind() {
   const advantages = [
@@ -56,78 +57,104 @@ export default function ProjectDetailTheWind() {
     },
   ];
 
-  const [activeTab, setActiveTab] = useState("SCHOOLS");
+  const [activeTab, setActiveTab] = useState("LOCATION HIGHLIGHTS");
 
   const locationData = {
-    SCHOOLS: [
-      { name: "PSBB MILLENNIUM SCHOOL", distance: "0.5 KM", time: "5 MIN" },
-      { name: "LITTLE FLOWERS MAT. SCHOOL", distance: "0.6 KM", time: "5 MIN" },
+    "LOCATION HIGHLIGHTS": [
+      { name: "Kundratur Main Road.", distance: "0.8 Kms", time: "2 MINS" },
+      { name: "Porur Junction", distance: "3.5 Kms", time: "8 MINS" },
       {
-        name: "ST. FRANCIS INTERNATIONAL SCHOOL",
-        distance: "0.8 KM",
-        time: "5 MIN",
+        name: "Mangadu Sri Kamakshi Temple",
+        distance: "5.5 Kms",
+        time: "12 MINS",
       },
-      { name: "OMEGA INTERNATIONAL SCHOOL", distance: "1.0 KM", time: "8 MIN" },
-      { name: "PON VIDYASHRAM SCHOOL", distance: "1.5 KM", time: "10 MIN" },
+      { name: "Airport", distance: "7.8 Kms", time: "18 MINS" },
+      { name: "Railway Station, Guindy", distance: "9.5 Kms", time: "22 MINS" },
+    ],
+    "MEDICAL FACILITIES": [
+      { name: "SRMC", distance: "5.0 Kms", time: "10 MINS" },
+      { name: "MIOT", distance: "7.0 Kms", time: "15 MINS" },
       {
-        name: "ORCHID INTERNATIONAL SCHOOL",
-        distance: "2 KMS",
-        time: "10 MIN",
+        name: "Apollo Speciality Hospital, Vanagaram",
+        distance: "8.0 Kms",
+        time: "18 MINS",
       },
     ],
-    COLLEGES: [
+    RESTAURANTS: [
+      { name: "Adyar Ananda Bhavan", distance: "0.2 Kms", time: "1 MIN" },
+      { name: "Dominos", distance: "1.5 Kms", time: "4 MINS" },
+      { name: "Lemon Tree", distance: "4.0 Kms", time: "8 MINS" },
+      { name: "KFC", distance: "4.0 Kms", time: "8 MINS" },
+      { name: "Anjappar", distance: "4.0 Kms", time: "8 MINS" },
+      { name: "Dindigul Thalapakatti", distance: "4.5 Kms", time: "10 MINS" },
       {
-        name: "SRM INSTITUTE OF SCIENCE & TECH",
-        distance: "1.2 KM",
-        time: "6 MIN",
+        name: "Sangeetha Veg Restaurant",
+        distance: "6.8 Kms",
+        time: "15 MINS",
       },
-      {
-        name: "RAMACHANDRA MEDICAL COLLEGE",
-        distance: "2.5 KM",
-        time: "10 MIN",
-      },
-      {
-        name: "MIOT ACADEMY OF ALLIED HEALTH",
-        distance: "3.0 KM",
-        time: "12 MIN",
-      },
-      { name: "MOP VAISHNAV COLLEGE", distance: "4.5 KM", time: "15 MIN" },
     ],
-    HOSPITALS: [
+    "EDUCATIONAL INSTITUTIONS": [
+      { name: "PSBB Milenium School", distance: "0.5 Kms", time: "2 MINS" },
       {
-        name: "SRI RAMACHANDRA MEDICAL CENTRE",
-        distance: "2.0 KM",
-        time: "8 MIN",
+        name: "St. Francis International School",
+        distance: "0.8 Kms",
+        time: "3 MINS",
       },
       {
-        name: "MIOT INTERNATIONAL HOSPITAL",
-        distance: "3.2 KM",
-        time: "10 MIN",
+        name: "Omega International School",
+        distance: "1.0 Kms",
+        time: "4 MINS",
       },
+      { name: "K.K. College of Pharmacy", distance: "1.3 Kms", time: "5 MINS" },
+      { name: "Madha Medical College", distance: "4.0 Kms", time: "9 MINS" },
       {
-        name: "ANNASAMY RAJALAKSHMI HOSPITAL",
-        distance: "1.5 KM",
-        time: "6 MIN",
+        name: "Sri Krishna International School",
+        distance: "4.5 Kms",
+        time: "10 MINS",
       },
-      { name: "KAUVERY HOSPITAL PORUR", distance: "2.8 KM", time: "9 MIN" },
+      { name: "SRM Dental College", distance: "5.0 Kms", time: "12 MINS" },
+      {
+        name: "Muthu Kumaran College of Medical",
+        distance: "5.2 Kms",
+        time: "12 MINS",
+      },
+      { name: "Anna University", distance: "13 Kms", time: "25 MINS" },
+      { name: "I.I.T., Chennai", distance: "13 Kms", time: "25 MINS" },
     ],
-    TRANSPORTS: [
+    COMMERCIAL: [
+      { name: "HP", distance: "3.3 Kms", time: "7 MINS" },
+      { name: "DLF IT Park", distance: "5.0 Kms", time: "12 MINS" },
+      { name: "L&T", distance: "6.0 Kms", time: "14 MINS" },
       {
-        name: "PORUR METRO STATION (UPCOMING)",
-        distance: "1.0 KM",
-        time: "4 MIN",
+        name: "Nandambakkam Trade Center",
+        distance: "6.4 Kms",
+        time: "15 MINS",
       },
-      { name: "MOUNT-POONAMALLEE ROAD", distance: "0.5 KM", time: "2 MIN" },
-      {
-        name: "CHENNAI INTERNATIONAL AIRPORT",
-        distance: "12 KMS",
-        time: "25 MIN",
-      },
-      { name: "GUINDY RAILWAY STATION", distance: "8.5 KMS", time: "20 MIN" },
+    ],
+    "FINANCIAL INSTITUTIONS": [
+      { name: "Indian Overseas Bank", distance: "0.4 Kms", time: "2 MINS" },
+      { name: "ICICI Bank", distance: "1.5 Kms", time: "4 MINS" },
+      { name: "CUB ATM", distance: "1.8 Kms", time: "5 MINS" },
+      { name: "HDFC Bank", distance: "2.0 Kms", time: "5 MINS" },
+      { name: "Indian Bank", distance: "2.5 Kms", time: "6 MINS" },
+    ],
+    "SUPER MARKETS": [
+      { name: "White Rose Super Market", distance: "0.4 Kms", time: "2 MINS" },
+      { name: "Nellai Pazhamudhir Solai", distance: "2.5 Kms", time: "6 MINS" },
+      { name: "Mega Mart", distance: "3.5 Kms", time: "8 MINS" },
+      { name: "Nilgiris", distance: "4.0 Kms", time: "10 MINS" },
     ],
   };
 
-  const tabs = ["SCHOOLS", "COLLEGES", "HOSPITALS", "TRANSPORTS"];
+  const tabs = [
+    "LOCATION HIGHLIGHTS",
+    "MEDICAL FACILITIES",
+    "RESTAURANTS",
+    "EDUCATIONAL INSTITUTIONS",
+    "COMMERCIAL",
+    "FINANCIAL INSTITUTIONS",
+    "SUPER MARKETS",
+  ];
   return (
     <>
       <section className="relative w-full h-[800px] flex items-end overflow-hidden">
@@ -183,7 +210,7 @@ export default function ProjectDetailTheWind() {
         </div>
       </section>
 
-      <ProjectDetailIntro/>
+      <ProjectDetailIntro />
 
       <section className="w-full py-16 sm:py-24 px-4 sm:px-8 lg:px-12 bg-[#EDE8D0] border-b border-[#16161629]">
         <div className="max-w-7xl mx-auto flex flex-col items-center">
@@ -333,12 +360,11 @@ export default function ProjectDetailTheWind() {
                 Wind <strong className="greencolor">Advantages</strong>
               </h2>
             </div>
-
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {strengths.map((item, index) => (
                 <div
                   key={index}
-                  className="group p-6 sm:p-7 rounded-2xl flex flex-col justify-between min-h-[190px] bg-[#C9A24B] text-[#0c3835] transition-all duration-500 ease-in-out hover:bg-[#004852] hover:text-white hover:-translate-y-1 hover:shadow-xl cursor-pointer"
+                  className="boxcardss group p-6 sm:p-7 rounded-2xl flex flex-col justify-between min-h-[160px] bg-[#C9A24B] text-[#0c3835] transition-all duration-500 ease-in-out hover:bg-[#004852] hover:text-white hover:-translate-y-1 hover:shadow-xl overflow-hidden"
                 >
                   <div>
                     <img
@@ -349,13 +375,16 @@ export default function ProjectDetailTheWind() {
                   </div>
 
                   <div>
-                    <h3 className="foundervoicesubtext mt-[30px] transition-colors duration-500 ease-in-out group-hover:text-white">
+                    <h3 className="foundervoicesubtext greencolor mt-[20px] transition-colors duration-500 ease-in-out group-hover:!text-white">
                       {item.title}
                     </h3>
+
                     {item.desc && (
-                      <p className="paratext mt-[15px] transition-colors duration-500 ease-in-out text-[#0c3835]/80 group-hover:text-white/90">
-                        {item.desc}
-                      </p>
+                      <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 ease-in-out group-hover:grid-rows-[1fr] group-hover:opacity-100 group-hover:mt-[10px] ">
+                        <p className="paratext overflow-hidden transition-colors duration-500 ease-in-out text-[#0c3835]/80 group-hover:text-[#EDE8D0]">
+                          {item.desc}
+                        </p>
+                      </div>
                     )}
                   </div>
                 </div>
@@ -366,7 +395,7 @@ export default function ProjectDetailTheWind() {
           {/* Right Side Rounded Image */}
           <div className="lg:col-span-6 flex justify-center lg:justify-end  ">
             <img
-              src="/images/project-detail/wind-advantage.jpg"
+              src="/images/project-detail/windimage.jpg"
               alt="Mother Mira Villa Street View"
               className="rounded-[15px]"
             />
@@ -375,6 +404,8 @@ export default function ProjectDetailTheWind() {
       </section>
 
       <ProjectGallery />
+
+        <LivingExperienceBanner/>
     </>
   );
 }

@@ -1,3 +1,6 @@
+import LivingExperienceBanner from "../components/LivingExperience";
+import TestimonialSlider from "../components/TestimonialSlider";
+
 export default function Ourprojects() {
   const stats = [
     { value: "140", label: "NO. OF TOTAL UNITS" },
@@ -47,7 +50,7 @@ export default function Ourprojects() {
         </div>
       </section>
 
-      <section className="w-full py-16 sm:py-24 px-4 sm:px-8 bg-[#EDE8D0] flex justify-center">
+      <section className="w-full py-16 sm:py-24 px-4 sm:px-8 bg-[#EDE8D0] flex justify-center border-b border-[#16161629]">
         <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Left & Center Main Showcase Area */}
           <div className="lg:col-span-8 flex flex-col sm:flex-row gap-4 sm:gap-6 relative">
@@ -150,6 +153,9 @@ export default function Ourprojects() {
           </div>
         </div>
       </section>
+
+      <TestimonialSlider/>
+        <LivingExperienceBanner/>
     </>
   );
 }

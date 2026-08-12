@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TestimonialSlider from "../components/TestimonialSlider";
 export default function ContactPage() {
   return (
     <>
@@ -242,6 +243,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <TestimonialSlider/>
     </>
   );
 }

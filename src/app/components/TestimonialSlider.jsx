@@ -103,7 +103,6 @@ export default function TestimonialSlider() {
     arrows: false,
     centerMode: true,
     centerPadding: "0px",
-  
   };
 
   const mainSettings = {
@@ -113,6 +112,8 @@ export default function TestimonialSlider() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
   };
 
   return (
@@ -133,7 +134,7 @@ export default function TestimonialSlider() {
 
         <div className="max-w-7xl mx-auto tesimonialslidersection">
           {/* LEFT COLUMN */}
-          <div className=" bg-white/40 p-3 rounded-3xl border border-[#0c3835]/10 flex flex-col justify-center imagetestisection1">
+          <div className="p-3 rounded-3xl border border-[#0c3835]/10 flex flex-col justify-center imagetestisection1">
             <Slider
               asNavFor={nav1}
               ref={slider2}
@@ -159,7 +160,7 @@ export default function TestimonialSlider() {
 
           {/* RIGHT COLUMN */}
           <div className="imagetestisection2">
-            <div className="bg-white rounded-[2.5rem] p-8 sm:p-12 shadow-sm border border-[#0c3835]/10 relative borddrerer">
+            <div className="rounded-[2.5rem] p-8 sm:p-12 shadow-sm border border-[#0c3835]/10 relative borddrerer">
               <Slider
                 asNavFor={nav2}
                 ref={slider1}
@@ -169,16 +170,16 @@ export default function TestimonialSlider() {
                 {testimonials.map((item) => (
                   <div key={item.id} className="outline-none">
                     <div className="min-h-[220px] flex flex-col justify-between">
-                      <h3 className="testimonialcontent semibold">
+                      <h3 className="testimonialcontent semibold greencolor">
                         {item.quote}
                       </h3>
 
                       <div className="pt-6 pb-6 border-b border-dashed border-[#0c3835]/40 flex items-center justify-between">
                         <div>
-                          <h4 className="twentyfourpixel paratext greencolor semibold">
+                          <h4 className="twentyfourpixel paratext blackcolor semibold">
                             {item.name}
                           </h4>
-                          <p className="builtontrustpara  blackcolor slimfontthin mt-[4px]">
+                          <p className="builtontrustpara  blackcolor paratext mt-[4px] !text-[#8A8A8A]">
                             {item.designation}
                           </p>
                         </div>

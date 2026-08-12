@@ -6,6 +6,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { StaggerText, TextFadeUp } from "../components/TextFadeUp";
+import Header from "../components/Header";
+import LivingExperienceBanner from "../components/LivingExperience";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,28 +17,24 @@ export default function AboutUs() {
       title: "INFRASTRUCTURE",
       desc: "Well-planned layouts and essential infrastructure",
       highlighted: true,
-      // Icon: House on hand / structure
       icon: "/images/icons/Infrastructure.svg",
     },
     {
       title: "QUALITY",
       desc: "Superior material and construction standards",
       highlighted: false,
-      // Icon: Diamond / Quality
       icon: "/images/icons/Quality.svg",
     },
     {
       title: "VALUE",
       desc: "Strategic locations for long-term growth",
       highlighted: false,
-      // Icon: Chart / Growth
       icon: "/images/icons/Value.svg",
     },
     {
       title: "CUSTOMER SATISFACTION",
       desc: "Transparent process and legal clarity",
       highlighted: false,
-      // Icon: Thumbs up with stars
       icon: "/images/icons/CustomerSatisfaction.svg",
     },
   ];
@@ -80,13 +78,12 @@ export default function AboutUs() {
   );
   return (
     <>
+      <Header bgcolor={"#ece6cf"} />
       <section className="relative w-full min-h-[900px] max-h-[800px] overflow-hidden flex flex-col items-center justify-between">
         <div className="absolute inset-0 -z-10 w-full h-full">
-          <Image
+          <img
             src="/images/aboutusbg.jpg"
             alt="Talk to our team"
-            fill
-            priority
             className="object-cover object-center"
           />
         </div>
@@ -290,7 +287,7 @@ export default function AboutUs() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {strengths.map((item, index) => (
                 <div
                   key={index}
@@ -316,6 +313,37 @@ export default function AboutUs() {
                   </div>
                 </div>
               ))}
+            </div> */}
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {strengths.map((item, index) => (
+                <div
+                  key={index}
+                  className="boxcardss group p-6 sm:p-7 rounded-2xl flex flex-col justify-between min-h-[160px] bg-[#C9A24B] text-[#0c3835] transition-all duration-500 ease-in-out hover:bg-[#004852] hover:text-white hover:-translate-y-1 hover:shadow-xl overflow-hidden"
+                >
+                  <div>
+                    <img
+                      src={item.icon}
+                      alt=""
+                      className="transition-all duration-500 ease-in-out group-hover:brightness-0 group-hover:invert"
+                    />
+                  </div>
+
+                  <div>
+                    <h3 className="foundervoicesubtext greencolor mt-[20px] transition-colors duration-500 ease-in-out group-hover:!text-white">
+                      {item.title}
+                    </h3>
+
+                    {item.desc && (
+                      <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 ease-in-out group-hover:grid-rows-[1fr] group-hover:opacity-100 group-hover:mt-[10px] ">
+                        <p className="paratext overflow-hidden transition-colors duration-500 ease-in-out text-[#0c3835]/80 group-hover:text-[#EDE8D0]">
+                          {item.desc}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -329,6 +357,8 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
+
+      <LivingExperienceBanner/>
     </>
   );
 }
