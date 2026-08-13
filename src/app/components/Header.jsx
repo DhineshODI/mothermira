@@ -1,17 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function Header({ bgcolor }) {
+export default function Header({ sec }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
 
   const navLinks = [
-    { name: "ABOUT US", href: "#about" },
-    { name: "ONGOING", href: "#ongoing" },
-    { name: "UPCOMING", href: "#upcoming" },
+    { name: "ABOUT US", href: "aboutus" },
+    { name: "ONGOING", href: "ourprojects" },
+    { name: "UPCOMING", href: "ourprojects" },
+    { name: "CONTACT US", href: "contact-us" },
   ];
 
   const menuVariants = {
@@ -41,41 +43,51 @@ export default function Header({ bgcolor }) {
     open: { opacity: 1, y: 0, transition: { duration: 0.3 } },
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header
-      style={{ background: bgcolor }}
-      className="sticky top-0 z-50 w-full px-6 sm:px-6 lg:px-6 transition-all duration-300"
+      className={`sticky top-0 z-50 w-full px-9 sm:px-9 lg:px-9 transition-all duration-300 py-[20px] headdersectionmain ${
+        isSticky ? "stickyheader" : ""
+      } ${sec}`}
     >
       <div className="flex items-center justify-between headerrrrcontainer">
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="relative w-32 sm:w-40 h-12">
+          <div className="relative ">
             <img
-              src="/images/mothermira-logo.svg"
+              src={
+                sec === "transperantBg" && isSticky === false
+                  ? "/images/mothermira-logo-color.svg"
+                  : "/images/mothermira-logo.svg"
+              }
               alt="Mother Mira"
-              className="object-contain object-left"
+              className="headerimageesection"
             />
           </div>
         </Link>
 
         {/* DESKTOP NAVIGATION */}
-        <nav className="hidden md:flex items-center gap-8 lg:gap-12">
+        <nav className="hidden md:flex items-center gap-5 lg:gap-5">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-xs lg:text-sm font-semibold text-[#0c3835] uppercase tracking-wider hover:opacity-75 transition-opacity"
+              className="paratext semibold headerbuttondiv"
             >
               {link.name}
             </Link>
           ))}
-
-          <Link
-            href="#contact"
-            className="bg-[#0c3835] text-white text-xs lg:text-sm font-bold uppercase tracking-wider px-6 py-2.5 rounded-full hover:bg-black transition-colors shadow-sm"
-          >
-            CONTACT US
-          </Link>
         </nav>
 
         {/* ANIMATED HAMBURGER ICON */}

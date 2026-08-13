@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import TestimonialSlider from "./components/TestimonialSlider";
 import LivingExperienceBanner from "./components/LivingExperience";
+import Header from "./components/Header";
 
 export default function Home() {
   const strengths = [
@@ -37,6 +38,11 @@ export default function Home() {
 
   return (
     <>
+      <Header sec={"transperantBg"} />
+      <div>
+        <img className="w-full" src="/images/home/mothermira-hero-banner.jpg" />
+      </div>
+
       <section className="relative w-full bg-[#EEE8D0] overflow-hidden text-center buildontrusthomepage">
         {/* Main Title Header */}
         <h2 className="builtttonalwayshome semibold">Built on Trust Always</h2>
@@ -244,7 +250,7 @@ export default function Home() {
               Premium villas in a well-connected and peaceful environment
             </p>
             <button
-              className="bg-[#004852] mt-[15px] !text-[#fff] cursor-pointer rounded-full semibold paratext  buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300"
+              className="project-button bg-[#004852] mt-[15px] !text-[#fff] cursor-pointer rounded-full semibold paratext  buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300"
               style={{ letterSpacing: "1px" }}
             >
               VIEW PROJECT
@@ -265,7 +271,7 @@ export default function Home() {
       </section>
 
       <TestimonialSlider />
-      <LivingExperienceBanner/>
+      <LivingExperienceBanner />
     </>
   );
 }

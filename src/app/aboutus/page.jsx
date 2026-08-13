@@ -78,8 +78,8 @@ export default function AboutUs() {
   );
   return (
     <>
-      <Header bgcolor={"#ece6cf"} />
-      <section className="relative w-full min-h-[900px] max-h-[800px] overflow-hidden flex flex-col items-center justify-between">
+      <Header sec={""}  />
+      <section className="headertop relative w-full min-h-[800px] max-h-[800px] overflow-hidden flex flex-col items-center justify-between">
         <div className="absolute inset-0 -z-10 w-full h-full">
           <img
             src="/images/aboutusbg.jpg"
@@ -88,7 +88,7 @@ export default function AboutUs() {
           />
         </div>
 
-        <div className="pt-36 sm:pt-30 text-center z-10 px-4">
+        <div className="pt-5 sm:pt-5 text-center z-10 px-4">
           <h1 className="mainheading indicocolor">
             The Mother Mira<strong className="greencolor"> Legacy</strong>
           </h1>

@@ -1,3 +1,4 @@
+import Header from "../components/Header";
 import LivingExperienceBanner from "../components/LivingExperience";
 import TestimonialSlider from "../components/TestimonialSlider";
 
@@ -11,6 +12,7 @@ export default function Ourprojects() {
 
   return (
     <>
+      <Header sec={"transperantBg"} />
       <section className="relative w-full h-[800px] flex items-end overflow-hidden">
         <div className="absolute inset-0 -z-10 w-full h-[100%]">
           <img
@@ -154,8 +156,8 @@ export default function Ourprojects() {
         </div>
       </section>
 
-      <TestimonialSlider/>
-        <LivingExperienceBanner/>
+      <TestimonialSlider />
+      <LivingExperienceBanner />
     </>
   );
 }

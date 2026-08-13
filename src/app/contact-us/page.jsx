@@ -1,20 +1,20 @@
 import Image from "next/image";
 import TestimonialSlider from "../components/TestimonialSlider";
+import Header from "../components/Header";
 export default function ContactPage() {
   return (
     <>
-      <section className="relative w-full min-h-[900px] max-h-[800px] overflow-hidden flex flex-col items-center justify-between">
+      <Header sec={""} />
+      <section className="relative w-full min-h-[800px] max-h-[800px] overflow-hidden flex flex-col items-center justify-between headertop">
         <div className="absolute inset-0 -z-10 w-full h-full">
-          <Image
+          <img
             src="/images/contactusbanner.jpg"
             alt="Talk to our team"
-            fill
-            priority
             className="object-cover object-center"
           />
         </div>
 
-        <div className="pt-36 sm:pt-30 text-center z-10 px-4">
+        <div className="pt-5 sm:pt-5 text-center z-10 px-4">
           <h1 className="mainheading indicocolor">
             Talk to <strong className="greencolor"> Our Team</strong>
           </h1>
@@ -58,24 +58,34 @@ export default function ContactPage() {
               <div className="flex items-center gap-3">
                 <a
                   href="#"
-                  className="w-8 h-8 rounded-full bg-[#0077b5] text-white flex items-center justify-center text-sm hover:opacity-80 transition"
-                ></a>
+                  className="w-11 h-11 rounded-full  flex items-center justify-center text-sm hover:opacity-80 transition"
+                >
+                  <img src="/images/icons/Indeed.png" alt="Indeed" />
+                </a>
                 <a
                   href="#"
-                  className="w-8 h-8 rounded-full bg-[#e4405f] text-white flex items-center justify-center text-sm hover:opacity-80 transition"
-                ></a>
+                  className="w-11 h-11 rounded-full flex items-center justify-center text-sm hover:opacity-80 transition"
+                >
+                  <img src="/images/icons/insta.png" alt="insta" />
+                </a>
                 <a
                   href="#"
-                  className="w-8 h-8 rounded-full bg-[#1877f2] text-white flex items-center justify-center text-sm hover:opacity-80 transition"
-                ></a>
+                  className="w-11 h-11 rounded-full  flex items-center justify-center text-sm hover:opacity-80 transition"
+                >
+                  <img src="/images/icons/fb.png" alt="fb" />
+                </a>
                 <a
                   href="#"
-                  className="w-8 h-8 rounded-full bg-[#ff0000] text-white flex items-center justify-center text-sm hover:opacity-80 transition"
-                ></a>
+                  className="w-11 h-11 rounded-full  flex items-center justify-center text-sm hover:opacity-80 transition"
+                >
+                  <img src="/images/icons/youtube.png" alt="" />
+                </a>
                 <a
                   href="#"
-                  className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center text-sm hover:opacity-80 transition"
-                ></a>
+                  className="w-11 h-11 rounded-full  flex items-center justify-center text-sm hover:opacity-80 transition"
+                >
+                  <img src="/images/icons/threads.png" alt="" />
+                </a>
               </div>
             </div>
           </div>
@@ -244,7 +254,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <TestimonialSlider/>
+      <TestimonialSlider />
     </>
   );
 }

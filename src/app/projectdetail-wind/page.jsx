@@ -5,6 +5,7 @@ import AmenitiesSection from "../components/ProjectAminites";
 import ProjectGallery from "../components/ProjectGallery";
 import ProjectDetailIntro from "../components/ProjectDetailIntro";
 import LivingExperienceBanner from "../components/LivingExperience";
+import Header from "../components/Header";
 
 export default function ProjectDetailTheWind() {
   const advantages = [
@@ -157,6 +158,7 @@ export default function ProjectDetailTheWind() {
   ];
   return (
     <>
+      <Header sec={"transperantBg"} />
       <section className="relative w-full h-[800px] flex items-end overflow-hidden">
         <div className="absolute inset-0 -z-10 w-full h-[100%]">
           <img
@@ -171,11 +173,17 @@ export default function ProjectDetailTheWind() {
           {/* Category Badge */}
           <div className="">
             <div className="flex items-center ">
-              <span className="subheadingherobanner greencolor ourprojectsss uppercase !pr-[12px]">
+              <span
+                className="subheadingherobanner greencolor ourprojectsss uppercase !pr-[12px]"
+                style={{ lineHeight: "120%" }}
+              >
                 MOTHER MIRA - THE WIND
               </span>
-              <span className="subheadingherobanner greencolor ourprojectsss uppercase">
-                <div className="flex items-center gap-2">
+              <span
+                style={{ lineHeight: "120%" }}
+                className="subheadingherobanner greencolor ourprojectsss uppercase"
+              >
+                <div className="flex items-center gap-2 ">
                   <img
                     className="w-[22px] h-[22x]"
                     src="/images/icons/map-pin.svg"
@@ -188,7 +196,7 @@ export default function ProjectDetailTheWind() {
           </div>
 
           {/* Main Title */}
-          <h1 className="herobannerheading text-[#fff]">WELCOME TO THE WIND</h1>
+          <h1 className="herobannerheading text-[#fff] mt-[10px]">WELCOME TO THE WIND</h1>
 
           {/* Subtle Horizontal Divider */}
           <hr className="border-t border-white/20 w-full mb-5" />
@@ -405,7 +413,7 @@ export default function ProjectDetailTheWind() {
 
       <ProjectGallery />
 
-        <LivingExperienceBanner/>
+      <LivingExperienceBanner />
     </>
   );
 }
