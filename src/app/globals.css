@@ -79,6 +79,74 @@ html.has-scroll-dragging {
 
 /* Fonts */
 
+/* Container */
+
+/* 1921px and above */
+@media (min-width: 1921px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* 1800px - 1920px */
+/* @media (max-width: 1920px) and (min-width: 1800px) {
+  .container {
+    max-width: 1400px;
+  }
+} */
+
+/* 1601px - 1799px */
+@media (max-width: 1800px) and (min-width: 1600px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* 1440px - 1600px */
+@media (max-width: 1600px) and (min-width: 1440px) {
+  .container {
+    max-width: 1324px;
+  }
+}
+
+/* 1280px - 1439px */
+@media (max-width: 1439px) and (min-width: 1280px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* 1024px - 1279px */
+@media (max-width: 1279px) and (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* 768px - 1023px */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* 576px - 767px */
+@media (max-width: 767px) and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* Below 576px */
+@media (max-width: 575px) and (min-width: 0px) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+
+/* Container */
+
 body {
   font-family: "Neue Haas Grotesk", sans-serif;
   padding: 0;
@@ -819,7 +887,18 @@ background-color: #ede8d0; */
   color: #ede8d0;
 }
 
+.headerbuttondiv.active::before {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+}
 
+.headerbuttondiv.active {
+  color: #ede8d0;
+}
+.stickyheader.transperantBg .headerbuttondiv.active {
+  color: #ede8d0;
+}
 /* button-animationsss */
 
 .project-button {
@@ -864,4 +943,306 @@ background-color: #ede8d0; */
 
 .project-button:active {
   transform: scale(0.95);
+}
+
+@media (max-width: 1900px) and (min-width: 1800px) {
+  /* fonts-style */
+
+  .mainheading {
+    font-size: 58px;
+    line-height: 68px;
+  }
+
+  .subheadingtext {
+    font-size: 30px;
+    line-height: 100%;
+  }
+
+  .paratext {
+    font-size: 17px;
+    line-height: 27px;
+  }
+
+  .thirdheading {
+    font-size: 28px;
+    line-height: 100%;
+  }
+
+  .fifththheading {
+    font-size: 100px;
+    line-height: 95px;
+  }
+  .salesfooterrr {
+    font-size: 45px;
+    line-height: 53px;
+  }
+
+  .herobannerheading {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .subheadingherobanner {
+    font-size: 22px;
+  }
+
+  .mothermiraourproject {
+    font-size: 37px;
+    line-height: 37px;
+  }
+
+  .twentyfourpixel {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .premiumvillaamain {
+    font-size: 38px;
+    line-height: 40px;
+  }
+
+  .fiftypixel {
+    font-size: 46px;
+    line-height: 46px;
+  }
+
+  .hunderpixel {
+    font-size: 88px;
+    line-height: 100%;
+  }
+
+  .builtontrustpara {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .secondheading {
+    font-size: 80px;
+    line-height: 100%;
+  }
+
+  .twentyeightpixel {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .foundervoicesubtext {
+    font-family: Neue Haas Grotesk normal semibold;
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .addressstyle {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .mainheading.missionclasss {
+    font-size: 44px;
+    line-height: 46px;
+  }
+
+  .perfecthomefont {
+    font-size: 115px;
+    line-height: 100%;
+  }
+
+  .thitytwoexper {
+    font-size: 280px;
+    line-height: 100%;
+  }
+
+  .foundersvoicetext {
+    padding-top: 50px;
+    font-size: 128px;
+    line-height: 109px;
+  }
+
+  .builtttonalwayshome {
+    padding-top: 90px;
+    font-size: 145px;
+    line-height: 160px;
+  }
+
+  /* fonts-style */
+
+  .testimonialsection {
+    height: 950px;
+  }
+
+  .maxwidthcontent {
+    padding-left: 0%;
+  }
+
+  .footerrimageSecondd {
+    width: 55%;
+    padding-left: 74px;
+  }
+
+  .projectdetailabannerrr {
+    height: 700px;
+  }
+
+  .aboutsectionbanner {
+    min-height: 785px;
+  }
+
+  .aboumiraaboutsection {
+    height: 1500px;
+  }
+
+  .foundervoicesection {
+    min-height: 845px;
+  }
+}
+
+@media (max-width: 1800px) and (min-width: 1600px) {
+  /* fonts-style */
+
+  .mainheading {
+    font-size: 58px;
+    line-height: 68px;
+  }
+
+  .subheadingtext {
+    font-size: 30px;
+    line-height: 100%;
+  }
+
+  .paratext {
+    font-size: 17px;
+    line-height: 27px;
+  }
+
+  .thirdheading {
+    font-size: 28px;
+    line-height: 100%;
+  }
+
+  .fifththheading {
+    font-size: 100px;
+    line-height: 95px;
+  }
+  .salesfooterrr {
+    font-size: 45px;
+    line-height: 53px;
+  }
+
+  .herobannerheading {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .subheadingherobanner {
+    font-size: 22px;
+  }
+
+  .mothermiraourproject {
+    font-size: 37px;
+    line-height: 37px;
+  }
+
+  .twentyfourpixel {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .premiumvillaamain {
+    font-size: 38px;
+    line-height: 40px;
+  }
+
+  .fiftypixel {
+    font-size: 46px;
+    line-height: 46px;
+  }
+
+  .hunderpixel {
+    font-size: 88px;
+    line-height: 100%;
+  }
+
+  .builtontrustpara {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .secondheading {
+    font-size: 80px;
+    line-height: 100%;
+  }
+
+  .twentyeightpixel {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .foundervoicesubtext {
+    font-family: Neue Haas Grotesk normal semibold;
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .addressstyle {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .mainheading.missionclasss {
+    font-size: 44px;
+    line-height: 46px;
+  }
+
+  .perfecthomefont {
+    font-size: 115px;
+    line-height: 100%;
+  }
+
+  .thitytwoexper {
+    font-size: 280px;
+    line-height: 100%;
+  }
+
+  .foundersvoicetext {
+    padding-top: 50px;
+    font-size: 128px;
+    line-height: 109px;
+  }
+
+  .builtttonalwayshome {
+    padding-top: 90px;
+    font-size: 145px;
+    line-height: 160px;
+  }
+
+  /* fonts-style */
+
+  .testimonialsection {
+    height: 950px;
+  }
+
+  .maxwidthcontent {
+    padding-left: 0%;
+  }
+
+  .footerrimageSecondd {
+    width: 55%;
+    padding-left: 74px;
+  }
+
+  .projectdetailabannerrr {
+    height: 700px;
+  }
+
+  .aboutsectionbanner {
+    min-height: 785px;
+  }
+
+  .aboumiraaboutsection {
+    height: 1500px;
+  }
+
+  .foundervoicesection {
+    min-height: 845px;
+  }
 }

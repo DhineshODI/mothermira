@@ -249,7 +249,7 @@ export default function AmenitiesSection() {
 
   return (
     <section className="w-full py-16 sm:py-24 px-4 sm:px-8 bg-[#EDE8D0] !pb-0">
-      <div className="max-w-7xl mx-auto flex flex-col items-center">
+      <div className="container max-w-7xl mx-auto flex flex-col items-center">
         {/* Header Area */}
         <div className="text-center max-w-7xl mb-17">
           <p className="subheadingtext uppercase blackcolor">AMENITIES</p>

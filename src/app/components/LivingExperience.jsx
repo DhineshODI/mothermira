@@ -36,7 +36,7 @@ export default function LivingExperienceBanner() {
       {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" /> */}
 
       {/* CONTENT CONTAINER */}
-      <div className="relative z-10 max-w-7xl mx-auto text-center flex flex-col items-center videobanenrrcontent">
+      <div className="relative z-10 container max-w-7xl mx-auto text-center flex flex-col items-center videobanenrrcontent">
         {/* SUBTITLE */}
         <p className=" mb-2  uppercase blackcolor paragraphfont subheadingtext">
           CONNECT WITH US FOR THE BEST

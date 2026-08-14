@@ -118,7 +118,7 @@ export default function TestimonialSlider() {
 
   return (
     <section className="relative w-full bg-[#f4f3e8] py-20 px-4 sm:px-8 lg:px-16 overflow-hidden testimonialsection">
-      <div className="max-w-7xl mx-auto">
+      <div className="container max-w-7xl mx-auto">
         <p className="subheadingtext uppercase blackcolor">
           HOMEOWNERS SHARE THEIR
         </p>
@@ -132,7 +132,7 @@ export default function TestimonialSlider() {
           long-term value experienced <br /> across every Mother Mira project
         </p>
 
-        <div className="max-w-7xl mx-auto tesimonialslidersection">
+        <div className="tesimonialslidersection">
           {/* LEFT COLUMN */}
           <div className="p-3 rounded-3xl border border-[#0c3835]/10 flex flex-col justify-center imagetestisection1">
             <Slider

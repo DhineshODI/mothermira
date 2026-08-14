@@ -22,7 +22,7 @@ export default function ContactPage() {
       </section>
 
       <section className="bg-[#EDE8D0] py-16 px-6 md:px-12 lg:px-20 font-sans text-[#0f3d3e] contactformsections ">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="container max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* LEFT COLUMN: Info & Text */}
           <div className="space-y-6">
             <div>
@@ -180,6 +180,7 @@ export default function ContactPage() {
         </div>
 
         {/* 4. Location Cards Container */}
+
         <div className="z-10 w-full max-w-fit grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 mt-7">
           {/* Office Address Card */}
           <div className="adressbox bg-[#FFF8D8]/90 backdrop-blur-sm p-6 sm:p-8 rounded-[2rem] border border-[#e2dec9] flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">

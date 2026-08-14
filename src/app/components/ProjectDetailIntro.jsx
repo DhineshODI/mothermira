@@ -10,7 +10,7 @@ export default function ProjectDetailIntro() {
 
   return (
     <section className="w-full py-16 sm:py-20 px-4 sm:px-8 bg-[#EDE8D0] proejectdetailbannerer">
-      <div className="max-w-7xl mx-auto flex flex-col">
+      <div className="container max-w-7xl mx-auto flex flex-col">
         {/* Top Grid: Content & Stats */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
           {/* Left Area: Title & Description */}

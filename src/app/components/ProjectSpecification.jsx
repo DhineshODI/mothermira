@@ -12,72 +12,52 @@ export default function ProjectSpecifications() {
       subtitle: "SPECIFICATIONS",
       image: "/images/specification.jpg",
       points: [
-        "Hydro Pneumatic System for pressurized water supply",
-        "Dedicated Municipal water connection for kitchen",
-        "Sewage Treatment Plant (STP) with recycled water for gardening",
-        "Provision for geysers and solar water heater connections",
-        "Rainwater harvesting pits across the premises",
-        "Water softener system for treated domestic usage",
-        "Water softener system for treated domestic usage",
+        "Hydro Pneumatic System with treated water",
+        "Separate Municipal water supply in kitchens",
+        "Provision for geysers in all bathrooms",
+        "Rainwater harvesting pits for water conservation",
       ],
     },
+
     KITCHEN: {
       title: "KITCHEN",
       subtitle: "SPECIFICATIONS",
       image: "/images/specification.jpg",
       points: [
-        "Polished granite platform with stainless steel sink",
-        "Glazed ceramic tile dadoing up to 2 feet above platform",
-        "Provision for chimney, exhaust fan, and water purifier",
-        "Piped gas connection / LPG cylinder provision in utility",
-        "Adequate power points for modern kitchen appliances",
-        "Separate utility area with washing machine provision",
-        "Water softener system for treated domestic usage",
-        "Water softener system for treated domestic usage",
+        "Granite polished edge counter top",
+        "Stainless steel sink",
+        "Designer ceramic tiles two feet above counter",
+        "Superior quality anti-skid ceramic tiles on utility area",
       ],
     },
+
     PAINTING: {
       title: "PAINTING",
       subtitle: "SPECIFICATIONS",
       image: "/images/specification.jpg",
       points: [
-        "Internal Walls: Smooth putty finish with premium emulsion",
-        "External Walls: Weather-proof exterior grade texture coating",
-        "Ceilings: Smooth finish with oil-bound distemper / emulsion",
-        "MS Grills & Railings: Enamel paint over anti-corrosive primer",
-        "Main Door: Premium teak wood polish finish",
-        "Toilet Doors: Waterproof enamel paint finish",
-        "Water softener system for treated domestic usage",
+        "Internal Walls: Superior wall putty with acrylic emulsion paint",
+        "External Walls: Plaster finish with weather shield exterior emulsion",
       ],
     },
+
     STRUCTURE: {
       title: "STRUCTURE",
       subtitle: "SPECIFICATIONS",
       image: "/images/specification.jpg",
       points: [
-        "RCC framed structure designed for Seismic Zone III compliance",
-        '6" thick solid concrete block masonry for external walls',
-        '4" thick solid block masonry for interior partition walls',
-        "Anti-termite chemical treatment at foundation level",
-        "Floor-to-floor height maintained at standard 10 feet",
-        "High-grade Fe550 steel and 53-grade OPC/PPC cement",
-        "Water softener system for treated domestic usage",
-        "Water softener system for treated domestic usage",
+        "Ground + two levels RCC structure",
+        "Covered car park in ground floor",
       ],
     },
+
     PLASTERING: {
       title: "PLASTERING",
       subtitle: "SPECIFICATIONS",
       image: "/images/specification.jpg",
       points: [
-        "Internal Walls: Smooth cement plastering with wall putty",
-        "External Walls: Double-coat sponge finish cement plastering",
-        "Ceiling: Single-coat smooth cement plastering finish",
-        "Bathroom Walls: Waterproof plastering up to lintel level",
-        "Utility Area: Cement plastering with damp-proof coating",
-        "Parapet & Terrace: Waterproof cement plastering",
-        "Water softener system for treated domestic usage",
-        "Water softener system for treated domestic usage",
+        "Internal & Ceiling: 12 mm thick double coat cement plaster with smooth finish",
+        "External: 18 mm thick double coat cement plaster",
       ],
     },
   };
@@ -87,7 +67,7 @@ export default function ProjectSpecifications() {
 
   return (
     <section className="w-full py-16 sm:py-24 px-4 sm:px-8 bg-[#EDE8D0] !pb-10">
-      <div className="max-w-7xl mx-auto flex flex-col items-center">
+      <div className="container max-w-7xl mx-auto flex flex-col items-center">
         {/* Header Section */}
         <div className="text-center max-w-7xl mb-12">
           <p className="subheadingtext uppercase blackcolor">SPECIFICATIONS</p>
@@ -161,7 +141,10 @@ export default function ProjectSpecifications() {
 
         {/* Bottom CTA */}
         <div className="flex flex-col items-center mt-10 space-y-3">
-          <p className="blackcolor paratext " style={{ letterSpacing: "0.5px" }}>
+          <p
+            className="blackcolor paratext "
+            style={{ letterSpacing: "0.5px" }}
+          >
             FOR MORE DETAILED SPECIFICATIONS
           </p>
           <button className="cursor-pointer rounded-full border border-[#0048523D] bg-[#004852] text-[#EDE8D0] semibold paratext  buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300">

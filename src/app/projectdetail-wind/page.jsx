@@ -29,137 +29,228 @@ export default function ProjectDetailTheWind() {
 
   const strengths = [
     {
-      title: "INFRASTRUCTURE",
-      desc: "Well-planned layouts and essential infrastructure",
+      title: "STRATEGIC LOCATION",
+      desc: "Excellent connectivity to IT hubs and metro access",
       highlighted: true,
       // Icon: House on hand / structure
       icon: "/images/icons/Infrastructure.svg",
     },
     {
-      title: "QUALITY",
-      desc: "Superior material and construction standards",
+      title: "SMART VALUE LIVING",
+      desc: "Balanced pricing with strong long-term appreciation potential",
       highlighted: false,
       // Icon: Diamond / Quality
       icon: "/images/icons/Quality.svg",
     },
     {
-      title: "VALUE",
-      desc: "Strategic locations for long-term growth",
+      title: "PEACEFUL COMMUNITY",
+      desc: "Low-density gated environment for comfortable everyday living",
       highlighted: false,
       // Icon: Chart / Growth
       icon: "/images/icons/Value.svg",
     },
     {
-      title: "CUSTOMER SATISFACTION",
-      desc: "Transparent process and legal clarity",
+      title: "QUALITY INFRASTRUCTURE",
+      desc: "Well-Planned Amenities & Durable Infrastructure",
       highlighted: false,
       // Icon: Thumbs up with stars
       icon: "/images/icons/CustomerSatisfaction.svg",
     },
   ];
 
-  const [activeTab, setActiveTab] = useState("LOCATION HIGHLIGHTS");
+  const [activeTab, setActiveTab] = useState("MEDICAL FACILITIES");
+
+  // const locationData = {
+  //   "LOCATION HIGHLIGHTS": [
+  //     { name: "Kundratur Main Road.", distance: "0.8 Kms", time: "2 MINS" },
+  //     { name: "Porur Junction", distance: "3.5 Kms", time: "8 MINS" },
+  //     {
+  //       name: "Mangadu Sri Kamakshi Temple",
+  //       distance: "5.5 Kms",
+  //       time: "12 MINS",
+  //     },
+  //     { name: "Airport", distance: "7.8 Kms", time: "18 MINS" },
+  //     { name: "Railway Station, Guindy", distance: "9.5 Kms", time: "22 MINS" },
+  //   ],
+  //   "MEDICAL FACILITIES": [
+  //     { name: "SRMC", distance: "5.0 Kms", time: "10 MINS" },
+  //     { name: "MIOT", distance: "7.0 Kms", time: "15 MINS" },
+  //     {
+  //       name: "Apollo Speciality Hospital, Vanagaram",
+  //       distance: "8.0 Kms",
+  //       time: "18 MINS",
+  //     },
+  //   ],
+  //   RESTAURANTS: [
+  //     { name: "Adyar Ananda Bhavan", distance: "0.2 Kms", time: "1 MIN" },
+  //     { name: "Dominos", distance: "1.5 Kms", time: "4 MINS" },
+  //     { name: "Lemon Tree", distance: "4.0 Kms", time: "8 MINS" },
+  //     { name: "KFC", distance: "4.0 Kms", time: "8 MINS" },
+  //     { name: "Anjappar", distance: "4.0 Kms", time: "8 MINS" },
+  //     { name: "Dindigul Thalapakatti", distance: "4.5 Kms", time: "10 MINS" },
+  //     {
+  //       name: "Sangeetha Veg Restaurant",
+  //       distance: "6.8 Kms",
+  //       time: "15 MINS",
+  //     },
+  //   ],
+  //   "EDUCATIONAL INSTITUTIONS": [
+  //     { name: "PSBB Milenium School", distance: "0.5 Kms", time: "2 MINS" },
+  //     {
+  //       name: "St. Francis International School",
+  //       distance: "0.8 Kms",
+  //       time: "3 MINS",
+  //     },
+  //     {
+  //       name: "Omega International School",
+  //       distance: "1.0 Kms",
+  //       time: "4 MINS",
+  //     },
+  //     { name: "K.K. College of Pharmacy", distance: "1.3 Kms", time: "5 MINS" },
+  //     { name: "Madha Medical College", distance: "4.0 Kms", time: "9 MINS" },
+  //     {
+  //       name: "Sri Krishna International School",
+  //       distance: "4.5 Kms",
+  //       time: "10 MINS",
+  //     },
+  //     { name: "SRM Dental College", distance: "5.0 Kms", time: "12 MINS" },
+  //     {
+  //       name: "Muthu Kumaran College of Medical",
+  //       distance: "5.2 Kms",
+  //       time: "12 MINS",
+  //     },
+  //     { name: "Anna University", distance: "13 Kms", time: "25 MINS" },
+  //     { name: "I.I.T., Chennai", distance: "13 Kms", time: "25 MINS" },
+  //   ],
+  //   COMMERCIAL: [
+  //     { name: "HP", distance: "3.3 Kms", time: "7 MINS" },
+  //     { name: "DLF IT Park", distance: "5.0 Kms", time: "12 MINS" },
+  //     { name: "L&T", distance: "6.0 Kms", time: "14 MINS" },
+  //     {
+  //       name: "Nandambakkam Trade Center",
+  //       distance: "6.4 Kms",
+  //       time: "15 MINS",
+  //     },
+  //   ],
+  //   "FINANCIAL INSTITUTIONS": [
+  //     { name: "Indian Overseas Bank", distance: "0.4 Kms", time: "2 MINS" },
+  //     { name: "ICICI Bank", distance: "1.5 Kms", time: "4 MINS" },
+  //     { name: "CUB ATM", distance: "1.8 Kms", time: "5 MINS" },
+  //     { name: "HDFC Bank", distance: "2.0 Kms", time: "5 MINS" },
+  //     { name: "Indian Bank", distance: "2.5 Kms", time: "6 MINS" },
+  //   ],
+  //   "SUPER MARKETS": [
+  //     { name: "White Rose Super Market", distance: "0.4 Kms", time: "2 MINS" },
+  //     { name: "Nellai Pazhamudhir Solai", distance: "2.5 Kms", time: "6 MINS" },
+  //     { name: "Mega Mart", distance: "3.5 Kms", time: "8 MINS" },
+  //     { name: "Nilgiris", distance: "4.0 Kms", time: "10 MINS" },
+  //   ],
+  // };
+
+  // const tabs = [
+  //   "LOCATION HIGHLIGHTS",
+  //   "MEDICAL FACILITIES",
+  //   "RESTAURANTS",
+  //   "EDUCATIONAL INSTITUTIONS",
+  //   "COMMERCIAL",
+  //   "FINANCIAL INSTITUTIONS",
+  //   "SUPER MARKETS",
+  // ];
 
   const locationData = {
-    "LOCATION HIGHLIGHTS": [
-      { name: "Kundratur Main Road.", distance: "0.8 Kms", time: "2 MINS" },
-      { name: "Porur Junction", distance: "3.5 Kms", time: "8 MINS" },
-      {
-        name: "Mangadu Sri Kamakshi Temple",
-        distance: "5.5 Kms",
-        time: "12 MINS",
-      },
-      { name: "Airport", distance: "7.8 Kms", time: "18 MINS" },
-      { name: "Railway Station, Guindy", distance: "9.5 Kms", time: "22 MINS" },
-    ],
     "MEDICAL FACILITIES": [
-      { name: "SRMC", distance: "5.0 Kms", time: "10 MINS" },
-      { name: "MIOT", distance: "7.0 Kms", time: "15 MINS" },
+      { name: "MIOT", distance: "6 Kms", time: "1 HR 12 MINS" },
       {
         name: "Apollo Speciality Hospital, Vanagaram",
-        distance: "8.0 Kms",
-        time: "18 MINS",
+        distance: "8.6 Kms",
+        time: "1 HR 43 MINS",
       },
-    ],
-    RESTAURANTS: [
-      { name: "Adyar Ananda Bhavan", distance: "0.2 Kms", time: "1 MIN" },
-      { name: "Dominos", distance: "1.5 Kms", time: "4 MINS" },
-      { name: "Lemon Tree", distance: "4.0 Kms", time: "8 MINS" },
-      { name: "KFC", distance: "4.0 Kms", time: "8 MINS" },
-      { name: "Anjappar", distance: "4.0 Kms", time: "8 MINS" },
-      { name: "Dindigul Thalapakatti", distance: "4.5 Kms", time: "10 MINS" },
       {
-        name: "Sangeetha Veg Restaurant",
-        distance: "6.8 Kms",
-        time: "15 MINS",
+        name: "Sri Ramachandra Medical Centre",
+        distance: "5.3 Kms",
+        time: "1 HR 4 MINS",
       },
     ],
+
     "EDUCATIONAL INSTITUTIONS": [
-      { name: "PSBB Milenium School", distance: "0.5 Kms", time: "2 MINS" },
+      { name: "PSBB Millennium School", distance: "0.6 Kms", time: "7 MINS" },
       {
         name: "St. Francis International School",
-        distance: "0.8 Kms",
-        time: "3 MINS",
+        distance: "1.8 Kms",
+        time: "22 MINS",
       },
       {
         name: "Omega International School",
-        distance: "1.0 Kms",
-        time: "4 MINS",
+        distance: "1.6 Kms",
+        time: "19 MINS",
       },
-      { name: "K.K. College of Pharmacy", distance: "1.3 Kms", time: "5 MINS" },
-      { name: "Madha Medical College", distance: "4.0 Kms", time: "9 MINS" },
+      { name: "Madha Medical College", distance: "4.5 Kms", time: "54 MINS" },
+      { name: "SRM Dental College", distance: "6.5 Kms", time: "1 HR 18 MINS" },
+      { name: "Anna University", distance: "13 Kms", time: "2 HRS 36 MINS" },
+      { name: "Madha Engineering College", distance: "5 Kms", time: "1 HR" },
+      { name: "Pon Vidyashram School", distance: "1.5 Kms", time: "18 MINS" },
       {
-        name: "Sri Krishna International School",
-        distance: "4.5 Kms",
-        time: "10 MINS",
+        name: "Orchid International School",
+        distance: "2 Kms",
+        time: "24 MINS",
       },
-      { name: "SRM Dental College", distance: "5.0 Kms", time: "12 MINS" },
       {
-        name: "Muthu Kumaran College of Medical",
-        distance: "5.2 Kms",
-        time: "12 MINS",
+        name: "Sri Ramachandra Medical College",
+        distance: "5.1 Kms",
+        time: "1 HR 1 MIN",
       },
-      { name: "Anna University", distance: "13 Kms", time: "25 MINS" },
-      { name: "I.I.T., Chennai", distance: "13 Kms", time: "25 MINS" },
+      {
+        name: "Little Flowers Matriculation School",
+        distance: "0.6 Kms",
+        time: "7 MINS",
+      },
     ],
+
     COMMERCIAL: [
-      { name: "HP", distance: "3.3 Kms", time: "7 MINS" },
-      { name: "DLF IT Park", distance: "5.0 Kms", time: "12 MINS" },
-      { name: "L&T", distance: "6.0 Kms", time: "14 MINS" },
+      { name: "DLF IT Park", distance: "7 Kms", time: "1 HR 24 MINS" },
+      { name: "L&T", distance: "6.5 Kms", time: "1 HR 18 MINS" },
       {
-        name: "Nandambakkam Trade Center",
-        distance: "6.4 Kms",
-        time: "15 MINS",
+        name: "Chennai Trade Centre",
+        distance: "6.7 Kms",
+        time: "1 HR 20 MINS",
       },
+      { name: "Fintech City", distance: "6.5 Kms", time: "1 HR 18 MINS" },
+      { name: "Porur Saravana Stores", distance: "5 Kms", time: "1 HR" },
+      { name: "Commerzone", distance: "4.7 Kms", time: "56 MINS" },
+      { name: "RMZ Software Park", distance: "4.6 Kms", time: "55 MINS" },
+      { name: "Olympia Tech Park", distance: "8 Kms", time: "1 HR 36 MINS" },
+      { name: "Mega Mart", distance: "5.6 Kms", time: "1 HR 7 MINS" },
+      { name: "D Mart", distance: "5.5 Kms", time: "1 HR 6 MINS" },
     ],
-    "FINANCIAL INSTITUTIONS": [
-      { name: "Indian Overseas Bank", distance: "0.4 Kms", time: "2 MINS" },
-      { name: "ICICI Bank", distance: "1.5 Kms", time: "4 MINS" },
-      { name: "CUB ATM", distance: "1.8 Kms", time: "5 MINS" },
-      { name: "HDFC Bank", distance: "2.0 Kms", time: "5 MINS" },
-      { name: "Indian Bank", distance: "2.5 Kms", time: "6 MINS" },
-    ],
-    "SUPER MARKETS": [
-      { name: "White Rose Super Market", distance: "0.4 Kms", time: "2 MINS" },
-      { name: "Nellai Pazhamudhir Solai", distance: "2.5 Kms", time: "6 MINS" },
-      { name: "Mega Mart", distance: "3.5 Kms", time: "8 MINS" },
-      { name: "Nilgiris", distance: "4.0 Kms", time: "10 MINS" },
+
+    METRO: [
+      {
+        name: "Chennai Trade Centre Metro",
+        distance: "6.3 Kms",
+        time: "1 HR 16 MINS",
+      },
+      {
+        name: "Chennai Airport Metro",
+        distance: "8.5 Kms",
+        time: "1 HR 42 MINS",
+      },
+      { name: "Guindy Metro", distance: "9.2 Kms", time: "1 HR 50 MINS" },
+      { name: "Porur Metro", distance: "3.5 Kms", time: "42 MINS" },
+      { name: "Alandur Metro", distance: "9 Kms", time: "1 HR 48 MINS" },
     ],
   };
 
   const tabs = [
-    "LOCATION HIGHLIGHTS",
     "MEDICAL FACILITIES",
-    "RESTAURANTS",
     "EDUCATIONAL INSTITUTIONS",
     "COMMERCIAL",
-    "FINANCIAL INSTITUTIONS",
-    "SUPER MARKETS",
+    "METRO",
   ];
+
   return (
     <>
       <Header sec={"transperantBg"} />
-      <section className="relative w-full h-[800px] flex items-end overflow-hidden">
+      <section className="relative w-full h-[800px] flex items-end overflow-hidden projectdetailabannerrr">
         <div className="absolute inset-0 -z-10 w-full h-[100%]">
           <img
             src="/images/thewind-banner.jpg"
@@ -196,7 +287,9 @@ export default function ProjectDetailTheWind() {
           </div>
 
           {/* Main Title */}
-          <h1 className="herobannerheading text-[#fff] mt-[10px]">WELCOME TO THE WIND</h1>
+          <h1 className="herobannerheading text-[#fff] mt-[10px]">
+            WELCOME TO THE WIND
+          </h1>
 
           {/* Subtle Horizontal Divider */}
           <hr className="border-t border-white/20 w-full mb-5" />
@@ -221,7 +314,7 @@ export default function ProjectDetailTheWind() {
       <ProjectDetailIntro />
 
       <section className="w-full py-16 sm:py-24 px-4 sm:px-8 lg:px-12 bg-[#EDE8D0] border-b border-[#16161629]">
-        <div className="max-w-7xl mx-auto flex flex-col items-center">
+        <div className="container max-w-7xl mx-auto flex flex-col items-center">
           {/* Header Section */}
           <div className="text-center max-w-7xl mb-12 sm:mb-16">
             <p className="subheadingtext uppercase blackcolor">WHY PORUR</p>
@@ -264,7 +357,7 @@ export default function ProjectDetailTheWind() {
       </section>
 
       <section className="w-full py-16 sm:py-24 px-4 sm:px-8 bg-[#EDE8D0]">
-        <div className="max-w-7xl mx-auto flex flex-col items-center">
+        <div className="container max-w-7xl mx-auto flex flex-col items-center">
           {/* Header Section */}
           <div className="text-center max-w-7xl mb-12">
             <p className="subheadingtext uppercase blackcolor">
@@ -294,7 +387,7 @@ export default function ProjectDetailTheWind() {
       </section>
 
       <section className="w-full py-16 sm:py-24 px-4 sm:px-8 bg-[#EDE8D0] !pt-0 border-b border-[#16161629]">
-        <div className="max-w-6xl mx-auto flex flex-col items-center">
+        <div className="container max-w-6xl mx-auto flex flex-col items-center">
           {/* Top Pills Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-10">
             {tabs.map((tab) => {
@@ -356,7 +449,7 @@ export default function ProjectDetailTheWind() {
       <ProjectSpecifications />
 
       <section className="w-full py-16 sm:py-24 px-4 sm:px-8 lg:px-16 bg-[#EDE8D0] border-b border-[#16161629]">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="container max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Content Side */}
           <div className="lg:col-span-6 space-y-8">
             {/* Header Title */}

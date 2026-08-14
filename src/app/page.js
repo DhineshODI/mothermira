@@ -47,7 +47,7 @@ export default function Home() {
         {/* Main Title Header */}
         <h2 className="builtttonalwayshome semibold">Built on Trust Always</h2>
 
-        <div className="max-w-5xl mx-auto flex flex-col items-center">
+        <div className="container max-w-5xl mx-auto flex flex-col items-center">
           <p
             className="mainheading missionclasss paragraphfont mt-[50px]"
             style={{ lineHeight: "107%" }}
@@ -77,7 +77,7 @@ export default function Home() {
         </div>
 
         {/* Bottom Hero Stats Box with Background Image Overlay */}
-        <div className="relative w-full max-w-6xl mx-auto flex flex-col justify-end p-8 sm:p-12 text-white">
+        <div className="relative container w-full max-w-6xl mx-auto flex flex-col justify-end p-8 sm:p-12 text-white">
           {/* Overlay Content */}
           <div className="relative z-10 max-w-7xl mx-auto text-center flex flex-col items-center">
             {/* "Trusted 32+ Years" Counter Display */}
@@ -114,7 +114,7 @@ export default function Home() {
       </section>
 
       <section className="py-20 px-6 md:px-12 lg:px-20 bg-[#EEE8D0]">
-        <div className="max-w-7xl mx-auto">
+        <div className="container max-w-7xl mx-auto">
           {/* Main Heading with Motion Fade-Up */}
 
           <h2 className="salesfooterrr paragraphfont blackcolor">
@@ -198,7 +198,7 @@ export default function Home() {
       </section>
 
       <section className="relative w-full bg-[#f4f3e8] py-16 px-4 sm:px-8 lg:px-16 overflow-hidden projecthomebannersec">
-        <div className="max-w-7xl mx-auto ">
+        <div className="container max-w-7xl mx-auto ">
           <div className="contenthomepagesection">
             <div className="w-max">
               <div>

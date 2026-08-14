@@ -21,19 +21,19 @@ export default function AboutUs() {
     },
     {
       title: "QUALITY",
-      desc: "Superior material and construction standards",
+      desc: "Focused on durable construction standards",
       highlighted: false,
       icon: "/images/icons/Quality.svg",
     },
     {
       title: "VALUE",
-      desc: "Strategic locations for long-term growth",
+      desc: "Maximum benefit for your investment",
       highlighted: false,
       icon: "/images/icons/Value.svg",
     },
     {
       title: "CUSTOMER SATISFACTION",
-      desc: "Transparent process and legal clarity",
+      desc: "Built on transparency and reliabilit",
       highlighted: false,
       icon: "/images/icons/CustomerSatisfaction.svg",
     },
@@ -78,8 +78,8 @@ export default function AboutUs() {
   );
   return (
     <>
-      <Header sec={""}  />
-      <section className="headertop relative w-full min-h-[800px] max-h-[800px] overflow-hidden flex flex-col items-center justify-between">
+      <Header sec={""} />
+      <section className="headertop aboutsectionbanner relative w-full min-h-[800px] max-h-[800px] overflow-hidden flex flex-col items-center justify-between">
         <div className="absolute inset-0 -z-10 w-full h-full">
           <img
             src="/images/aboutusbg.jpg"
@@ -102,7 +102,7 @@ export default function AboutUs() {
         </div>
 
         {/* 4. Content Area */}
-        <div className="z-10 max-w-7xl mx-auto text-center flex flex-col items-center">
+        <div className="z-10 container max-w-7xl mx-auto text-center flex flex-col items-center">
           {/* Title */}
           <h2 className="secondheading greencolor">
             ABOUT <strong> MOTHER MIRA </strong>
@@ -155,7 +155,7 @@ export default function AboutUs() {
         </StaggerText>
         {/* </TextFadeUp> */}
 
-        <div className="z-10 w-full max-w-7xl mx-auto space-y-8">
+        <div className="z-10 container w-full max-w-7xl mx-auto space-y-8">
           <div
             ref={(el) => (rowsRef.current[0] = el)}
             className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-start"
@@ -227,7 +227,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className="relative w-full min-h-[900px] py-16 sm:py-24 px-4 sm:px-8 lg:px-16 flex items-center overflow-hidden bg-[#f4f3e8]">
+      <section className="relative w-full min-h-[900px] py-16 sm:py-24 px-4 sm:px-8 lg:px-16 flex items-center overflow-hidden bg-[#f4f3e8] foundervoicesection">
         <div className="absolute top-4 left-1/2 -translate-x-1/2 w-full text-center select-none pointer-events-none z-10">
           <h1 className="foundersvoicetext">FOUNDER&apos;S VOICE</h1>
         </div>
@@ -239,7 +239,7 @@ export default function AboutUs() {
           />
         </div>
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 items-center landingtextaboutpage">
+        <div className="relative z-10 container w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 items-center landingtextaboutpage">
           <div className="md:col-span-7 lg:col-span-6 space-y-6 apastaphy">
             {/* Label + Quote Icon */}
             <div className="flex items-start space-x-3">
@@ -274,7 +274,7 @@ export default function AboutUs() {
       </section>
 
       <section className="w-full py-16 sm:py-24 px-4 sm:px-8 lg:px-16 bg-[#EDE8D0]">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="container max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Content Side */}
           <div className="lg:col-span-6 space-y-8">
             {/* Header Title */}
@@ -358,7 +358,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <LivingExperienceBanner/>
+      <LivingExperienceBanner />
     </>
   );
 }
