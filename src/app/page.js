@@ -55,7 +55,7 @@ export default function Home() {
             <span className="semibold">Mother Mira</span> Industries Limited,{" "}
             <br />
             established in Chennai in 1994, <br /> develops value-driven real
-            estate with legal compliance &{" "}
+            estate with legal <br /> compliance &{" "}
             <span className="semibold">quality infrastructure.</span>
           </p>
 
@@ -103,17 +103,17 @@ export default function Home() {
             </div>
 
             {/* Bottom Paragraph Description */}
-            <p className="builtontrustpara text-[#fff">
+            <p className="builtontrustpara text-[#fff] brnone">
               For over three decades, Mother Mira has grown through consistent
               delivery, ethical <br /> practices, and strong planning,
               developing reliable real estate assets that offer lasting value
-              and build enduring trust among customers.
+              and build <br /> enduring trust among customers.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-6 md:px-12 lg:px-20 bg-[#EEE8D0]">
+      <section className="py-20 px-6 md:px-12 lg:px-20 bg-[#EEE8D0] keyssectionbg">
         <div className="container max-w-7xl mx-auto">
           {/* Main Heading with Motion Fade-Up */}
 
@@ -144,7 +144,7 @@ export default function Home() {
                 className="group border-b border-[#0c3835]/15 mb-10"
               >
                 <div className="max-w-5xl mx-auto">
-                  <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-12 ">
+                  <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-12 keystrengthsection ">
                     {/* Left Side: Tag Title & Description */}
                     <div className="md:col-span-5 flex flex-col items-start justify-center">
                       {/* Badge Tag */}
@@ -198,7 +198,7 @@ export default function Home() {
       </section>
 
       <section className="relative w-full bg-[#f4f3e8] py-16 px-4 sm:px-8 lg:px-16 overflow-hidden projecthomebannersec">
-        <div className="container max-w-7xl mx-auto ">
+        <div className="container max-w-7xl mx-auto  projectbannercontainer">
           <div className="contenthomepagesection">
             <div className="w-max">
               <div>
@@ -216,7 +216,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="inline-flex items-center space-x-1.5 bg-[#004852] px-3.5 py-1 mt-[5px] ml-[20px]">
+              <div className="inline-flex items-center space-x-1.5 bg-[#004852] px-3.5 py-1 mt-[5px] ml-[20px] leftsidezero">
                 <img
                   className="h-[22px] w-[18px]"
                   src="/images/home/location-icon.svg"
@@ -230,7 +230,7 @@ export default function Home() {
                 </span>
               </div>
 
-              <p className="blackcolor paratext mt-[12px] ml-[20px]">
+              <p className="blackcolor paratext mt-[12px] ml-[20px] brnone leftsidezero">
                 Premium villas with quality construction, gated living, and
                 thoughtfully <br /> planned community infrastructure.
               </p>

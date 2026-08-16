@@ -81,11 +81,7 @@ export default function AboutUs() {
       <Header sec={""} />
       <section className="headertop aboutsectionbanner relative w-full min-h-[800px] max-h-[800px] overflow-hidden flex flex-col items-center justify-between">
         <div className="absolute inset-0 -z-10 w-full h-full">
-          <img
-            src="/images/aboutusbg.jpg"
-            alt="Talk to our team"
-            className="object-cover object-center"
-          />
+          <img src="/images/aboutusbg.jpg" alt="Talk to our team" />
         </div>
 
         <div className="pt-5 sm:pt-5 text-center z-10 px-4">
@@ -109,7 +105,7 @@ export default function AboutUs() {
           </h2>
 
           {/* Description Paragraphs */}
-          <div className="space-y-6 max-w-4xl">
+          <div className="space-y-6 max-w-4xl aboutmothermiraaasec">
             <p className="blackcolor paratext ">
               Mother Mira Industries Limited (MMIL) was established in Chennai
               in 1994 as a diversified enterprise with long-term asset
@@ -155,7 +151,7 @@ export default function AboutUs() {
         </StaggerText>
         {/* </TextFadeUp> */}
 
-        <div className="z-10 container w-full max-w-7xl mx-auto space-y-8">
+        <div className="z-10 container w-full max-w-7xl mx-auto space-y-8 aboutslidesection">
           <div
             ref={(el) => (rowsRef.current[0] = el)}
             className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-start"
@@ -315,7 +311,7 @@ export default function AboutUs() {
               ))}
             </div> */}
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 aboutsssssection">
               {strengths.map((item, index) => (
                 <div
                   key={index}
@@ -348,7 +344,7 @@ export default function AboutUs() {
           </div>
 
           {/* Right Side Rounded Image */}
-          <div className="lg:col-span-6 flex justify-center lg:justify-end  ">
+          <div className="lg:col-span-6 flex justify-center lg:justify-end mobilimagee  ">
             <img
               src="/images/about-strength.jpg"
               alt="Mother Mira Villa Street View"

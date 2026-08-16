@@ -5,7 +5,7 @@ export default function ContactPage() {
   return (
     <>
       <Header sec={""} />
-      <section className="relative w-full min-h-[800px] max-h-[800px] overflow-hidden flex flex-col items-center justify-between headertop">
+      <section className="relative w-full min-h-[800px] max-h-[800px] overflow-hidden flex flex-col items-center justify-between headertop aboutsectionbanner ">
         <div className="absolute inset-0 -z-10 w-full h-full">
           <img
             src="/images/contactusbanner.jpg"
@@ -91,7 +91,7 @@ export default function ContactPage() {
           </div>
 
           {/* RIGHT COLUMN: Dark Form Card */}
-          <div className="bg-[#004852] p-8 md:p-10 rounded-3xl shadow-xl">
+          <div className="bg-[#004852] p-8 md:p-10 rounded-3xl shadow-xl formsectioncontact">
             <form className="space-y-5 contactform">
               {/* NAME FIELD */}
               <div>
@@ -157,7 +157,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="relative w-full min-h-[1000px] py-16 px-4 sm:px-8 flex flex-col items-center justify-start overflow-hidden">
+      <section className="relative w-full min-h-[1000px] py-16 px-4 sm:px-8 flex flex-col items-center justify-start overflow-hidden contactbannerr">
         {/* 1. Background Aerial Image */}
         <div className="absolute inset-0 -z-10 w-full h-full">
           <Image

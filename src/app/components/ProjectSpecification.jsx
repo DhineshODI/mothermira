@@ -86,16 +86,16 @@ export default function ProjectSpecifications() {
 
         {/* Specs Box Container */}
         <div className="w-full bg-[#E7DEC0]/60 border border-[#004852]/15 rounded-3xl p-6 sm:p-8 md:p-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center projectsectificationscontain">
             {/* Left Vertical Tabs */}
-            <div className="lg:col-span-2 flex flex-row lg:flex-col gap-4 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 ">
+            <div className="lg:col-span-2 flex flex-row lg:flex-col gap-4 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 mobileeedisplayslider ">
               {tabs.map((tab) => {
                 const isActive = activeTab === tab;
                 return (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`px-3 py-3.5 rounded-xl  semibold addressstyle uppercase transition-all duration-300 text-center whitespace-nowrap cursor-pointer ${
+                    className={`waterspec px-3 py-3.5 rounded-xl  semibold addressstyle uppercase transition-all duration-300 text-center whitespace-nowrap cursor-pointer ${
                       isActive
                         ? "bg-[#004852] text-white shadow-md"
                         : "bg-[#E3DCB9]/50 text-[#004852] hover:bg-[#E3DCB9] border border-[#004852]/10"

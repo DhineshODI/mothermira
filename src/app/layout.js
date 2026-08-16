@@ -1,4 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
+
+import "./cutom.css";
 import "./globals.css";
 import Footer from "./components/Footer";
 import SmoothScroll from "./components/SmoothScroll";

@@ -1,0 +1,3980 @@
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+/* colors */
+
+.greencolor {
+  color: #004852;
+}
+
+.indicocolor {
+  color: #282731;
+}
+
+.blackcolor {
+  color: #1f2933;
+}
+
+/* colors */
+
+/* Fonts */
+
+@font-face {
+  font-family: "Neue Haas Grotesk thin";
+  src: url("/fonts/NeueHaasGrotDisp-25XThin-Trial.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk normal semibold";
+  src: url("/fonts/NeueHaasGrotDisp-65Medium-Trial.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Bold";
+  src: url("/fonts/NeueHaasGrotDisp-75Bold-Trial.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Bold thin 35";
+  src: url("/fonts/NeueHaasGrotDisp-35Thin-Trial.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Paragraph";
+  src: url("/fonts/NeueHaasGrotDisp-55Roman-Trial.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueHaasGrotDisp-95Black-Trial";
+  src: url("/fonts/NeueHaasGrotDisp-95Black-Trial.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fonts */
+
+/* Container */
+
+/* Large screens: 1600px and up */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1324px;
+  }
+}
+
+/* Between 1300px and 1599px */
+@media (max-width: 1600px) and (min-width: 1400px) {
+  .container {
+    max-width: 1250px;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 1250px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+
+/* Between 1100px and 1299px */
+@media (max-width: 1250px) and (min-width: 1100px) {
+  .container {
+    max-width: 950px;
+  }
+}
+
+/* Between 900px and 1099px */
+@media (max-width: 1099px) and (min-width: 900px) {
+  .container {
+    max-width: 850px;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 767px) {
+  .container {
+    max-width: 700px;
+  }
+}
+
+/* Tablets: 600px to 899px */
+@media (max-width: 767px) and (min-width: 600px) {
+  .container {
+    max-width: 560px;
+  }
+}
+
+/* Mobile: below 600px */
+@media (max-width: 599px) {
+  .container {
+    max-width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Container */
+
+body {
+  font-family: "Neue Haas Grotesk", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.thinfont {
+  font-family: "Neue Haas Grotesk thin";
+}
+
+.mainheading {
+  font-family: "Neue Haas Grotesk thin";
+  font-size: 70px;
+  line-height: 80px;
+}
+
+.mainheading strong {
+  font-family: "Neue Haas Grotesk Bold";
+}
+
+.thirdheading {
+  font-family: "Neue Haas Grotesk thin";
+  font-size: 30px;
+}
+
+.thirdheading strong {
+  font-family: "Neue Haas Grotesk Bold";
+}
+
+.fourheading {
+  font-family: Neue Haas Grotesk normal semibold;
+  font-size: 60px;
+  line-height: 70px;
+}
+
+.secondheading {
+  font-family: "Neue Haas Grotesk thin";
+  font-weight: 400;
+  font-size: 90px;
+}
+.secondheading strong {
+  font-family: "Neue Haas Grotesk Bold";
+}
+
+.fifththheading {
+  font-family: Neue Haas Grotesk Bold;
+  font-size: 120px;
+  font-weight: 400;
+  line-height: 110px;
+}
+.fourthheading strong {
+  font-family: "Neue Haas Grotesk Bold";
+}
+
+.subheadingtext {
+  font-family: "Neue Haas Grotesk Bold thin 35";
+  font-size: 32px;
+}
+
+.subheadingtext strong {
+  font-family: "Neue Haas Grotesk Bold";
+}
+
+.paratext {
+  font-family: "Neue Haas Grotesk Paragraph";
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.boldfont {
+  font-family: "Neue Haas Grotesk Bold";
+}
+
+.semibold {
+  font-family: "Neue Haas Grotesk normal semibold";
+}
+
+.hunderpixel {
+  font-family: Neue Haas Grotesk Bold;
+  font-size: 100px;
+  line-height: 100%;
+}
+
+.addressstyle {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.adressbox {
+  padding: 50px;
+}
+
+.contactform input {
+  height: 60px;
+}
+
+.contactform input::placeholder,
+.contactform textarea::placeholder {
+  font-family: "Neue Haas Grotesk Paragraph";
+  font-size: 18px;
+  color: #1f2933;
+  letter-spacing: 0.5px;
+}
+
+.contactformsections {
+  padding-top: 100px;
+  padding-bottom: 0;
+}
+
+/* footer */
+
+.footerbgsection {
+  height: 900px;
+}
+
+.salesfooterrr {
+  font-size: 48px;
+  line-height: 55px;
+}
+
+.footerrimagefirst {
+  width: 45%;
+}
+.footerrimageSecondd {
+  width: 55%;
+  padding-top: 100px;
+  padding-left: 100px;
+  justify-content: center;
+  gap: 30px;
+}
+
+.copyrightrightsection {
+  margin-top: 50px;
+  padding-top: 55px;
+}
+/* footer */
+
+/* about-us */
+
+/* padding-top: 200px;
+height: 1600px;
+background-color: #ede8d0; */
+
+.aboumiraaboutsection {
+  background-color: #ede8d0;
+  height: 1635px;
+}
+
+.aboutmiraimagepositionn {
+  top: 100px;
+  z-index: 10;
+}
+
+.aboutmiraimagepositionn img {
+  width: 100%;
+}
+
+.builtontrustpara {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.mainheading.missionclasss {
+  font-size: 45px;
+  line-height: 50px;
+}
+
+.missionsecid {
+  padding-top: 20px;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.foundersvoicetext {
+  color: #004852;
+  opacity: 0.3;
+  font-family: NeueHaasGrotDisp-95Black-Trial;
+  font-size: 150px;
+  line-height: 125px;
+  padding-top: 70px;
+}
+
+.webelivepremium {
+  font-family: "Neue Haas Grotesk Bold thin 35";
+  font-size: 40px;
+  line-height: 46px;
+  margin-bottom: 5px;
+}
+
+.accesssible {
+  font-family: Neue Haas Grotesk Bold;
+  font-size: 70px;
+  margin-bottom: 30px;
+  line-height: 75px;
+}
+
+.foundervoicesubtext {
+  font-family: Neue Haas Grotesk normal semibold;
+  font-size: 28px;
+  line-height: 30px;
+}
+
+.landingtextaboutpage {
+  margin-top: 130px;
+}
+
+.apastaphy {
+  position: relative;
+}
+
+.apastaphy::before {
+  content: "";
+  background-image: url("/images/abouticon.png");
+  width: 73px;
+  height: 60px;
+  position: absolute;
+  left: -102px;
+  top: 20px;
+}
+
+.founderwithd {
+  width: 83%;
+}
+/* about-us */
+
+/* ourprojects */
+
+.herobannerheading {
+  font-family: "Neue Haas Grotesk Bold";
+  font-size: 45px;
+  line-height: 50px;
+}
+
+.subheadingherobanner {
+  font-family: "Neue Haas Grotesk Bold";
+  font-size: 24px;
+}
+
+.ourprojectsss {
+  background-color: #fff;
+  padding: 3px 8px 1px 8px;
+}
+
+.premiumvillaamain {
+  font-family: Neue Haas Grotesk Bold;
+  font-size: 40px;
+  line-height: 46px;
+}
+
+.buttonpading {
+  padding: 7px 28px 6px 28px;
+}
+
+.ourprojectsimageposition {
+  height: 500px;
+  width: 930px;
+}
+
+.imagedivposition {
+  margin-left: -25px;
+}
+
+.mothermiraourproject {
+  font-family: Neue Haas Grotesk thin;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.motehrmiratextour {
+  margin-left: 15%;
+  margin-bottom: 1.7%;
+}
+
+.motehrmirabuttonour {
+  margin-left: 11%;
+}
+
+.fiftypixel {
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.twentyeightpixel {
+  font-size: 28px;
+  line-height: 30px;
+}
+
+.slimfontthin {
+  font-family: "Neue Haas Grotesk Bold thin 35";
+}
+
+.maxwidthcontent {
+  width: max-content;
+  padding-left: 31%;
+  padding-top: 23%;
+}
+
+.twentyfourpixel {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.paragraphfont {
+  font-family: "Neue Haas Grotesk Paragraph";
+}
+
+.rightsidecolumnlinee {
+  position: relative;
+}
+
+.rightsidecolumnlinee::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: 50%;
+  background-color: #0048523d;
+}
+
+/* .lastborderr:nth-of-type(4),
+.lastborderr:nth-of-type(7) {
+  border: none;
+} */
+
+.imagecordnerr {
+  padding-left: 5.5%;
+}
+
+.imagebordererer {
+  position: relative;
+}
+
+.imagebordererer::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: -1%;
+  background-color: #0048523d;
+}
+
+/* Project Detail */
+
+.proejectdetailbannerer {
+  background-image: url("/images/project-detail/windpage-bg.jpg");
+  height: 1420px;
+}
+
+/* Project Detail */
+
+.imageesectionhome img {
+  border: 7px solid #c9c8b3;
+  border-radius: 20px;
+  height: 325px;
+  width: 90%;
+}
+
+.projecthomebannersec {
+  background-color: #eee8d0;
+  background-image: url("/images/home/homebgproject.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 985px;
+  padding-top: 0;
+}
+
+.contenthomepagesection {
+  justify-content: flex-start;
+  display: flex;
+  margin-top: 12%;
+  margin-left: 48%;
+}
+
+.detailsectionproject {
+  position: absolute;
+  left: 67%;
+  top: 71%;
+}
+
+.leftsidesectioncontent {
+  width: max-content;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  left: 33%;
+  top: 71%;
+}
+
+.premisumvillasend {
+  text-align: end;
+  width: 30%;
+  margin-top: 10px;
+}
+
+.perfecthomefont {
+  font-family: Neue Haas Grotesk Bold;
+  font-size: 140px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.imagecontenttttt {
+  top: 130px;
+}
+
+.buildontrusthomepage {
+  background-color: #eee8d0;
+  background-image: url("/images/home/homepageintrobg.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1400px;
+}
+
+.builtttonalwayshome {
+  font-size: 160px;
+  line-height: 160px;
+  padding-top: 130px;
+}
+
+.borderbuttonexplore::before {
+  content: "";
+  background-color: #b4b7a3;
+
+  width: 38%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.borderbuttonexplore::after {
+  content: "";
+  background-color: #b4b7a3;
+
+  width: 38%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.borderbuttonexplore .buttonpading {
+  padding: 10px 28px 10px;
+}
+
+.thitytwoexper {
+  font-size: 315px;
+  line-height: 100%;
+}
+
+.plusfont {
+  font-size: 50px;
+}
+
+.butoonconteebd {
+  margin-top: 50px;
+}
+
+.boxcardss {
+  height: 250px;
+  padding-bottom: 40px;
+}
+
+.videosectionz {
+  height: 1100px;
+}
+
+.videobanenrrcontent {
+  margin-bottom: 8%;
+}
+
+/* testimonial section */
+
+.testimonialsection {
+  position: relative;
+}
+
+.testimonial-thumb-slider .slick-list {
+  padding: 10px 0 !important;
+  overflow: hidden;
+}
+
+.testimonial-thumb-slider .slick-slide {
+  outline: none;
+}
+
+.testimonial-thumb-slider .slick-current .thumbnail-card {
+  border-color: #0c3835 !important;
+  border: 5px solid;
+}
+
+.testimonial-thumb-slider .slick-slide:not(.slick-current) .thumbnail-card {
+  opacity: 0.5;
+  filter: grayscale(40%);
+  transition: all 0.3s ease;
+}
+
+.testimonial-thumb-slider .slick-slide:hover .thumbnail-card {
+  opacity: 0.9;
+  filter: grayscale(0%);
+}
+
+.testimonial-main-slider {
+  position: relative;
+}
+
+.testimonial-main-slider .slick-dots {
+  z-index: 20;
+  flex-direction: column;
+  gap: 14px;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  left: auto;
+  right: -25px;
+  transform: translateY(-50%);
+  display: flex !important;
+  justify-content: center;
+}
+
+.testimonial-main-slider .slick-dots li {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0;
+}
+
+.testimonial-main-slider .slick-dots li button {
+  background-color: #0c383533;
+  border-radius: 2px;
+  width: 4px;
+  height: 18px;
+  padding: 0;
+  font-size: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.testimonial-main-slider .slick-dots li button:before {
+  display: none;
+}
+
+.testimonial-main-slider .slick-dots li.slick-active button {
+  background-color: #0c3835;
+}
+
+.testimonialsection {
+  background-color: #eee8d0;
+  background-image: url("/images/testimonialbanner.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1038px;
+  position: relative;
+}
+
+.tesimonialslidersection {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 6.2%;
+}
+
+.imagetestisection1 {
+  background-color: #fff;
+  border: 10px solid #dedac9;
+  border: 10px solid #1f293329;
+  width: 17%;
+  height: 500px;
+  padding: 15px 5px;
+  overflow: hidden;
+}
+.imagetestisection2 {
+  width: 62%;
+  background-color: #fff;
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.imagetestisection2::before {
+  content: "";
+  z-index: 0;
+  background-image: url("/images/bglayertestimonial.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 450px;
+  height: 288px;
+  position: absolute;
+  top: -36px;
+  right: 13px;
+}
+
+.imagetestisection2 > div {
+  border: 10px solid #eee8d0cc;
+  border: 10px solid #dedac9;
+  border: 10px solid #1f293329;
+}
+
+.testimonialcontent {
+  min-height: 220px;
+  padding-top: 35px;
+  padding-right: 40px;
+  font-size: 35px;
+  line-height: 40px;
+  margin-bottom: 45px;
+}
+
+.imagesizetes {
+  border-radius: 30px;
+}
+
+.imagesizetes img {
+  width: 100%;
+}
+
+/* testimonial section */
+
+/* header */
+
+.headerimageesection {
+  height: 90px;
+  transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stickyheader .headerimageesection {
+  height: 60px;
+}
+
+.stickyheader {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.5s ease;
+  background-color: #ede8d0 !important;
+}
+
+.headerrrrcontainer {
+  padding-right: 20px;
+}
+
+.headdersectionmain {
+  background: transparent;
+  position: fixed;
+}
+
+.stickyheader.headdersectionmain {
+  z-index: 15000;
+}
+
+.headertop {
+  padding-top: 120px;
+}
+
+.headerbuttondiv {
+  padding: 8px 25px;
+}
+
+.headerbuttondiv:hover {
+  /* background-color: #004852; */
+  color: #ede8d0;
+  border-radius: 50px;
+}
+
+.transperantBg .headerbuttondiv {
+  color: #fff;
+}
+
+.transperantBg .headerbuttondiv {
+  color: #fff;
+}
+
+.transperantBg .headerbuttondiv:hover {
+  background-color: #004852;
+  color: #ede8d0;
+}
+
+.stickyheader.transperantBg .headerbuttondiv {
+  color: #000;
+}
+
+.stickyheader.transperantBg .headerbuttondiv:hover {
+  color: #ede8d0;
+}
+
+/* button-animationnnn */
+
+.headerbuttondiv {
+  padding: 8px 25px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 50px;
+}
+
+.headerbuttondiv::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #004852;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.headerbuttondiv:hover {
+  /* background-color: #004852; */
+  color: #ede8d0;
+  border-radius: 50px;
+}
+
+.headerbuttondiv:hover::before {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+}
+
+.transperantBg .headerbuttondiv {
+  color: #fff;
+}
+
+.transperantBg .headerbuttondiv:hover {
+  background-color: transparent;
+  color: #ede8d0;
+}
+
+.stickyheader.transperantBg .headerbuttondiv {
+  color: #000;
+}
+
+.stickyheader.transperantBg .headerbuttondiv:hover {
+  color: #ede8d0;
+}
+
+.headerbuttondiv.active::before {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+}
+
+.headerbuttondiv.active {
+  color: #ede8d0;
+}
+.stickyheader.transperantBg .headerbuttondiv.active {
+  color: #ede8d0;
+}
+/* button-animationsss */
+
+.project-button {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border: none;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.project-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #0c3835;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition:
+    width 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+    height 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 0.3s ease;
+}
+
+.project-button:hover {
+  background-color: #004852;
+  color: #fff;
+}
+
+.project-button:hover::before {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+}
+
+.project-button:active {
+  transform: scale(0.95);
+}
+
+.aboutslidesection {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+@media (max-width: 1900px) and (min-width: 1800px) {
+  /* fonts-style */
+
+  .mainheading {
+    font-size: 58px;
+    line-height: 68px;
+  }
+
+  .subheadingtext {
+    font-size: 30px;
+    line-height: 100%;
+  }
+
+  .paratext {
+    font-size: 17px;
+    line-height: 27px;
+  }
+
+  .thirdheading {
+    font-size: 28px;
+    line-height: 100%;
+  }
+
+  .fifththheading {
+    font-size: 100px;
+    line-height: 95px;
+  }
+  .salesfooterrr {
+    font-size: 45px;
+    line-height: 53px;
+  }
+
+  .herobannerheading {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .subheadingherobanner {
+    font-size: 22px;
+  }
+
+  .mothermiraourproject {
+    font-size: 37px;
+    line-height: 37px;
+  }
+
+  .twentyfourpixel {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .premiumvillaamain {
+    font-size: 38px;
+    line-height: 40px;
+  }
+
+  .fiftypixel {
+    font-size: 46px;
+    line-height: 46px;
+  }
+
+  .hunderpixel {
+    font-size: 88px;
+    line-height: 100%;
+  }
+
+  .builtontrustpara {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .secondheading {
+    font-size: 80px;
+    line-height: 100%;
+  }
+
+  .twentyeightpixel {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .foundervoicesubtext {
+    font-family: Neue Haas Grotesk normal semibold;
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .addressstyle {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .mainheading.missionclasss {
+    font-size: 44px;
+    line-height: 46px;
+  }
+
+  .perfecthomefont {
+    font-size: 115px;
+    line-height: 100%;
+  }
+
+  .thitytwoexper {
+    font-size: 280px;
+    line-height: 100%;
+  }
+
+  .foundersvoicetext {
+    padding-top: 50px;
+    font-size: 128px;
+    line-height: 109px;
+  }
+
+  .builtttonalwayshome {
+    padding-top: 90px;
+    font-size: 145px;
+    line-height: 160px;
+  }
+
+  /* fonts-style */
+
+  .testimonialsection {
+    height: 950px;
+  }
+
+  .maxwidthcontent {
+    padding-left: 0%;
+  }
+
+  .footerrimageSecondd {
+    width: 55%;
+    padding-left: 74px;
+  }
+
+  .projectdetailabannerrr {
+    height: 700px;
+  }
+
+  .aboutsectionbanner {
+    min-height: 785px;
+  }
+
+  .aboumiraaboutsection {
+    height: 1500px;
+  }
+
+  .foundervoicesection {
+    min-height: 845px;
+  }
+}
+
+@media (max-width: 1800px) and (min-width: 1600px) {
+  /* fonts-style */
+
+  .mainheading {
+    font-size: 58px;
+    line-height: 68px;
+  }
+
+  .subheadingtext {
+    font-size: 30px;
+    line-height: 100%;
+  }
+
+  .paratext {
+    font-size: 17px;
+    line-height: 27px;
+  }
+
+  .thirdheading {
+    font-size: 28px;
+    line-height: 100%;
+  }
+
+  .fifththheading {
+    font-size: 100px;
+    line-height: 95px;
+  }
+  .salesfooterrr {
+    font-size: 45px;
+    line-height: 53px;
+  }
+
+  .herobannerheading {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .subheadingherobanner {
+    font-size: 22px;
+  }
+
+  .mothermiraourproject {
+    font-size: 37px;
+    line-height: 37px;
+  }
+
+  .twentyfourpixel {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .premiumvillaamain {
+    font-size: 38px;
+    line-height: 40px;
+  }
+
+  .fiftypixel {
+    font-size: 46px;
+    line-height: 46px;
+  }
+
+  .hunderpixel {
+    font-size: 88px;
+    line-height: 100%;
+  }
+
+  .builtontrustpara {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .secondheading {
+    font-size: 80px;
+    line-height: 100%;
+  }
+
+  .twentyeightpixel {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .foundervoicesubtext {
+    font-family: Neue Haas Grotesk normal semibold;
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .addressstyle {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .mainheading.missionclasss {
+    font-size: 44px;
+    line-height: 46px;
+  }
+
+  .perfecthomefont {
+    font-size: 115px;
+    line-height: 100%;
+  }
+
+  .thitytwoexper {
+    font-size: 280px;
+    line-height: 100%;
+  }
+
+  .foundersvoicetext {
+    padding-top: 50px;
+    font-size: 128px;
+    line-height: 109px;
+  }
+
+  .builtttonalwayshome {
+    padding-top: 80px;
+    font-size: 120px;
+    line-height: 125px;
+  }
+
+  /* fonts-style */
+
+  .testimonialsection {
+    height: 950px;
+  }
+
+  .maxwidthcontent {
+    padding-left: 0%;
+  }
+
+  .footerrimageSecondd {
+    width: 55%;
+    padding-left: 74px;
+  }
+
+  .projectdetailabannerrr {
+    height: 700px;
+  }
+
+  .aboutsectionbanner {
+    min-height: 785px;
+  }
+
+  .aboumiraaboutsection {
+    height: 1500px;
+  }
+
+  .foundervoicesection {
+    min-height: 845px;
+  }
+}
+
+@media (max-width: 1600px) and (min-width: 1400px) {
+  /* fonts-style */
+
+  .mainheading {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .subheadingtext {
+    font-size: 30px;
+    line-height: 100%;
+  }
+
+  .imagecontenttttt {
+    top: 87px;
+  }
+
+  .headdersectionmain {
+    padding-top: 2%;
+    padding-bottom: 6px;
+  }
+
+  .stickyheader.headdersectionmain {
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+  .paratext {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .imageesectionhome img {
+    height: 295px;
+  }
+  .thirdheading {
+    font-size: 28px;
+    line-height: 100%;
+  }
+
+  .fifththheading {
+    font-size: 84px;
+    line-height: 90px;
+  }
+  .salesfooterrr {
+    font-size: 35px;
+    line-height: 46px;
+  }
+
+  .testimonialcontent {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .fourheading {
+    font-size: 50px;
+    line-height: 58px;
+  }
+
+  .imagetestisection1 {
+    height: 473px;
+  }
+
+  .videosectionz {
+    height: 900px;
+  }
+
+  .aboutslidesection {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .herobannerheading {
+    font-size: 38px;
+    line-height: 53px;
+  }
+
+  .subheadingherobanner {
+    font-size: 20px;
+  }
+
+  .mothermiraourproject {
+    font-size: 32px;
+    line-height: 34px;
+  }
+
+  .twentyfourpixel {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .premiumvillaamain {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .fiftypixel {
+    font-size: 43px;
+    line-height: 44px;
+  }
+
+  .hunderpixel {
+    font-size: 80px;
+    line-height: 100%;
+  }
+
+  .builtontrustpara {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .secondheading {
+    font-size: 63px;
+    line-height: 100%;
+  }
+
+  .twentyeightpixel {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .foundervoicesubtext {
+    font-family: Neue Haas Grotesk normal semibold;
+    font-size: 22px;
+    line-height: 24px;
+  }
+
+  .addressstyle {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .mainheading.missionclasss {
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .perfecthomefont {
+    font-size: 100px;
+    line-height: 100%;
+  }
+
+  .thitytwoexper {
+    font-size: 210px;
+    line-height: 100%;
+  }
+
+  .foundersvoicetext {
+    padding-top: 50px;
+    font-size: 125px;
+    line-height: 95px;
+  }
+
+  .builtttonalwayshome {
+    padding-top: 80px;
+    font-size: 102px;
+    line-height: 100px;
+  }
+
+  /* fonts-style */
+
+  .testimonialsection {
+    height: 900px;
+    background-size: cover;
+  }
+
+  .maxwidthcontent {
+    padding-left: 0%;
+    padding-top: 10%;
+  }
+
+  .footerrimageSecondd {
+    width: 55%;
+    padding-left: 55px;
+  }
+
+  .projectdetailabannerrr {
+    height: 600px;
+  }
+  .motehrmirabuttonour {
+    margin-left: 9%;
+    padding-top: 15px;
+  }
+  .projecthomebannersec {
+    height: 800px;
+    background-size: cover;
+  }
+
+  .aboutsectionbanner {
+    min-height: 700px;
+    max-height: 700px;
+  }
+  .aboutsectionbanner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .projectbannercontainer {
+    position: relative;
+    height: 100%;
+  }
+
+  .leftsidesectioncontent {
+    top: 58%;
+    left: 30%;
+  }
+
+  .contenthomepagesection {
+    margin-top: 10%;
+    margin-left: 49%;
+    display: flex;
+  }
+
+  .keystrengthsection {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .keyssectionbg {
+    padding-bottom: 20px;
+  }
+
+  .detailsectionproject {
+    top: 58%;
+    left: 73%;
+  }
+
+  .buildontrusthomepage {
+    height: 1100px;
+  }
+  .aboumiraaboutsection {
+    background-color: #ede8d0;
+    height: 1300px;
+  }
+
+  .foundervoicesection {
+    min-height: 780px;
+  }
+
+  .missionsecid {
+    height: 800px !important;
+    max-height: 800px !important;
+    min-height: 800px !important;
+  }
+  .missionsecid img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .foundervoicesection img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .landingtextaboutpage {
+    margin-top: 100px;
+    margin-left: 13%;
+  }
+
+  .aboutsssssection {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .boxcardss {
+    height: 220px;
+    padding-bottom: 30px;
+  }
+
+  .detailpageherobg {
+    height: 600px;
+  }
+
+  .detailpageherobg .container {
+    padding-bottom: 65px;
+  }
+
+  .ourprojectsimageposition {
+    width: 785px;
+    height: 420px;
+  }
+
+  .contactformsections {
+    padding-top: 75px;
+  }
+
+  .contactform input {
+    height: 50px;
+  }
+
+  .contactform input::placeholder,
+  .contactform textarea::placeholder {
+    font-size: 17px;
+  }
+
+  .headerimageesection {
+    height: 70px;
+  }
+
+  .copyrightrightsection {
+    margin-top: 20px;
+    padding-top: 40px;
+  }
+
+  .aboutmothermiraaasec {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 1250px) {
+  /* fonts-style */
+
+  .mainheading {
+    font-size: 43px;
+    line-height: 55px;
+  }
+
+  .subheadingtext {
+    font-size: 30px;
+    line-height: 100%;
+  }
+
+  .imagecontenttttt {
+    top: 87px;
+  }
+
+  .headdersectionmain {
+    padding-top: 2%;
+    padding-bottom: 6px;
+  }
+
+  .stickyheader.headdersectionmain {
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+  .paratext {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .imageesectionhome img {
+    height: 280px;
+  }
+  .thirdheading {
+    font-size: 28px;
+    line-height: 100%;
+  }
+
+  .fifththheading {
+    font-size: 70px;
+    line-height: 80px;
+  }
+  .salesfooterrr {
+    font-size: 35px;
+    line-height: 46px;
+  }
+
+  .testimonialcontent {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .fourheading {
+    font-size: 45px;
+    line-height: 55px;
+  }
+
+  .imagetestisection1 {
+    height: 473px;
+  }
+
+  .videosectionz {
+    height: 800px;
+  }
+
+  .aboutslidesection {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .herobannerheading {
+    font-size: 38px;
+    line-height: 53px;
+  }
+
+  .subheadingherobanner {
+    font-size: 20px;
+  }
+
+  .mothermiraourproject {
+    font-size: 29px;
+    line-height: 28px;
+  }
+
+  .twentyfourpixel {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .premiumvillaamain {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .fiftypixel {
+    font-size: 39px;
+    line-height: 41px;
+  }
+
+  .hunderpixel {
+    font-size: 80px;
+    line-height: 100%;
+  }
+
+  .builtontrustpara {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .secondheading {
+    font-size: 63px;
+    line-height: 100%;
+  }
+
+  .twentyeightpixel {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .foundervoicesubtext {
+    font-family: Neue Haas Grotesk normal semibold;
+    font-size: 22px;
+    line-height: 24px;
+  }
+
+  .addressstyle {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .mainheading.missionclasss {
+    font-size: 37px;
+    line-height: 46px;
+  }
+
+  .perfecthomefont {
+    font-size: 100px;
+    line-height: 100%;
+  }
+
+  .thitytwoexper {
+    font-size: 210px;
+    line-height: 100%;
+  }
+
+  .foundersvoicetext {
+    padding-top: 51px;
+    font-size: 115px;
+    line-height: 90px;
+  }
+
+  .builtttonalwayshome {
+    padding-top: 80px;
+    font-size: 102px;
+    line-height: 100px;
+  }
+
+  /* fonts-style */
+
+  .testimonialsection {
+    height: 900px;
+    background-size: cover;
+  }
+
+  .maxwidthcontent {
+    padding-top: 10%;
+    padding-left: 0%;
+    justify-content: flex-start;
+  }
+
+  .footerrimageSecondd {
+    width: 55%;
+    padding-left: 55px;
+  }
+
+  .projectdetailabannerrr {
+    height: 600px;
+  }
+  .motehrmirabuttonour {
+    margin-left: 14%;
+    padding-top: 15px;
+    width: max-content;
+  }
+
+  .motehrmiratextour {
+    margin-bottom: 3.7%;
+    margin-left: 11%;
+  }
+  .projecthomebannersec {
+    height: 800px;
+    background-size: cover;
+  }
+
+  .aboutsectionbanner {
+    min-height: 600px;
+    max-height: 600px;
+  }
+  .aboutsectionbanner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .projectbannercontainer {
+    position: relative;
+    height: 100%;
+  }
+
+  .leftsidesectioncontent {
+    top: 60%;
+    left: 28%;
+  }
+
+  .contenthomepagesection {
+    margin-top: 10%;
+    margin-left: 49%;
+    display: flex;
+  }
+
+  .keystrengthsection {
+    padding-left: 9%;
+    padding-right: 5%;
+  }
+
+  .keyssectionbg {
+    padding-bottom: 20px;
+  }
+
+  .detailsectionproject {
+    top: 60%;
+    left: 75%;
+  }
+
+  .buildontrusthomepage {
+    height: 1100px;
+  }
+  .aboumiraaboutsection {
+    height: 1100px;
+  }
+
+  .foundervoicesection {
+    min-height: 780px;
+  }
+
+  .missionsecid {
+    height: 800px !important;
+    max-height: 800px !important;
+    min-height: 800px !important;
+  }
+  .missionsecid img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .foundervoicesection img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .landingtextaboutpage {
+    margin-top: 100px;
+    margin-left: 13%;
+  }
+
+  .aboutsssssection {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .boxcardss {
+    height: 220px;
+    padding-bottom: 30px;
+  }
+
+  .detailpageherobg {
+    height: 550px;
+  }
+
+  .detailpageherobg .container {
+    padding-bottom: 65px;
+  }
+
+  .ourprojectsimageposition {
+    width: 640px;
+    height: 345px;
+  }
+
+  .contactformsections {
+    padding-top: 75px;
+  }
+
+  .contactform input {
+    height: 47px;
+    border-radius: 10px;
+  }
+
+  .contactform input::placeholder,
+  .contactform textarea::placeholder {
+    font-size: 16px;
+  }
+
+  .headerimageesection {
+    height: 70px;
+  }
+
+  .copyrightrightsection {
+    margin-top: 20px;
+    padding-top: 40px;
+  }
+
+  .aboutmothermiraaasec {
+    margin-top: 30px;
+  }
+
+  .accesssible {
+    margin-bottom: 10px;
+    font-size: 57px;
+    line-height: 63px;
+  }
+
+  .webelivepremium {
+    margin-top: -16px;
+    margin-bottom: 10px;
+    font-size: 29px;
+    line-height: 34px;
+  }
+
+  .apastaphy:before {
+    width: 61px;
+    height: 45px;
+    top: 18px;
+    left: -81px;
+    background-size: cover;
+  }
+  .footerbgsection {
+    height: 770px;
+  }
+
+  .contactbannerr {
+    min-height: 900px;
+  }
+}
+
+@media (max-width: 1250px) and (min-width: 1100px) {
+  /* fonts-style */
+
+  .mainheading {
+    font-size: 43px;
+    line-height: 55px;
+  }
+
+  .subheadingtext {
+    font-size: 27px;
+    line-height: 120%;
+  }
+
+  .imagecontenttttt {
+    top: 63px;
+  }
+
+  .headdersectionmain {
+    padding-top: 2%;
+    padding-bottom: 6px;
+  }
+
+  .stickyheader.headdersectionmain {
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+  .paratext {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .imageesectionhome img {
+    height: 250px;
+  }
+  .thirdheading {
+    font-size: 25px;
+    line-height: 100%;
+  }
+
+  .fifththheading {
+    font-size: 63px;
+    line-height: 71px;
+  }
+  .salesfooterrr {
+    font-size: 35px;
+    line-height: 46px;
+  }
+
+  .testimonialcontent {
+    font-size: 24px;
+    line-height: 30px;
+    padding-top: 0;
+    min-height: 170px;
+  }
+
+  .fourheading {
+    font-size: 39px;
+    line-height: 48px;
+  }
+
+  .imagetestisection1 {
+    height: 430px;
+  }
+
+  .videosectionz {
+    height: 800px;
+  }
+
+  .aboutslidesection {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .herobannerheading {
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  .subheadingherobanner {
+    font-size: 20px;
+  }
+
+  .mothermiraourproject {
+    font-size: 29px;
+    line-height: 28px;
+  }
+
+  .twentyfourpixel {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .premiumvillaamain {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .fiftypixel {
+    font-size: 37px;
+    line-height: 38px;
+  }
+
+  .hunderpixel {
+    font-size: 70px;
+    line-height: 100%;
+  }
+
+  .builtontrustpara {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .secondheading {
+    font-size: 63px;
+    line-height: 100%;
+  }
+
+  .twentyeightpixel {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .foundervoicesubtext {
+    font-family: Neue Haas Grotesk normal semibold;
+    font-size: 19px;
+    line-height: 20px;
+  }
+
+  .addressstyle {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .mainheading.missionclasss {
+    font-size: 34px;
+    line-height: 46px;
+  }
+
+  .perfecthomefont {
+    font-size: 80px;
+    line-height: 100%;
+  }
+
+  .thitytwoexper {
+    font-size: 195px;
+    line-height: 100%;
+  }
+
+  .foundersvoicetext {
+    padding-top: 50px;
+    font-size: 96px;
+    line-height: 90px;
+  }
+
+  .builtttonalwayshome {
+    padding-top: 80px;
+    font-size: 95px;
+    line-height: 95px;
+  }
+
+  /* fonts-style */
+
+  .testimonialsection {
+    background-size: contain;
+    height: 800px;
+    background-position: bottom;
+  }
+
+  .maxwidthcontent {
+    justify-content: flex-start;
+    padding-top: 8%;
+    padding-left: 0%;
+  }
+
+  .footerrimageSecondd {
+    width: 55%;
+    padding-left: 55px;
+  }
+
+  .projectdetailabannerrr {
+    height: 600px;
+  }
+  .motehrmirabuttonour {
+    width: max-content;
+    margin-left: 8%;
+    padding-top: 15px;
+  }
+
+  .motehrmiratextour {
+    margin-bottom: 3.7%;
+    margin-left: 7%;
+  }
+  .projecthomebannersec {
+    background-size: cover;
+    height: 700px;
+  }
+
+  .aboutsectionbanner {
+    min-height: 600px;
+    max-height: 600px;
+  }
+  .aboutsectionbanner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .projectbannercontainer {
+    position: relative;
+    height: 100%;
+  }
+
+  .leftsidesectioncontent {
+    top: 69%;
+    left: 21%;
+  }
+
+  .contenthomepagesection {
+    margin-top: 4%;
+    margin-left: 49%;
+    display: flex;
+  }
+
+  .keystrengthsection {
+    padding-left: 9%;
+    padding-right: 5%;
+  }
+
+  .keyssectionbg {
+    padding-bottom: 20px;
+  }
+
+  .detailsectionproject {
+    top: 69%;
+    left: 76%;
+  }
+
+  .buildontrusthomepage {
+    height: 1100px;
+  }
+  .aboumiraaboutsection {
+    height: 1100px;
+  }
+
+  .foundervoicesection {
+    min-height: 725px;
+  }
+
+  .missionsecid {
+    height: 800px !important;
+    max-height: 800px !important;
+    min-height: 800px !important;
+  }
+  .missionsecid img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .foundervoicesection img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .landingtextaboutpage {
+    margin-top: 100px;
+    margin-left: 11%;
+  }
+
+  .aboutsssssection {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: -20px;
+  }
+
+  .boxcardss {
+    height: 190px;
+    padding-bottom: 30px;
+    justify-content: space-around;
+  }
+
+  .detailpageherobg {
+    height: 550px;
+  }
+
+  .detailpageherobg .container {
+    padding-bottom: 65px;
+  }
+
+  .ourprojectsimageposition {
+    width: 570px;
+    height: 320px;
+  }
+
+  .contactformsections {
+    padding-top: 75px;
+  }
+
+  .contactform input {
+    height: 47px;
+    border-radius: 10px;
+  }
+
+  .contactform input::placeholder,
+  .contactform textarea::placeholder {
+    font-size: 16px;
+  }
+
+  .headerimageesection {
+    height: 70px;
+  }
+
+  .copyrightrightsection {
+    margin-top: 20px;
+    padding-top: 40px;
+  }
+
+  .aboutmothermiraaasec {
+    margin-top: 30px;
+  }
+
+  .accesssible {
+    margin-bottom: 10px;
+    font-size: 57px;
+    line-height: 63px;
+  }
+
+  .webelivepremium {
+    margin-top: -16px;
+    margin-bottom: 10px;
+    font-size: 29px;
+    line-height: 34px;
+  }
+
+  .apastaphy:before {
+    width: 61px;
+    height: 45px;
+    top: 18px;
+    left: -81px;
+    background-size: cover;
+  }
+  .footerbgsection {
+    height: 750px;
+  }
+
+  .contactbannerr {
+    min-height: 800px;
+  }
+
+  .headertop {
+    padding-top: 100px;
+  }
+
+  .proejectdetailbannerer {
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 1000px;
+  }
+
+  .gridaminiteddd {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .gridaminiteddd .group {
+    min-height: 250px;
+  }
+
+  .hoverranimationnn img {
+    width: 157px;
+  }
+
+  .waterspec {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 1099px) and (min-width: 900px) {
+  /* fonts-style */
+
+  .mainheading {
+    font-size: 43px;
+    line-height: 55px;
+  }
+
+  .subheadingtext {
+    font-size: 25px;
+    line-height: 120%;
+  }
+
+  .imagecontenttttt {
+    top: 70px;
+  }
+
+  .headdersectionmain {
+    padding-top: 2%;
+    padding-bottom: 6px;
+    padding-right: 1%;
+    padding-left: 4%;
+  }
+
+  .stickyheader.headdersectionmain {
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+  .paratext {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .imageesectionhome img {
+    height: 240px;
+  }
+  .thirdheading {
+    font-size: 25px;
+    line-height: 100%;
+  }
+
+  .fifththheading {
+    font-size: 63px;
+    line-height: 71px;
+  }
+  .salesfooterrr {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .testimonialcontent {
+    min-height: 90px;
+    padding-top: 0;
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  .fourheading {
+    font-size: 39px;
+    line-height: 48px;
+  }
+
+  .imagetestisection1 {
+    height: 348px;
+    border: 5px solid #1f293329;
+  }
+
+  .videosectionz {
+    height: 600px;
+  }
+
+  .aboutslidesection {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .herobannerheading {
+    font-size: 32px;
+    line-height: 50px;
+  }
+
+  .subheadingherobanner {
+    font-size: 20px;
+  }
+
+  .mothermiraourproject {
+    font-size: 29px;
+    line-height: 28px;
+  }
+
+  .twentyfourpixel {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .premiumvillaamain {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .fiftypixel {
+    font-size: 30px;
+    line-height: 34px;
+  }
+
+  .hunderpixel {
+    font-size: 60px;
+    line-height: 100%;
+  }
+
+  .builtontrustpara {
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  .secondheading {
+    font-size: 50px;
+    line-height: 100%;
+  }
+
+  .butoonconteebd {
+    margin-top: 0;
+  }
+
+  .twentyeightpixel {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .foundervoicesubtext {
+    font-family: Neue Haas Grotesk normal semibold;
+    font-size: 19px;
+    line-height: 20px;
+  }
+
+  .addressstyle {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  .mainheading.missionclasss {
+    font-size: 29px;
+    line-height: 33px;
+  }
+
+  .perfecthomefont {
+    font-size: 65px;
+    line-height: 100%;
+  }
+
+  .thitytwoexper {
+    font-size: 170px;
+    line-height: 100%;
+  }
+
+  .foundersvoicetext {
+    padding-top: 45px;
+    font-size: 78px;
+    line-height: 80px;
+  }
+
+  .builtttonalwayshome {
+    padding-top: 70px;
+    font-size: 72px;
+    line-height: 60px;
+  }
+
+  /* fonts-style */
+
+  .testimonialsection {
+    background-size: contain;
+    height: 800px;
+    background-position: bottom;
+  }
+
+  .imagetestisection2 > div {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    border: 5px solid #1f293329;
+  }
+
+  .borddrerer img {
+    height: 35px;
+    width: 52px;
+  }
+
+  .maxwidthcontent {
+    justify-content: flex-start;
+    padding-top: 8%;
+    padding-left: 0%;
+  }
+
+  .footerrimageSecondd {
+    width: 55%;
+    padding-left: 30px;
+  }
+
+  .projectdetailabannerrr {
+    height: 600px;
+  }
+  .motehrmirabuttonour {
+    width: max-content;
+    margin-left: 8%;
+    padding-top: 15px;
+  }
+
+  .motehrmiratextour {
+    margin-bottom: 3.7%;
+    margin-left: 7%;
+  }
+  .projecthomebannersec {
+    background-size: cover;
+    height: 700px;
+  }
+
+  .aboutsectionbanner {
+    min-height: 500px;
+    max-height: 500px;
+  }
+  .aboutsectionbanner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .projectbannercontainer {
+    position: relative;
+    height: 100%;
+  }
+
+  .leftsidesectioncontent {
+    top: 63%;
+    left: 21%;
+  }
+
+  .contenthomepagesection {
+    margin-top: 10%;
+    margin-left: 45%;
+    display: flex;
+  }
+
+  .keystrengthsection {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .keyssectionbg {
+    padding-bottom: 20px;
+  }
+
+  .detailsectionproject {
+    top: 63%;
+    left: 79%;
+  }
+
+  .aboutmiraimagepositionn {
+    top: 200px;
+  }
+  .buildontrusthomepage {
+    height: 900px;
+  }
+  .aboumiraaboutsection {
+    height: 850px;
+  }
+
+  .foundervoicesection {
+    min-height: 725px;
+  }
+
+  .missionsecid {
+    height: 800px !important;
+    max-height: 800px !important;
+    min-height: 800px !important;
+  }
+  .missionsecid img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .foundervoicesection img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .landingtextaboutpage {
+    margin-top: -40px;
+    margin-left: 6%;
+  }
+
+  .aboutsssssection {
+    margin-top: -20px;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .boxcardss {
+    justify-content: space-around;
+    width: 190px;
+    height: 190px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+  }
+
+  .detailpageherobg {
+    height: 450px;
+  }
+
+  .detailpageherobg .container {
+    padding-bottom: 50px;
+  }
+
+  .ourprojectsimageposition {
+    width: 543px;
+    height: 291px;
+  }
+
+  .maxwidthcontent {
+    flex-direction: row;
+    align-items: center;
+    gap: 6%;
+    width: 100%;
+    display: flex;
+    padding-top: 40px;
+    justify-content: center;
+  }
+
+  .maxwidthcontent .border-b {
+    width: max-content;
+    margin-bottom: 0;
+    border: none;
+  }
+
+  .contactformsections {
+    padding-top: 75px;
+  }
+
+  .contactform input {
+    height: 47px;
+    border-radius: 10px;
+  }
+
+  .formsectioncontact {
+    width: 60%;
+  }
+
+  .contactform input::placeholder,
+  .contactform textarea::placeholder {
+    font-size: 16px;
+  }
+
+  .headerimageesection {
+    height: 60px;
+  }
+
+  .copyrightrightsection {
+    margin-top: 0px;
+    padding-top: 27px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .aboutmothermiraaasec {
+    margin-top: 30px;
+  }
+
+  .accesssible {
+    margin-bottom: 10px;
+    font-size: 52px;
+    line-height: 55px;
+  }
+
+  .webelivepremium {
+    margin-top: -16px;
+    margin-bottom: 10px;
+    font-size: 26px;
+    line-height: 29px;
+  }
+
+  .apastaphy:before {
+    background-size: cover;
+    width: 52px;
+    height: 37px;
+    top: 10px;
+    left: -67px;
+  }
+  .footerbgsection {
+    height: 700px;
+  }
+
+  .contactbannerr {
+    min-height: 800px;
+  }
+
+  .headertop {
+    padding-top: 85px;
+  }
+
+  .proejectdetailbannerer {
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 1000px;
+  }
+
+  .gridaminiteddd {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .gridaminiteddd .group {
+    min-height: 250px;
+  }
+
+  .hoverranimationnn img {
+    width: 157px;
+  }
+
+  .waterspec {
+    padding: 6px 18px;
+    font-size: 15px;
+  }
+
+  .headdersectionmain .gap-5 {
+    gap: 10px;
+  }
+  .headerrrrcontainer {
+    padding-right: 0;
+  }
+
+  .stickyheader .headerimageesection {
+    height: 50px;
+  }
+
+  .footerrimageSecondd .w-11 {
+    width: 33px;
+  }
+
+  .headerbuttondiv {
+    font-size: 14px;
+    line-height: 25px;
+    padding: 6px 17px;
+  }
+  .statscolumnss {
+    flex-direction: row;
+    gap: 4%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .statscolumnss .border-b {
+    width: max-content;
+    margin-bottom: 0;
+    border: none;
+  }
+
+  .leftsidesectionflexxxs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+
+  .projectsectificationscontain {
+    display: flex;
+    flex-direction: column;
+  }
+  .imagebordererer:before {
+    content: none;
+  }
+  .imagebordererer {
+    padding-left: 0;
+  }
+
+  .projectsectificationscontain .subheadingtext {
+    text-align: center;
+  }
+
+  .py-16 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .projectgallerysectionsa {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) and (min-width: 768px) {
+  /* fonts-style */
+
+  .mainheading {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .subheadingtext {
+    font-size: 25px;
+    line-height: 120%;
+  }
+
+  .imagecontenttttt {
+    top: 40px;
+  }
+
+  .headdersectionmain {
+    padding-top: 2%;
+    padding-bottom: 6px;
+    padding-right: 1%;
+    padding-left: 4%;
+  }
+
+  .stickyheader.headdersectionmain {
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+  .paratext {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .imageesectionhome img {
+    height: 240px;
+  }
+  .thirdheading {
+    font-size: 23px;
+    line-height: 100%;
+  }
+
+  .fifththheading {
+    font-size: 63px;
+    line-height: 71px;
+  }
+  .salesfooterrr {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .testimonialcontent {
+    min-height: 90px;
+    padding-top: 0;
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  .fourheading {
+    font-size: 39px;
+    line-height: 48px;
+  }
+
+  .imagetestisection1 {
+    border: 2px solid #1f293329;
+    height: 312px;
+  }
+
+  .imagesizetes {
+    border-radius: 10px;
+  }
+  .videosectionz {
+    height: 550px;
+  }
+
+  .aboutslidesection {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .herobannerheading {
+    font-size: 32px;
+    line-height: 40px;
+    margin-top: 0;
+  }
+
+  .subheadingherobanner {
+    font-size: 20px;
+  }
+
+  .footerrimageSecondd .greencolor.paratext br {
+    display: none;
+  }
+
+  .mothermiraourproject {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .twentyfourpixel {
+    font-size: 18px;
+    line-height: 19px;
+  }
+
+  .premiumvillaamain {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .fiftypixel {
+    font-size: 27px;
+    line-height: 30px;
+  }
+
+  .hunderpixel {
+    font-size: 60px;
+    line-height: 100%;
+  }
+
+  .builtontrustpara {
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  .secondheading {
+    font-size: 50px;
+    line-height: 100%;
+  }
+
+  .butoonconteebd {
+    margin-top: 0;
+  }
+
+  .twentyeightpixel {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .foundervoicesubtext {
+    font-family: Neue Haas Grotesk normal semibold;
+    font-size: 19px;
+    line-height: 20px;
+  }
+
+  .addressstyle {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  .mainheading.missionclasss {
+    font-size: 27px;
+    line-height: 33px;
+  }
+
+  .perfecthomefont {
+    font-size: 60px;
+    line-height: 100%;
+  }
+
+  .thitytwoexper {
+    font-size: 170px;
+    line-height: 100%;
+  }
+
+  .foundersvoicetext {
+    padding-top: 45px;
+    font-size: 78px;
+    line-height: 80px;
+  }
+
+  .builtttonalwayshome {
+    padding-top: 60px;
+    font-size: 63px;
+    line-height: 52px;
+  }
+
+  /* fonts-style */
+
+  .testimonialsection {
+    background-position: bottom;
+    background-size: contain;
+    height: 900px;
+  }
+
+  .imagetestisection2 > div {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    border: 5px solid #1f293329;
+  }
+
+  .borddrerer img {
+    height: 35px;
+    width: 52px;
+  }
+
+  .maxwidthcontent {
+    justify-content: flex-start;
+    padding-top: 8%;
+    padding-left: 0%;
+  }
+
+  .footerrimageSecondd {
+    width: 55%;
+    padding-left: 30px;
+  }
+
+  .projectdetailabannerrr {
+    height: 600px;
+  }
+  .motehrmirabuttonour {
+    width: max-content;
+    margin-left: 02%;
+    flex-wrap: wrap;
+    column-gap: 2%;
+    padding-top: 0;
+  }
+
+  .motehrmiratextour {
+    margin-bottom: 3.7%;
+    margin-left: 7%;
+  }
+  .projecthomebannersec {
+    background-size: cover;
+    height: 650px;
+  }
+
+  .aboutsectionbanner {
+    min-height: 500px;
+    max-height: 500px;
+  }
+  .aboutsectionbanner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .projectbannercontainer {
+    position: relative;
+    height: 100%;
+  }
+
+  .leftsidesectioncontent {
+    top: 67%;
+    left: 13%;
+  }
+
+  .contenthomepagesection {
+    margin-top: 3%;
+    margin-left: 43%;
+    display: flex;
+  }
+
+  .keystrengthsection {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .keyssectionbg {
+    padding-bottom: 20px;
+  }
+
+  .detailsectionproject {
+    top: 67%;
+    left: 82%;
+  }
+
+  .aboutmiraimagepositionn {
+    top: 200px;
+  }
+  .buildontrusthomepage {
+    height: 900px;
+  }
+  .aboumiraaboutsection {
+    height: 800px;
+  }
+
+  .foundervoicesection {
+    min-height: 725px;
+  }
+
+  .missionsecid {
+    height: 800px !important;
+    max-height: 800px !important;
+    min-height: 800px !important;
+  }
+  .missionsecid img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .foundervoicesection img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .landingtextaboutpage {
+    margin-top: -40px;
+    margin-left: 6%;
+  }
+
+  .aboutsssssection {
+    margin-top: -20px;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .boxcardss {
+    justify-content: space-around;
+    width: 190px;
+    height: 190px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+  }
+
+  .detailpageherobg {
+    height: 420px;
+  }
+
+  .detailpageherobg .container {
+    padding-bottom: 50px;
+  }
+
+  .ourprojectsimageposition {
+    width: 543px;
+    height: 291px;
+  }
+
+  .maxwidthcontent {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6%;
+    width: 100%;
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+  }
+
+  .maxwidthcontent .border-b {
+    width: max-content;
+    margin-bottom: 0;
+    border: none;
+  }
+
+  .contactformsections {
+    padding-top: 75px;
+  }
+
+  .contactform input {
+    height: 47px;
+    border-radius: 10px;
+  }
+
+  .formsectioncontact {
+    width: 60%;
+  }
+
+  .contactform input::placeholder,
+  .contactform textarea::placeholder {
+    font-size: 16px;
+  }
+
+  .headerimageesection {
+    height: 60px;
+  }
+
+  .copyrightrightsection {
+    margin-top: 0px;
+    padding-top: 27px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .aboutmothermiraaasec {
+    margin-top: 30px;
+  }
+
+  .greenbarsection {
+    width: 53px;
+    max-width: 53px;
+    min-width: 53px;
+  }
+
+  .accesssible {
+    margin-bottom: 10px;
+    font-size: 52px;
+    line-height: 55px;
+  }
+
+  .webelivepremium {
+    margin-top: -16px;
+    margin-bottom: 10px;
+    font-size: 26px;
+    line-height: 29px;
+  }
+
+  .apastaphy:before {
+    background-size: cover;
+    width: 52px;
+    height: 37px;
+    top: 10px;
+    left: -67px;
+  }
+  .footerbgsection {
+    height: 730px;
+  }
+
+  .contactbannerr {
+    min-height: 700px;
+  }
+
+  .contactbannerr .mt-15 {
+    margin-top: 0px;
+  }
+
+  .headertop {
+    padding-top: 85px;
+  }
+
+  .proejectdetailbannerer {
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 1000px;
+  }
+
+  .imagetestisection2 {
+    width: 90%;
+  }
+  .gridaminiteddd {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .gridaminiteddd .group {
+    min-height: 250px;
+  }
+
+  .hoverranimationnn img {
+    width: 157px;
+  }
+
+  .waterspec {
+    padding: 6px 18px;
+    font-size: 15px;
+  }
+
+  .headdersectionmain .gap-5 {
+    gap: 10px;
+  }
+  .headerrrrcontainer {
+    padding-right: 0;
+  }
+
+  .stickyheader .headerimageesection {
+    height: 50px;
+  }
+
+  .footerrimageSecondd .w-11 {
+    width: 33px;
+  }
+
+  .headerbuttondiv {
+    font-size: 14px;
+    line-height: 25px;
+    padding: 6px 17px;
+  }
+  .statscolumnss {
+    flex-direction: row;
+    justify-content: center;
+    gap: 6%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  .statscolumnss .border-b {
+    width: max-content;
+    margin-bottom: 0;
+    border: none;
+  }
+
+  .leftsidesectionflexxxs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+
+  .projectsectificationscontain {
+    display: flex;
+    flex-direction: column;
+  }
+  .imagebordererer:before {
+    content: none;
+  }
+  .imagebordererer {
+    padding-left: 0;
+  }
+
+  .projectsectificationscontain .subheadingtext {
+    text-align: center;
+  }
+
+  .py-16 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .projectgallerysectionsa {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .brnone br {
+    display: none;
+  }
+
+  .borderbuttonexplore::before {
+    width: 35%;
+  }
+  .borderbuttonexplore::after {
+    width: 35%;
+  }
+
+  .keystrengthsection .builtontrustpara {
+    width: 90%;
+  }
+
+  .contactformsections .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .adressbox .addressstyle.mt-2 br {
+    display: none;
+  }
+
+  .adressbox {
+    padding: 30px;
+  }
+
+  .sliderrimagesectionnn {
+    height: 220px;
+  }
+
+  .butttonssssss {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 600px) {
+  /* fonts-style */
+
+  .mainheading {
+    font-size: 34px;
+    line-height: 41px;
+  }
+
+  .subheadingtext {
+    font-size: 23px;
+    line-height: 110%;
+  }
+
+  .imagecontenttttt {
+    top: 25px;
+  }
+
+  .headdersectionmain {
+    padding-top: 2%;
+    padding-bottom: 6px;
+    padding-right: 1%;
+    padding-left: 4%;
+  }
+
+  .stickyheader.headdersectionmain {
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+  .paratext {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .imageesectionhome img {
+    height: 240px;
+  }
+  .thirdheading {
+    font-size: 23px;
+    line-height: 100%;
+  }
+
+  .fifththheading {
+    font-size: 46px;
+    line-height: 44px;
+  }
+  .salesfooterrr {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .testimonialcontent {
+    min-height: 90px;
+    padding-top: 0;
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  .fourheading {
+    font-size: 39px;
+    line-height: 48px;
+  }
+
+  .imagetestisection1 {
+    border: 2px solid #1f293329;
+    height: 312px;
+    display: none;
+  }
+
+  .imagesizetes {
+    border-radius: 10px;
+  }
+  .videosectionz {
+    height: 600px;
+  }
+
+  .aboutslidesection {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .herobannerheading {
+    margin-top: 0;
+    font-size: 26px;
+    line-height: 35px;
+  }
+
+  .subheadingherobanner {
+    font-size: 17px;
+  }
+
+  .footerrimageSecondd .greencolor.paratext br {
+    display: none;
+  }
+
+  .mothermiraourproject {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .twentyfourpixel {
+    font-size: 18px;
+    line-height: 19px;
+  }
+
+  .premiumvillaamain {
+    font-size: 24px;
+    line-height: 37px;
+  }
+
+  .fiftypixel {
+    font-size: 25px;
+    line-height: 26px;
+  }
+
+  .hunderpixel {
+    font-size: 50px;
+    line-height: 100%;
+  }
+
+  .builtontrustpara {
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  .videobanenrrcontent .hunderpixel {
+    margin-bottom: 25px;
+  }
+  .secondheading {
+    font-size: 37px;
+    line-height: 100%;
+  }
+
+  .videobanenrrcontent .builtontrustpara {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .butoonconteebd {
+    margin-top: 0;
+  }
+
+  .twentyeightpixel {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .foundervoicesubtext {
+    font-family: Neue Haas Grotesk normal semibold;
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: 0;
+  }
+
+  .addressstyle {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  .mainheading.missionclasss {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  .mainheading.missionclasss br {
+    display: none;
+  }
+  .mainheading.missionclasss strong {
+    padding-left: 3px;
+  }
+
+  .perfecthomefont {
+    font-size: 50px;
+    line-height: 100%;
+  }
+
+  .thitytwoexper {
+    font-size: 150px;
+    line-height: 100%;
+  }
+
+  .foundersvoicetext {
+    padding-top: 45px;
+    font-size: 50px;
+    line-height: 48px;
+  }
+
+  .builtttonalwayshome {
+    padding-top: 56px;
+    font-size: 52px;
+    line-height: 40px;
+  }
+
+  /* fonts-style */
+
+  .testimonialsection {
+    background-position: bottom;
+    background-size: contain;
+    height: 860px;
+  }
+
+  .imagetestisection2 > div {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    border: 5px solid #1f293329;
+  }
+
+  .borddrerer img {
+    height: 35px;
+    width: 52px;
+  }
+
+  .maxwidthcontent {
+    justify-content: flex-start;
+    padding-top: 8%;
+    padding-left: 0%;
+  }
+
+  .footerrimageSecondd {
+    width: 100%;
+    padding-left: 50px;
+    padding-top: 50px;
+  }
+
+  .footerrimagefirst img {
+    height: 300px;
+    display: none;
+  }
+
+  .footerrimagefirst {
+    width: 100%;
+  }
+
+  .projectdetailabannerrr {
+    height: 600px;
+  }
+  .motehrmirabuttonour {
+    flex-wrap: wrap;
+    column-gap: 2%;
+    width: max-content;
+    margin-left: 0;
+    padding-top: 0;
+  }
+
+  .imagedivposition {
+    margin-left: 0;
+  }
+
+  .motehrmiratextour .inline-flex.items-center.py-2 {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 5px;
+  }
+
+  .motehrmiratextour {
+    margin-bottom: 3.7%;
+    margin-left: 1%;
+    width: max-content;
+  }
+  .projecthomebannersec {
+    background-size: contain;
+    height: 750px;
+    background-position: bottom;
+  }
+
+  .aboutsectionbanner {
+    min-height: 400px;
+    max-height: 400px;
+  }
+  .aboutsectionbanner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .projectbannercontainer {
+    position: relative;
+    height: 100%;
+  }
+
+  .leftsidesectioncontent {
+    width: auto;
+    top: 30%;
+    left: 0;
+    right: 0;
+    width: 244px;
+  }
+
+  .premisumvillasend {
+    width: 100%;
+  }
+
+  .contenthomepagesection {
+    margin-top: 0%;
+    margin-left: 8%;
+    display: flex;
+    width: 82%;
+  }
+
+  .leftsidezero {
+    margin-left: 0;
+  }
+
+  .keystrengthsection {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .keyssectionbg {
+    padding-bottom: 20px;
+  }
+
+  .detailsectionproject {
+    top: 30%;
+    left: 284px;
+    width: 200px;
+  }
+
+  .aboutmiraimagepositionn {
+    top: 331px;
+  }
+  .buildontrusthomepage {
+    height: 800px;
+  }
+  .aboumiraaboutsection {
+    height: 800px;
+  }
+
+  .foundervoicesection {
+    min-height: 500px;
+  }
+
+  .apastaphy {
+    margin-top: 100px;
+  }
+  .missionsecid {
+    height: 800px !important;
+    max-height: 800px !important;
+    min-height: 800px !important;
+  }
+  .missionsecid img {
+    object-fit: contain;
+    height: 100%;
+    object-position: bottom;
+    background: #eee8d0;
+  }
+
+  .founderwithd {
+    width: 85%;
+  }
+
+  .foundervoicesection img {
+    object-fit: cover;
+    height: 100%;
+    object-position: left;
+  }
+
+  .landingtextaboutpage {
+    margin-top: 0;
+    margin-left: 15%;
+  }
+
+  .aboutsssssection {
+    flex-wrap: wrap;
+    margin-top: -20px;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobilimagee {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .videobanenrrcontent {
+    margin-bottom: 10%;
+  }
+
+  .mobilimagee img {
+    height: 465px;
+  }
+  .boxcardss {
+    justify-content: space-around;
+    width: 190px;
+    height: 190px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+  }
+
+  .detailpageherobg {
+    height: 350px;
+  }
+
+  .detailpageherobg .container {
+    padding-bottom: 40px;
+  }
+
+  .ourprojectsimageposition {
+    width: 100%;
+    height: auto;
+  }
+
+  .maxwidthcontent {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6%;
+    width: 100%;
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+  }
+
+  .maxwidthcontent .border-b {
+    width: max-content;
+    margin-bottom: 0;
+    border: none;
+  }
+
+  .contactformsections {
+    padding-top: 75px;
+  }
+
+  .contactform input {
+    height: 47px;
+    border-radius: 10px;
+  }
+
+  .formsectioncontact {
+    width: 90%;
+  }
+
+  .objectpositionproject {
+    justify-content: flex-start;
+  }
+
+  .contactform input::placeholder,
+  .contactform textarea::placeholder {
+    font-size: 16px;
+  }
+
+  .headerimageesection {
+    height: 60px;
+  }
+
+  .copyrightrightsection {
+    margin-top: 0px;
+    padding-top: 27px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .aboutmothermiraaasec {
+    margin-top: 30px;
+  }
+
+  .greenbarsection {
+    width: 53px;
+    min-width: 53px;
+    max-width: 53px;
+    display: none;
+  }
+
+  .accesssible {
+    margin-bottom: 9px;
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .webelivepremium {
+    margin-top: -14px;
+    margin-bottom: 10px;
+    font-size: 23px;
+    line-height: 25px;
+  }
+
+  .apastaphy:before {
+    background-size: cover;
+    width: 36px;
+    height: 29px;
+    top: 13px;
+    left: -47px;
+  }
+  .footerbgsection {
+    height: max-content;
+    flex-direction: column-reverse;
+  }
+
+  .contactbannerr {
+    min-height: 700px;
+  }
+
+  .contactbannerr .mt-15 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .headertop {
+    padding-top: 60px;
+  }
+
+  .mobileeedisplayslider {
+    flex-flow: row;
+    justify-content: flex-start;
+    display: flex;
+    overflow: scroll;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  .proejectdetailbannerer {
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 895px;
+  }
+
+  .imagetestisection2 {
+    width: 90%;
+  }
+  .gridaminiteddd {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .gridaminiteddd .group {
+    min-height: 250px;
+  }
+
+  .hoverranimationnn img {
+    width: 157px;
+  }
+
+  .waterspec {
+    padding: 6px 18px;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+
+  .headdersectionmain .gap-5 {
+    gap: 10px;
+  }
+  .headerrrrcontainer {
+    padding-right: 0;
+  }
+
+  .stickyheader .headerimageesection {
+    height: 50px;
+  }
+
+  .footerrimageSecondd .w-11 {
+    width: 36px;
+    height: 35px;
+  }
+
+  .headerbuttondiv {
+    font-size: 14px;
+    line-height: 25px;
+    padding: 6px 17px;
+  }
+  .statscolumnss {
+    flex-direction: row;
+    justify-content: center;
+    gap: 6%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  .statscolumnss .border-b {
+    width: max-content;
+    margin-bottom: 0;
+    border: none;
+  }
+
+  .leftsidesectionflexxxs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+
+  .projectsectificationscontain {
+    display: flex;
+    flex-direction: column;
+  }
+  .imagebordererer:before {
+    content: none;
+  }
+  .imagebordererer {
+    padding-left: 0;
+    height: 300px;
+  }
+
+  .projectsectificationscontain .subheadingtext {
+    text-align: left;
+  }
+
+  .rightsidecolumnlinee:before {
+    display: none;
+  }
+
+  .rightsidecolumnlinee {
+    display: flex;
+    flex-direction: column;
+  }
+  .py-16 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .projectgallerysectionsa {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .brnone br {
+    display: none;
+  }
+
+  .borderbuttonexplore::before {
+    width: 30%;
+  }
+  .borderbuttonexplore::after {
+    width: 30%;
+  }
+
+  .keystrengthsection .builtontrustpara {
+    width: 90%;
+  }
+
+  .contactformsections .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .adressbox .addressstyle.mt-2 br {
+    display: none;
+  }
+
+  .adressbox {
+    padding: 30px;
+    margin-left: 14%;
+    margin-right: 14%;
+  }
+
+  .sliderrimagesectionnn {
+    height: 220px;
+  }
+
+  .butttonssssss {
+    width: 38px;
+    height: 38px;
+  }
+
+  .mainheading.missionclasss.paragraphfont {
+    margin-top: 37px;
+  }
+}

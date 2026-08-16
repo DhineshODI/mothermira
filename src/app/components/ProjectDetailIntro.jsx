@@ -12,9 +12,9 @@ export default function ProjectDetailIntro() {
     <section className="w-full py-16 sm:py-20 px-4 sm:px-8 bg-[#EDE8D0] proejectdetailbannerer">
       <div className="container max-w-7xl mx-auto flex flex-col">
         {/* Top Grid: Content & Stats */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12 leftsidesectionflexxxs">
           {/* Left Area: Title & Description */}
-          <div className="lg:col-span-8 space-y-4">
+          <div className="lg:col-span-8 space-y-4 ">
             <p className="subheadingtext uppercase blackcolor mb-0">
               EXPERIENCE THE SMART
             </p>
@@ -54,7 +54,7 @@ export default function ProjectDetailIntro() {
           </div>
 
           {/* Right Area: Stats Column */}
-          <div className="lg:col-span-4 flex flex-col justify-center space-y-5 lg:pl-8">
+          <div className="lg:col-span-4 flex flex-col justify-center space-y-5 lg:pl-8 statscolumnss">
             {stats.map((stat, idx) => (
               <div key={idx} className="border-b border-[#004852]/15 pb-5">
                 <div className="flex items-baseline space-x-1.5">
@@ -67,9 +67,7 @@ export default function ProjectDetailIntro() {
                     </span>
                   )}
                 </div>
-                <p className="blackcolor paratext">
-                  {stat.label}
-                </p>
+                <p className="blackcolor paratext">{stat.label}</p>
               </div>
             ))}
           </div>

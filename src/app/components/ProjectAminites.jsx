@@ -25,10 +25,10 @@ function AmenitiesCategoryGrid({ categoryData, sliderRef }) {
         },
       },
       {
-        breakpoint: 640,
+        breakpoint: 768,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
         },
       },
     ],
@@ -39,7 +39,7 @@ function AmenitiesCategoryGrid({ categoryData, sliderRef }) {
       <Slider ref={sliderRef} {...settings}>
         {categoryData.map((item, index) => (
           <div key={`${item.title}-${index}`} className="px-2">
-            <div className="relative group h-[320px] sm:h-[380px] rounded-2xl overflow-hidden shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl cursor-pointer">
+            <div className="relative group sliderrimagesectionnn h-[320px] sm:h-[380px] rounded-2xl overflow-hidden shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl cursor-pointer">
               {/* Background Image */}
               {item.image &&
                 item.image !== "/images/project-detail/aminites/" && (
@@ -301,7 +301,7 @@ export default function AmenitiesSection() {
           <button
             aria-label="Previous"
             onClick={() => sliderRef.current?.slickPrev()}
-            className="w-12 h-12 rounded-full border border-[#004852]/40 flex items-center justify-center text-[#004852] hover:bg-[#004852] hover:text-white transition-colors duration-300 cursor-pointer"
+            className="w-12 h-12 butttonssssss rounded-full border border-[#004852]/40 flex items-center justify-center text-[#004852] hover:bg-[#004852] hover:text-white transition-colors duration-300 cursor-pointer"
           >
             <svg
               width="15"
@@ -331,7 +331,7 @@ export default function AmenitiesSection() {
           <button
             aria-label="Next"
             onClick={() => sliderRef.current?.slickNext()}
-            className="w-12 h-12 rounded-full border border-[#004852]/40 flex items-center justify-center text-[#004852] hover:bg-[#004852] hover:text-white transition-colors duration-300 cursor-pointer"
+            className="w-12 h-12  butttonssssss rounded-full border border-[#004852]/40 flex items-center justify-center text-[#004852] hover:bg-[#004852] hover:text-white transition-colors duration-300 cursor-pointer"
           >
             <svg
               width="15"

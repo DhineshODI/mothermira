@@ -250,7 +250,7 @@ export default function ProjectDetailTheWind() {
   return (
     <>
       <Header sec={"transperantBg"} />
-      <section className="relative w-full h-[800px] flex items-end overflow-hidden projectdetailabannerrr">
+      <section className="relative w-full h-[800px] flex items-end overflow-hidden detailpageherobg">
         <div className="absolute inset-0 -z-10 w-full h-[100%]">
           <img
             src="/images/thewind-banner.jpg"
@@ -260,7 +260,7 @@ export default function ProjectDetailTheWind() {
         </div>
 
         {/* 3. Bottom Content Box */}
-        <div className="w-full max-w-7xl mx-auto pb-22 sm:pb-22 z-10">
+        <div className="container w-full max-w-7xl mx-auto pb-22 sm:pb-22 z-10">
           {/* Category Badge */}
           <div className="">
             <div className="flex items-center ">
@@ -329,14 +329,14 @@ export default function ProjectDetailTheWind() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 w-full gridaminiteddd">
             {advantages.map((card, index) => (
               <div
                 key={index}
                 className="relative group bg-[#004852] p-7 sm:p-8 rounded-2xl flex flex-col justify-start overflow-hidden min-h-[340px] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl cursor-pointer"
               >
                 {/* Position exact-a same (-bottom-0 -right-4), hover-la mattum translateUp aagum */}
-                <span className="absolute -bottom-[1px] -right-4 pointer-events-none transition-transform duration-500 ease-out translate-y-1 group-hover:translate-y-5">
+                <span className="absolute -bottom-[1px] -right-4 pointer-events-none transition-transform duration-500 ease-out translate-y-1 group-hover:translate-y-5 hoverranimationnn">
                   <img
                     src="/images/m-texticon.svg"
                     alt=""
@@ -461,7 +461,7 @@ export default function ProjectDetailTheWind() {
                 Wind <strong className="greencolor">Advantages</strong>
               </h2>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 aboutsssssection">
               {strengths.map((item, index) => (
                 <div
                   key={index}
@@ -494,7 +494,7 @@ export default function ProjectDetailTheWind() {
           </div>
 
           {/* Right Side Rounded Image */}
-          <div className="lg:col-span-6 flex justify-center lg:justify-end  ">
+          <div className="lg:col-span-6 flex justify-center lg:justify-end mobilimagee   ">
             <img
               src="/images/project-detail/windimage.jpg"
               alt="Mother Mira Villa Street View"

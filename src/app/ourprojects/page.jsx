@@ -13,7 +13,7 @@ export default function Ourprojects() {
   return (
     <>
       <Header sec={"transperantBg"} />
-      <section className="relative w-full h-[800px] flex items-end overflow-hidden">
+      <section className="relative w-full h-[800px] flex items-end overflow-hidden detailpageherobg">
         <div className="absolute inset-0 -z-10 w-full h-[100%]">
           <img
             src="/images/ourpeojectsbanner.jpg"
@@ -52,12 +52,12 @@ export default function Ourprojects() {
         </div>
       </section>
 
-      <section className="w-full py-16 sm:py-24 px-4 sm:px-8 bg-[#EDE8D0] flex justify-center border-b border-[#16161629]">
+      <section className="w-full py-16 sm:py-24 px-4 sm:px-8 bg-[#EDE8D0] flex justify-center border-b border-[#16161629] objectpositionproject">
         <div className="container max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Left & Center Main Showcase Area */}
           <div className="lg:col-span-8 flex flex-col sm:flex-row gap-4 sm:gap-6 relative">
             {/* 1. Left Vertical Banner */}
-            <div className="bg-[#004852] text-white hidden sm:flex items-center justify-center min-w-[77px] w-14 py-8">
+            <div className="bg-[#004852] text-white hidden sm:flex items-center justify-center min-w-[77px] w-14 py-8 greenbarsection">
               <span className="rotate-[-90deg] whitespace-nowrap premiumvillaamain text-[#EDE8D0]">
                 PREMIUM &nbsp; VILLA
               </span>

@@ -158,12 +158,12 @@ export default function ProjectGallery() {
         </div>
 
         {/* 4-Column Image Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full projectgallerysectionsa">
           {currentImages.map((img, index) => (
             <div
               key={img.id || index}
               onClick={() => setLightboxIndex(index)}
-              className="relative group h-[280px] sm:h-[280px] rounded-2xl overflow-hidden shadow-sm cursor-pointer border border-[#004852]/10"
+              className="relative sliderrimagesectionnn group h-[280px] sm:h-[280px] rounded-2xl overflow-hidden shadow-sm cursor-pointer border border-[#004852]/10"
             >
               <img
                 src={img.src}
