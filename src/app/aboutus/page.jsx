@@ -145,7 +145,7 @@ export default function AboutUs() {
         {/* <TextFadeUp delay={0.1}> */}
 
         <StaggerText delay={0.4}>
-          <div className="text-center z-10 mb-12 sm:mb-16">
+          <div className="text-center z-10 mb-12 sm:mb-16 builttttbottom">
             <h2 className="fifththheading greencolor">Built on Trust Always</h2>
           </div>
         </StaggerText>

@@ -59,17 +59,17 @@ export default function Home() {
             <span className="semibold">quality infrastructure.</span>
           </p>
 
-          <p className="builtontrustpara mt-[40px]">
+          <p className="builtontrustpara mt-[40px] wecreateee">
             We create secure, future-ready assets that deliver long-term <br />
             appreciation and practical living for every customer consistently.
           </p>
 
           {/* Pill CTA Button */}
 
-          <div className="borderbuttonexplore relative mt-[60px] w-full">
+          <div className="borderbuttonexplore relative mt-[50px] w-full">
             <a
               href="#explore"
-              className="cursor-pointer rounded-full border border-[#0048523D] bg-[#004852] text-[#EDE8D0] semibold paratext  buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300"
+              className="project-button cursor-pointer rounded-full border border-[#0048523D] bg-[#004852] text-[#EDE8D0] semibold paratext  buttonpading hover:bg-[#0c3835]  transition-colors duration-300"
             >
               EXPLORE MORE
             </a>
@@ -178,7 +178,7 @@ export default function Home() {
       </section>
 
       <section className="perfectfamilysection relative">
-        <div>
+        <div className="padingggtopimage">
           <img src="/images/perfectfamily.jpg" />
         </div>
         <div className="absolute imagecontenttttt w-full">
@@ -192,7 +192,7 @@ export default function Home() {
             </h2>
           </div>
         </div>
-        <div className="absolute top-0 z-1000">
+        <div className="absolute top-0 z-1000 inbodyimageee padingggtopimage">
           <img src="/images/perfectfamily-transperant.png" />
         </div>
       </section>
@@ -250,7 +250,7 @@ export default function Home() {
               Premium villas in a well-connected and peaceful environment
             </p>
             <button
-              className="project-button bg-[#004852] mt-[15px] !text-[#fff] cursor-pointer rounded-full semibold paratext  buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300"
+              className="project-button bg-[#004852] mt-[15px] text-[#fff] cursor-pointer rounded-full semibold paratext  buttonpading hover:bg-[#0c3835] transition-colors duration-300"
               style={{ letterSpacing: "1px" }}
             >
               VIEW PROJECT

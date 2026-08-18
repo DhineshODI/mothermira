@@ -2,7 +2,10 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#eee9d5] text-[#084243] font-sans">
+    <footer
+      className="w-full bg-[#eee9d5] text-[#084243] font-sans"
+      id="foooterid"
+    >
       <div className="flex footerbgsection ">
         <div className="relative footerrimagefirst">
           <img
@@ -15,15 +18,15 @@ export default function Footer() {
         <div className="p-8 sm:p-12 lg:p-16 flex flex-col justify-between footerrimageSecondd">
           <div className="space-y-8">
             {/* USEFUL LINKS */}
-            <div>
-              <h4 className="paratext boldfont greencolor uppercase mb-3 !text-[20px]">
+            <div className="marginnnnbotoomfooter">
+              <h4 className="paratext boldfont greencolor uppercase mb-3 !text-[20px] max-sm:!text-[15px]">
                 Useful Links
               </h4>
               <ul className="space-y-1">
-                <li>
+                <li className="mb-0">
                   <a
                     href="#about"
-                    className="hover:underline greencolor paratext  !text-[16px] !font-[400]"
+                    className="hover:underline greencolor paratext  !text-[16px] !font-[400] max-sm:!text-[13px] "
                   >
                     ABOUT US
                   </a>
@@ -31,7 +34,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#about"
-                    className="hover:underline greencolor paratext  !text-[16px] !font-[400]"
+                    className="hover:underline greencolor paratext  !text-[16px] !font-[400] max-sm:!text-[13px]"
                   >
                     CONTACT US
                   </a>
@@ -40,20 +43,20 @@ export default function Footer() {
             </div>
 
             {/* OUR PROJECT */}
-            <div className="mb-2">
-              <h4 className="paratext boldfont greencolor uppercase mb-3 !text-[20px]">
+            <div className="mb-2 marginnnnbotoomfooter">
+              <h4 className="paratext boldfont greencolor uppercase mb-3 !text-[20px] max-sm:!text-[15px]">
                 Our Project
               </h4>
               <a
                 href="#project"
-                className="hover:underline greencolor paratext  !text-[16px] !font-[400]"
+                className="hover:underline greencolor paratext  !text-[16px] !font-[400] max-sm:!text-[13px]"
               >
                 THE WIND - KOLAPAKKAM
               </a>
             </div>
 
             {/* EMAIL & PHONE */}
-            <div className="space-y-1 pt-2">
+            <div className="space-y-1 pt-2 marginnnnbotoomfooter">
               <a
                 href="mailto:sales@mothermira.com"
                 className="salesfooterrr greencolor semibold"
@@ -61,17 +64,20 @@ export default function Footer() {
                 sales@mothermira.com
               </a>{" "}
               <br />
-              <a href="tel:+919840029535" className="salesfooterrr greencolor semibold ">
+              <a
+                href="tel:+919840029535"
+                className="salesfooterrr greencolor semibold "
+              >
                 +91 98400 29535
               </a>
             </div>
 
             {/* CORPORATE OFFICE ADDRESS */}
-            <div>
-              <h4 className="paratext boldfont greencolor uppercase mb-3 !text-[20px]">
+            <div className="marginnnnbotoomfooter">
+              <h4 className="paratext boldfont greencolor uppercase mb-3 !text-[20px] max-sm:!text-[15px]">
                 Corporate Office Address
               </h4>
-              <p className="greencolor paratext  !text-[16px] !font-[400]">
+              <p className="greencolor paratext  !text-[16px] !font-[400] max-sm:!text-[13px]">
                 Upper Crest Apartments, Flat F2, First Floor, No.11, <br />
                 School Street, Near Corporation School, Koyambedu, <br />
                 Chennai - 600 107.
@@ -80,7 +86,7 @@ export default function Footer() {
 
             {/* FOLLOW US */}
             <div>
-              <h4 className="paratext boldfont greencolor uppercase mb-3 !text-[20px]">
+              <h4 className="paratext boldfont greencolor uppercase mb-3 !text-[20px] max-sm:!text-[15px]">
                 Follow Us
               </h4>
               <div className="flex items-center gap-3">
@@ -121,16 +127,16 @@ export default function Footer() {
           {/* BOTTOM COPYRIGHT & DESIGN BY */}
           <div className="copyrightrightsection mt-12 pt-6 border-t border-solid border-[rgba(0,72,82,0.24)] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-[10px] font-bold tracking-wider text-gray-600">
             <div>
-              <p className=" greencolor paratext  !text-[16px] !font-[400]">
+              <p className=" greencolor paratext  !text-[16px] !font-[400] max-sm:!text-[13px]">
                 COPYRIGHT © 2026 MOTHER MIRA
               </p>
-              <p className=" greencolor paratext  !text-[16px] !font-[400]">
+              <p className=" greencolor paratext  !text-[16px] !font-[400] max-sm:!text-[13px]">
                 ALL RIGHTS RESERVED.
               </p>
             </div>
 
             <div className="flex items-center gap-2">
-              <span className=" greencolor paratext  !text-[16px] !font-[400]">
+              <span className=" greencolor paratext  !text-[16px] !font-[400] max-sm:!text-[13px]">
                 DESIGN BY
               </span>
               {/* Designer Logo Icon Placeholder */}

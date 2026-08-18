@@ -25,19 +25,19 @@ export default function ContactPage() {
         <div className="container max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* LEFT COLUMN: Info & Text */}
           <div className="space-y-6">
-            <div>
+            <div className="marginnnnbotoomfooter">
               <p className="subheadingtext uppercase blackcolor">Mother Mira</p>
               <h2 className="mainheading indicocolor uppercase">
                 Get In <strong className="greencolor"> Touch</strong>
               </h2>
             </div>
 
-            <p className="blackcolor paratext ">
+            <p className="blackcolor paratext breakremove marginnnnbotoomfooter ">
               Connect with our team for project details, site visits and
               personalized <br /> guidance for your property investment journey.
             </p>
 
-            <div className="pt-2 space-y-1">
+            <div className="pt-2 space-y-1 marginnnnbotoomfooter">
               <a
                 href="mailto:sales@mothermira.com"
                 className="fourheading greencolor"
@@ -51,7 +51,7 @@ export default function ContactPage() {
             </div>
 
             {/* Social Icons */}
-            <div className="pt-4">
+            <div className="pt-4 marginnnnbotoomfooter"> 
               <p className="paratext boldfont greencolor uppercase mb-3">
                 Follow Us
               </p>
@@ -147,7 +147,7 @@ export default function ContactPage() {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="cursor-pointer bg-[#ede8d0] greencolor semibold paratext uppercase px-6 py-2 rounded-full hover:bg-white transition duration-200"
+                  className="project-button1 cursor-pointer bg-[#ede8d0] greencolor semibold paratext uppercase px-6 py-2 rounded-full hover:bg-white hover:!text-[#fff] transition duration-200"
                 >
                   Get In Touch
                 </button>

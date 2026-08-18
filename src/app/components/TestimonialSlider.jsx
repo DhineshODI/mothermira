@@ -112,7 +112,7 @@ export default function TestimonialSlider() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
   };
 
@@ -127,7 +127,7 @@ export default function TestimonialSlider() {
           Warm<span className="thinfont blackcolor"> Experince</span>
         </h2>
 
-        <p className="builtontrustpara blackcolor mt-[15px]">
+        <p className="builtontrustpara blackcolor mt-[15px] breakremove">
           Feedback from homeowners reflecting trust, quality development, and
           long-term value experienced <br /> across every Mother Mira project
         </p>
@@ -169,12 +169,12 @@ export default function TestimonialSlider() {
               >
                 {testimonials.map((item) => (
                   <div key={item.id} className="outline-none">
-                    <div className="min-h-[220px] flex flex-col justify-between">
+                    <div className="min-h-[220px] flex flex-col justify-between  testimonilaaaanewsec">
                       <h3 className="testimonialcontent semibold greencolor">
                         {item.quote}
                       </h3>
 
-                      <div className="pt-6 pb-6 border-b border-dashed border-[#0c3835]/40 flex items-center justify-between">
+                      <div className="pt-6 pb-6 border-b border-dashed border-[#0c3835]/40 flex items-center justify-between bordderbottomtestimonail">
                         <div>
                           <h4 className="twentyfourpixel paratext blackcolor semibold">
                             {item.name}
@@ -188,7 +188,7 @@ export default function TestimonialSlider() {
                           href={item.youtubeUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center justify-center text-white hover:scale-105 transition-transform"
+                          className="inline-flex items-center justify-center text-white hover:scale-105 transition-transform atagg"
                         >
                           <img
                             src="/images/icons/youtubesvg.svg"

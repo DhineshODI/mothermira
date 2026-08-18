@@ -54,7 +54,7 @@ export default function LivingExperienceBanner() {
         >
           <a
             href="#"
-            className="relative inline-block after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-500 hover:after:w-full"
+            className="relative inline-block after:absolute after:left-0 after:-bottom-[0px] after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-500 hover:after:w-full"
           >
             ENQUIRE NOW
           </a>
@@ -63,7 +63,7 @@ export default function LivingExperienceBanner() {
 
           <a
             href="#"
-            className="relative inline-block after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-500 hover:after:w-full"
+            className="relative inline-block after:absolute after:left-0 after:-bottom-[0px] after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-500 hover:after:w-full"
           >
             BOOK A SITE VISIT
           </a>

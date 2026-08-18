@@ -92,12 +92,12 @@ export default function Ourprojects() {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-wrap items-center gap-3 pt-2 motehrmirabuttonour">
-                <button className=" cursor-pointer rounded-full border border-[#0048523D] greencolor semibold paratext  buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300">
+              <div className="flex  flex-wrap items-center gap-3 pt-2 motehrmirabuttonour">
+                <button className=" project-button1 cursor-pointer rounded-full border border-[#0048523D] greencolor semibold paratext  buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300">
                   VIEW PROJECT
                 </button>
 
-                <button className="group cursor-pointer rounded-full border border-[#0048523D] greencolor semibold paratext buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300 inline-flex items-center gap-2.5">
+                <button className="project-button1 group cursor-pointer rounded-full border border-[#0048523D] greencolor semibold paratext buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300 inline-flex items-center gap-2.5">
                   <span>DOWNLOAD BROCHURE</span>
                   <svg
                     className="mt-[-3px] stroke-[#004852] group-hover:stroke-white transition-colors duration-300"
@@ -128,7 +128,7 @@ export default function Ourprojects() {
                   </svg>
                 </button>
 
-                <button className="cursor-pointer rounded-full border border-[#0048523D] bg-[#004852] text-[#EDE8D0] semibold paratext  buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300">
+                <button className="project-button  cursor-pointer rounded-full border border-[#0048523D] bg-[#004852] text-[#EDE8D0] semibold paratext  buttonpading hover:bg-[#0c3835] transition-colors duration-300">
                   BOOK A SITE VISIT
                 </button>
               </div>

@@ -248,14 +248,14 @@ export default function ProjectDetailTheWind() {
   ];
 
   return (
-    <>
+    <div className="projectdetailpage">
       <Header sec={"transperantBg"} />
       <section className="relative w-full h-[800px] flex items-end overflow-hidden detailpageherobg">
         <div className="absolute inset-0 -z-10 w-full h-[100%]">
           <img
             src="/images/thewind-banner.jpg"
             alt="Mother Mira Projects Master Plan Layout"
-            className="h-[100%]"
+            className="h-[100%] projectdetailimgae"
           />
         </div>
 
@@ -274,9 +274,9 @@ export default function ProjectDetailTheWind() {
                 style={{ lineHeight: "120%" }}
                 className="subheadingherobanner greencolor ourprojectsss uppercase"
               >
-                <div className="flex items-center gap-2 ">
+                <div className="flex items-center gap-2 breadcrumtexxttt ">
                   <img
-                    className="w-[22px] h-[22x]"
+                    className="w-[22px] h-[22x] "
                     src="/images/icons/map-pin.svg"
                     alt=""
                   />{" "}
@@ -322,7 +322,7 @@ export default function ProjectDetailTheWind() {
               PORUR&apos;S GROWTH{" "}
               <strong className="greencolor">ADVANTAGE</strong>
             </h2>
-            <p className="blackcolor paratext mt-[10px]">
+            <p className="blackcolor paratext mt-[10px] breakremove">
               Explore the advantages of living in Chennai&apos;s fast-growing{" "}
               <br />
               and well-connected Porur corridor.
@@ -356,7 +356,7 @@ export default function ProjectDetailTheWind() {
         </div>
       </section>
 
-      <section className="w-full py-16 sm:py-24 px-4 sm:px-8 bg-[#EDE8D0]">
+      <section className="w-full py-16 sm:py-24 px-4 sm:px-8 bg-[#EDE8D0] locationadavantageeeesection">
         <div className="container max-w-7xl mx-auto flex flex-col items-center">
           {/* Header Section */}
           <div className="text-center max-w-7xl mb-12">
@@ -369,7 +369,7 @@ export default function ProjectDetailTheWind() {
                 Lifestyle
               </strong>
             </h2>
-            <p className="blackcolor paratext mt-[10px]">
+            <p className="blackcolor paratext mt-[10px] breakremove">
               Excellent connectivity to IT hubs, metro access, schools,
               hospitals, <br /> and key transport corridors across Chennai.
             </p>
@@ -378,7 +378,7 @@ export default function ProjectDetailTheWind() {
           <img src="/images/mapimage.png" alt="" />
 
           {/* Bottom CTA */}
-          <div className="flex flex-col items-center mt-10 space-y-3">
+          <div className="flex flex-col items-center mt-10 space-y-3 googlemapsssbutton">
             <button className=" uppercase cursor-pointer rounded-full border border-[#0048523D] bg-[#004852] text-[#EDE8D0] semibold paratext  buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300">
               View Google Map
             </button>
@@ -389,7 +389,7 @@ export default function ProjectDetailTheWind() {
       <section className="w-full py-16 sm:py-24 px-4 sm:px-8 bg-[#EDE8D0] !pt-0 border-b border-[#16161629]">
         <div className="container max-w-6xl mx-auto flex flex-col items-center">
           {/* Top Pills Filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-10">
+          <div className="flex flex-wrap justify-center gap-3 mb-10 mobileeedisplayslider">
             {tabs.map((tab) => {
               const isActive = activeTab === tab;
               return (
@@ -409,7 +409,7 @@ export default function ProjectDetailTheWind() {
           </div>
 
           {/* Outer Fieldset Card Container */}
-          <div className="w-full border border-[#004852]/20 rounded-2xl p-6 sm:p-10 pt-2 sm:pt-4 relative mt-10">
+          <div className="w-full border border-[#004852]/20 rounded-2xl p-6 sm:p-10 pt-2 sm:pt-4 relative mt-10 mobileeeslidmobilee">
             {/* Section Title embedded in top border line */}
             <div className="text-center -mt-8 sm:-mt-10 mb-6">
               <span className="bg-[#EDE8D0] px-4 inline-block herobannerheading greencolor">
@@ -507,6 +507,6 @@ export default function ProjectDetailTheWind() {
       <ProjectGallery />
 
       <LivingExperienceBanner />
-    </>
+    </div>
   );
 }

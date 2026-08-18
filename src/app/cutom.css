@@ -112,14 +112,14 @@ html.has-scroll-dragging {
   }
 }
 
-@media (max-width: 900px) and (min-width: 767px) {
+@media (max-width: 900px) and (min-width: 768px) {
   .container {
     max-width: 700px;
   }
 }
 
 /* Tablets: 600px to 899px */
-@media (max-width: 767px) and (min-width: 600px) {
+@media (max-width: 768px) and (min-width: 600px) {
   .container {
     max-width: 560px;
   }
@@ -260,11 +260,11 @@ body {
   width: 45%;
 }
 .footerrimageSecondd {
-  width: 55%;
-  padding-top: 100px;
-  padding-left: 100px;
   justify-content: center;
   gap: 30px;
+  width: 55%;
+  padding-top: 100px;
+  padding-left: 75px;
 }
 
 .copyrightrightsection {
@@ -562,7 +562,7 @@ background-color: #ede8d0; */
   content: "";
   background-color: #b4b7a3;
 
-  width: 38%;
+  width: 39%;
   height: 1px;
   position: absolute;
   top: 50%;
@@ -573,7 +573,7 @@ background-color: #ede8d0; */
   content: "";
   background-color: #b4b7a3;
 
-  width: 38%;
+  width: 39%;
   height: 1px;
   position: absolute;
   top: 50%;
@@ -581,7 +581,7 @@ background-color: #ede8d0; */
   transform: translateY(-50%);
 }
 .borderbuttonexplore .buttonpading {
-  padding: 10px 28px 10px;
+  padding: 7px 28px 6px;
 }
 
 .thitytwoexper {
@@ -710,7 +710,7 @@ background-color: #ede8d0; */
   border: 10px solid #dedac9;
   border: 10px solid #1f293329;
   width: 17%;
-  height: 500px;
+  height: 485px;
   padding: 15px 5px;
   overflow: hidden;
 }
@@ -788,7 +788,7 @@ background-color: #ede8d0; */
 }
 
 .stickyheader.headdersectionmain {
-  z-index: 15000;
+  z-index: 1000;
 }
 
 .headertop {
@@ -800,7 +800,6 @@ background-color: #ede8d0; */
 }
 
 .headerbuttondiv:hover {
-  /* background-color: #004852; */
   color: #ede8d0;
   border-radius: 50px;
 }
@@ -893,50 +892,6 @@ background-color: #ede8d0; */
   color: #ede8d0;
 }
 /* button-animationsss */
-
-.project-button {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  border: none;
-
-  transition:
-    color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.project-button::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  background-color: #0c3835;
-  border-radius: 50%;
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  transition:
-    width 0.8s cubic-bezier(0.23, 1, 0.32, 1),
-    height 0.8s cubic-bezier(0.23, 1, 0.32, 1),
-    opacity 0.3s ease;
-}
-
-.project-button:hover {
-  background-color: #004852;
-  color: #fff;
-}
-
-.project-button:hover::before {
-  width: 200px;
-  height: 200px;
-  opacity: 1;
-}
-
-.project-button:active {
-  transform: scale(0.95);
-}
 
 .aboutslidesection {
   padding-left: 2%;
@@ -3345,8 +3300,8 @@ background-color: #ede8d0; */
     padding-bottom: 1%;
   }
   .paratext {
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 16px;
   }
 
   .imageesectionhome img {
@@ -3397,13 +3352,13 @@ background-color: #ede8d0; */
   }
 
   .herobannerheading {
-    margin-top: 0;
+    margin-top: 8px;
     font-size: 26px;
-    line-height: 35px;
+    line-height: 33px;
   }
 
   .subheadingherobanner {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .footerrimageSecondd .greencolor.paratext br {
@@ -3935,8 +3890,20 @@ background-color: #ede8d0; */
     padding-right: 10%;
   }
 
+  .detailpageherobg hr {
+    margin-bottom: 10px !important;
+  }
+
   .brnone br {
     display: none;
+  }
+
+  .breadcrumtexxttt img {
+    width: 16px;
+    height: 15px;
+  }
+  .greencolor.ourprojectsss.uppercase:last-child {
+    padding-left: 0px;
   }
 
   .borderbuttonexplore::before {
@@ -3966,15 +3933,1165 @@ background-color: #ede8d0; */
   }
 
   .sliderrimagesectionnn {
-    height: 220px;
+    height: 190px;
   }
 
   .butttonssssss {
-    width: 38px;
-    height: 38px;
+    width: 33px;
+    height: 33px;
   }
 
   .mainheading.missionclasss.paragraphfont {
     margin-top: 37px;
   }
+}
+
+@media (max-width: 600px) {
+  /* fonts-style */
+
+  .mainheading {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .subheadingtext {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  .imagecontenttttt {
+    top: 25px;
+  }
+
+  .headdersectionmain {
+    padding: 14px 20px;
+    padding-bottom: 10px;
+  }
+
+  .contactform .semibold.uppercase.text-white {
+    font-size: 14px;
+  }
+
+  .stickyheader.headdersectionmain {
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+  .paratext {
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  .imageesectionhome img {
+    height: 165px;
+    width: 100%;
+  }
+  .thirdheading {
+    font-size: 16px;
+    line-height: 100%;
+  }
+
+  .fifththheading {
+    font-size: 30px;
+    line-height: 32px;
+  }
+  .salesfooterrr {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .keyssectionbg .group {
+    margin-bottom: 30px;
+  }
+
+  .testimonialcontent {
+    min-height: max-content;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-right: 10px;
+    font-size: 15px;
+    line-height: 18px;
+    width: 75%;
+  }
+
+  .fourheading {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .imagetestisection1 {
+    border: 2px solid #1f293329;
+    height: 312px;
+    display: none;
+  }
+
+  .imagesizetes {
+    border-radius: 10px;
+  }
+  .videosectionz {
+    height: 380px;
+  }
+
+  .aboutslidesection {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .herobannerheading {
+    margin-top: 5px;
+    padding-bottom: 0;
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .subheadingherobanner {
+    font-size: 14px;
+  }
+
+  .footerrimageSecondd .greencolor.paratext br {
+    display: none;
+  }
+
+  .mothermiraourproject {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .motehrmiratextour .mainheading.greencolor {
+    font-size: 25px;
+    line-height: 27px;
+  }
+
+  .motehrmiratextour .flex.flex-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .twentyfourpixel {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .premiumvillaamain {
+    font-size: 24px;
+    line-height: 37px;
+  }
+
+  .fiftypixel {
+    font-size: 15px;
+    line-height: 16px;
+  }
+
+  .hunderpixel {
+    font-size: 26px;
+    line-height: 26px;
+  }
+
+  .builtontrustpara {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .videobanenrrcontent .hunderpixel {
+    margin-bottom: 10px;
+  }
+  .secondheading {
+    font-size: 26px;
+    line-height: 100%;
+  }
+
+  .videobanenrrcontent .builtontrustpara {
+    border-radius: 8px;
+    gap: 8px;
+    padding: 8px 15px;
+  }
+
+  .butoonconteebd {
+    flex-flow: wrap;
+    align-items: baseline;
+    margin-top: 0;
+    gap: 8px;
+  }
+
+  .twentyeightpixel {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .foundervoicesubtext {
+    margin-top: 0;
+    font-family: Neue Haas Grotesk normal semibold;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .addressstyle {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .mainheading.missionclasss {
+    font-size: 20px;
+    line-height: 20px !important;
+  }
+
+  .builttttbottom {
+    margin-bottom: 15px;
+  }
+  .buildontrusthomepage .borderbuttonexplore.relative {
+    margin-top: 30px;
+  }
+
+  .contactbannerr .mt-7 {
+    margin-top: 13px;
+  }
+
+  .contactbannerr .mt-7 a {
+    font-size: 13px;
+  }
+
+  .buildontrusthomepage .borderbuttonexplore.relative a {
+    padding: 8px 17px;
+  }
+  .wecreateee {
+    margin-top: 20px;
+  }
+
+  .wecreateee br {
+    display: none;
+  }
+  .mainheading.missionclasss br {
+    display: none;
+  }
+  .mainheading.missionclasss strong {
+    padding-left: 3px;
+  }
+
+  .perfecthomefont {
+    font-size: 36px;
+    line-height: 100%;
+  }
+
+  .plusfont {
+    font-size: 25px;
+    line-height: 100%;
+  }
+  .thitytwoexper {
+    font-size: 85px;
+    line-height: 100%;
+  }
+
+  .foundersvoicetext {
+    padding-top: 25px;
+    font-size: 35px;
+    line-height: 34px;
+    opacity: 0.85;
+  }
+
+  .builtttonalwayshome {
+    padding-top: 30px;
+    font-size: 33px;
+    line-height: 30px;
+  }
+
+  /* fonts-style */
+
+  .testimonialsection {
+    background-position: bottom;
+    background-size: contain;
+    height: 620px;
+  }
+
+  .imagetestisection2 > div {
+    border: 5px solid #1f293329;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    border-radius: 15px;
+  }
+
+  .breakremove br {
+    display: none;
+  }
+
+  .borddrerer img {
+    width: 40px;
+    height: 35px;
+  }
+
+  .maxwidthcontent {
+    justify-content: flex-start;
+    padding-top: 8%;
+    padding-left: 0%;
+  }
+
+  .footerrimageSecondd {
+    width: 100%;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+  }
+
+  #foooterid .footerrimageSecondd .paratext.boldfont.greencolor.uppercase {
+    font-size: 14px !important;
+  }
+
+  .footerrimagefirst img {
+    height: 300px;
+    display: none;
+  }
+
+  .marginnnnbotoomfooter {
+    margin-bottom: 20px !important;
+    padding-top: 0;
+  }
+
+  .footerrimagefirst {
+    width: 100%;
+  }
+
+  .projectdetailabannerrr {
+    height: 600px;
+  }
+  .motehrmirabuttonour {
+    flex-wrap: wrap;
+    column-gap: 2%;
+    width: 100%;
+    margin-left: 0;
+    padding-top: 0;
+  }
+
+  .imagedivposition {
+    margin-left: 0;
+  }
+
+  .motehrmiratextour .inline-flex.items-center.py-2 {
+    padding-top: 3px;
+    padding-bottom: 4px;
+    padding-left: 3px;
+    padding-right: 7px;
+  }
+  .motehrmiratextour .inline-flex.items-center.py-2 img {
+    width: 16px;
+    height: 16px;
+  }
+  .motehrmiratextour {
+    margin-bottom: 3.7%;
+    margin-left: 1%;
+    width: max-content;
+  }
+
+  .motehrmirabuttonour .paratext {
+    font-size: 11px;
+    line-height: 16px;
+    padding: 6px 15px;
+  }
+
+  .motehrmirabuttonour .paratext svg {
+    height: 14px;
+  }
+
+  .objectpositionproject .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .projecthomebannersec {
+    background-position: bottom;
+    background-size: contain;
+    height: 650px;
+    padding-top: 20px !important;
+  }
+
+  .aboutsectionbanner {
+    min-height: 450px;
+    max-height: 450px;
+  }
+  .aboutsectionbanner img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .projectbannercontainer {
+    position: relative;
+    height: 100%;
+  }
+
+  .leftsidesectioncontent {
+    align-items: flex-start;
+    width: 100%;
+    top: 30%;
+    left: 0;
+    right: 0;
+    padding-left: 25px;
+  }
+
+  .premisumvillasend {
+    text-align: start;
+    width: 80%;
+  }
+
+  .brnone.leftsidezero {
+    max-width: 300px;
+  }
+
+  .project-button {
+    padding: 5px 12px;
+    font-size: 11px;
+  }
+
+  .leftsidesectioncontent .thirdheading {
+    text-align: left;
+  }
+
+  .contenthomepagesection {
+    width: 100%;
+    margin-top: 0%;
+    margin-left: 0;
+    display: flex;
+  }
+
+  .leftsidezero {
+    margin-left: 0;
+    padding-top: 5px;
+  }
+
+  .projectbannercontainer .semibold.addressstyle {
+    letter-spacing: 0 !important;
+    margin-left: 0;
+  }
+
+  .leftsidezero img {
+    width: 12px;
+    height: 13px;
+  }
+
+  .keystrengthsection {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 30px;
+    gap: 15px;
+  }
+
+  .keyssectionbg {
+    padding-bottom: 20px;
+  }
+
+  .keyssectionbg .inline-block.twentyfourpixel {
+    padding: 5px 8px;
+    margin-bottom: 10px;
+  }
+  .detailsectionproject {
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    top: 57%;
+    left: 0;
+    padding-left: 28px;
+    row-gap: 15px;
+  }
+
+  .aboutmiraimagepositionn {
+    top: 500px;
+  }
+  .buildontrusthomepage {
+    height: 600px;
+  }
+  .aboumiraaboutsection {
+    height: 800px;
+  }
+
+  .detailsectionproject > div {
+    width: max-content;
+    margin-bottom: 0;
+  }
+
+  .foundervoicesection {
+    min-height: 445px;
+    padding-bottom: 0 !important;
+  }
+
+  .apastaphy {
+    margin-top: 35px;
+  }
+  .missionsecid {
+    height: 800px !important;
+    max-height: 800px !important;
+    min-height: 800px !important;
+  }
+  .missionsecid img {
+    object-fit: contain;
+    height: 100%;
+    object-position: bottom;
+    background: #eee8d0;
+  }
+
+  .founderwithd {
+    width: 85%;
+  }
+
+  .foundervoicesection img {
+    object-fit: cover;
+    height: 100%;
+    object-position: left;
+  }
+
+  .landingtextaboutpage {
+    margin-top: 0;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 40px;
+  }
+
+  .keyssectionbg .salesfooterrr.paragraphfont.blackcolor br {
+    display: none;
+  }
+
+  .keyssectionbg .space-y-12.mt-10 {
+    margin-top: 30px;
+  }
+
+  .aboutsssssection {
+    flex-wrap: wrap;
+    margin-top: -20px;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobilimagee {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .videobanenrrcontent {
+    margin-bottom: 17%;
+  }
+
+  .mobilimagee img {
+    height: auto;
+  }
+  .boxcardss {
+    justify-content: space-around;
+    width: 220px;
+    height: 200px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+  }
+
+  .detailpageherobg {
+    height: 350px;
+  }
+
+  .detailpageherobg .projectdetailimgae {
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .detailpageherobg .container {
+    padding-bottom: 30px;
+  }
+
+  .ourprojectsimageposition {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .maxwidthcontent {
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6%;
+    width: 100%;
+    padding-top: 0;
+    display: flex;
+  }
+
+  .maxwidthcontent .border-b {
+    border: none;
+    width: 47%;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+  }
+
+  .ourprojectsss {
+    padding: 3px 5px 1px;
+  }
+
+  .maxwidthcontent .semibold.fiftypixel.greencolor {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .contactformsections {
+    padding-top: 75px;
+  }
+
+  .contactform input {
+    border-radius: 6px;
+    height: 40px;
+  }
+
+  .formsectioncontact {
+    width: 100%;
+    border-radius: 15px;
+    padding: 30px 18px;
+  }
+
+  .objectpositionproject {
+    justify-content: flex-start;
+  }
+
+  .contactform input::placeholder,
+  .contactform textarea::placeholder {
+    font-size: 15px;
+  }
+
+  .headerimageesection {
+    height: 45px;
+  }
+
+  .inbodyimageee {
+    top: 0;
+  }
+
+  .contactformsections .w-11 {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contactformsections .flex.items-center.gap-3 {
+    gap: 5px;
+  }
+
+  .padingggtopimage {
+    padding-top: 40px;
+  }
+
+  .copyrightrightsection {
+    margin-top: 0px;
+    padding-top: 27px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .aboutmothermiraaasec {
+    margin-top: 20px;
+  }
+
+  .greenbarsection {
+    width: 53px;
+    min-width: 53px;
+    max-width: 53px;
+    display: none;
+  }
+
+  .testimonilaaaanewsec {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .boxcardss img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .accesssible {
+    margin-bottom: 9px;
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .webelivepremium {
+    margin-top: -18px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .apastaphy:before {
+    background-size: cover;
+    width: 30px;
+    height: 22px;
+    top: 0;
+    left: -37px;
+  }
+
+  .testimonial-main-slider .slick-dots {
+    gap: 7px;
+  }
+  .footerbgsection {
+    height: max-content;
+    flex-direction: column-reverse;
+  }
+
+  .contactbannerr {
+    min-height: 700px;
+  }
+
+  .testimonial-main-slider .slick-dots li button {
+    width: 3px;
+    height: 11px;
+  }
+
+  .contactbannerr .mt-15 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .headertop {
+    padding-top: 80px;
+  }
+
+  .mobileeedisplayslider {
+    flex-flow: row;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    display: flex;
+    overflow: scroll;
+  }
+
+  .proejectdetailbannerer {
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 850px;
+  }
+
+  .imagetestisection2 {
+    width: 100%;
+    border-radius: 15px;
+  }
+  .gridaminiteddd {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .gridaminiteddd .group {
+    min-height: auto;
+  }
+
+  .hoverranimationnn img {
+    width: 157px;
+  }
+
+  .waterspec {
+    padding: 6px 18px;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+
+  .headdersectionmain .gap-5 {
+    gap: 10px;
+  }
+  .headerrrrcontainer {
+    padding-right: 0;
+  }
+
+  .stickyheader .headerimageesection {
+    height: 40px;
+  }
+
+  .footerrimageSecondd .w-11 {
+    width: 33px;
+    height: 33px;
+  }
+
+  .footerbgsection .flex.items-center.gap-3 {
+    gap: 5px;
+  }
+
+  .headerbuttondiv {
+    font-size: 14px;
+    line-height: 25px;
+    padding: 6px 17px;
+  }
+  .statscolumnss {
+    flex-flow: wrap;
+    justify-content: center;
+    gap: 10px 6%;
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+
+  .proejectdetailbannerer .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .statscolumnss .border-b {
+    border: none;
+    width: 47%;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+  }
+
+  .leftsidesectionflexxxs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+
+  .projectsectificationscontain {
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+  }
+  .imagebordererer:before {
+    content: none;
+  }
+  .imagebordererer {
+    height: auto;
+    padding-left: 0;
+    margin-top: 5px;
+  }
+
+  .projectsectificationscontain .subheadingtext {
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 15px;
+  }
+
+  .rightsidecolumnlinee:before {
+    display: none;
+  }
+
+  .flexxxxdeirection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .flexxxxdeirection .relative {
+    height: 75px;
+  }
+
+  .flexxxxdeirection .relative img {
+    height: 100%;
+  }
+  .rightsidecolumnlinee {
+    display: flex;
+    flex-direction: column;
+  }
+  .py-16 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .py-20 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .projectgallerysectionsa {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-left: 0;
+    padding-right: 0;
+    gap: 10px;
+  }
+
+  .detailpageherobg hr {
+    margin-bottom: 10px !important;
+  }
+
+  .brnone br {
+    display: none;
+  }
+
+  .breadcrumtexxttt img {
+    width: 16px;
+    height: 15px;
+  }
+  .greencolor.ourprojectsss.uppercase:last-child {
+    padding-left: 0px;
+  }
+
+  .borderbuttonexplore::before {
+    width: 30%;
+    display: none;
+  }
+  .borderbuttonexplore::after {
+    width: 30%;
+    display: none;
+  }
+
+  .keystrengthsection .builtontrustpara {
+    width: 90%;
+  }
+
+  .contactformsections .container {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+  }
+
+  .adressbox .addressstyle.mt-2 br {
+    display: none;
+  }
+
+  .mobileprojectttcsss {
+  }
+  .donwloadbreochurebutton {
+    padding: 5px 20px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .googlemapsssbutton {
+    margin-top: 20px;
+  }
+  .googlemapsssbutton button {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 5px 20px;
+  }
+
+  .adressbox {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .formsectioncontact .project-button1 {
+    font-size: 13px;
+    padding: 7px 20px;
+  }
+
+  .sliderrimagesectionnn {
+    height: auto;
+  }
+
+  .butttonssssss {
+    width: 30px;
+    height: 30px;
+  }
+
+  .butttonssssss svg {
+    width: 12px;
+  }
+
+  .mainheading.missionclasss.paragraphfont {
+    margin-top: 25px;
+  }
+
+  .mobileeedisplayslider button {
+    border-radius: 20px;
+    flex-shrink: 0;
+    padding: 5px 19px;
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  .statscolumnss .semibold.fiftypixel.greencolor {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .projectdetailpage .mb-17 {
+    margin-bottom: 20px;
+  }
+  .projectdetailpage .mb-10 {
+    margin-bottom: 20px;
+  }
+
+  .projectdetailpage .mb-12 {
+    margin-bottom: 20px;
+  }
+
+  .mobileprojectttcsss {
+    border-radius: 10px;
+  }
+
+  .projectdetailpage .mt-10 {
+    margin-top: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .projectsectificationscontain .border-b:last-child {
+    border: none;
+  }
+
+  .aminitessssectionnbg .sliderrimagesectionnn {
+    height: 250px;
+  }
+
+  .locationadavantageeeesection img {
+  }
+
+  .mobileeeslidmobilee .paratext {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  /* .slick-slide > div {
+    width: 300px;
+  } */
+
+  .detailpageherobg img {
+    object-fit: cover;
+  }
+
+  .atagg {
+    left: 0;
+  }
+
+  .bordderbottomtestimonail {
+    border-bottom: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    padding-bottom: 0;
+  }
+  /* menubarstyleeee */
+
+  .menubarrrrrrrstyle {
+    z-index: 1000;
+    width: 100%;
+    position: fixed;
+    height: 100% !important;
+    overflow: hidden;
+  }
+
+  .menubaropennn {
+    padding-top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headerrrrcontainer.newwwwww {
+    padding: 14px 0 10px;
+    border-bottom: 1px solid #0000001a;
+  }
+
+  .menubarrrrrrrstyle .contactmobileeeee {
+    background: none !important;
+  }
+
+  .menuolddddnewww {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .menuolddddnewww a {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  /* menubarstyleeee */
+}
+
+/* Pure button animation */
+
+.project-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+  border: none;
+  text-decoration: none;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+  border: 1px solid #0048523d;
+}
+
+.project-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #eee8d0;
+  color: #0c3835;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition:
+    width 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+    height 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 0.3s ease;
+}
+
+.project-button:hover {
+  color: #0c3835;
+  background-color: #0c3835;
+}
+
+.project-button:hover::before {
+  width: 300px;
+  height: 200px;
+  opacity: 1;
+}
+
+.project-button:active {
+  transform: scale(0.95);
+}
+
+/* Pure button new color animation */
+
+.project-button1 {
+  isolation: isolate;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition:
+    color 0.3s,
+    transform 0.3s;
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #0048523d;
+}
+
+.project-button1::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #0c3835;
+  color: #000;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition:
+    width 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+    height 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 0.3s ease;
+}
+
+.project-button1:hover {
+  color: #000;
+  background-color: #eee8d0;
+}
+
+.project-button1:hover::before {
+  width: 300px;
+  height: 200px;
+  opacity: 1;
+}
+
+.project-button1:active {
+  transform: scale(0.95);
 }

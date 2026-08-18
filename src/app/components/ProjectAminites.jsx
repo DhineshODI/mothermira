@@ -4,7 +4,6 @@ import { useState, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import Image from "next/image";
 
 function AmenitiesCategoryGrid({ categoryData, sliderRef }) {
@@ -16,6 +15,7 @@ function AmenitiesCategoryGrid({ categoryData, sliderRef }) {
     slidesToScroll: 1,
     arrows: false,
     autoplay: false,
+
     responsive: [
       {
         breakpoint: 1024,
@@ -25,22 +25,20 @@ function AmenitiesCategoryGrid({ categoryData, sliderRef }) {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
     ],
   };
-
   return (
     <div className="w-full">
       <Slider ref={sliderRef} {...settings}>
         {categoryData.map((item, index) => (
           <div key={`${item.title}-${index}`} className="px-2">
             <div className="relative group sliderrimagesectionnn h-[320px] sm:h-[380px] rounded-2xl overflow-hidden shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl cursor-pointer">
-              {/* Background Image */}
               {item.image &&
                 item.image !== "/images/project-detail/aminites/" && (
                   <Image
@@ -71,7 +69,6 @@ function AmenitiesCategoryGrid({ categoryData, sliderRef }) {
 export default function AmenitiesSection() {
   const [activeCategory, setActiveCategory] = useState("SECURITY");
 
-  // IMPORTANT: ref must be inside the component
   const sliderRef = useRef(null);
 
   const amenitiesData = {
@@ -248,7 +245,7 @@ export default function AmenitiesSection() {
   ];
 
   return (
-    <section className="w-full py-16 sm:py-24 px-4 sm:px-8 bg-[#EDE8D0] !pb-0">
+    <section className="w-full py-16 sm:py-24 px-4 sm:px-8 bg-[#EDE8D0] !pb-0  aminitessssectionnbg">
       <div className="container max-w-7xl mx-auto flex flex-col items-center">
         {/* Header Area */}
         <div className="text-center max-w-7xl mb-17">
@@ -267,7 +264,7 @@ export default function AmenitiesSection() {
         </div>
 
         {/* Category Pills */}
-        <div className="flex flex-wrap justify-center gap-3 mb-17">
+        <div className="flex flex-wrap justify-center gap-3 mb-17 mobileeedisplayslider">
           {categories.map((cat) => (
             <button
               key={cat}

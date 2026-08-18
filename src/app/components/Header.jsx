@@ -221,72 +221,91 @@ export default function Header({ sec }) {
   }, []);
 
   return (
-    <header
-      className={`sticky top-0 z-50 w-full px-9 sm:px-9 lg:px-9 transition-all duration-300 py-[20px] headdersectionmain ${
-        isSticky ? "stickyheader" : ""
-      } ${sec}`}
-    >
-      <div className="flex items-center justify-between headerrrrcontainer">
-        {/* LOGO */}
-        <Link href="/" className="flex items-center gap-2">
-          <div className="relative">
-            <img
-              src={
-                sec === "transperantBg" && isSticky === false
-                  ? "/images/mothermira-logo-color.svg"
-                  : "/images/mothermira-logo.svg"
+    <>
+      <header
+        className={`sticky top-0 z-50 w-full px-9 sm:px-9 lg:px-9 transition-all duration-300 py-[20px] headdersectionmain ${
+          isSticky ? "stickyheader" : ""
+        } ${sec}`}
+      >
+        <div className="flex items-center justify-between headerrrrcontainer">
+          {/* LOGO */}
+          <Link href="/" className="flex items-center gap-2">
+            <div className="relative">
+              <img
+                src={
+                  sec === "transperantBg" && isSticky === false
+                    ? "/images/mothermira-logo-color.svg"
+                    : "/images/mothermira-logo.svg"
+                }
+                alt="Mother Mira"
+                className="headerimageesection"
+              />
+            </div>
+          </Link>
+
+          {/* DESKTOP NAVIGATION */}
+          <nav className="hidden md:flex items-center gap-5 lg:gap-5">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`paratext semibold headerbuttondiv ${
+                    isActive ? "active" : ""
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
+          </nav>
+
+          {/* ANIMATED HAMBURGER ICON */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden relative z-50 w-8 h-8 flex flex-col justify-center items-center gap-1.5 focus:outline-none"
+            aria-label="Toggle Menu"
+          >
+            <motion.span
+              animate={
+                isMenuOpen ? { rotate: 45, y: 7.5 } : { rotate: 0, y: 0 }
               }
-              alt="Mother Mira"
-              className="headerimageesection"
+              className={`w-6 h-0.5 block rounded-full transition-transform ${
+                sec === "transperantBg" && isSticky === false
+                  ? "bg-[#fff]"
+                  : "bg-[#0c3835]"
+              }`}
             />
-          </div>
-        </Link>
 
-        {/* DESKTOP NAVIGATION */}
-        <nav className="hidden md:flex items-center gap-5 lg:gap-5">
-          {navLinks.map((link) => {
-            const isActive = pathname === link.href;
+            <motion.span
+              animate={isMenuOpen ? { opacity: 0 } : { opacity: 1 }}
+              className={`w-6 h-0.5 bg-[#0c3835] block transition-opacity rounded-full  ${
+                sec === "transperantBg" && isSticky === false
+                  ? "bg-[#fff]"
+                  : "bg-[#0c3835]"
+              }`}
+            />
 
-            return (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={`paratext semibold headerbuttondiv ${
-                  isActive ? "active" : ""
-                }`}
-              >
-                {link.name}
-              </Link>
-            );
-          })}
-        </nav>
+            <motion.span
+              animate={
+                isMenuOpen ? { rotate: -45, y: -7.5 } : { rotate: 0, y: 0 }
+              }
+              className={`w-6 h-0.5 bg-[#0c3835] block transition-transform rounded-full
+              ${
+                sec === "transperantBg" && isSticky === false
+                  ? "bg-[#fff]"
+                  : "bg-[#0c3835]"
+              }
+              `}
+            />
+          </button>
+        </div>
 
-        {/* ANIMATED HAMBURGER ICON */}
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden relative z-50 w-8 h-8 flex flex-col justify-center items-center gap-1.5 focus:outline-none"
-          aria-label="Toggle Menu"
-        >
-          <motion.span
-            animate={isMenuOpen ? { rotate: 45, y: 7.5 } : { rotate: 0, y: 0 }}
-            className="w-6 h-0.5 bg-[#0c3835] block transition-transform rounded-full"
-          />
+        {/* MOBILE SMOOTH SLIDE-DOWN DRAWER */}
+      </header>
 
-          <motion.span
-            animate={isMenuOpen ? { opacity: 0 } : { opacity: 1 }}
-            className="w-6 h-0.5 bg-[#0c3835] block transition-opacity rounded-full"
-          />
-
-          <motion.span
-            animate={
-              isMenuOpen ? { rotate: -45, y: -7.5 } : { rotate: 0, y: 0 }
-            }
-            className="w-6 h-0.5 bg-[#0c3835] block transition-transform rounded-full"
-          />
-        </button>
-      </div>
-
-      {/* MOBILE SMOOTH SLIDE-DOWN DRAWER */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -294,14 +313,68 @@ export default function Header({ sec }) {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="md:hidden overflow-hidden bg-[#f4f3e8] border-t border-[#0c3835]/10 px-4 pb-6"
+            className="md:hidden overflow-hidden bg-[#f4f3e8] border-t border-[#0c3835]/10 px-4 pb-6 menubarrrrrrrstyle"
           >
-            <div className="pt-4 space-y-4">
+            <div className="flex items-center justify-between headerrrrcontainer newwwwww">
+              <Link href="/" className="flex items-center gap-2">
+                <div className="relative">
+                  <img
+                    src="/images/mothermira-logo.svg"
+                    alt="Mother Mira"
+                    className="headerimageesection"
+                  />
+                </div>
+              </Link>
+
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="md:hidden relative z-50 w-8 h-8 flex flex-col justify-center items-center gap-1.5 focus:outline-none"
+                aria-label="Toggle Menu"
+              >
+                <motion.span
+                  animate={
+                    isMenuOpen ? { rotate: 45, y: 7.5 } : { rotate: 0, y: 0 }
+                  }
+                  className={`w-6 h-0.5 block rounded-full transition-transform ${
+                    sec === "transperantBg" && isSticky === false
+                      ? "bg-[#0c3835]"
+                      : "bg-[#0c3835]"
+                  }`}
+                />
+
+                <motion.span
+                  animate={isMenuOpen ? { opacity: 0 } : { opacity: 1 }}
+                  className={`w-6 h-0.5 bg-[#0c3835] block transition-opacity rounded-full  ${
+                    sec === "transperantBg" && isSticky === false
+                      ? "bg-[#0c3835]"
+                      : "bg-[#0c3835]"
+                  }`}
+                />
+
+                <motion.span
+                  animate={
+                    isMenuOpen ? { rotate: -45, y: -7.5 } : { rotate: 0, y: 0 }
+                  }
+                  className={`w-6 h-0.5 bg-[#0c3835] block transition-transform rounded-full
+              ${
+                sec === "transperantBg" && isSticky === false
+                  ? "bg-[#0c3835]"
+                  : "bg-[#0c3835]"
+              }
+              `}
+                />
+              </button>
+            </div>
+            <div className="pt-4 space-y-4 menubaropennn">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
 
                 return (
-                  <motion.div key={link.name} variants={itemVariants}>
+                  <motion.div
+                    key={link.name}
+                    variants={itemVariants}
+                    className="menuolddddnewww"
+                  >
                     <Link
                       href={link.href}
                       onClick={() => setIsMenuOpen(false)}
@@ -316,20 +389,10 @@ export default function Header({ sec }) {
                   </motion.div>
                 );
               })}
-
-              <motion.div variants={itemVariants}>
-                <Link
-                  href="#contact"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block text-center bg-[#0c3835] text-white text-xs font-bold uppercase tracking-wider py-3 rounded-full mt-4 shadow-md active:scale-95 transition-transform"
-                >
-                  CONTACT US
-                </Link>
-              </motion.div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }

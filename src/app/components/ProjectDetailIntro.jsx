@@ -20,7 +20,7 @@ export default function ProjectDetailIntro() {
             </p>
 
             {/* Title with Logo */}
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-4 flexxxxdeirection">
               <h2 className="secondheading greencolor leading-[100%]">
                 <strong>VALUE LIVING</strong>
               </h2>

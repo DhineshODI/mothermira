@@ -77,7 +77,7 @@ export default function ProjectSpecifications() {
               SPECIFICATIONS
             </strong>
           </h2>
-          <p className="blackcolor paratext mt-[10px]">
+          <p className="blackcolor paratext mt-[10px] breakremove">
             Detailed specifications highlighting construction quality,
             infrastructure standards and <br /> thoughtfully planned development
             features throughout the project.
@@ -85,7 +85,7 @@ export default function ProjectSpecifications() {
         </div>
 
         {/* Specs Box Container */}
-        <div className="w-full bg-[#E7DEC0]/60 border border-[#004852]/15 rounded-3xl p-6 sm:p-8 md:p-10">
+        <div className="w-full bg-[#E7DEC0]/60 border border-[#004852]/15 rounded-3xl p-6 sm:p-8 md:p-10 mobileprojectttcsss">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center projectsectificationscontain">
             {/* Left Vertical Tabs */}
             <div className="lg:col-span-2 flex flex-row lg:flex-col gap-4 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 mobileeedisplayslider ">
@@ -147,7 +147,7 @@ export default function ProjectSpecifications() {
           >
             FOR MORE DETAILED SPECIFICATIONS
           </p>
-          <button className="cursor-pointer rounded-full border border-[#0048523D] bg-[#004852] text-[#EDE8D0] semibold paratext  buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300">
+          <button className="cursor-pointer rounded-full border border-[#0048523D] bg-[#004852] text-[#EDE8D0] semibold paratext  buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300 donwloadbreochurebutton">
             DOWNLOAD BROCHURE
           </button>
         </div>

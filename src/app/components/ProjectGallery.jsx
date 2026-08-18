@@ -127,7 +127,7 @@ export default function ProjectGallery() {
           <h2 className="mainheading indicocolor uppercase">
             PROJECT <strong className="greencolor">VISUALS</strong>
           </h2>
-          <p className="blackcolor paratext mt-[10px]">
+          <p className="blackcolor paratext mt-[10px] breakremove">
             Take a closer look at the community spaces, modern amenities,
             infrastructure <br /> planning, and peaceful residential environment
             offered.
@@ -135,7 +135,7 @@ export default function ProjectGallery() {
         </div>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-17">
+        <div className="flex flex-wrap justify-center gap-3 mb-17 mobileeedisplayslider">
           {tabs.map((tab) => {
             const isActive = activeTab === tab;
             return (
