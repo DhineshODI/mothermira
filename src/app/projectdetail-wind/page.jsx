@@ -32,211 +32,101 @@ export default function ProjectDetailTheWind() {
       title: "STRATEGIC LOCATION",
       desc: "Excellent connectivity to IT hubs and metro access",
       highlighted: true,
-      // Icon: House on hand / structure
       icon: "/images/icons/Infrastructure.svg",
     },
     {
       title: "SMART VALUE LIVING",
       desc: "Balanced pricing with strong long-term appreciation potential",
       highlighted: false,
-      // Icon: Diamond / Quality
       icon: "/images/icons/Quality.svg",
     },
     {
       title: "PEACEFUL COMMUNITY",
       desc: "Low-density gated environment for comfortable everyday living",
       highlighted: false,
-      // Icon: Chart / Growth
       icon: "/images/icons/Value.svg",
     },
     {
       title: "QUALITY INFRASTRUCTURE",
       desc: "Well-Planned Amenities & Durable Infrastructure",
       highlighted: false,
-      // Icon: Thumbs up with stars
       icon: "/images/icons/CustomerSatisfaction.svg",
     },
   ];
 
   const [activeTab, setActiveTab] = useState("MEDICAL FACILITIES");
-
-  // const locationData = {
-  //   "LOCATION HIGHLIGHTS": [
-  //     { name: "Kundratur Main Road.", distance: "0.8 Kms", time: "2 MINS" },
-  //     { name: "Porur Junction", distance: "3.5 Kms", time: "8 MINS" },
-  //     {
-  //       name: "Mangadu Sri Kamakshi Temple",
-  //       distance: "5.5 Kms",
-  //       time: "12 MINS",
-  //     },
-  //     { name: "Airport", distance: "7.8 Kms", time: "18 MINS" },
-  //     { name: "Railway Station, Guindy", distance: "9.5 Kms", time: "22 MINS" },
-  //   ],
-  //   "MEDICAL FACILITIES": [
-  //     { name: "SRMC", distance: "5.0 Kms", time: "10 MINS" },
-  //     { name: "MIOT", distance: "7.0 Kms", time: "15 MINS" },
-  //     {
-  //       name: "Apollo Speciality Hospital, Vanagaram",
-  //       distance: "8.0 Kms",
-  //       time: "18 MINS",
-  //     },
-  //   ],
-  //   RESTAURANTS: [
-  //     { name: "Adyar Ananda Bhavan", distance: "0.2 Kms", time: "1 MIN" },
-  //     { name: "Dominos", distance: "1.5 Kms", time: "4 MINS" },
-  //     { name: "Lemon Tree", distance: "4.0 Kms", time: "8 MINS" },
-  //     { name: "KFC", distance: "4.0 Kms", time: "8 MINS" },
-  //     { name: "Anjappar", distance: "4.0 Kms", time: "8 MINS" },
-  //     { name: "Dindigul Thalapakatti", distance: "4.5 Kms", time: "10 MINS" },
-  //     {
-  //       name: "Sangeetha Veg Restaurant",
-  //       distance: "6.8 Kms",
-  //       time: "15 MINS",
-  //     },
-  //   ],
-  //   "EDUCATIONAL INSTITUTIONS": [
-  //     { name: "PSBB Milenium School", distance: "0.5 Kms", time: "2 MINS" },
-  //     {
-  //       name: "St. Francis International School",
-  //       distance: "0.8 Kms",
-  //       time: "3 MINS",
-  //     },
-  //     {
-  //       name: "Omega International School",
-  //       distance: "1.0 Kms",
-  //       time: "4 MINS",
-  //     },
-  //     { name: "K.K. College of Pharmacy", distance: "1.3 Kms", time: "5 MINS" },
-  //     { name: "Madha Medical College", distance: "4.0 Kms", time: "9 MINS" },
-  //     {
-  //       name: "Sri Krishna International School",
-  //       distance: "4.5 Kms",
-  //       time: "10 MINS",
-  //     },
-  //     { name: "SRM Dental College", distance: "5.0 Kms", time: "12 MINS" },
-  //     {
-  //       name: "Muthu Kumaran College of Medical",
-  //       distance: "5.2 Kms",
-  //       time: "12 MINS",
-  //     },
-  //     { name: "Anna University", distance: "13 Kms", time: "25 MINS" },
-  //     { name: "I.I.T., Chennai", distance: "13 Kms", time: "25 MINS" },
-  //   ],
-  //   COMMERCIAL: [
-  //     { name: "HP", distance: "3.3 Kms", time: "7 MINS" },
-  //     { name: "DLF IT Park", distance: "5.0 Kms", time: "12 MINS" },
-  //     { name: "L&T", distance: "6.0 Kms", time: "14 MINS" },
-  //     {
-  //       name: "Nandambakkam Trade Center",
-  //       distance: "6.4 Kms",
-  //       time: "15 MINS",
-  //     },
-  //   ],
-  //   "FINANCIAL INSTITUTIONS": [
-  //     { name: "Indian Overseas Bank", distance: "0.4 Kms", time: "2 MINS" },
-  //     { name: "ICICI Bank", distance: "1.5 Kms", time: "4 MINS" },
-  //     { name: "CUB ATM", distance: "1.8 Kms", time: "5 MINS" },
-  //     { name: "HDFC Bank", distance: "2.0 Kms", time: "5 MINS" },
-  //     { name: "Indian Bank", distance: "2.5 Kms", time: "6 MINS" },
-  //   ],
-  //   "SUPER MARKETS": [
-  //     { name: "White Rose Super Market", distance: "0.4 Kms", time: "2 MINS" },
-  //     { name: "Nellai Pazhamudhir Solai", distance: "2.5 Kms", time: "6 MINS" },
-  //     { name: "Mega Mart", distance: "3.5 Kms", time: "8 MINS" },
-  //     { name: "Nilgiris", distance: "4.0 Kms", time: "10 MINS" },
-  //   ],
-  // };
-
-  // const tabs = [
-  //   "LOCATION HIGHLIGHTS",
-  //   "MEDICAL FACILITIES",
-  //   "RESTAURANTS",
-  //   "EDUCATIONAL INSTITUTIONS",
-  //   "COMMERCIAL",
-  //   "FINANCIAL INSTITUTIONS",
-  //   "SUPER MARKETS",
-  // ];
-
   const locationData = {
     "MEDICAL FACILITIES": [
-      { name: "MIOT", distance: "6 Kms", time: "1 HR 12 MINS" },
+      { name: "MIOT", distance: "6 Kms", time: "15 Mins" },
       {
         name: "Apollo Speciality Hospital, Vanagaram",
         distance: "8.6 Kms",
-        time: "1 HR 43 MINS",
+        time: "20 Mins",
       },
       {
         name: "Sri Ramachandra Medical Centre",
         distance: "5.3 Kms",
-        time: "1 HR 4 MINS",
+        time: "12 Mins",
       },
     ],
 
     "EDUCATIONAL INSTITUTIONS": [
-      { name: "PSBB Millennium School", distance: "0.6 Kms", time: "7 MINS" },
+      { name: "PSBB Millennium School", distance: "0.6 Kms", time: "2 Mins" },
       {
         name: "St. Francis International School",
         distance: "1.8 Kms",
-        time: "22 MINS",
+        time: "5 Mins",
       },
       {
         name: "Omega International School",
         distance: "1.6 Kms",
-        time: "19 MINS",
+        time: "4 Mins",
       },
-      { name: "Madha Medical College", distance: "4.5 Kms", time: "54 MINS" },
-      { name: "SRM Dental College", distance: "6.5 Kms", time: "1 HR 18 MINS" },
-      { name: "Anna University", distance: "13 Kms", time: "2 HRS 36 MINS" },
-      { name: "Madha Engineering College", distance: "5 Kms", time: "1 HR" },
-      { name: "Pon Vidyashram School", distance: "1.5 Kms", time: "18 MINS" },
+      { name: "Madha Medical College", distance: "4.5 Kms", time: "10 Mins" },
+      { name: "SRM Dental College", distance: "6.5 Kms", time: "15 Mins" },
+      { name: "Anna University", distance: "13 Kms", time: "25 Mins" },
+      { name: "Madha Engineering College", distance: "5 Kms", time: "12 Mins" },
+      { name: "Pon Vidyashram School", distance: "1.5 Kms", time: "4 Mins" },
       {
         name: "Orchid International School",
         distance: "2 Kms",
-        time: "24 MINS",
+        time: "5 Mins",
       },
       {
         name: "Sri Ramachandra Medical College",
         distance: "5.1 Kms",
-        time: "1 HR 1 MIN",
+        time: "12 Mins",
       },
       {
         name: "Little Flowers Matriculation School",
         distance: "0.6 Kms",
-        time: "7 MINS",
+        time: "2 Mins",
       },
     ],
 
     COMMERCIAL: [
-      { name: "DLF IT Park", distance: "7 Kms", time: "1 HR 24 MINS" },
-      { name: "L&T", distance: "6.5 Kms", time: "1 HR 18 MINS" },
-      {
-        name: "Chennai Trade Centre",
-        distance: "6.7 Kms",
-        time: "1 HR 20 MINS",
-      },
-      { name: "Fintech City", distance: "6.5 Kms", time: "1 HR 18 MINS" },
-      { name: "Porur Saravana Stores", distance: "5 Kms", time: "1 HR" },
-      { name: "Commerzone", distance: "4.7 Kms", time: "56 MINS" },
-      { name: "RMZ Software Park", distance: "4.6 Kms", time: "55 MINS" },
-      { name: "Olympia Tech Park", distance: "8 Kms", time: "1 HR 36 MINS" },
-      { name: "Mega Mart", distance: "5.6 Kms", time: "1 HR 7 MINS" },
-      { name: "D Mart", distance: "5.5 Kms", time: "1 HR 6 MINS" },
+      { name: "DLF IT Park", distance: "7 Kms", time: "18 Mins" },
+      { name: "L&T", distance: "6.5 Kms", time: "15 Mins" },
+      { name: "Chennai Trade Centre", distance: "6.7 Kms", time: "15 Mins" },
+      { name: "Fintech City", distance: "6.5 Kms", time: "15 Mins" },
+      { name: "Porur Saravana Stores", distance: "5 Kms", time: "12 Mins" },
+      { name: "Commerzone", distance: "4.7 Kms", time: "10 Mins" },
+      { name: "RMZ Software Park", distance: "4.6 Kms", time: "10 Mins" },
+      { name: "Olympia Tech Park", distance: "8 Kms", time: "20 Mins" },
+      { name: "Mega Mart", distance: "5.6 Kms", time: "14 Mins" },
+      { name: "D Mart", distance: "5.5 Kms", time: "12 Mins" },
     ],
 
     METRO: [
       {
         name: "Chennai Trade Centre Metro",
         distance: "6.3 Kms",
-        time: "1 HR 16 MINS",
+        time: "15 Mins",
       },
-      {
-        name: "Chennai Airport Metro",
-        distance: "8.5 Kms",
-        time: "1 HR 42 MINS",
-      },
-      { name: "Guindy Metro", distance: "9.2 Kms", time: "1 HR 50 MINS" },
-      { name: "Porur Metro", distance: "3.5 Kms", time: "42 MINS" },
-      { name: "Alandur Metro", distance: "9 Kms", time: "1 HR 48 MINS" },
+      { name: "Chennai Airport Metro", distance: "8.5 Kms", time: "20 Mins" },
+      { name: "Guindy Metro", distance: "9.2 Kms", time: "22 Mins" },
+      { name: "Porur Metro", distance: "3.5 Kms", time: "8 Mins" },
+      { name: "Alandur Metro", distance: "9 Kms", time: "20 Mins" },
     ],
   };
 
@@ -387,7 +277,7 @@ export default function ProjectDetailTheWind() {
       </section>
 
       <section className="w-full py-16 sm:py-24 px-4 sm:px-8 bg-[#EDE8D0] !pt-0 border-b border-[#16161629]">
-        <div className="container max-w-6xl mx-auto flex flex-col items-center">
+        <div className="container max-w-5xl mx-auto flex flex-col items-center lg:!max-w-5xl">
           {/* Top Pills Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-10 mobileeedisplayslider">
             {tabs.map((tab) => {
@@ -424,17 +314,14 @@ export default function ProjectDetailTheWind() {
                   key={index}
                   className="grid grid-cols-12 items-center text-xs sm:text-sm text-[#004852] tracking-wide py-1.5 mb-0"
                 >
-                  {/* School / Place Name */}
                   <div className="col-span-6 sm:col-span-6 uppercase pr-2 semibold paratext blackcolor">
                     {item.name}
                   </div>
 
-                  {/* Distance Column with left divider */}
                   <div className="col-span-3 sm:col-span-3 text-center border-l border-r border-[#004852]/20 pl-2 semibold paratext greencolor">
                     {item.distance}
                   </div>
 
-                  {/* Time Column with left divider */}
                   <div className="col-span-3 sm:col-span-3 text-right border-l border-l border-[#004852]/20 pl-2 semibold paratext greencolo">
                     {item.time}
                   </div>

@@ -5,7 +5,11 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { StaggerText, TextFadeUp } from "../components/TextFadeUp";
+import {
+  StaggerText,
+  TextFadeHorizontal,
+  TextFadeUp,
+} from "../components/TextFadeUp";
 import Header from "../components/Header";
 import LivingExperienceBanner from "../components/LivingExperience";
 
@@ -85,9 +89,11 @@ export default function AboutUs() {
         </div>
 
         <div className="pt-5 sm:pt-5 text-center z-10 px-4">
-          <h1 className="mainheading indicocolor">
-            The Mother Mira<strong className="greencolor"> Legacy</strong>
-          </h1>
+          <TextFadeUp delay={0.15} direction="left">
+            <h1 className="mainheading indicocolor">
+              The Mother Mira<strong className="greencolor"> Legacy</strong>
+            </h1>
+          </TextFadeUp>
         </div>
       </section>
 
@@ -278,6 +284,7 @@ export default function AboutUs() {
               <p className="subheadingtext uppercase blackcolor">
                 WHY CHOOSE MOTHER MIRA?
               </p>
+
               <h2 className="mainheading indicocolor uppercase">
                 OUR <strong className="greencolor">STRENGTH</strong>
               </h2>

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
+import { TextFadeUp } from "./TextFadeUp";
 
 export default function LivingExperienceBanner() {
   const videoRef = useRef(null);
@@ -38,16 +39,23 @@ export default function LivingExperienceBanner() {
       {/* CONTENT CONTAINER */}
       <div className="relative z-10 container max-w-7xl mx-auto text-center flex flex-col items-center videobanenrrcontent">
         {/* SUBTITLE */}
-        <p className=" mb-2  uppercase blackcolor paragraphfont subheadingtext">
-          CONNECT WITH US FOR THE BEST
-        </p>
+
+        <TextFadeUp delay={0.6}>
+          <p className=" mb-2  uppercase blackcolor paragraphfont subheadingtext">
+            CONNECT WITH US FOR THE BEST
+          </p>
+        </TextFadeUp>
 
         {/* MAIN BOLD TITLE */}
-        <h2 className="hunderpixel greencolor uppercase mb-8">
-          <strong>LIVING EXPERIENCE </strong>
-        </h2>
+
+        <TextFadeUp delay={0.8}>
+          <h2 className="hunderpixel greencolor uppercase mb-8">
+            <strong>LIVING EXPERIENCE </strong>
+          </h2>
+        </TextFadeUp>
 
         {/* PILL BUTTON */}
+             <TextFadeUp delay={0.9}> 
         <div
           className="inline-flex items-center gap-3 bg-[#EDE8D0] builtontrustpara semibold greencolor px-14 py-2.5 rounded-[15px]"
           style={{ boxShadow: "0px 12px 25px rgba(0, 0, 0, 0.35)" }}
@@ -68,6 +76,7 @@ export default function LivingExperienceBanner() {
             BOOK A SITE VISIT
           </a>
         </div>
+        </TextFadeUp>
       </div>
     </section>
   );

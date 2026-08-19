@@ -195,7 +195,7 @@ export default function ProjectGallery() {
 
       {/* Lightbox Modal */}
       {lightboxIndex !== null && currentImages[lightboxIndex] && (
-        <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-500000 bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
           {/* Close Button */}
           <button
             onClick={() => setLightboxIndex(null)}

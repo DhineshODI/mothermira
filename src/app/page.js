@@ -4,6 +4,11 @@ import { motion } from "framer-motion";
 import TestimonialSlider from "./components/TestimonialSlider";
 import LivingExperienceBanner from "./components/LivingExperience";
 import Header from "./components/Header";
+import {
+  TextFadeDown,
+  TextFadeHorizontal,
+  TextFadeUp,
+} from "./components/TextFadeUp";
 
 export default function Home() {
   const strengths = [
@@ -45,24 +50,32 @@ export default function Home() {
 
       <section className="relative w-full bg-[#EEE8D0] overflow-hidden text-center buildontrusthomepage">
         {/* Main Title Header */}
-        <h2 className="builtttonalwayshome semibold">Built on Trust Always</h2>
+
+        <TextFadeUp delay={0.6}>
+          <h2 className="builtttonalwayshome semibold">
+            Built on Trust Always
+          </h2>
+        </TextFadeUp>
 
         <div className="container max-w-5xl mx-auto flex flex-col items-center">
-          <p
-            className="mainheading missionclasss paragraphfont mt-[50px]"
-            style={{ lineHeight: "107%" }}
-          >
-            <span className="semibold">Mother Mira</span> Industries Limited,{" "}
-            <br />
-            established in Chennai in 1994, <br /> develops value-driven real
-            estate with legal <br /> compliance &{" "}
-            <span className="semibold">quality infrastructure.</span>
-          </p>
+          <TextFadeDown delay={0.9}>
+            <p
+              className="mainheading missionclasss paragraphfont mt-[50px]"
+              style={{ lineHeight: "107%" }}
+            >
+              <span className="semibold">Mother Mira</span> Industries Limited,{" "}
+              <br />
+              established in Chennai in 1994, <br /> develops value-driven real
+              estate with legal <br /> compliance &{" "}
+              <span className="semibold">quality infrastructure.</span>
+            </p>
 
-          <p className="builtontrustpara mt-[40px] wecreateee">
-            We create secure, future-ready assets that deliver long-term <br />
-            appreciation and practical living for every customer consistently.
-          </p>
+            <p className="builtontrustpara mt-[40px] wecreateee">
+              We create secure, future-ready assets that deliver long-term{" "}
+              <br />
+              appreciation and practical living for every customer consistently.
+            </p>
+          </TextFadeDown>
 
           {/* Pill CTA Button */}
 
@@ -82,24 +95,28 @@ export default function Home() {
           <div className="relative z-10 max-w-7xl mx-auto text-center flex flex-col items-center">
             {/* "Trusted 32+ Years" Counter Display */}
             <div className="flex items-baseline justify-center gap-3 mb-4 butoonconteebd">
-              <span
-                className="secondheading semibold"
-                style={{ lineHeight: "100%" }}
-              >
-                Trusted
-              </span>
+              <TextFadeHorizontal direction="left" delay={0.6}>
+                <span
+                  className="secondheading semibold"
+                  style={{ lineHeight: "100%" }}
+                >
+                  Trusted
+                </span>
+              </TextFadeHorizontal>
 
               <div className="relative flex items-start">
                 <span className="thitytwoexper slimfontthin">32</span>
                 <span className="slimfontthin plusfont">+</span>
               </div>
 
-              <span
-                className="secondheading semibold"
-                style={{ lineHeight: "100%" }}
-              >
-                Years
-              </span>
+              <TextFadeHorizontal direction="right" delay={0.6}>
+                <span
+                  className="secondheading semibold"
+                  style={{ lineHeight: "100%" }}
+                >
+                  Years
+                </span>
+              </TextFadeHorizontal>
             </div>
 
             {/* Bottom Paragraph Description */}
@@ -178,20 +195,28 @@ export default function Home() {
       </section>
 
       <section className="perfectfamilysection relative">
-        <div className="padingggtopimage">
-          <img src="/images/perfectfamily.jpg" />
-        </div>
+        <TextFadeUp delay={0.6}>
+          <div className="padingggtopimage">
+            <img src="/images/perfectfamily.jpg" />
+          </div>
+        </TextFadeUp>
         <div className="absolute imagecontenttttt w-full">
           <div className="flex flex-col justify-center items-center">
-            <h4 className="semibold blackcolor fiftypixel">
-              Discover value living for your
-            </h4>
-            <h2 className="perfecthomefont greencolor">
-              {" "}
-              <span className="thinfont indicocolor">PERFECT </span> HOME{" "}
-            </h2>
+            <TextFadeDown delay={0.6}>
+              <h4 className="semibold blackcolor fiftypixel">
+                Discover value living for your
+              </h4>
+            </TextFadeDown>
+
+            <TextFadeDown delay={0.8}>
+              <h2 className="perfecthomefont greencolor">
+                {" "}
+                <span className="thinfont indicocolor">PERFECT </span> HOME{" "}
+              </h2>
+            </TextFadeDown>
           </div>
         </div>
+
         <div className="absolute top-0 z-1000 inbodyimageee padingggtopimage">
           <img src="/images/perfectfamily-transperant.png" />
         </div>
@@ -202,68 +227,89 @@ export default function Home() {
           <div className="contenthomepagesection">
             <div className="w-max">
               <div>
-                <p className="subheadingtext uppercase blackcolor">PREMIUM</p>
+                <TextFadeHorizontal direction="right" delay={0.3}>
+                  <p className="subheadingtext uppercase blackcolor">PREMIUM</p>
+                </TextFadeHorizontal>
                 <div className="flex gap-1 items-end">
-                  <h2
-                    className="secondheading indicocolor uppercase"
-                    style={{ lineHeight: "90%" }}
-                  >
-                    <strong style={{ lineHeight: "90%" }}>VILLA </strong>
-                  </h2>
-                  <h3 className="subheadingtext">
-                    <strong>COMMUNITY </strong>{" "}
-                  </h3>
+                  <TextFadeHorizontal direction="right" delay={0.4}>
+                    <h2
+                      className="secondheading indicocolor uppercase"
+                      style={{ lineHeight: "90%" }}
+                    >
+                      <strong style={{ lineHeight: "90%" }}>VILLA </strong>
+                    </h2>
+                  </TextFadeHorizontal>
+
+                  <TextFadeHorizontal direction="right" delay={0.5}>
+                    <h3 className="subheadingtext">
+                      <strong>COMMUNITY </strong>{" "}
+                    </h3>
+                  </TextFadeHorizontal>
                 </div>
               </div>
 
-              <div className="inline-flex items-center space-x-1.5 bg-[#004852] px-3.5 py-1 mt-[5px] ml-[20px] leftsidezero">
-                <img
-                  className="h-[22px] w-[18px]"
-                  src="/images/home/location-icon.svg"
-                  alt=""
-                />
-                <span
-                  className="ml-[5px] text-[#fff] semibold addressstyle "
-                  style={{ letterSpacing: "6px", lineHeight: "100%" }}
-                >
-                  KOLAPAKKAM, PORUR
-                </span>
-              </div>
+              <TextFadeHorizontal direction="right" delay={0.7}>
+                <div className="inline-flex items-center space-x-1.5 bg-[#004852] px-3.5 py-1 mt-[5px] ml-[20px] leftsidezero">
+                  <img
+                    className="h-[22px] w-[18px]"
+                    src="/images/home/location-icon.svg"
+                    alt=""
+                  />
+                  <span
+                    className="ml-[5px] text-[#fff] semibold addressstyle "
+                    style={{ letterSpacing: "6px", lineHeight: "100%" }}
+                  >
+                    KOLAPAKKAM, PORUR
+                  </span>
+                </div>
+              </TextFadeHorizontal>
 
-              <p className="blackcolor paratext mt-[12px] ml-[20px] brnone leftsidezero">
-                Premium villas with quality construction, gated living, and
-                thoughtfully <br /> planned community infrastructure.
-              </p>
+              <TextFadeHorizontal direction="right" delay={0.9}>
+                <p className="blackcolor paratext mt-[12px] ml-[20px] brnone leftsidezero">
+                  Premium villas with quality construction, gated living, and
+                  thoughtfully <br /> planned community infrastructure.
+                </p>
+              </TextFadeHorizontal>
             </div>
           </div>
 
           <div className="leftsidesectioncontent">
-            <h4
-              className="thirdheading w-max text-end"
-              style={{ lineHeight: "100%" }}
-            >
-              <strong>
-                VALUE LIVING <br /> IN PERFECT HOME
-              </strong>
-            </h4>
-            <p className="builtontrustpara blackcolor premisumvillasend">
-              Premium villas in a well-connected and peaceful environment
-            </p>
-            <button
-              className="project-button bg-[#004852] mt-[15px] text-[#fff] cursor-pointer rounded-full semibold paratext  buttonpading hover:bg-[#0c3835] transition-colors duration-300"
-              style={{ letterSpacing: "1px" }}
-            >
-              VIEW PROJECT
-            </button>
+            <TextFadeUp delay={0.8}>
+              <h4
+                className="thirdheading w-max text-end"
+                style={{ lineHeight: "100%" }}
+              >
+                <strong>
+                  VALUE LIVING <br /> IN PERFECT HOME
+                </strong>
+              </h4>
+            </TextFadeUp>
+
+            {/* <TextFadeUp delay={0.8}> */}
+              <p className="builtontrustpara blackcolor premisumvillasend">
+                Premium villas in a well-connected and peaceful environment
+              </p>
+            {/* </TextFadeUp> */}
+
+            <TextFadeUp delay={0.8}>
+              <button
+                className="project-button bg-[#004852] mt-[15px] text-[#fff] cursor-pointer rounded-full semibold paratext  buttonpading hover:bg-[#0c3835] transition-colors duration-300"
+                style={{ letterSpacing: "1px" }}
+              >
+                VIEW PROJECT
+              </button>
+            </TextFadeUp>
           </div>
 
           <div className="text-left space-y-2 pl-2 detailsectionproject">
             {specs.map((item, idx) => (
               <div key={idx}>
-                <p className="blackcolor paratext ">{item.label}</p>
-                <p className="builtontrustpara blackcolor uppercase boldfont">
-                  {item.value}
-                </p>
+                <TextFadeUp delay={0.8}>
+                  <p className="blackcolor paratext ">{item.label}</p>
+                  <p className="builtontrustpara blackcolor uppercase boldfont">
+                    {item.value}
+                  </p>
+                </TextFadeUp>
               </div>
             ))}
           </div>

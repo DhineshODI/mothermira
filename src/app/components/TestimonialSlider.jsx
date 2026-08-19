@@ -6,6 +6,7 @@ import Image from "next/image";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { TextFadeDown, TextFadeUp } from "./TextFadeUp";
 
 export default function TestimonialSlider() {
   const [nav1, setNav1] = useState(null);
@@ -132,78 +133,80 @@ export default function TestimonialSlider() {
           long-term value experienced <br /> across every Mother Mira project
         </p>
 
-        <div className="tesimonialslidersection">
-          {/* LEFT COLUMN */}
-          <div className="p-3 rounded-3xl border border-[#0c3835]/10 flex flex-col justify-center imagetestisection1">
-            <Slider
-              asNavFor={nav1}
-              ref={slider2}
-              {...navSettings}
-              className="testimonial-thumb-slider"
-            >
-              {testimonials.map((item) => (
-                <div
-                  key={item.id}
-                  className="py-0 px-0 outline-none cursor-pointer"
-                >
-                  <div className="relative w-full imagesizetes rounded-2xl overflow-hidden border-2 border-transparent transition-all duration-300 thumbnail-card">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-              ))}
-            </Slider>
-          </div>
-
-          {/* RIGHT COLUMN */}
-          <div className="imagetestisection2">
-            <div className="rounded-[2.5rem] p-8 sm:p-12 shadow-sm border border-[#0c3835]/10 relative borddrerer">
+        <TextFadeDown delay={0.8}>
+          <div className="tesimonialslidersection">
+            {/* LEFT COLUMN */}
+            <div className="p-3 rounded-3xl border border-[#0c3835]/10 flex flex-col justify-center imagetestisection1">
               <Slider
-                asNavFor={nav2}
-                ref={slider1}
-                {...mainSettings}
-                className="testimonial-main-slider"
+                asNavFor={nav1}
+                ref={slider2}
+                {...navSettings}
+                className="testimonial-thumb-slider"
               >
                 {testimonials.map((item) => (
-                  <div key={item.id} className="outline-none">
-                    <div className="min-h-[220px] flex flex-col justify-between  testimonilaaaanewsec">
-                      <h3 className="testimonialcontent semibold greencolor">
-                        {item.quote}
-                      </h3>
-
-                      <div className="pt-6 pb-6 border-b border-dashed border-[#0c3835]/40 flex items-center justify-between bordderbottomtestimonail">
-                        <div>
-                          <h4 className="twentyfourpixel paratext blackcolor semibold">
-                            {item.name}
-                          </h4>
-                          <p className="builtontrustpara  blackcolor paratext mt-[4px] !text-[#8A8A8A]">
-                            {item.designation}
-                          </p>
-                        </div>
-
-                        <a
-                          href={item.youtubeUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center justify-center text-white hover:scale-105 transition-transform atagg"
-                        >
-                          <img
-                            src="/images/icons/youtubesvg.svg"
-                            className="w-[80px] h-[50px]"
-                            alt=""
-                          />
-                        </a>
-                      </div>
+                  <div
+                    key={item.id}
+                    className="py-0 px-0 outline-none cursor-pointer"
+                  >
+                    <div className="relative w-full imagesizetes rounded-2xl overflow-hidden border-2 border-transparent transition-all duration-300 thumbnail-card">
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="object-cover"
+                      />
                     </div>
                   </div>
                 ))}
               </Slider>
             </div>
+
+            {/* RIGHT COLUMN */}
+            <div className="imagetestisection2">
+              <div className="rounded-[2.5rem] p-8 sm:p-12 shadow-sm border border-[#0c3835]/10 relative borddrerer">
+                <Slider
+                  asNavFor={nav2}
+                  ref={slider1}
+                  {...mainSettings}
+                  className="testimonial-main-slider"
+                >
+                  {testimonials.map((item) => (
+                    <div key={item.id} className="outline-none">
+                      <div className="min-h-[220px] flex flex-col justify-between  testimonilaaaanewsec">
+                        <h3 className="testimonialcontent semibold greencolor">
+                          {item.quote}
+                        </h3>
+
+                        <div className="pt-6 pb-6 border-b border-dashed border-[#0c3835]/40 flex items-center justify-between bordderbottomtestimonail">
+                          <div>
+                            <h4 className="twentyfourpixel paratext blackcolor semibold">
+                              {item.name}
+                            </h4>
+                            <p className="builtontrustpara  blackcolor paratext mt-[4px] !text-[#8A8A8A]">
+                              {item.designation}
+                            </p>
+                          </div>
+
+                          <a
+                            href={item.youtubeUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center justify-center text-white hover:scale-105 transition-transform atagg"
+                          >
+                            <img
+                              src="/images/icons/youtubesvg.svg"
+                              className="w-[80px] h-[50px]"
+                              alt=""
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </Slider>
+              </div>
+            </div>
           </div>
-        </div>
+        </TextFadeDown>
       </div>
     </section>
   );

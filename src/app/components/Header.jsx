@@ -163,6 +163,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { TextFadeHorizontal } from "./TextFadeUp";
 
 export default function Header({ sec }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -244,23 +245,26 @@ export default function Header({ sec }) {
           </Link>
 
           {/* DESKTOP NAVIGATION */}
-          <nav className="hidden md:flex items-center gap-5 lg:gap-5">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
 
-              return (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className={`paratext semibold headerbuttondiv ${
-                    isActive ? "active" : ""
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              );
-            })}
-          </nav>
+          <TextFadeHorizontal direction="right" delay={0.8}>
+            <nav className="hidden md:flex items-center gap-5 lg:gap-5">
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className={`paratext semibold headerbuttondiv ${
+                      isActive ? "active" : ""
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
+            </nav>
+          </TextFadeHorizontal>
 
           {/* ANIMATED HAMBURGER ICON */}
           <button
