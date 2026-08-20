@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# enquiry endpoint
+api/config.php
+api/mail-error.log
