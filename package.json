@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:dev": "node scripts/build-export.mjs --base=/mother-mira-with-form",
+    "build:export": "node scripts/build-export.mjs",
     "start": "next start",
     "lint": "eslint"
   },

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { BrochureButton } from "./CtaButtons";
 
 export default function ProjectSpecifications() {
   const [activeTab, setActiveTab] = useState("WATER");
@@ -147,9 +148,13 @@ export default function ProjectSpecifications() {
           >
             FOR MORE DETAILED SPECIFICATIONS
           </p>
-          <button className="cursor-pointer rounded-full border border-[#0048523D] bg-[#004852] text-[#EDE8D0] semibold paratext  buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300 donwloadbreochurebutton">
+          <BrochureButton
+            project="Mother Mira - The Wind"
+            brochure="/pdf/the-wind-brochure.pdf"
+            className="cursor-pointer rounded-full border border-[#0048523D] bg-[#004852] text-[#EDE8D0] semibold paratext  buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300 donwloadbreochurebutton"
+          >
             DOWNLOAD BROCHURE
-          </button>
+          </BrochureButton>
         </div>
       </div>
     </section>
