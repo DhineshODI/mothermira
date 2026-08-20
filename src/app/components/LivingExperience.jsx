@@ -2,7 +2,6 @@
 
 import React, { useRef, useEffect } from "react";
 import { TextFadeUp } from "./TextFadeUp";
-import { SiteVisitButton } from "./CtaButtons";
 
 export default function LivingExperienceBanner() {
   const videoRef = useRef(null);
@@ -62,7 +61,7 @@ export default function LivingExperienceBanner() {
           style={{ boxShadow: "0px 12px 25px rgba(0, 0, 0, 0.35)" }}
         >
           <a
-            href="/contact-us"
+            href="#"
             className="relative inline-block after:absolute after:left-0 after:-bottom-[0px] after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-500 hover:after:w-full"
           >
             ENQUIRE NOW
@@ -70,12 +69,12 @@ export default function LivingExperienceBanner() {
 
           <span className="greencolor boldfont">|</span>
 
-          <SiteVisitButton
-            project="Mother Mira - The Wind"
-            className="cursor-pointer relative inline-block after:absolute after:left-0 after:-bottom-[0px] after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-500 hover:after:w-full"
+          <a
+            href="#"
+            className="relative inline-block after:absolute after:left-0 after:-bottom-[0px] after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-500 hover:after:w-full"
           >
             BOOK A SITE VISIT
-          </SiteVisitButton>
+          </a>
         </div>
         </TextFadeUp>
       </div>

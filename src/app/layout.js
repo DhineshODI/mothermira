@@ -4,7 +4,6 @@ import "./cutom.css";
 import "./globals.css";
 import Footer from "./components/Footer";
 import SmoothScroll from "./components/SmoothScroll";
-import EnquiryModalProvider from "./components/EnquiryModalProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,12 +28,10 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       >
         <body className="min-h-full flex flex-col">
-          <EnquiryModalProvider>
-            <SmoothScroll>
-              <main className="flex-1">{children}</main>
-              <Footer />
-            </SmoothScroll>
-          </EnquiryModalProvider>
+          <SmoothScroll>
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </SmoothScroll>
         </body>
       </html>
     </>

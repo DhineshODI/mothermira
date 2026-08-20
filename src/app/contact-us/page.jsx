@@ -1,7 +1,6 @@
 import Image from "next/image";
 import TestimonialSlider from "../components/TestimonialSlider";
 import Header from "../components/Header";
-import ContactForm from "../components/ContactForm";
 export default function ContactPage() {
   return (
     <>
@@ -93,7 +92,67 @@ export default function ContactPage() {
 
           {/* RIGHT COLUMN: Dark Form Card */}
           <div className="bg-[#004852] p-8 md:p-10 rounded-3xl shadow-xl formsectioncontact">
-            <ContactForm />
+            <form className="space-y-5 contactform">
+              {/* NAME FIELD */}
+              <div>
+                <label className="semibold uppercase text-white">
+                  Name <span className="text-[#FF0F1E]">*</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter your Name"
+                  className="mt-2 w-full px-4 py-3 rounded-xl bg-white text-gray-800 placeholder-gray-400 focus:outline-none text-sm"
+                  required
+                />
+              </div>
+
+              {/* PHONE & EMAIL GRID */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="semibold uppercase text-white">
+                    Phone <span className="text-[#FF0F1E]">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    placeholder="Enter your Phone"
+                    className="mt-2 w-full px-4 py-3 rounded-xl bg-white text-gray-800 placeholder-gray-400 focus:outline-none text-sm"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="semibold uppercase text-white">
+                    Email <span className="text-[#FF0F1E]">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Enter your Email"
+                    className="mt-2 w-full px-4 py-3 rounded-xl bg-white text-gray-800 placeholder-gray-400 focus:outline-none text-sm"
+                    required
+                  />
+                </div>
+              </div>
+
+              {/* MESSAGE FIELD */}
+              <div>
+                <label className="semibold uppercase text-white">Message</label>
+                <textarea
+                  rows={4}
+                  placeholder="Enter your Message"
+                  className="mt-2 w-full px-4 py-3 rounded-xl bg-white text-gray-800 placeholder-gray-400 focus:outline-none text-sm resize-none"
+                />
+              </div>
+
+              {/* SUBMIT BUTTON */}
+              <div className="pt-2">
+                <button
+                  type="submit"
+                  className="project-button1 cursor-pointer bg-[#ede8d0] greencolor semibold paratext uppercase px-6 py-2 rounded-full hover:bg-white hover:!text-[#fff] transition duration-200"
+                >
+                  Get In Touch
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
