@@ -5,6 +5,20 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import {
+  StaggerText,
+  TextFadeHorizontal,
+  TextFadeUp,
+  FlipRight,
+  FlipLeft,
+  TextFadeLeft,
+  TextFadeDown,
+} from "../components/TextFadeUp";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function AmenitiesCategoryGrid({ categoryData, sliderRef }) {
   const settings = {
@@ -33,6 +47,45 @@ function AmenitiesCategoryGrid({ categoryData, sliderRef }) {
       },
     ],
   };
+
+  const sectionRef = useRef(null);
+  const rowsRef = useRef([]);
+
+  useGSAP(
+    () => {
+      const rows = rowsRef.current;
+
+      // 1. Initial State: All rows set to low opacity & slightly shifted down
+      gsap.set(rows, { opacity: 0.15, y: 30 });
+
+      // 2. Timeline for Pinned Scroll Sequence
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "+=150%", // Scroll length to complete sequence
+          pin: true, // Pin section while scrolling
+          scrub: 1, // Smooth response to scroll
+        },
+      });
+
+      // 3. Reveal Each Row Sequentially
+      rows.forEach((row, index) => {
+        tl.to(
+          row,
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power2.out",
+          },
+          index * 1.2,
+        );
+      });
+    },
+    { scope: sectionRef },
+  );
+
   return (
     <div className="w-full">
       <Slider ref={sliderRef} {...settings}>
@@ -71,170 +124,287 @@ export default function AmenitiesSection() {
 
   const sliderRef = useRef(null);
 
+  // const amenitiesData = {
+  //   SECURITY: [
+  //     {
+  //       title: "Security Personnel at Main Entrance",
+  //       image: "/images/project-detail/aminites/security.jpg",
+  //     },
+  //     {
+  //       title: "CCTV Surveillance",
+  //       image: "/images/project-detail/aminites/cctv.jpg",
+  //     },
+  //     {
+  //       title: "Video Door Phone",
+  //       image: "/images/project-detail/aminites/videocall.jpg",
+  //     },
+  //     {
+  //       title: "Security Personnel at Main Entrance",
+  //       image: "/images/project-detail/aminites/security.jpg",
+  //     },
+  //     {
+  //       title: "CCTV Surveillance",
+  //       image: "/images/project-detail/aminites/cctv.jpg",
+  //     },
+  //     {
+  //       title: "Video Door Phone",
+  //       image: "/images/project-detail/aminites/videocall.jpg",
+  //     },
+  //   ],
+
+  //   CLUBHOUSE: [
+  //     {
+  //       title: "Multipurpose Hall",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Gymnasium & Fitness Center",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Swimming Pool",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Multipurpose Hall",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Gymnasium & Fitness Center",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Swimming Pool",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //   ],
+
+  //   RECREATION: [
+  //     {
+  //       title: "Children Play Area",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Badminton Court",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Amphitheatre",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Children Play Area",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Badminton Court",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Amphitheatre",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //   ],
+
+  //   LANDSCAPE: [
+  //     {
+  //       title: "Landscaped Gardens",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Senior Citizen Park",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Reflexology Pathway",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Landscaped Gardens",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Senior Citizen Park",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Reflexology Pathway",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //   ],
+
+  //   INFRASTRUCTURE: [
+  //     {
+  //       title: "100% Power Backup",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Rainwater Harvesting",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "EV Charging Stations",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "100% Power Backup",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Rainwater Harvesting",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "EV Charging Stations",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //   ],
+
+  //   CONVENIENCE: [
+  //     {
+  //       title: "Supermarket / Grocery Store",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Pharmacy Facility",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Visitor Parking",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Supermarket / Grocery Store",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Pharmacy Facility",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //     {
+  //       title: "Visitor Parking",
+  //       image: "/images/project-detail/aminites/",
+  //     },
+  //   ],
+  // };
+
   const amenitiesData = {
     SECURITY: [
       {
         title: "Security Personnel at Main Entrance",
-        image: "/images/project-detail/aminites/security.jpg",
+        image:
+          "/images/project-detail/aminites/Security/security_personnel_at_main_entrance.jpg",
       },
       {
         title: "CCTV Surveillance",
-        image: "/images/project-detail/aminites/cctv.jpg",
+        image: "/images/project-detail/aminites/Security/cctv_surveillance.jpg",
       },
       {
         title: "Video Door Phone",
-        image: "/images/project-detail/aminites/videocall.jpg",
+        image: "/images/project-detail/aminites/Security/video_door_phone.jpg",
       },
       {
-        title: "Security Personnel at Main Entrance",
-        image: "/images/project-detail/aminites/security.jpg",
-      },
-      {
-        title: "CCTV Surveillance",
-        image: "/images/project-detail/aminites/cctv.jpg",
-      },
-      {
-        title: "Video Door Phone",
-        image: "/images/project-detail/aminites/videocall.jpg",
+        title: "Covered Car Park",
+        image: "/images/project-detail/aminites/Security/covered_car_park.jpg",
       },
     ],
 
     CLUBHOUSE: [
       {
-        title: "Multipurpose Hall",
-        image: "/images/project-detail/aminites/",
+        title: "Multi Purpose Hall with 100 Seating",
+        image:
+          "/images/project-detail/aminites/Clubhouse/multi_purpose_hall_with_100_seating.jpg",
       },
       {
-        title: "Gymnasium & Fitness Center",
-        image: "/images/project-detail/aminites/",
+        title: "Mini Theater with 50 Seating",
+        image:
+          "/images/project-detail/aminites/Clubhouse/mini_theater_with_50_seating.jpg",
       },
       {
-        title: "Swimming Pool",
-        image: "/images/project-detail/aminites/",
+        title: "Party Roof Garden in Club House",
+        image:
+          "/images/project-detail/aminites/Clubhouse/party_roof_garden_in_club_house.jpg",
       },
       {
-        title: "Multipurpose Hall",
-        image: "/images/project-detail/aminites/",
-      },
-      {
-        title: "Gymnasium & Fitness Center",
-        image: "/images/project-detail/aminites/",
-      },
-      {
-        title: "Swimming Pool",
-        image: "/images/project-detail/aminites/",
+        title: "Separate Restroom for Domestic Staff",
+        image:
+          "/images/project-detail/aminites/Clubhouse/separate_restroom_for_domestic_staff_and_drivers.jpg",
       },
     ],
 
     RECREATION: [
       {
-        title: "Children Play Area",
-        image: "/images/project-detail/aminites/",
+        title: "Swimming Pool",
+        image: "/images/project-detail/aminites/Recreation/swimming_pool.jpg",
       },
       {
-        title: "Badminton Court",
-        image: "/images/project-detail/aminites/",
+        title: "Equipped Modern Gymnasium",
+        image:
+          "/images/project-detail/aminites/Recreation/equipped_modern_gymnasium.jpg",
       },
       {
-        title: "Amphitheatre",
-        image: "/images/project-detail/aminites/",
+        title: "Jogging Track",
+        image: "/images/project-detail/aminites/Recreation/jogging_track.jpg",
       },
       {
-        title: "Children Play Area",
-        image: "/images/project-detail/aminites/",
-      },
-      {
-        title: "Badminton Court",
-        image: "/images/project-detail/aminites/",
-      },
-      {
-        title: "Amphitheatre",
-        image: "/images/project-detail/aminites/",
+        title: "Indoor Games (Table Tennis & Pool)",
+        image:
+          "/images/project-detail/aminites/Recreation/indoor_games_–_table_tennis_&_pool_table.jpg",
       },
     ],
 
     LANDSCAPE: [
       {
-        title: "Landscaped Gardens",
-        image: "/images/project-detail/aminites/",
+        title: "Children's Play Area",
+        image:
+          "/images/project-detail/aminites/Landscape/children’s_play_area.jpg",
       },
       {
-        title: "Senior Citizen Park",
-        image: "/images/project-detail/aminites/",
+        title: "Creatively Landscaped Garden",
+        image:
+          "/images/project-detail/aminites/Landscape/creatively_landscaped_garden.jpg",
       },
       {
-        title: "Reflexology Pathway",
-        image: "/images/project-detail/aminites/",
+        title: "Fully Landscaped OSR Park",
+        image:
+          "/images/project-detail/aminites/Landscape/fully_landscaped_osr_park.jpg",
       },
       {
-        title: "Landscaped Gardens",
-        image: "/images/project-detail/aminites/",
-      },
-      {
-        title: "Senior Citizen Park",
-        image: "/images/project-detail/aminites/",
-      },
-      {
-        title: "Reflexology Pathway",
-        image: "/images/project-detail/aminites/",
+        title: "Concrete Paved Roads with Street Lights",
+        image:
+          "/images/project-detail/aminites/Landscape/concrete_paved_roads_with_street_lights.jpg",
       },
     ],
 
     INFRASTRUCTURE: [
       {
-        title: "100% Power Backup",
-        image: "/images/project-detail/aminites/",
+        title: "Rain Water Harvesting",
+        image:
+          "/images/project-detail/aminites/Infrastructure/rain_water_harvesting.jpg",
       },
       {
-        title: "Rainwater Harvesting",
-        image: "/images/project-detail/aminites/",
+        title: "STP (Sewage Treatment Plant)",
+        image: "/images/project-detail/aminites/Infrastructure/stp.jpg",
       },
       {
-        title: "EV Charging Stations",
-        image: "/images/project-detail/aminites/",
+        title: "WTP (Water Treatment Plant)",
+        image: "/images/project-detail/aminites/Infrastructure/wtp.jpg",
       },
       {
-        title: "100% Power Backup",
-        image: "/images/project-detail/aminites/",
-      },
-      {
-        title: "Rainwater Harvesting",
-        image: "/images/project-detail/aminites/",
-      },
-      {
-        title: "EV Charging Stations",
-        image: "/images/project-detail/aminites/",
+        title: "Hydro Pneumatic Water Supply System",
+        image:
+          "/images/project-detail/aminites/Infrastructure/hydro_pneumatic_water_supply_system.jpg",
       },
     ],
 
     CONVENIENCE: [
       {
-        title: "Supermarket / Grocery Store",
-        image: "/images/project-detail/aminites/",
-      },
-      {
-        title: "Pharmacy Facility",
-        image: "/images/project-detail/aminites/",
-      },
-      {
-        title: "Visitor Parking",
-        image: "/images/project-detail/aminites/",
-      },
-      {
-        title: "Supermarket / Grocery Store",
-        image: "/images/project-detail/aminites/",
-      },
-      {
-        title: "Pharmacy Facility",
-        image: "/images/project-detail/aminites/",
-      },
-      {
-        title: "Visitor Parking",
-        image: "/images/project-detail/aminites/",
+        title: "Power Back-up in Club House",
+        image:
+          "/images/project-detail/aminites/Convenience/power_back_up_in_club_house.jpg",
       },
     ],
   };
-
   const categories = [
     "SECURITY",
     "CLUBHOUSE",
@@ -265,24 +435,25 @@ export default function AmenitiesSection() {
 
         {/* Category Pills */}
         <div className="flex flex-wrap justify-center gap-3 mb-17 mobileeedisplayslider">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => {
-                setActiveCategory(cat);
+          {categories.map((cat, index) => (
+            <TextFadeUp key={cat} delay={0.1 + index * 0.12}>
+              <button
+                onClick={() => {
+                  setActiveCategory(cat);
 
-                setTimeout(() => {
-                  sliderRef.current?.slickGoTo(0);
-                }, 0);
-              }}
-              className={`px-8 py-1.5 rounded-full paratext uppercase transition-all duration-300 cursor-pointer ${
-                activeCategory === cat
-                  ? "bg-[#004852] text-[#EDE8D0] shadow-md semibold"
-                  : "bg-[#E7DEC0] text-[#1f2933] hover:bg-[#E2DCC6] border border-[#1616163D]"
-              }`}
-            >
-              {cat}
-            </button>
+                  setTimeout(() => {
+                    sliderRef.current?.slickGoTo(0);
+                  }, 0);
+                }}
+                className={`px-8 py-1.5 rounded-full paratext uppercase transition-all duration-300 cursor-pointer ${
+                  activeCategory === cat
+                    ? "bg-[#004852] text-[#EDE8D0] shadow-md semibold"
+                    : "bg-[#E7DEC0] text-[#1f2933] hover:bg-[#E2DCC6] border border-[#1616163D]"
+                }`}
+              >
+                {cat}
+              </button>
+            </TextFadeUp>
           ))}
         </div>
 

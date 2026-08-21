@@ -106,7 +106,10 @@ export default function EnquiryModal({ config, onClose }) {
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length) {
-      setStatus({ type: "error", msg: "Please correct the highlighted fields." });
+      setStatus({
+        type: "error",
+        msg: "Please correct the highlighted fields.",
+      });
       return;
     }
 
@@ -115,7 +118,10 @@ export default function EnquiryModal({ config, onClose }) {
 
     try {
       await submitEnquiry(payload);
-      setStatus({ type: "success", msg: "Thank you! Your request has been submitted." });
+      setStatus({
+        type: "success",
+        msg: "Thank you! Your request has been submitted.",
+      });
       setForm(EMPTY);
       setErrors({});
       const url = thankYouUrl({ type, brochure, project });
@@ -160,7 +166,15 @@ export default function EnquiryModal({ config, onClose }) {
           aria-label="Close"
           className="absolute -top-3 -right-3 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-[#EDE8D0] text-[#004852] shadow-md transition hover:bg-white"
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.2"
+            strokeLinecap="round"
+          >
             <path d="M18 6 6 18M6 6l12 12" />
           </svg>
         </button>
@@ -241,7 +255,11 @@ export default function EnquiryModal({ config, onClose }) {
 
             {isSiteVisit ? (
               <>
-                <Field id="expectedDate" label="Expected Date" error={errors.expectedDate}>
+                <Field
+                  id="expectedDate"
+                  label="Expected Date"
+                  error={errors.expectedDate}
+                >
                   <input
                     id="expectedDate"
                     type="date"
@@ -252,7 +270,11 @@ export default function EnquiryModal({ config, onClose }) {
                   />
                 </Field>
 
-                <Field id="preferredTime" label="Preferred Time" error={errors.preferredTime}>
+                <Field
+                  id="preferredTime"
+                  label="Preferred Time"
+                  error={errors.preferredTime}
+                >
                   <input
                     id="preferredTime"
                     type="time"
@@ -262,7 +284,12 @@ export default function EnquiryModal({ config, onClose }) {
                   />
                 </Field>
 
-                <Field id="message" label="Message" error={errors.message} className="sm:col-span-2">
+                <Field
+                  id="message"
+                  label="Message"
+                  error={errors.message}
+                  className="sm:col-span-2"
+                >
                   <textarea
                     id="message"
                     rows={3}
@@ -278,7 +305,8 @@ export default function EnquiryModal({ config, onClose }) {
 
           {project ? (
             <p className="text-xs uppercase tracking-wide text-[#EDE8D0]/70">
-              Project: <span className="font-semibold text-[#EDE8D0]">{project}</span>
+              Project:{" "}
+              <span className="font-semibold text-[#EDE8D0]">{project}</span>
             </p>
           ) : null}
 

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import TestimonialSlider from "./components/TestimonialSlider";
 import LivingExperienceBanner from "./components/LivingExperience";
 import Header from "./components/Header";
+import Counter from "./components/Counter";
 import {
   TextFadeDown,
   TextFadeHorizontal,
@@ -44,8 +45,17 @@ export default function Home() {
   return (
     <>
       <Header sec={"transperantBg"} />
-      <div>
-        <img className="w-full" src="/images/home/mothermira-hero-banner.jpg" />
+      <div className="relative">
+        <div>
+          <img
+            className="w-full fordesktop"
+            src="/images/home/mothermira-hero-banner.jpg"
+          />
+          <img
+            className="w-full formobilee"
+            src="/images/home/mobilemothermirabanner.jpg"
+          />
+        </div>
       </div>
 
       <section className="relative w-full bg-[#EEE8D0] overflow-hidden text-center buildontrusthomepage">
@@ -105,7 +115,8 @@ export default function Home() {
               </TextFadeHorizontal>
 
               <div className="relative flex items-start">
-                <span className="thitytwoexper slimfontthin">32</span>
+                <Counter end={32} />
+
                 <span className="slimfontthin plusfont">+</span>
               </div>
 
@@ -134,14 +145,16 @@ export default function Home() {
         <div className="container max-w-7xl mx-auto">
           {/* Main Heading with Motion Fade-Up */}
 
-          <h2 className="salesfooterrr paragraphfont blackcolor">
-            Key strengths that define{" "}
-            <strong className="greencolor">
-              Mother Mira’s <br />
-              developments
-            </strong>
-            , delivering consistent value <br /> to every customer
-          </h2>
+          <TextFadeUp delay={0.15} direction="left">
+            <h2 className="salesfooterrr paragraphfont blackcolor">
+              Key strengths that define{" "}
+              <strong className="greencolor">
+                Mother Mira’s <br />
+                developments
+              </strong>
+              , delivering consistent value <br /> to every customer
+            </h2>
+          </TextFadeUp>
 
           {/* Strengths Rows List */}
 
@@ -286,18 +299,19 @@ export default function Home() {
             </TextFadeUp>
 
             {/* <TextFadeUp delay={0.8}> */}
-              <p className="builtontrustpara blackcolor premisumvillasend">
-                Premium villas in a well-connected and peaceful environment
-              </p>
+            <p className="builtontrustpara blackcolor premisumvillasend">
+              Premium villas in a well-connected and peaceful environment
+            </p>
             {/* </TextFadeUp> */}
 
             <TextFadeUp delay={0.8}>
-              <button
+              <a
+                href="/projectdetail-wind"
                 className="project-button bg-[#004852] mt-[15px] text-[#fff] cursor-pointer rounded-full semibold paratext  buttonpading hover:bg-[#0c3835] transition-colors duration-300"
                 style={{ letterSpacing: "1px" }}
               >
                 VIEW PROJECT
-              </button>
+              </a>
             </TextFadeUp>
           </div>
 

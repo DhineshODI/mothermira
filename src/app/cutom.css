@@ -4131,8 +4131,8 @@ background-color: #ede8d0; */
   }
 
   .mainheading.missionclasss {
-    font-size: 20px;
-    line-height: 20px !important;
+    font-size: 18px;
+    line-height: 23px !important;
   }
 
   .builttttbottom {
@@ -4887,7 +4887,7 @@ background-color: #ede8d0; */
   .mobileeedisplayslider button {
     border-radius: 20px;
     flex-shrink: 0;
-    padding: 5px 19px;
+    padding: 5px 10px;
     font-size: 11px;
     line-height: 15px;
   }
@@ -4964,12 +4964,13 @@ background-color: #ede8d0; */
   }
 
   .menubaropennn {
-    padding-top: 0;
-    height: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    padding-top: 0;
+    display: flex;
+    padding-bottom: 40%;
   }
 
   .headerrrrcontainer.newwwwww {
@@ -5094,4 +5095,24 @@ background-color: #ede8d0; */
 
 .project-button1:active {
   transform: scale(0.95);
+}
+
+@media (min-width: 767px) {
+  .formobilee {
+    display: none;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .fordesktop {
+    display: none;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .animation-wrapper {
+    display: contents;
+  }
 }

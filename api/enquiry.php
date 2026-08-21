@@ -203,11 +203,158 @@ function send_mail($config, $type, $label, $project, $name, $email, $html, $text
     return $mail;
 }
 
+/* ------------------------------------------------------------------ *
+ * Acknowledgement to the enquirer
+ * ------------------------------------------------------------------ */
+function ack_copy($type, $name, $project)
+{
+    $hi = 'Hi ' . esc($name) . ',';
+
+    switch ($type) {
+        case 'sitevisit':
+            return [
+                'subject' => 'Your site visit request - Mother Mira',
+                'lead'    => 'Thank you for requesting a site visit'
+                             . ($project !== '' ? ' at <strong>' . esc($project) . '</strong>' : '') . '.',
+                'body'    => 'Our team will call you shortly to confirm your preferred date and time.',
+            ];
+        case 'brochure':
+            return [
+                'subject' => 'Your brochure - Mother Mira',
+                'lead'    => 'Thank you for your interest in'
+                             . ($project !== '' ? ' <strong>' . esc($project) . '</strong>' : ' Mother Mira') . '.',
+                'body'    => 'The brochure is attached to this email. Our team will be in touch if you would like to know more.',
+            ];
+        default:
+            return [
+                'subject' => 'We received your enquiry - Mother Mira',
+                'lead'    => 'Thank you for getting in touch with Mother Mira.',
+                'body'    => 'Our team will review your enquiry and get back to you within 24 hours.',
+            ];
+    }
+}
+
+/**
+ * Resolve a brochure web path (e.g. /mother-mira-with-form/pdf/x.pdf) to a file
+ * inside ../pdf/. Returns null if it does not resolve to a real PDF there.
+ */
+function brochure_file($webPath)
+{
+    if ($webPath === '' || substr(strtolower($webPath), -4) !== '.pdf') {
+        return null;
+    }
+    $dir  = realpath(__DIR__ . '/../pdf');
+    if ($dir === false) {
+        return null;
+    }
+    $file = realpath($dir . '/' . basename($webPath));
+
+    return ($file && strpos($file, $dir) === 0 && is_readable($file)) ? $file : null;
+}
+
+function send_ack($config, $type, $name, $email, $project, $brochureWebPath, $portOverride = null, $secureOverride = null)
+{
+    $copy = ack_copy($type, $name, $project);
+
+    $html = '<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6;color:#161616;'
+          . 'max-width:560px;margin:0 auto;background:#EDE8D0;padding:32px 28px;border-radius:12px">'
+          . '<p style="margin:0 0 16px;font-size:13px;letter-spacing:1px;color:#004852;text-transform:uppercase">Mother Mira</p>'
+          . '<p style="margin:0 0 14px">Hi ' . esc($name) . ',</p>'
+          . '<p style="margin:0 0 14px">' . $copy['lead'] . '</p>'
+          . '<p style="margin:0 0 22px">' . esc($copy['body']) . '</p>'
+          . '<p style="margin:0 0 4px">Need us sooner?</p>'
+          . '<p style="margin:0 0 22px">'
+          . '<a href="mailto:sales@mothermira.com" style="color:#004852">sales@mothermira.com</a><br>'
+          . '<a href="tel:+919840029535" style="color:#004852">+91 98400 29535</a></p>'
+          . '<p style="margin:0;color:#004852"><strong>Mother Mira Industries Ltd</strong></p>'
+          . '<p style="margin:4px 0 0;font-size:12px;color:#666">This is an automated confirmation - no reply needed.</p>'
+          . '</div>';
+
+    $text = "Hi {$name},\n\n"
+          . strip_tags($copy['lead']) . "\n"
+          . $copy['body'] . "\n\n"
+          . "sales@mothermira.com | +91 98400 29535\n"
+          . "Mother Mira Industries Ltd\n";
+
+    $mail = new PHPMailer(true);
+
+    if (($config['transport'] ?? 'smtp') === 'mail') {
+        $mail->isMail();
+    } else {
+        $secure = $secureOverride ?? $config['smtp_secure'];
+
+        $mail->isSMTP();
+        $mail->Host     = $config['smtp_host'];
+        $mail->Port     = (int) ($portOverride ?? $config['smtp_port']);
+        $mail->SMTPAuth = !empty($config['smtp_auth']);
+        $mail->Timeout  = 20;
+
+        if ($mail->SMTPAuth) {
+            $mail->Username = $config['smtp_user'];
+            $mail->Password = $config['smtp_pass'];
+        }
+
+        if ($secure === 'ssl') {
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        } elseif ($secure === 'tls') {
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        } else {
+            $mail->SMTPSecure  = false;
+            $mail->SMTPAutoTLS = false;
+        }
+    }
+
+    $mail->CharSet = 'UTF-8';
+    $from = $config['smtp_from'] ?: $config['smtp_user'];
+    $mail->setFrom($from, $config['from_name'] ?? 'Mother Mira');
+    $mail->Sender = $from;
+    $mail->addAddress($email, $name);
+    $mail->addReplyTo($config['smtp_to'], $config['from_name'] ?? 'Mother Mira');
+
+    // Attach the brochure to brochure-download acknowledgements.
+    if ($type === 'brochure' && !empty($config['ack_attach_brochure'])) {
+        $file = brochure_file($brochureWebPath);
+        if ($file) {
+            $mail->addAttachment($file, 'Mother Mira Brochure.pdf');
+        }
+    }
+
+    $mail->isHTML(true);
+    $mail->Subject = $copy['subject'];
+    $mail->Body    = $html;
+    $mail->AltBody = $text;
+
+    $mail->send();
+}
+
 $args = [$config, $type, $label, $project, $name, $email, $html, $text];
 $detail = null;
 
+/** Acknowledgement must never break the response — log and move on. */
+function try_ack($config, $type, $name, $email, $project, $brochure, $port = null, $secure = null)
+{
+    if (empty($config['send_ack'])) {
+        return;
+    }
+    try {
+        send_ack($config, $type, $name, $email, $project, $brochure, $port, $secure);
+    } catch (\Throwable $e) {
+        error_log('Ack mail failed: ' . $e->getMessage());
+        if (!empty($config['debug_log'])) {
+            @file_put_contents(
+                __DIR__ . '/mail-error.log',
+                date('c') . ' [ack:' . $type . '] ' . $e->getMessage() . PHP_EOL,
+                FILE_APPEND
+            );
+        }
+    }
+}
+
+$brochureWebPath = field($b, 'brochure');
+
 try {
     send_mail(...$args);
+    try_ack($config, $type, $name, $email, $project, $brochureWebPath);
     echo json_encode(['ok' => true]);
     exit;
 } catch (\Throwable $e) {
@@ -218,6 +365,7 @@ try {
 if (($config['transport'] ?? 'smtp') === 'smtp' && (int) $config['smtp_port'] === 465) {
     try {
         send_mail(...array_merge($args, [587, 'tls']));
+        try_ack($config, $type, $name, $email, $project, $brochureWebPath, 587, 'tls');
         echo json_encode(['ok' => true, 'note' => 'sent via port 587']);
         exit;
     } catch (\Throwable $e2) {

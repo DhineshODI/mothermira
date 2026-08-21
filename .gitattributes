@@ -1,0 +1,20 @@
+# Normalize line endings: LF in the repo, native in the working tree.
+# Stops Windows/macOS checkouts from showing whole files as modified.
+* text=auto eol=lf
+
+# Binary files — never touch these.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.webp  binary
+*.avif  binary
+*.pdf   binary
+*.mp4   binary
+*.webm  binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.otf   binary
+*.eot   binary

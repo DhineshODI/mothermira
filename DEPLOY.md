@@ -45,23 +45,33 @@ public_html/mother-mira-with-form/
 
 ## 3. Mail configuration
 
-`api/config.php` currently uses `'transport' => 'mail'` — the server's local PHP
-`mail()`. No credentials needed, so the form works as soon as it's uploaded.
+`api/config.php` uses `'transport' => 'smtp'` — the dev host has PHP `mail()`
+disabled ("Could not instantiate mail function"), so SMTP is the only option.
 Enquiries go to **kavirajan@opendesignsin.com**.
 
-For better deliverability, switch to SMTP:
+If port 465 is blocked, the endpoint automatically retries on 587/STARTTLS and
+reports `"note":"sent via port 587"` in the response.
 
-```php
-'transport' => 'smtp',
-'smtp_host' => 'mail.opendesignsin.com',
-'smtp_port' => 465,
-'smtp_secure' => 'ssl',
-'smtp_auth' => true,
-'smtp_user' => 'donotreply@opendesignsin.com',
-'smtp_pass' => '••••••',
-```
+Requirements: PHP 7.4+ with the `openssl` extension.
 
-Requirements: PHP 7.4+ with the `openssl` extension (needed only for SMTP).
+### Acknowledgement email
+
+Every submission also sends a branded auto-reply to the person who filled the
+form, with wording per form type:
+
+| Form | Subject |
+|---|---|
+| Contact | We received your enquiry - Mother Mira |
+| Site visit | Your site visit request - Mother Mira |
+| Brochure | Your brochure - Mother Mira (PDF attached) |
+
+Brochure acknowledgements attach `public/pdf/<file>.pdf`, resolved from the
+`brochure` value sent by the form — so `api/` and `pdf/` must sit in the same
+folder on the server (the build script already arranges this).
+
+Toggles in `config.php`: `'send_ack'` and `'ack_attach_brochure'`. If the
+acknowledgement fails it is logged but never fails the submission — the enquiry
+notification still reaches you.
 
 ## 4. Test checklist
 
@@ -71,6 +81,8 @@ Requirements: PHP 7.4+ with the `openssl` extension (needed only for SMTP).
 - **Book a Site Visit** → modal with date/time → submit → thank-you page
 - Phone field: rejects anything not 10 digits starting 6/7/8/9
 - Check the inbox for three mails, each with the project name in the subject
+- Check the address you typed into the form for three acknowledgements, and that
+  the brochure one has the PDF attached
 
 If a submission returns a 500, `api/mail-error.log` will contain the reason
 (`'debug_log' => true` in config). Delete that file and set `debug_log` to
