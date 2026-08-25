@@ -45,12 +45,35 @@ public_html/mother-mira-with-form/
 
 ## 3. Mail configuration
 
-`api/config.php` uses `'transport' => 'smtp'` — the dev host has PHP `mail()`
-disabled ("Could not instantiate mail function"), so SMTP is the only option.
-Enquiries go to **kavirajan@opendesignsin.com**.
+`api/config.php` is not in git (it holds the mailbox password). Copy the
+template and fill in the password:
 
-If port 465 is blocked, the endpoint automatically retries on 587/STARTTLS and
-reports `"note":"sent via port 587"` in the response.
+```bash
+cp api/config.sample.php api/config.php
+```
+
+Current settings — Microsoft 365, since the host has PHP `mail()` disabled:
+
+| Setting | Value |
+|---|---|
+| Host | smtp.office365.com |
+| Port | 587 |
+| Encryption | STARTTLS (`'tls'`) |
+| Username | sales@mothermira.com |
+| From | sales@mothermira.com |
+| Enquiries to | kavirajan@opendesignsin.com |
+
+Office 365 requires `smtp_from` to match the authenticated mailbox, or a mailbox
+it has Send As rights on — changing one without the other causes a 5.7.60
+"client does not have permissions to send as this sender" rejection.
+
+Two things to confirm on the tenant if authentication fails:
+
+- **SMTP AUTH must be enabled** for the mailbox. Microsoft disables it by
+  default: Microsoft 365 admin centre → Users → sales@mothermira.com → Mail →
+  Manage email apps → tick *Authenticated SMTP*.
+- **If the mailbox has MFA**, the normal password will not work — generate an
+  app password and use that.
 
 Requirements: PHP 7.4+ with the `openssl` extension.
 
