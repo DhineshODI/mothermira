@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
@@ -24,20 +25,37 @@ export default function Footer() {
               </h4>
               <ul className="space-y-1">
                 <li className="mb-0">
-                  <a
-                    href="#about"
+                  <Link
+                    href="/aboutus"
                     className="hover:underline greencolor paratext  !text-[16px] !font-[400] max-sm:!text-[13px] "
                   >
                     ABOUT US
-                  </a>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="/ourprojects"
+                    className="hover:underline greencolor paratext  !text-[16px] !font-[400] max-sm:!text-[13px]"
+                  >
+                    ONGOING
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#about"
+                  <Link
+                    href="/upcomingprojects"
+                    className="hover:underline greencolor paratext  !text-[16px] !font-[400] max-sm:!text-[13px]"
+                  >
+                    UPCOMING
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contact-us"
                     className="hover:underline greencolor paratext  !text-[16px] !font-[400] max-sm:!text-[13px]"
                   >
                     CONTACT US
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -47,29 +65,29 @@ export default function Footer() {
               <h4 className="paratext boldfont greencolor uppercase mb-3 !text-[20px] max-sm:!text-[15px]">
                 Our Project
               </h4>
-              <a
-                href="#project"
-                className="hover:underline greencolor paratext  !text-[16px] !font-[400] max-sm:!text-[13px]"
+              <Link
+                href="/projectdetail-wind"
+                className="hover:underline greencolor paratext  !text-[16px] !font-[400] max-sm:!text-[13px] "
               >
                 THE WIND - KOLAPAKKAM
-              </a>
+              </Link>
             </div>
 
             {/* EMAIL & PHONE */}
             <div className="space-y-1 pt-2 marginnnnbotoomfooter">
-              <a
+              <Link
                 href="mailto:sales@mothermira.com"
                 className="salesfooterrr greencolor semibold"
               >
                 sales@mothermira.com
-              </a>{" "}
+              </Link>{" "}
               <br />
-              <a
+              <Link
                 href="tel:+919840029535"
                 className="salesfooterrr greencolor semibold "
               >
                 +91 98400 29535
-              </a>
+              </Link>
             </div>
 
             {/* CORPORATE OFFICE ADDRESS */}
@@ -78,9 +96,9 @@ export default function Footer() {
                 Corporate Office Address
               </h4>
               <p className="greencolor paratext  !text-[16px] !font-[400] max-sm:!text-[13px]">
-                Upper Crest Apartments, Flat F2, First Floor, No.11, <br />
-                School Street, Near Corporation School, Koyambedu, <br />
-                Chennai - 600 107.
+                New Door No. 3/931B, Old Door No. 3/556B, <br />
+                Kundrathur Main Road, Madanandapuram, <br />
+                Porur, Chennai - 600125.
               </p>
             </div>
 
@@ -90,36 +108,36 @@ export default function Footer() {
                 Follow Us
               </h4>
               <div className="flex items-center gap-3">
-                <a
+                <Link
                   href="#"
                   className="w-11 h-11 rounded-full  flex items-center justify-center text-sm hover:opacity-80 transition"
                 >
                   <img src="/images/icons/Indeed.png" alt="Indeed" />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
                   className="w-11 h-11 rounded-full flex items-center justify-center text-sm hover:opacity-80 transition"
                 >
                   <img src="/images/icons/insta.png" alt="insta" />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
                   className="w-11 h-11 rounded-full  flex items-center justify-center text-sm hover:opacity-80 transition"
                 >
                   <img src="/images/icons/fb.png" alt="fb" />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
                   className="w-11 h-11 rounded-full  flex items-center justify-center text-sm hover:opacity-80 transition"
                 >
                   <img src="/images/icons/youtube.png" alt="" />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
                   className="w-11 h-11 rounded-full  flex items-center justify-center text-sm hover:opacity-80 transition"
                 >
                   <img src="/images/icons/threads.png" alt="" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -135,15 +153,17 @@ export default function Footer() {
               </p>
             </div>
 
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
               <span className=" greencolor paratext  !text-[16px] !font-[400] max-sm:!text-[13px]">
                 DESIGN BY
               </span>
-              {/* Designer Logo Icon Placeholder */}
-              <div className="w-11 h-11  flex items-center justify-center text-[9px] font-extrabold">
-                <img src="/images/icons/opendesigns.png" alt="" />
-              </div>
-            </div>
+        
+              <a href="https://www.opendesignsin.com/" target="_blank">
+                <div className="w-11 h-11  flex items-center justify-center text-[9px] font-extrabold">
+                  <img src="/images/icons/opendesigns.png" alt="" />
+                </div>
+              </a>
+            </div> */}
           </div>
         </div>
       </div>

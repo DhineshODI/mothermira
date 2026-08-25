@@ -4,11 +4,13 @@ import { motion } from "framer-motion";
 import TestimonialSlider from "./components/TestimonialSlider";
 import LivingExperienceBanner from "./components/LivingExperience";
 import Header from "./components/Header";
+import Counter from "./components/Counter";
 import {
   TextFadeDown,
   TextFadeHorizontal,
   TextFadeUp,
 } from "./components/TextFadeUp";
+import Link from "next/link";
 
 export default function Home() {
   const strengths = [
@@ -44,8 +46,17 @@ export default function Home() {
   return (
     <>
       <Header sec={"transperantBg"} />
-      <div>
-        <img className="w-full" src="/images/home/mothermira-hero-banner.jpg" />
+      <div className="relative">
+        <div>
+          <img
+            className="w-full fordesktop"
+            src="/images/home/mothermira-hero-banner-new.jpg"
+          />
+          <img
+            className="w-full formobilee"
+            src="/images/home/mobilemothermirabanner.jpg"
+          />
+        </div>
       </div>
 
       <section className="relative w-full bg-[#EEE8D0] overflow-hidden text-center buildontrusthomepage">
@@ -66,9 +77,20 @@ export default function Home() {
               <span className="semibold">Mother Mira</span> Industries Limited,{" "}
               <br />
               established in Chennai in 1994, <br /> develops value-driven real
-              estate with legal <br /> compliance &{" "}
+              estate with clear legal <br /> compliance and{" "}
               <span className="semibold">quality infrastructure.</span>
             </p>
+
+            {/* <p
+              className="mainheading missionclasss paragraphfont mt-[50px]"
+              style={{ lineHeight: "107%" }}
+            >
+              <span className="semibold">Mother Mira</span> Industries Limited,{" "}
+              <br />
+              established in Chennai in 1994, <br /> develops value-driven real
+              estate with legal <br /> compliance &{" "}
+              <span className="semibold">quality infrastructure.</span>
+            </p> */}
 
             <p className="builtontrustpara mt-[40px] wecreateee">
               We create secure, future-ready assets that deliver long-term{" "}
@@ -80,12 +102,12 @@ export default function Home() {
           {/* Pill CTA Button */}
 
           <div className="borderbuttonexplore relative mt-[50px] w-full">
-            <a
-              href="#explore"
+            <Link
+              href="/aboutus"
               className="project-button cursor-pointer rounded-full border border-[#0048523D] bg-[#004852] text-[#EDE8D0] semibold paratext  buttonpading hover:bg-[#0c3835]  transition-colors duration-300"
             >
               EXPLORE MORE
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -105,7 +127,8 @@ export default function Home() {
               </TextFadeHorizontal>
 
               <div className="relative flex items-start">
-                <span className="thitytwoexper slimfontthin">32</span>
+                <Counter end={32} />
+
                 <span className="slimfontthin plusfont">+</span>
               </div>
 
@@ -134,38 +157,81 @@ export default function Home() {
         <div className="container max-w-7xl mx-auto">
           {/* Main Heading with Motion Fade-Up */}
 
-          <h2 className="salesfooterrr paragraphfont blackcolor">
-            Key strengths that define{" "}
-            <strong className="greencolor">
-              Mother Mira’s <br />
-              developments
-            </strong>
-            , delivering consistent value <br /> to every customer
-          </h2>
+          <TextFadeUp delay={0.15} direction="left">
+            <h2 className="salesfooterrr paragraphfont blackcolor">
+              Key strengths that define{" "}
+              <strong className="greencolor">
+                Mother Mira’s <br />
+                developments
+              </strong>
+              , delivering consistent value <br /> to every customer
+            </h2>
+          </TextFadeUp>
 
-          {/* Strengths Rows List */}
+          {/* <div className="space-y-12 md:space-y-16 mt-10">
+              {strengths.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-80px" }}
+                  transition={{
+                    duration: 0.7,
+                    delay: index * 0.1,
+                    ease: [0.25, 0.1, 0.25, 1],
+                  }}
+                  className="group border-b border-[#0c3835]/15 mb-10"
+                >
+                  <div className="max-w-5xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-12 keystrengthsection ">
+                      <div className="md:col-span-5 flex flex-col items-start justify-center">
+                        <span className="inline-block bg-[#004852]  uppercase  px-4 py-1.5 mb-4 twentyfourpixel text-[#fff] semibold">
+                          {item.title}
+                        </span>
 
-          {/* <div className="max-w-4xl mx-auto"> */}
-          <div className="space-y-12 md:space-y-16 mt-10">
+                        <p className="builtontrustpara blackcolor w-[65%]">
+                          {item.description}
+                        </p>
+                      </div>
+
+                      <div className="md:col-span-7 flex justify-end">
+                        <div className="relative imageesectionhome ">
+                          <img
+                            src={item.image}
+                            alt={item.title}
+                            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>  */}
+
+          <div className="relative mt-10 space-y-0">
             {strengths.map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
+                viewport={{ once: true }}
                 transition={{
-                  duration: 0.7,
-                  delay: index * 0.1, // Stagger effect for consecutive rows
+                  duration: 0.6,
                   ease: [0.25, 0.1, 0.25, 1],
                 }}
-                className="group border-b border-[#0c3835]/15 mb-10"
+                // Sticky position and dynamic top index create the stacking overlapping effect
+                style={{
+                  top: `${index * 40 + 80}px`,
+                }}
+                className="sticky bg-[#eee8d0] border-b border-[#0c3835]/15 mb-10 group  overflow-hidden"
               >
-                <div className="max-w-5xl mx-auto">
-                  <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-12 keystrengthsection ">
+                <div className="max-w-5xl mx-auto p-6 md:p-10 paddingrightandleft">
+                  <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-6 keystrengthsection">
                     {/* Left Side: Tag Title & Description */}
                     <div className="md:col-span-5 flex flex-col items-start justify-center">
                       {/* Badge Tag */}
-                      <span className="inline-block bg-[#004852]  uppercase  px-4 py-1.5 mb-4 twentyfourpixel text-[#fff] semibold">
+                      <span className="inline-block bg-[#004852] uppercase px-4 py-1.5 mb-4 twentyfourpixel text-[#fff] semibold rounded">
                         {item.title}
                       </span>
 
@@ -177,7 +243,7 @@ export default function Home() {
 
                     {/* Right Side: Rounded Card Image */}
                     <div className="md:col-span-7 flex justify-end">
-                      <div className="relative imageesectionhome ">
+                      <div className="relative imageesectionhome overflow-hidden rounded-xl">
                         <img
                           src={item.image}
                           alt={item.title}
@@ -190,7 +256,6 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
-          {/* </div> */}
         </div>
       </section>
 
@@ -274,31 +339,32 @@ export default function Home() {
           </div>
 
           <div className="leftsidesectioncontent">
-            <TextFadeUp delay={0.8}>
-              <h4
-                className="thirdheading w-max text-end"
-                style={{ lineHeight: "100%" }}
-              >
-                <strong>
-                  VALUE LIVING <br /> IN PERFECT HOME
-                </strong>
-              </h4>
-            </TextFadeUp>
-
             {/* <TextFadeUp delay={0.8}> */}
-              <p className="builtontrustpara blackcolor premisumvillasend">
-                Premium villas in a well-connected and peaceful environment
-              </p>
+            <h4
+              className="thirdheading w-max text-end"
+              style={{ lineHeight: "100%" }}
+            >
+              <strong>
+                VALUE LIVING <br /> IN PERFECT HOME
+              </strong>
+            </h4>
             {/* </TextFadeUp> */}
 
-            <TextFadeUp delay={0.8}>
-              <button
-                className="project-button bg-[#004852] mt-[15px] text-[#fff] cursor-pointer rounded-full semibold paratext  buttonpading hover:bg-[#0c3835] transition-colors duration-300"
-                style={{ letterSpacing: "1px" }}
-              >
-                VIEW PROJECT
-              </button>
-            </TextFadeUp>
+            {/* <TextFadeUp delay={0.8}> */}
+            <p className="builtontrustpara blackcolor premisumvillasend">
+              Premium villas in a well-connected and peaceful environment
+            </p>
+            {/* </TextFadeUp> */}
+
+            {/* <TextFadeUp delay={0.8}> */}
+            <Link
+              href="/projectdetail-wind"
+              className="project-button bg-[#004852] mt-[15px] text-[#fff] cursor-pointer rounded-full semibold paratext  buttonpading hover:bg-[#0c3835] transition-colors duration-300"
+              style={{ letterSpacing: "1px" }}
+            >
+              VIEW PROJECT
+            </Link>
+            {/* </TextFadeUp> */}
           </div>
 
           <div className="text-left space-y-2 pl-2 detailsectionproject">

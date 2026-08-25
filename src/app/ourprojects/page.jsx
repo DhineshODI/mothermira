@@ -1,14 +1,70 @@
+"use client";
 import Header from "../components/Header";
 import LivingExperienceBanner from "../components/LivingExperience";
 import TestimonialSlider from "../components/TestimonialSlider";
+import { useRef } from "react";
+
+import { BrochureButton, SiteVisitButton } from "../components/CtaButtons";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import {
+  StaggerText,
+  TextFadeHorizontal,
+  TextFadeUp,
+  FlipRight,
+  FlipLeft,
+  TextFadeLeft,
+} from "../components/TextFadeUp";
+import Link from "next/link";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Ourprojects() {
+  const sectionRef = useRef(null);
+  const rowsRef = useRef([]);
   const stats = [
     { value: "140", label: "NO. OF TOTAL UNITS" },
     { value: "3 & 4", unit: "BHK", label: "NO. OF BEDROOMS" },
     { value: "5.70", unit: "ACRES", label: "TOTAL SIZE IN ACRES" },
     { value: "1200-3000", unit: "SQ.FT.", label: "TOTAL SIZE IN SQ. FT" },
   ];
+
+  useGSAP(
+    () => {
+      const rows = rowsRef.current;
+
+      // 1. Initial State: All rows set to low opacity & slightly shifted down
+      gsap.set(rows, { opacity: 0.15, y: 30 });
+
+      // 2. Timeline for Pinned Scroll Sequence
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "+=150%", // Scroll length to complete sequence
+          pin: true, // Pin section while scrolling
+          scrub: 1, // Smooth response to scroll
+        },
+      });
+
+      // 3. Reveal Each Row Sequentially
+      rows.forEach((row, index) => {
+        tl.to(
+          row,
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power2.out",
+          },
+          index * 1.2,
+        );
+      });
+    },
+    { scope: sectionRef },
+  );
 
   return (
     <>
@@ -26,29 +82,35 @@ export default function Ourprojects() {
         <div className="w-full container max-w-7xl mx-auto pb-22 sm:pb-22 z-10">
           {/* Category Badge */}
           <div className="">
-            <span className="subheadingherobanner greencolor ourprojectsss">
-              OUR PROJECTS
-            </span>
+            <TextFadeLeft delay={0.1}>
+              <span className="subheadingherobanner greencolor ourprojectsss">
+                OUR PROJECTS
+              </span>
+            </TextFadeLeft>
           </div>
 
           {/* Main Title */}
-          <h1 className="herobannerheading text-[#fff]">
-            OUR SIGNATURE DEVELOPMENTS
-          </h1>
+          <TextFadeLeft delay={0.3}>
+            <h1 className="herobannerheading text-[#fff]">
+              OUR SIGNATURE DEVELOPMENTS
+            </h1>
+          </TextFadeLeft>
 
           {/* Subtle Horizontal Divider */}
-          <hr className="border-t border-white/20 w-full mb-5" />
+          <TextFadeLeft delay={0.15}>
+            <hr className="border-t border-white/20 w-full mb-5" />
 
-          {/* Breadcrumb Navigation */}
-          <nav className="flex items-center space-x-2">
-            <a href="/" className="text-[#FFFFFF80] paratext ">
-              Home
-            </a>
-            <span className="text-[#FFFFFF80] paratext">&gt;</span>
-            <span className="paratext text-[rgba(255,255,255,0.9)]">
-              Our Projects
-            </span>
-          </nav>
+            {/* Breadcrumb Navigation */}
+            <nav className="flex items-center space-x-2">
+              <a link="/" className="text-[#FFFFFF80] paratext ">
+                Home
+              </a>
+              <span className="text-[#FFFFFF80] paratext">&gt;</span>
+              <span className="paratext text-[rgba(255,255,255,0.9)]">
+                Our Projects
+              </span>
+            </nav>
+          </TextFadeLeft>
         </div>
       </section>
 
@@ -68,6 +130,7 @@ export default function Ourprojects() {
               {/* Header Title & Badge */}
               <div className="motehrmiratextour">
                 <p className="mothermiraourproject">MOTHER MIRA</p>
+
                 <div className="flex flex-wrap items-center gap-3 mt-0">
                   <h2 className="mainheading greencolor">
                     <strong>THE WIND</strong>
@@ -93,44 +156,58 @@ export default function Ourprojects() {
 
               {/* CTA Buttons */}
               <div className="flex  flex-wrap items-center gap-3 pt-2 motehrmirabuttonour">
-                <button className=" project-button1 cursor-pointer rounded-full border border-[#0048523D] greencolor semibold paratext  buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300">
-                  VIEW PROJECT
-                </button>
-
-                <button className="project-button1 group cursor-pointer rounded-full border border-[#0048523D] greencolor semibold paratext buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300 inline-flex items-center gap-2.5">
-                  <span>DOWNLOAD BROCHURE</span>
-                  <svg
-                    className="mt-[-3px] stroke-[#004852] group-hover:stroke-white transition-colors duration-300"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                <TextFadeUp delay={0.1} direction="left">
+                  <Link
+                    href="/projectdetail-wind"
+                    className=" project-button1 cursor-pointer rounded-full border border-[#0048523D] greencolor semibold paratext  buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300"
                   >
-                    <path
-                      d="M16.75 11.417V14.9725C16.75 15.444 16.5627 15.8962 16.2293 16.2296C15.8959 16.563 15.4437 16.7503 14.9722 16.7503H2.52778C2.05628 16.7503 1.6041 16.563 1.2707 16.2296C0.937301 15.8962 0.75 15.444 0.75 14.9725V11.417"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M4.30859 6.97266L8.75304 11.4171L13.1975 6.97266"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M8.75 11.4167V0.75"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
-
-                <button className="project-button  cursor-pointer rounded-full border border-[#0048523D] bg-[#004852] text-[#EDE8D0] semibold paratext  buttonpading hover:bg-[#0c3835] transition-colors duration-300">
-                  BOOK A SITE VISIT
-                </button>
+                    VIEW PROJECT
+                  </Link>
+                </TextFadeUp>
+                <TextFadeUp delay={0.15} direction="left">
+                  <BrochureButton
+                    project="Mother Mira - The Wind"
+                    brochure="/pdf/the-wind-brochure.pdf"
+                    className="project-button1 group cursor-pointer rounded-full border border-[#0048523D] greencolor semibold paratext buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300 inline-flex items-center gap-2.5"
+                  >
+                    <span>DOWNLOAD BROCHURE</span>
+                    <svg
+                      className="mt-[-3px] stroke-[#004852] group-hover:stroke-white transition-colors duration-300"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16.75 11.417V14.9725C16.75 15.444 16.5627 15.8962 16.2293 16.2296C15.8959 16.563 15.4437 16.7503 14.9722 16.7503H2.52778C2.05628 16.7503 1.6041 16.563 1.2707 16.2296C0.937301 15.8962 0.75 15.444 0.75 14.9725V11.417"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M4.30859 6.97266L8.75304 11.4171L13.1975 6.97266"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M8.75 11.4167V0.75"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </BrochureButton>
+                </TextFadeUp>
+                <TextFadeUp delay={0.2} direction="left">
+                  <SiteVisitButton
+                    project="Mother Mira - The Wind"
+                    className="project-button  cursor-pointer rounded-full border border-[#0048523D] bg-[#004852] text-[#EDE8D0] semibold paratext  buttonpading hover:bg-[#0c3835] transition-colors duration-300"
+                  >
+                    BOOK A SITE VISIT
+                  </SiteVisitButton>
+                </TextFadeUp>
               </div>
             </div>
           </div>
@@ -139,17 +216,19 @@ export default function Ourprojects() {
           <div className="lg:col-span-4 flex flex-col justify-center space-y-6 pt-6 lg:pt-16 lg:pl-6 z-10 maxwidthcontent">
             {stats.map((stat, idx) => (
               <div key={idx} className="border-b border-[#0c3835]/15 pb-5">
-                <div className="flex items-baseline space-x-1.5">
-                  <span className="semibold fiftypixel greencolor">
-                    {stat.value}
-                  </span>
-                  {stat.unit && (
-                    <span className="twentyeightpixel slimfontthin blackcolor">
-                      {stat.unit}
+                <TextFadeHorizontal direction="right" delay={0.6}>
+                  <div className="flex items-baseline space-x-1.5">
+                    <span className="semibold fiftypixel greencolor">
+                      {stat.value}
                     </span>
-                  )}
-                </div>
-                <p className="blackcolor paratext">{stat.label}</p>
+                    {stat.unit && (
+                      <span className="twentyeightpixel slimfontthin blackcolor">
+                        {stat.unit}
+                      </span>
+                    )}
+                  </div>
+                  <p className="blackcolor paratext">{stat.label}</p>
+                </TextFadeHorizontal>
               </div>
             ))}
           </div>

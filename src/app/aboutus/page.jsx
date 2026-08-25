@@ -9,6 +9,8 @@ import {
   StaggerText,
   TextFadeHorizontal,
   TextFadeUp,
+  FlipRight,
+  FlipLeft,
 } from "../components/TextFadeUp";
 import Header from "../components/Header";
 import LivingExperienceBanner from "../components/LivingExperience";
@@ -45,6 +47,9 @@ export default function AboutUs() {
 
   const sectionRef = useRef(null);
   const rowsRef = useRef([]);
+
+  const flipLeftRef = useRef(null);
+  const flipRightRef = useRef(null);
 
   useGSAP(
     () => {
@@ -106,33 +111,41 @@ export default function AboutUs() {
         {/* 4. Content Area */}
         <div className="z-10 container max-w-7xl mx-auto text-center flex flex-col items-center">
           {/* Title */}
-          <h2 className="secondheading greencolor">
-            ABOUT <strong> MOTHER MIRA </strong>
-          </h2>
+          <TextFadeUp delay={0.15} direction="down">
+            <h2 className="secondheading greencolor">
+              The Story of <strong> MOTHER MIRA </strong>
+            </h2>
+          </TextFadeUp>
 
           {/* Description Paragraphs */}
           <div className="space-y-6 max-w-4xl aboutmothermiraaasec">
-            <p className="blackcolor paratext ">
-              Mother Mira Industries Limited (MMIL) was established in Chennai
-              in 1994 as a diversified enterprise with long-term asset
-              interests. Over the past decade, the company has built a focused
-              presence in Chennai&apos;s real estate market, developing villa
-              and plotted projects in strategic locations positioned for
-              long-term appreciation across emerging growth corridors.
-            </p>
+            <TextFadeUp delay={0.15} direction="down">
+              <p className="blackcolor paratext ">
+                Mother Mira Industries Limited (MMIL) was established in Chennai
+                in 1994 as a diversified enterprise with long-term asset
+                interests. Over the past decade, the company has built a focused
+                presence in Chennai&apos;s real estate market, developing villa
+                and plotted projects in strategic locations positioned for
+                long-term appreciation across emerging growth corridors.
+              </p>
+            </TextFadeUp>
 
-            <p className="blackcolor paratext ">
-              Our developments begin with strategic land selection in areas
-              supported by infrastructure growth, connectivity, and clear
-              development fundamentals. Every project is backed by clear title
-              and regulatory compliance before execution.
-            </p>
+            <TextFadeUp delay={0.15} direction="down">
+              <p className="blackcolor paratext ">
+                Our developments begin with strategic land selection in areas
+                supported by infrastructure growth, connectivity, and clear
+                development fundamentals. Every project is backed by clear title
+                and regulatory compliance before execution.
+              </p>
+            </TextFadeUp>
 
-            <p className="blackcolor paratext ">
-              With strong emphasis on construction quality, material standards,
-              and structured planning, our communities are built for durability,
-              legal strength, and long-term asset value.
-            </p>
+            <TextFadeUp delay={0.15} direction="down">
+              <p className="blackcolor paratext ">
+                With strong emphasis on construction quality, material
+                standards, and structured planning, our communities are built
+                for durability, legal strength, and long-term asset value.
+              </p>
+            </TextFadeUp>
           </div>
         </div>
       </section>
@@ -150,9 +163,13 @@ export default function AboutUs() {
 
         {/* <TextFadeUp delay={0.1}> */}
 
-        <StaggerText delay={0.4}>
+        <StaggerText delay={0.4} direction="down">
           <div className="text-center z-10 mb-12 sm:mb-16 builttttbottom">
-            <h2 className="fifththheading greencolor">Built on Trust Always</h2>
+            <TextFadeUp delay={0.15} direction="left">
+              <h2 className="fifththheading greencolor">
+                Built on Trust Always
+              </h2>
+            </TextFadeUp>
           </div>
         </StaggerText>
         {/* </TextFadeUp> */}
@@ -244,33 +261,44 @@ export default function AboutUs() {
         <div className="relative z-10 container w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 items-center landingtextaboutpage">
           <div className="md:col-span-7 lg:col-span-6 space-y-6 apastaphy">
             {/* Label + Quote Icon */}
-            <div className="flex items-start space-x-3">
-              <span className="foundervoicesubtext greencolor">
-                FOUNDER&apos;S VOICE
-              </span>
-            </div>
+            <TextFadeUp delay={0.15} direction="right">
+              <div className="flex items-start space-x-3">
+                <span className="foundervoicesubtext greencolor">
+                  FOUNDER&apos;S VOICE
+                </span>
+              </div>
+            </TextFadeUp>
+            <TextFadeUp delay={0.15} direction="left">
+              {/* Main Headline */}
 
-            {/* Main Headline */}
-            <h2 className="webelivepremium indicocolor ">
-              WE BELIEVE PREMIUM
-              <br />
-              LIVING SHOULD ALSO FEEL
-            </h2>
-            <h2 className="accesssible greencolor">ACCESSIBLE</h2>
-
-            {/* Paragraphs */}
-            <div className="space-y-4 max-w-2xl founderwithd">
-              <p className="blackcolor paratext ">
-                Our developments are guided by a long-term approach to land,
-                planning, and community — creating thoughtfully designed spaces
-                that balance quality, value, and future growth.
-              </p>
-              <p className="blackcolor paratext ">
-                Backed by strategically held land banks, we focus on building
-                premium communities with lasting relevance and strong
-                fundamentals.
-              </p>
-            </div>
+              <h2 className="webelivepremium indicocolor ">
+                WE BELIEVE PREMIUM
+                <br />
+                LIVING SHOULD ALSO FEEL
+              </h2>
+            </TextFadeUp>
+            <TextFadeUp delay={0.15} direction="left">
+              <h2 className="accesssible greencolor">ACCESSIBLE</h2>
+            </TextFadeUp>
+            <TextFadeUp delay={0.15} direction="left">
+              {/* Paragraphs */}
+              <div className="space-y-4 max-w-2xl founderwithd">
+                <TextFadeUp delay={0.15} direction="left">
+                  <p className="blackcolor paratext ">
+                    Our developments are guided by a long-term approach to land,
+                    planning, and community — creating thoughtfully designed
+                    spaces that balance quality, value, and future growth.
+                  </p>
+                </TextFadeUp>
+                <TextFadeUp delay={0.15} direction="left">
+                  <p className="blackcolor paratext ">
+                    Backed by strategically held land banks, we focus on
+                    building premium communities with lasting relevance and
+                    strong fundamentals.
+                  </p>
+                </TextFadeUp>
+              </div>
+            </TextFadeUp>
           </div>
         </div>
       </section>
@@ -280,15 +308,17 @@ export default function AboutUs() {
           {/* Left Content Side */}
           <div className="lg:col-span-6 space-y-8">
             {/* Header Title */}
-            <div className="mb-[50px]">
-              <p className="subheadingtext uppercase blackcolor">
-                WHY CHOOSE MOTHER MIRA?
-              </p>
+            <TextFadeUp>
+              <div className="mb-[50px]">
+                <p className="subheadingtext uppercase blackcolor">
+                  WHY CHOOSE MOTHER MIRA?
+                </p>
 
-              <h2 className="mainheading indicocolor uppercase">
-                OUR <strong className="greencolor">STRENGTH</strong>
-              </h2>
-            </div>
+                <h2 className="mainheading indicocolor uppercase">
+                  OUR <strong className="greencolor">STRENGTH</strong>
+                </h2>
+              </div>
+            </TextFadeUp>
 
             {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {strengths.map((item, index) => (
@@ -320,43 +350,44 @@ export default function AboutUs() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 aboutsssssection">
               {strengths.map((item, index) => (
-                <div
-                  key={index}
-                  className="boxcardss group p-6 sm:p-7 rounded-2xl flex flex-col justify-between min-h-[160px] bg-[#C9A24B] text-[#0c3835] transition-all duration-500 ease-in-out hover:bg-[#004852] hover:text-white hover:-translate-y-1 hover:shadow-xl overflow-hidden"
-                >
-                  <div>
-                    <img
-                      src={item.icon}
-                      alt=""
-                      className="transition-all duration-500 ease-in-out group-hover:brightness-0 group-hover:invert"
-                    />
-                  </div>
+                <TextFadeUp key={index} delay={index * 0.2} duration={0.8}>
+                  <div className="boxcardss group p-6 sm:p-7 rounded-2xl flex flex-col justify-between min-h-[160px] bg-[#C9A24B] text-[#0c3835] transition-all duration-500 ease-in-out hover:bg-[#004852] hover:text-white hover:-translate-y-1 hover:shadow-xl overflow-hidden">
+                    <div>
+                      <img
+                        src={item.icon}
+                        alt=""
+                        className="transition-all duration-500 ease-in-out group-hover:brightness-0 group-hover:invert"
+                      />
+                    </div>
 
-                  <div>
-                    <h3 className="foundervoicesubtext greencolor mt-[20px] transition-colors duration-500 ease-in-out group-hover:!text-white">
-                      {item.title}
-                    </h3>
+                    <div>
+                      <h3 className="foundervoicesubtext greencolor mt-[20px] transition-colors duration-500 ease-in-out group-hover:!text-white">
+                        {item.title}
+                      </h3>
 
-                    {item.desc && (
-                      <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 ease-in-out group-hover:grid-rows-[1fr] group-hover:opacity-100 group-hover:mt-[10px] ">
-                        <p className="paratext overflow-hidden transition-colors duration-500 ease-in-out text-[#0c3835]/80 group-hover:text-[#EDE8D0]">
-                          {item.desc}
-                        </p>
-                      </div>
-                    )}
+                      {item.desc && (
+                        <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 ease-in-out group-hover:grid-rows-[1fr] group-hover:opacity-100 group-hover:mt-[10px] ">
+                          <p className="paratext overflow-hidden transition-colors duration-500 ease-in-out text-[#0c3835]/80 group-hover:text-[#EDE8D0]">
+                            {item.desc}
+                          </p>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
+                </TextFadeUp>
               ))}
             </div>
           </div>
 
           {/* Right Side Rounded Image */}
           <div className="lg:col-span-6 flex justify-center lg:justify-end mobilimagee  ">
-            <img
-              src="/images/about-strength.jpg"
-              alt="Mother Mira Villa Street View"
-              className="rounded-[15px]"
-            />
+            <TextFadeUp delay={0.2} direction="right">
+              <img
+                src="/images/about-strength.jpg"
+                alt="Mother Mira Villa Street View"
+                className="rounded-[15px]"
+              />
+            </TextFadeUp>
           </div>
         </div>
       </section>

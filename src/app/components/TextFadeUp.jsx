@@ -1,18 +1,42 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRef } from "react";
 
-// Single Text / Heading Fade-Up
-export function TextFadeUp({ children, delay = 0, y = 30, className = "" }) {
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
+
+// =====================================================
+// 1. TEXT FADE UP
+// =====================================================
+
+export function TextFadeUp({
+  children,
+  delay = 0,
+  y = 30,
+  className = "",
+}) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
+      initial={{
+        opacity: 0,
+        y,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: false,
+        margin: "-80px",
+      }}
       transition={{
         duration: 0.7,
-        delay: delay,
-        ease: [0.25, 0.1, 0.25, 1.0], // Smooth cubic-bezier
+        delay,
+        ease: [0.25, 0.1, 0.25, 1],
       }}
       className={className}
     >
@@ -21,13 +45,23 @@ export function TextFadeUp({ children, delay = 0, y = 30, className = "" }) {
   );
 }
 
-// Stagger Wrapper for Lines, Lists, or Multiple Text Paragraphs
-export function StaggerText({ children, staggerDelay = 0.15, className = "" }) {
+// =====================================================
+// 2. STAGGER TEXT
+// =====================================================
+
+export function StaggerText({
+  children,
+  staggerDelay = 0.15,
+  className = "",
+}) {
   return (
     <motion.div
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{
+        once: false,
+        margin: "-80px",
+      }}
       variants={{
         hidden: {},
         show: {
@@ -43,18 +77,28 @@ export function StaggerText({ children, staggerDelay = 0.15, className = "" }) {
   );
 }
 
-// Child item inside StaggerText
-export function StaggerTextItem({ children, y = 25, className = "" }) {
+// =====================================================
+// 3. STAGGER TEXT ITEM
+// =====================================================
+
+export function StaggerTextItem({
+  children,
+  y = 25,
+  className = "",
+}) {
   return (
     <motion.div
       variants={{
-        hidden: { opacity: 0, y: y },
+        hidden: {
+          opacity: 0,
+          y,
+        },
         show: {
           opacity: 1,
           y: 0,
           transition: {
             duration: 0.6,
-            ease: [0.25, 0.1, 0.25, 1.0],
+            ease: [0.25, 0.1, 0.25, 1],
           },
         },
       }}
@@ -65,17 +109,34 @@ export function StaggerTextItem({ children, y = 25, className = "" }) {
   );
 }
 
-// 2. Text Fade Down (Mela irundhu Keela) - NEW FOR YOUR REQUIREMENT
-export function TextFadeDown({ children, delay = 0, y = -30, className = "" }) {
+// =====================================================
+// 4. TEXT FADE DOWN
+// =====================================================
+
+export function TextFadeDown({
+  children,
+  delay = 0,
+  y = -30,
+  className = "",
+}) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: y }} // Negative Y value makes it come from TOP
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
+      initial={{
+        opacity: 0,
+        y,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: false,
+        margin: "-80px",
+      }}
       transition={{
         duration: 0.7,
-        delay: delay,
-        ease: [0.25, 0.1, 0.25, 1.0],
+        delay,
+        ease: [0.25, 0.1, 0.25, 1],
       }}
       className={className}
     >
@@ -84,7 +145,10 @@ export function TextFadeDown({ children, delay = 0, y = -30, className = "" }) {
   );
 }
 
-// 3. Fade In Left to Right / Right to Left
+// =====================================================
+// 5. TEXT FADE HORIZONTAL
+// =====================================================
+
 export function TextFadeHorizontal({
   children,
   delay = 0,
@@ -95,13 +159,22 @@ export function TextFadeHorizontal({
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: xOffset }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
+      initial={{
+        opacity: 0,
+        x: xOffset,
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+      }}
+      viewport={{
+        once: false,
+        margin: "-80px",
+      }}
       transition={{
         duration: 0.7,
-        delay: delay,
-        ease: [0.25, 0.1, 0.25, 1.0],
+        delay,
+        ease: [0.25, 0.1, 0.25, 1],
       }}
       className={className}
     >
@@ -110,7 +183,82 @@ export function TextFadeHorizontal({
   );
 }
 
-// 4. Stagger Wrapper (Group Elements-ku)
+// =====================================================
+// 6. TEXT FADE LEFT
+// =====================================================
+
+export function TextFadeLeft({
+  children,
+  delay = 0,
+  x = -30,
+  className = "",
+}) {
+  return (
+    <motion.div
+      initial={{
+        opacity: 0,
+        x,
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+      }}
+      viewport={{
+        once: false,
+        margin: "-80px",
+      }}
+      transition={{
+        duration: 0.7,
+        delay,
+        ease: [0.25, 0.1, 0.25, 1],
+      }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+// =====================================================
+// 7. TEXT FADE RIGHT
+// =====================================================
+
+export function TextFadeRight({
+  children,
+  delay = 0,
+  x = 30,
+  className = "",
+}) {
+  return (
+    <motion.div
+      initial={{
+        opacity: 0,
+        x,
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+      }}
+      viewport={{
+        once: false,
+        margin: "-80px",
+      }}
+      transition={{
+        duration: 0.7,
+        delay,
+        ease: [0.25, 0.1, 0.25, 1],
+      }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+// =====================================================
+// 8. STAGGER CONTAINER
+// =====================================================
+
 export function StaggerContainer({
   children,
   staggerDelay = 0.15,
@@ -120,7 +268,10 @@ export function StaggerContainer({
     <motion.div
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{
+        once: false,
+        margin: "-80px",
+      }}
       variants={{
         hidden: {},
         show: {
@@ -136,26 +287,47 @@ export function StaggerContainer({
   );
 }
 
-// 5. Stagger Child Item (Direction option-oda)
-export function StaggerItem({ children, direction = "up", className = "" }) {
+// =====================================================
+// 9. STAGGER ITEM
+// =====================================================
+
+export function StaggerItem({
+  children,
+  direction = "up",
+  className = "",
+}) {
   const initialVariants = {
-    up: { opacity: 0, y: 25 },
-    down: { opacity: 0, y: -25 },
-    left: { opacity: 0, x: -25 },
-    right: { opacity: 0, x: 25 },
+    up: {
+      opacity: 0,
+      y: 25,
+    },
+    down: {
+      opacity: 0,
+      y: -25,
+    },
+    left: {
+      opacity: 0,
+      x: -25,
+    },
+    right: {
+      opacity: 0,
+      x: 25,
+    },
   };
 
   return (
     <motion.div
       variants={{
-        hidden: initialVariants[direction] || initialVariants.up,
+        hidden:
+          initialVariants[direction] || initialVariants.up,
+
         show: {
           opacity: 1,
           x: 0,
           y: 0,
           transition: {
             duration: 0.6,
-            ease: [0.25, 0.1, 0.25, 1.0],
+            ease: [0.25, 0.1, 0.25, 1],
           },
         },
       }}
@@ -163,5 +335,97 @@ export function StaggerItem({ children, direction = "up", className = "" }) {
     >
       {children}
     </motion.div>
+  );
+}
+
+// =====================================================
+// 10. GSAP FLIP LEFT
+// =====================================================
+
+export function FlipLeft({
+  children,
+  delay = 0,
+  duration = 0.8,
+}) {
+  const ref = useRef(null);
+
+  useGSAP(() => {
+    if (!ref.current) return;
+
+    gsap.fromTo(
+      ref.current,
+      {
+        opacity: 0,
+        rotationY: -90,
+        scale: 0.95,
+        transformPerspective: 1000,
+      },
+      {
+        opacity: 1,
+        rotationY: 0,
+        scale: 1,
+        duration,
+        delay,
+        ease: "power3.out",
+
+        scrollTrigger: {
+          trigger: ref.current,
+          start: "top 80%",
+          toggleActions: "restart none restart reset",
+        },
+      },
+    );
+  }, []);
+
+  return (
+    <div ref={ref}>
+      {children}
+    </div>
+  );
+}
+
+// =====================================================
+// 11. GSAP FLIP RIGHT
+// =====================================================
+
+export function FlipRight({
+  children,
+  delay = 0,
+  duration = 0.8,
+}) {
+  const ref = useRef(null);
+
+  useGSAP(() => {
+    if (!ref.current) return;
+
+    gsap.fromTo(
+      ref.current,
+      {
+        opacity: 0,
+        rotationY: 90,
+        scale: 0.95,
+        transformPerspective: 1000,
+      },
+      {
+        opacity: 1,
+        rotationY: 0,
+        scale: 1,
+        duration,
+        delay,
+        ease: "power3.out",
+
+        scrollTrigger: {
+          trigger: ref.current,
+          start: "top 80%",
+          toggleActions: "restart none restart reset",
+        },
+      },
+    );
+  }, []);
+
+  return (
+    <div ref={ref}>
+      {children}
+    </div>
   );
 }

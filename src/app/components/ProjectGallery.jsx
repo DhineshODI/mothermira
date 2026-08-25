@@ -3,6 +3,22 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+import {
+  StaggerText,
+  TextFadeHorizontal,
+  TextFadeUp,
+  FlipRight,
+  FlipLeft,
+  TextFadeLeft,
+  TextFadeDown,
+} from "../components/TextFadeUp";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function ProjectGallery() {
   const [activeTab, setActiveTab] = useState("EXTERIOR");
   const [lightboxIndex, setLightboxIndex] = useState(null);
@@ -118,44 +134,87 @@ export default function ProjectGallery() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [lightboxIndex, handleNext, handlePrev]);
 
+  const sectionRef = useRef(null);
+  const rowsRef = useRef([]);
+
+  useGSAP(
+    () => {
+      const rows = rowsRef.current;
+
+      // 1. Initial State: All rows set to low opacity & slightly shifted down
+      gsap.set(rows, { opacity: 0.15, y: 30 });
+
+      // 2. Timeline for Pinned Scroll Sequence
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "+=150%", // Scroll length to complete sequence
+          pin: true, // Pin section while scrolling
+          scrub: 1, // Smooth response to scroll
+        },
+      });
+
+      // 3. Reveal Each Row Sequentially
+      rows.forEach((row, index) => {
+        tl.to(
+          row,
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power2.out",
+          },
+          index * 1.2,
+        );
+      });
+    },
+    { scope: sectionRef },
+  );
+
   return (
     <section className="w-full py-16 sm:py-24 px-4 sm:px-8 bg-[#EDE8D0]">
       <div className="container max-w-7xl mx-auto flex flex-col items-center">
         {/* Header Section */}
         <div className="text-center max-w-7xl mb-10">
-          <p className="subheadingtext uppercase blackcolor">GALLERY</p>
-          <h2 className="mainheading indicocolor uppercase">
-            PROJECT <strong className="greencolor">VISUALS</strong>
-          </h2>
-          <p className="blackcolor paratext mt-[10px] breakremove">
-            Take a closer look at the community spaces, modern amenities,
-            infrastructure <br /> planning, and peaceful residential environment
-            offered.
-          </p>
+          <TextFadeUp delay={0.15}>
+            <p className="subheadingtext uppercase blackcolor">GALLERY</p>
+            <h2 className="mainheading indicocolor uppercase">
+              PROJECT <strong className="greencolor">VISUALS</strong>
+            </h2>
+            <p className="blackcolor paratext mt-[10px] breakremove">
+              Take a closer look at the community spaces, modern amenities,
+              infrastructure <br /> planning, and peaceful residential
+              environment offered.
+            </p>
+          </TextFadeUp>
         </div>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-17 mobileeedisplayslider">
-          {tabs.map((tab) => {
-            const isActive = activeTab === tab;
-            return (
-              <button
-                key={tab}
-                onClick={() => {
-                  setActiveTab(tab);
-                  setLightboxIndex(null);
-                }}
-                className={`px-8 py-1.5 rounded-full paratext uppercase transition-all duration-300 cursor-pointer ${
-                  isActive
-                    ? "bg-[#004852] text-[#EDE8D0] shadow-md semibold"
-                    : "bg-[#E7DEC0] text-[#1f2933] hover:bg-[#E2DCC6] border border-[#1616163D]"
-                }`}
-              >
-                {tab}
-              </button>
-            );
-          })}
-        </div>
+<TextFadeUp delay={0.15}>
+  <div className="flex flex-wrap justify-center gap-3 mb-17 mobileeedisplayslider">
+    {tabs.map((tab) => {
+      const isActive = activeTab === tab;
+
+      return (
+        <button
+          key={tab}
+          onClick={() => {
+            setActiveTab(tab);
+            setLightboxIndex(null);
+          }}
+          className={`px-8 py-1.5 rounded-full paratext uppercase transition-all duration-300 cursor-pointer ${
+            isActive
+              ? "bg-[#004852] text-[#EDE8D0] shadow-md semibold"
+              : "bg-[#E7DEC0] text-[#1f2933] hover:bg-[#E2DCC6] border border-[#1616163D]"
+          }`}
+        >
+          {tab}
+        </button>
+      );
+    })}
+  </div>
+</TextFadeUp>
 
         {/* 4-Column Image Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full projectgallerysectionsa">

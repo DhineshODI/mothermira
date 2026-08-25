@@ -6,6 +6,21 @@ import ProjectGallery from "../components/ProjectGallery";
 import ProjectDetailIntro from "../components/ProjectDetailIntro";
 import LivingExperienceBanner from "../components/LivingExperience";
 import Header from "../components/Header";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+import {
+  StaggerText,
+  TextFadeHorizontal,
+  TextFadeUp,
+  FlipRight,
+  FlipLeft,
+  TextFadeLeft,
+  TextFadeDown,
+} from "../components/TextFadeUp";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function ProjectDetailTheWind() {
   const advantages = [
@@ -35,7 +50,7 @@ export default function ProjectDetailTheWind() {
       icon: "/images/icons/Infrastructure.svg",
     },
     {
-      title: "SMART VALUE LIVING",
+      title: " VALUE LIVING",
       desc: "Balanced pricing with strong long-term appreciation potential",
       highlighted: false,
       icon: "/images/icons/Quality.svg",
@@ -137,6 +152,44 @@ export default function ProjectDetailTheWind() {
     "METRO",
   ];
 
+  const sectionRef = useRef(null);
+  const rowsRef = useRef([]);
+
+  useGSAP(
+    () => {
+      const rows = rowsRef.current;
+
+      // 1. Initial State: All rows set to low opacity & slightly shifted down
+      gsap.set(rows, { opacity: 0.15, y: 30 });
+
+      // 2. Timeline for Pinned Scroll Sequence
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "+=150%", // Scroll length to complete sequence
+          pin: true, // Pin section while scrolling
+          scrub: 1, // Smooth response to scroll
+        },
+      });
+
+      // 3. Reveal Each Row Sequentially
+      rows.forEach((row, index) => {
+        tl.to(
+          row,
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power2.out",
+          },
+          index * 1.2,
+        );
+      });
+    },
+    { scope: sectionRef },
+  );
+
   return (
     <div className="projectdetailpage">
       <Header sec={"transperantBg"} />
@@ -152,52 +205,58 @@ export default function ProjectDetailTheWind() {
         {/* 3. Bottom Content Box */}
         <div className="container w-full max-w-7xl mx-auto pb-22 sm:pb-22 z-10">
           {/* Category Badge */}
-          <div className="">
-            <div className="flex items-center ">
-              <span
-                className="subheadingherobanner greencolor ourprojectsss uppercase !pr-[12px]"
-                style={{ lineHeight: "120%" }}
-              >
-                MOTHER MIRA - THE WIND
-              </span>
-              <span
-                style={{ lineHeight: "120%" }}
-                className="subheadingherobanner greencolor ourprojectsss uppercase"
-              >
-                <div className="flex items-center gap-2 breadcrumtexxttt ">
-                  <img
-                    className="w-[22px] h-[22x] "
-                    src="/images/icons/map-pin.svg"
-                    alt=""
-                  />{" "}
-                  PORUR
-                </div>
-              </span>
+          <TextFadeLeft delay={0.2}>
+            <div className="">
+              <div className="flex items-center ">
+                <span
+                  className="subheadingherobanner greencolor ourprojectsss uppercase !pr-[12px]"
+                  style={{ lineHeight: "120%" }}
+                >
+                  MOTHER MIRA - THE WIND
+                </span>
+                <span
+                  style={{ lineHeight: "120%" }}
+                  className="subheadingherobanner greencolor ourprojectsss uppercase"
+                >
+                  <div className="flex items-center gap-2 breadcrumtexxttt ">
+                    <img
+                      className="w-[22px] h-[22x] "
+                      src="/images/icons/map-pin.svg"
+                      alt=""
+                    />
+                    PORUR
+                  </div>
+                </span>
+              </div>
             </div>
-          </div>
+          </TextFadeLeft>
 
           {/* Main Title */}
-          <h1 className="herobannerheading text-[#fff] mt-[10px]">
-            WELCOME TO THE WIND
-          </h1>
+          <TextFadeLeft delay={0.5}>
+            <h1 className="herobannerheading text-[#fff] mt-[10px]">
+              WELCOME TO THE WIND
+            </h1>
+          </TextFadeLeft>
 
           {/* Subtle Horizontal Divider */}
-          <hr className="border-t border-white/20 w-full mb-5" />
+          <TextFadeLeft delay={0.8}>
+            <hr className="border-t border-white/20 w-full mb-5" />
 
-          {/* Breadcrumb Navigation */}
-          <nav className="flex items-center space-x-2">
-            <a href="/" className="text-[#FFFFFF80] paratext ">
-              Home
-            </a>
-            <span className="text-[#FFFFFF80] paratext">&gt;</span>
-            <a href="/" className="text-[#FFFFFF80] paratext ">
-              Our Projects
-            </a>
-            <span className="text-[#FFFFFF80] paratext">&gt;</span>
-            <span className="paratext text-[rgba(255,255,255,0.85)]">
-              Mother Mira-The Wind
-            </span>
-          </nav>
+            {/* Breadcrumb Navigation */}
+            <nav className="flex items-center space-x-2">
+              <a href="/" className="text-[#FFFFFF80] paratext ">
+                Home
+              </a>
+              <span className="text-[#FFFFFF80] paratext">&gt;</span>
+              <a href="/" className="text-[#FFFFFF80] paratext ">
+                Our Projects
+              </a>
+              <span className="text-[#FFFFFF80] paratext">&gt;</span>
+              <span className="paratext text-[rgba(255,255,255,0.85)]">
+                Mother Mira-The Wind
+              </span>
+            </nav>
+          </TextFadeLeft>
         </div>
       </section>
 
@@ -207,16 +266,22 @@ export default function ProjectDetailTheWind() {
         <div className="container max-w-7xl mx-auto flex flex-col items-center">
           {/* Header Section */}
           <div className="text-center max-w-7xl mb-12 sm:mb-16">
-            <p className="subheadingtext uppercase blackcolor">WHY PORUR</p>
-            <h2 className="mainheading indicocolor uppercase">
-              PORUR&apos;S GROWTH{" "}
-              <strong className="greencolor">ADVANTAGE</strong>
-            </h2>
-            <p className="blackcolor paratext mt-[10px] breakremove">
-              Explore the advantages of living in Chennai&apos;s fast-growing{" "}
-              <br />
-              and well-connected Porur corridor.
-            </p>
+            <TextFadeDown delay={0.12}>
+              <p className="subheadingtext uppercase blackcolor">WHY PORUR</p>
+            </TextFadeDown>
+            <TextFadeDown delay={0.14}>
+              <h2 className="mainheading indicocolor uppercase">
+                PORUR&apos;S GROWTH
+                <strong className="greencolor"> ADVANTAGE</strong>
+              </h2>
+            </TextFadeDown>
+            <TextFadeDown delay={0.15}>
+              <p className="blackcolor paratext mt-[10px] breakremove">
+                Explore the advantages of living in Chennai&apos;s fast-growing
+                <br />
+                and well-connected Porur corridor.
+              </p>
+            </TextFadeDown>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 w-full gridaminiteddd">
@@ -225,7 +290,6 @@ export default function ProjectDetailTheWind() {
                 key={index}
                 className="relative group bg-[#004852] p-7 sm:p-8 rounded-2xl flex flex-col justify-start overflow-hidden min-h-[340px] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl cursor-pointer"
               >
-                {/* Position exact-a same (-bottom-0 -right-4), hover-la mattum translateUp aagum */}
                 <span className="absolute -bottom-[1px] -right-4 pointer-events-none transition-transform duration-500 ease-out translate-y-1 group-hover:translate-y-5 hoverranimationnn">
                   <img
                     src="/images/m-texticon.svg"
@@ -250,28 +314,38 @@ export default function ProjectDetailTheWind() {
         <div className="container max-w-7xl mx-auto flex flex-col items-center">
           {/* Header Section */}
           <div className="text-center max-w-7xl mb-12">
-            <p className="subheadingtext uppercase blackcolor">
-              Location Advantage
-            </p>
-            <h2 className="mainheading indicocolor uppercase">
-              Connected{" "}
-              <strong className="font-extrabold text-[#004852]">
-                Lifestyle
-              </strong>
-            </h2>
-            <p className="blackcolor paratext mt-[10px] breakremove">
-              Excellent connectivity to IT hubs, metro access, schools,
-              hospitals, <br /> and key transport corridors across Chennai.
-            </p>
+            <TextFadeUp delay={0.15}>
+              <p className="subheadingtext uppercase blackcolor">
+                Location Advantage
+              </p>
+            </TextFadeUp>
+            <TextFadeUp delay={0.17}>
+              <h2 className="mainheading indicocolor uppercase">
+                Connected
+                <strong className="font-extrabold text-[#004852]">
+                  Lifestyle
+                </strong>
+              </h2>
+            </TextFadeUp>
+            <TextFadeUp delay={0.18}>
+              <p className="blackcolor paratext mt-[10px] breakremove">
+                Excellent connectivity to IT hubs, metro access, schools,
+                hospitals, <br /> and key transport corridors across Chennai.
+              </p>
+            </TextFadeUp>
           </div>
 
-          <img src="/images/mapimage.png" alt="" />
+          <TextFadeUp delay={0.15}>
+            <img src="/images/mapimage.png" alt="" />
+          </TextFadeUp>
 
           {/* Bottom CTA */}
           <div className="flex flex-col items-center mt-10 space-y-3 googlemapsssbutton">
-            <button className=" uppercase cursor-pointer rounded-full border border-[#0048523D] bg-[#004852] text-[#EDE8D0] semibold paratext  buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300">
-              View Google Map
-            </button>
+            <a href="https://maps.app.goo.gl/nxhuKCbKA2fZa4b56" target="_blank">
+              <button className=" uppercase cursor-pointer rounded-full border border-[#0048523D] bg-[#004852] text-[#EDE8D0] semibold paratext  buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300">
+                View Google Map
+              </button>
+            </a>
           </div>
         </div>
       </section>
@@ -280,19 +354,21 @@ export default function ProjectDetailTheWind() {
         <div className="container max-w-5xl mx-auto flex flex-col items-center lg:!max-w-5xl">
           {/* Top Pills Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-10 mobileeedisplayslider">
-            {tabs.map((tab) => {
+            {tabs.map((tab, index) => {
               const isActive = activeTab === tab;
               return (
-                <button
-                  key={tab}
-                  onClick={() => setActiveTab(tab)}
-                  className={`px-7 py-1.5 rounded-full paratext uppercase transition-all duration-300 cursor-pointer ${
-                    isActive
-                      ? "bg-[#004852] text-[#EDE8D0] shadow-md semibold"
-                      : "bg-[#E7DEC0] text-[#1f2933] hover:bg-[#E2DCC6] border border-[#1616163D]"
-                  }`}
-                >
-                  {tab}
+                <button key={tab} onClick={() => setActiveTab(tab)}>
+                  <TextFadeUp delay={index * 0.15}>
+                    <div
+                      className={`px-7 py-1.5 rounded-full paratext uppercase transition-all duration-300 cursor-pointer ${
+                        isActive
+                          ? "bg-[#004852] text-[#EDE8D0] shadow-md semibold"
+                          : "bg-[#E7DEC0] text-[#1f2933] hover:bg-[#E2DCC6] border border-[#1616163D]"
+                      }`}
+                    >
+                      {tab}
+                    </div>
+                  </TextFadeUp>
                 </button>
               );
             })}
@@ -310,21 +386,25 @@ export default function ProjectDetailTheWind() {
             {/* Table Rows */}
             <div className="space-y-4">
               {locationData[activeTab].map((item, index) => (
-                <div
-                  key={index}
-                  className="grid grid-cols-12 items-center text-xs sm:text-sm text-[#004852] tracking-wide py-1.5 mb-0"
-                >
-                  <div className="col-span-6 sm:col-span-6 uppercase pr-2 semibold paratext blackcolor">
-                    {item.name}
-                  </div>
+                <div key={index}>
+                  <TextFadeUp delay={index * 0.2}>
+                    <div className="grid grid-cols-12 items-center text-xs sm:text-sm text-[#004852] tracking-wide py-1.5 mb-0">
+                      {/* Location Name */}
+                      <div className="col-span-6 sm:col-span-6 uppercase pr-2 semibold paratext blackcolor">
+                        {item.name}
+                      </div>
 
-                  <div className="col-span-3 sm:col-span-3 text-center border-l border-r border-[#004852]/20 pl-2 semibold paratext greencolor">
-                    {item.distance}
-                  </div>
+                      {/* Distance */}
+                      <div className="col-span-3 sm:col-span-3 text-center border-l border-r border-[#004852]/20 pl-2 semibold paratext greencolor">
+                        {item.distance}
+                      </div>
 
-                  <div className="col-span-3 sm:col-span-3 text-right border-l border-l border-[#004852]/20 pl-2 semibold paratext greencolo">
-                    {item.time}
-                  </div>
+                      {/* Time */}
+                      <div className="col-span-3 sm:col-span-3 text-right border-l border-[#004852]/20 pl-2 semibold paratext greencolor">
+                        {item.time}
+                      </div>
+                    </div>
+                  </TextFadeUp>
                 </div>
               ))}
             </div>
@@ -341,40 +421,46 @@ export default function ProjectDetailTheWind() {
           <div className="lg:col-span-6 space-y-8">
             {/* Header Title */}
             <div className="mb-[30px]">
-              <p className="subheadingtext uppercase blackcolor">
-                WHY CHOOSE THE Wind?
-              </p>
-              <h2 className="mainheading indicocolor uppercase w-max">
-                Wind <strong className="greencolor">Advantages</strong>
-              </h2>
+              <TextFadeUp delay={0.2}>
+                <p className="subheadingtext uppercase blackcolor">
+                  WHY CHOOSE THE Wind?
+                </p>
+              </TextFadeUp>
+
+              <TextFadeUp delay={0.5}>
+                <h2 className="mainheading indicocolor uppercase w-max">
+                  Wind <strong className="greencolor">Advantages</strong>
+                </h2>
+              </TextFadeUp>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 aboutsssssection">
               {strengths.map((item, index) => (
-                <div
-                  key={index}
-                  className="boxcardss group p-6 sm:p-7 rounded-2xl flex flex-col justify-between min-h-[160px] bg-[#C9A24B] text-[#0c3835] transition-all duration-500 ease-in-out hover:bg-[#004852] hover:text-white hover:-translate-y-1 hover:shadow-xl overflow-hidden"
-                >
-                  <div>
-                    <img
-                      src={item.icon}
-                      alt=""
-                      className="transition-all duration-500 ease-in-out group-hover:brightness-0 group-hover:invert"
-                    />
-                  </div>
-
-                  <div>
-                    <h3 className="foundervoicesubtext greencolor mt-[20px] transition-colors duration-500 ease-in-out group-hover:!text-white">
-                      {item.title}
-                    </h3>
-
-                    {item.desc && (
-                      <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 ease-in-out group-hover:grid-rows-[1fr] group-hover:opacity-100 group-hover:mt-[10px] ">
-                        <p className="paratext overflow-hidden transition-colors duration-500 ease-in-out text-[#0c3835]/80 group-hover:text-[#EDE8D0]">
-                          {item.desc}
-                        </p>
+                <div key={index}>
+                  <TextFadeUp delay={index * 0.15}>
+                    <div className="boxcardss group p-6 sm:p-7 rounded-2xl flex flex-col justify-between min-h-[160px] bg-[#C9A24B] text-[#0c3835] transition-all duration-500 ease-in-out hover:bg-[#004852] hover:text-white hover:-translate-y-1 hover:shadow-xl overflow-hidden">
+                      <div>
+                        <img
+                          src={item.icon}
+                          alt=""
+                          className="transition-all duration-500 ease-in-out group-hover:brightness-0 group-hover:invert"
+                        />
                       </div>
-                    )}
-                  </div>
+
+                      <div>
+                        <h3 className="foundervoicesubtext greencolor mt-[20px] transition-colors duration-500 ease-in-out group-hover:!text-white">
+                          {item.title}
+                        </h3>
+
+                        {item.desc && (
+                          <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 ease-in-out group-hover:grid-rows-[1fr] group-hover:opacity-100 group-hover:mt-[10px] ">
+                            <p className="paratext overflow-hidden transition-colors duration-500 ease-in-out text-[#0c3835]/80 group-hover:text-[#EDE8D0]">
+                              {item.desc}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </TextFadeUp>
                 </div>
               ))}
             </div>

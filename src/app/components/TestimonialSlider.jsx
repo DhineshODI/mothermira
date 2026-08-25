@@ -120,20 +120,26 @@ export default function TestimonialSlider() {
   return (
     <section className="relative w-full bg-[#f4f3e8] py-20 px-4 sm:px-8 lg:px-16 overflow-hidden testimonialsection">
       <div className="container max-w-7xl mx-auto">
-        <p className="subheadingtext uppercase blackcolor">
-          HOMEOWNERS SHARE THEIR
-        </p>
+        <TextFadeUp delay={0.15} direction="left">
+          <p className="subheadingtext uppercase blackcolor">
+            HOMEOWNERS SHARE THEIR
+          </p>
+        </TextFadeUp>
 
-        <h2 className="fifththheading greencolor uppercase">
-          Warm<span className="thinfont blackcolor"> Experince</span>
-        </h2>
+        <TextFadeUp delay={0.15} direction="left">
+          <h2 className="fifththheading greencolor uppercase">
+            Warm<span className="thinfont blackcolor"> Experince</span>
+          </h2>
+        </TextFadeUp>
 
-        <p className="builtontrustpara blackcolor mt-[15px] breakremove">
-          Feedback from homeowners reflecting trust, quality development, and
-          long-term value experienced <br /> across every Mother Mira project
-        </p>
+        <TextFadeUp delay={0.15} direction="left">
+          <p className="builtontrustpara blackcolor mt-[15px] breakremove">
+            Feedback from homeowners reflecting trust, quality development, and
+            long-term value experienced <br /> across every Mother Mira project
+          </p>
+        </TextFadeUp>
 
-        <TextFadeDown delay={0.8}>
+        <TextFadeUp delay={0.10}>
           <div className="tesimonialslidersection">
             {/* LEFT COLUMN */}
             <div className="p-3 rounded-3xl border border-[#0c3835]/10 flex flex-col justify-center imagetestisection1">
@@ -206,7 +212,7 @@ export default function TestimonialSlider() {
               </div>
             </div>
           </div>
-        </TextFadeDown>
+        </TextFadeUp>
       </div>
     </section>
   );

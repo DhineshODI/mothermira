@@ -230,6 +230,13 @@ body {
 
 .contactform input {
   height: 60px;
+  font-size: 17px;
+  font-family: "Neue Haas Grotesk normal semibold" !important;
+}
+
+.contactform textarea {
+  font-size: 17px;
+  font-family: "Neue Haas Grotesk normal semibold" !important;
 }
 
 .contactform input::placeholder,
@@ -3982,8 +3989,8 @@ background-color: #ede8d0; */
   }
 
   .imageesectionhome img {
-    height: 165px;
     width: 100%;
+    height: 100%;
   }
   .thirdheading {
     font-size: 16px;
@@ -4131,8 +4138,8 @@ background-color: #ede8d0; */
   }
 
   .mainheading.missionclasss {
-    font-size: 20px;
-    line-height: 20px !important;
+    font-size: 18px;
+    line-height: 23px !important;
   }
 
   .builttttbottom {
@@ -4622,6 +4629,7 @@ background-color: #ede8d0; */
 
   .testimonial-main-slider .slick-dots {
     gap: 7px;
+    top: 40%;
   }
   .footerbgsection {
     height: max-content;
@@ -4887,7 +4895,7 @@ background-color: #ede8d0; */
   .mobileeedisplayslider button {
     border-radius: 20px;
     flex-shrink: 0;
-    padding: 5px 19px;
+    padding: 5px 10px;
     font-size: 11px;
     line-height: 15px;
   }
@@ -4964,12 +4972,13 @@ background-color: #ede8d0; */
   }
 
   .menubaropennn {
-    padding-top: 0;
-    height: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    padding-top: 0;
+    display: flex;
+    padding-bottom: 40%;
   }
 
   .headerrrrcontainer.newwwwww {
@@ -5094,4 +5103,28 @@ background-color: #ede8d0; */
 
 .project-button1:active {
   transform: scale(0.95);
+}
+
+@media (min-width: 767px) {
+  .formobilee {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .fordesktop {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .animation-wrapper {
+    display: contents;
+  }
+}
+
+
+.paddingrightandleft {
+  padding-left: 0;
+  padding-right: 0;
 }
