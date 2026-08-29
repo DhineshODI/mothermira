@@ -63,7 +63,7 @@ export default function Home() {
         {/* Main Title Header */}
 
         <TextFadeUp delay={0.6}>
-          <h2 className="builtttonalwayshome semibold">
+          <h2 className="builtttonalwayshome semibold greencolor">
             Built on Trust Always
           </h2>
         </TextFadeUp>
@@ -127,7 +127,7 @@ export default function Home() {
               </TextFadeHorizontal>
 
               <div className="relative flex items-start">
-                <Counter end={32} />
+                <Counter end={30} />
 
                 <span className="slimfontthin plusfont">+</span>
               </div>
@@ -226,23 +226,23 @@ export default function Home() {
                 }}
                 className="sticky bg-[#eee8d0] border-b border-[#0c3835]/15 mb-10 group  overflow-hidden"
               >
-                <div className="max-w-5xl mx-auto p-6 md:p-10 paddingrightandleft">
+                <div className="max-w-6xl mx-auto p-6 md:p-10 paddingrightandleft">
                   <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-6 keystrengthsection">
                     {/* Left Side: Tag Title & Description */}
                     <div className="md:col-span-5 flex flex-col items-start justify-center">
                       {/* Badge Tag */}
-                      <span className="inline-block bg-[#004852] uppercase px-4 py-1.5 mb-4 twentyfourpixel text-[#fff] semibold rounded">
+                      <span className="inline-block bg-[#004852] uppercase px-4 py-1.5 mb-4 keystrighthsectioncontent text-[#fff] semibold rounded">
                         {item.title}
                       </span>
 
                       {/* Description */}
-                      <p className="builtontrustpara blackcolor w-[65%]">
+                      <p className="keystrighthsectionpara blackcolor w-[65%]">
                         {item.description}
                       </p>
                     </div>
 
                     {/* Right Side: Rounded Card Image */}
-                    <div className="md:col-span-7 flex justify-end">
+                    <div className="md:col-span-7 flex justify-end flexsectionnn">
                       <div className="relative imageesectionhome overflow-hidden rounded-xl">
                         <img
                           src={item.image}

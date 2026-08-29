@@ -263,7 +263,7 @@ export default function Header({ sec }) {
   const navLinks = [
     { name: "ABOUT US", href: "/aboutus" },
     { name: "ONGOING", href: "/ourprojects" },
-    { name: "UPCOMING", href: "/ourprojects" },
+    { name: "UPCOMING", href: "/upcoming" },
     { name: "CONTACT US", href: "/contact-us" },
   ];
 
@@ -336,7 +336,9 @@ export default function Header({ sec }) {
                 src={
                   sec === "transperantBg" && isSticky === false
                     ? "/images/mothermira-logo-color.svg"
-                    : "/images/mothermira-logo.svg"
+                    : sec === "nonetranpserant" && isSticky === false
+                      ? "/images/mothermira-logo.svg"
+                      : "/images/mothermira-logo-color.svg"
                 }
                 alt="Mother Mira"
                 className="headerimageesection"
@@ -348,25 +350,25 @@ export default function Header({ sec }) {
           {shouldAnimate === true ? (
             // 1st Time Visit: Play animation
             // <TextFadeHorizontal direction="right" delay={0.8}>
-              <nav className="hidden md:flex items-center gap-5 lg:gap-5">
-                {navLinks.map((link) => {
-                  const isActive = pathname === link.href;
+            <nav className="hidden md:flex items-center gap-5 lg:gap-5">
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
 
-                  return (
-                    <Link
-                      key={link.name}
-                      href={link.href}
-                      className={`paratext semibold headerbuttondiv ${
-                        isActive ? "active" : ""
-                      }`}
-                    >
-                      {link.name}
-                    </Link>
-                  );
-                })}
-              </nav>
-            // </TextFadeHorizontal>
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className={`paratext semibold headerbuttondiv ${
+                      isActive ? "active" : ""
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
+            </nav>
           ) : (
+            // </TextFadeHorizontal>
             // Subsequent pages or initial state pending: Direct render without animation wrapper
             <nav className="hidden md:flex items-center gap-5 lg:gap-5">
               {navLinks.map((link) => {

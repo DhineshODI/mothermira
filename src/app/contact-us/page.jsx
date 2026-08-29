@@ -73,7 +73,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <Header sec={""} />
+      <Header sec={"nonetranpserant"} />
       <section className="relative w-full min-h-[800px] max-h-[800px] overflow-hidden flex flex-col items-center justify-between headertop aboutsectionbanner ">
         <div className="absolute inset-0 -z-10 w-full h-full">
           <img

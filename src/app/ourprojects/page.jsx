@@ -218,8 +218,20 @@ export default function Ourprojects() {
               <div key={idx} className="border-b border-[#0c3835]/15 pb-5">
                 <TextFadeHorizontal direction="right" delay={0.6}>
                   <div className="flex items-baseline space-x-1.5">
-                    <span className="semibold fiftypixel greencolor">
+                    {/* <span className="semibold fiftypixel greencolor">
                       {stat.value}
+                    </span> */}
+
+                    <span className="semibold fiftypixel greencolor">
+                      {stat.value.includes("&") ? (
+                        <>
+                          {stat.value.split("&")[0]}
+                          <span className="amp-glyph !font-thin">&</span>
+                          {stat.value.split("&")[1]}
+                        </>
+                      ) : (
+                        stat.value
+                      )}
                     </span>
                     {stat.unit && (
                       <span className="twentyeightpixel slimfontthin blackcolor">

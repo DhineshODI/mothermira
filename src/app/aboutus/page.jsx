@@ -21,25 +21,25 @@ export default function AboutUs() {
   const strengths = [
     {
       title: "INFRASTRUCTURE",
-      desc: "Well-planned layouts and essential infrastructure",
+      desc: "Spaces planned with care for how families truly live",
       highlighted: true,
       icon: "/images/icons/Infrastructure.svg",
     },
     {
       title: "QUALITY",
-      desc: "Focused on durable construction standards",
+      desc: "Every detail considered for lasting comfort and confidence",
       highlighted: false,
       icon: "/images/icons/Quality.svg",
     },
     {
       title: "VALUE",
-      desc: "Maximum benefit for your investment",
+      desc: "Creating homes that grow in meaning with every milestone",
       highlighted: false,
       icon: "/images/icons/Value.svg",
     },
     {
       title: "CUSTOMER SATISFACTION",
-      desc: "Built on transparency and reliabilit",
+      desc: "Relationships built on openness, care and keeping our word",
       highlighted: false,
       icon: "/images/icons/CustomerSatisfaction.svg",
     },
@@ -87,7 +87,7 @@ export default function AboutUs() {
   );
   return (
     <>
-      <Header sec={""} />
+      <Header sec={"nonetranpserant"} />
       <section className="headertop aboutsectionbanner relative w-full min-h-[800px] max-h-[800px] overflow-hidden flex flex-col items-center justify-between">
         <div className="absolute inset-0 -z-10 w-full h-full">
           <img src="/images/aboutusbg.jpg" alt="Talk to our team" />

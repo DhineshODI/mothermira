@@ -23,7 +23,7 @@ gsap.registerPlugin(ScrollTrigger);
 function AmenitiesCategoryGrid({ categoryData, sliderRef }) {
   const settings = {
     dots: false,
-    infinite: categoryData.length > 3,
+    infinite: categoryData.length > 2,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -124,170 +124,6 @@ export default function AmenitiesSection() {
 
   const sliderRef = useRef(null);
 
-  // const amenitiesData = {
-  //   SECURITY: [
-  //     {
-  //       title: "Security Personnel at Main Entrance",
-  //       image: "/images/project-detail/aminites/security.jpg",
-  //     },
-  //     {
-  //       title: "CCTV Surveillance",
-  //       image: "/images/project-detail/aminites/cctv.jpg",
-  //     },
-  //     {
-  //       title: "Video Door Phone",
-  //       image: "/images/project-detail/aminites/videocall.jpg",
-  //     },
-  //     {
-  //       title: "Security Personnel at Main Entrance",
-  //       image: "/images/project-detail/aminites/security.jpg",
-  //     },
-  //     {
-  //       title: "CCTV Surveillance",
-  //       image: "/images/project-detail/aminites/cctv.jpg",
-  //     },
-  //     {
-  //       title: "Video Door Phone",
-  //       image: "/images/project-detail/aminites/videocall.jpg",
-  //     },
-  //   ],
-
-  //   CLUBHOUSE: [
-  //     {
-  //       title: "Multipurpose Hall",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Gymnasium & Fitness Center",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Swimming Pool",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Multipurpose Hall",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Gymnasium & Fitness Center",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Swimming Pool",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //   ],
-
-  //   RECREATION: [
-  //     {
-  //       title: "Children Play Area",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Badminton Court",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Amphitheatre",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Children Play Area",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Badminton Court",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Amphitheatre",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //   ],
-
-  //   LANDSCAPE: [
-  //     {
-  //       title: "Landscaped Gardens",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Senior Citizen Park",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Reflexology Pathway",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Landscaped Gardens",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Senior Citizen Park",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Reflexology Pathway",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //   ],
-
-  //   INFRASTRUCTURE: [
-  //     {
-  //       title: "100% Power Backup",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Rainwater Harvesting",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "EV Charging Stations",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "100% Power Backup",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Rainwater Harvesting",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "EV Charging Stations",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //   ],
-
-  //   CONVENIENCE: [
-  //     {
-  //       title: "Supermarket / Grocery Store",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Pharmacy Facility",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Visitor Parking",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Supermarket / Grocery Store",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Pharmacy Facility",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //     {
-  //       title: "Visitor Parking",
-  //       image: "/images/project-detail/aminites/",
-  //     },
-  //   ],
-  // };
-
   const amenitiesData = {
     SECURITY: [
       {
@@ -303,25 +139,25 @@ export default function AmenitiesSection() {
         title: "Video Door Phone",
         image: "/images/project-detail/aminites/Security/video_door_phone.jpg",
       },
-      {
-        title: "Covered Car Park",
-        image: "/images/project-detail/aminites/Security/covered_car_park.jpg",
-      },
+      // {
+      //   title: "Covered Car Park",
+      //   image: "/images/project-detail/aminites/Security/covered_car_park.jpg",
+      // },
     ],
 
-    CLUBHOUSE: [
+    "CLUBHOUSE & RECREATION": [
       {
-        title: "Multi Purpose Hall with 100 Seating",
+        title: "Multi Purpose Hall",
         image:
           "/images/project-detail/aminites/Clubhouse/multi_purpose_hall_with_100_seating.jpg",
       },
       {
-        title: "Mini Theater with 50 Seating",
+        title: "Mini Theater",
         image:
           "/images/project-detail/aminites/Clubhouse/mini_theater_with_50_seating.jpg",
       },
       {
-        title: "Party Roof Garden in Club House",
+        title: "Rooftop Party Area",
         image:
           "/images/project-detail/aminites/Clubhouse/party_roof_garden_in_club_house.jpg",
       },
@@ -330,9 +166,6 @@ export default function AmenitiesSection() {
         image:
           "/images/project-detail/aminites/Clubhouse/separate_restroom_for_domestic_staff_and_drivers.jpg",
       },
-    ],
-
-    RECREATION: [
       {
         title: "Swimming Pool",
         image: "/images/project-detail/aminites/Recreation/swimming_pool.jpg",
@@ -342,25 +175,37 @@ export default function AmenitiesSection() {
         image:
           "/images/project-detail/aminites/Recreation/equipped_modern_gymnasium.jpg",
       },
-      {
-        title: "Jogging Track",
-        image: "/images/project-detail/aminites/Recreation/jogging_track.jpg",
-      },
+      // {
+      //   title: "Jogging Track",
+      //   image: "/images/project-detail/aminites/Recreation/jogging_track.jpg",
+      // },
       {
         title: "Indoor Games (Table Tennis & Pool)",
         image:
           "/images/project-detail/aminites/Recreation/indoor_games_–_table_tennis_&_pool_table.jpg",
       },
-    ],
-
-    LANDSCAPE: [
       {
         title: "Children's Play Area",
         image:
           "/images/project-detail/aminites/Landscape/children’s_play_area.jpg",
       },
+
       {
-        title: "Creatively Landscaped Garden",
+        title: "Yoga Hall",
+        image: "/images/project-detail/aminites/Clubhouse/yoga-hall.jpg",
+      },
+
+      {
+        title: "Barbecue",
+        image: "/images/project-detail/aminites/Clubhouse/barbecue.jpg",
+      },
+    ],
+
+    RECREATION: [],
+
+    LANDSCAPE: [
+      {
+        title: "Landscaped Garden",
         image:
           "/images/project-detail/aminites/Landscape/creatively_landscaped_garden.jpg",
       },
@@ -368,11 +213,6 @@ export default function AmenitiesSection() {
         title: "Fully Landscaped OSR Park",
         image:
           "/images/project-detail/aminites/Landscape/fully_landscaped_osr_park.jpg",
-      },
-      {
-        title: "Concrete Paved Roads with Street Lights",
-        image:
-          "/images/project-detail/aminites/Landscape/concrete_paved_roads_with_street_lights.jpg",
       },
     ],
 
@@ -395,23 +235,34 @@ export default function AmenitiesSection() {
         image:
           "/images/project-detail/aminites/Infrastructure/hydro_pneumatic_water_supply_system.jpg",
       },
-    ],
-
-    CONVENIENCE: [
       {
         title: "Power Back-up in Club House",
         image:
           "/images/project-detail/aminites/Convenience/power_back_up_in_club_house.jpg",
       },
+
+      {
+        title: "Paved Roads with Street Lights",
+        image:
+          "/images/project-detail/aminites/Landscape/concrete_paved_roads_with_street_lights.jpg",
+      },
     ],
+
+    // CONVENIENCE: [
+    //   {
+    //     title: "Power Back-up in Club House",
+    //     image:
+    //       "/images/project-detail/aminites/Convenience/power_back_up_in_club_house.jpg",
+    //   },
+    // ],
   };
   const categories = [
     "SECURITY",
-    "CLUBHOUSE",
-    "RECREATION",
+    "CLUBHOUSE & RECREATION",
+    // "RECREATION",
     "LANDSCAPE",
     "INFRASTRUCTURE",
-    "CONVENIENCE",
+    // "CONVENIENCE",
   ];
 
   return (

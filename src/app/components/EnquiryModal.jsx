@@ -15,15 +15,15 @@ import {
 function Field({ id, label, required, error, children, className = "" }) {
   return (
     <div className={className}>
+      <legend className="px-1.5 !text-[16px] sm:text-xs font-semibold uppercase texttttcolr  text-[#fff] mb-[6px]">
+        {label}
+        {required && <span className="text-[#FF0F1E]"> *</span>}
+      </legend>
       <fieldset
         className={`rounded-md border px-3 pb-3 transition-colors ${
           error ? "border-[#FF6B6B]" : "border-[#EDE8D0]/60"
         }`}
       >
-        <legend className="px-1.5 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-[#EDE8D0]">
-          {label}
-          {required && <span className="text-[#FF0F1E]"> *</span>}
-        </legend>
         {children}
       </fieldset>
       {error ? (
@@ -36,7 +36,7 @@ function Field({ id, label, required, error, children, className = "" }) {
 }
 
 const inputClass =
-  "w-full bg-transparent text-sm sm:text-base text-white placeholder-white/45 outline-none py-1.5 [color-scheme:dark]";
+  "w-full bg-transparent text-sm sm:text-base text-white placeholder-black/85 outline-none py-1.5 [color-scheme:white]";
 
 /* ------------------------------------------------------------------ */
 /* Modal                                                               */

@@ -121,7 +121,16 @@ export default function ProjectDetailIntro() {
                 <div className="border-b-0 lg:border-b border-[#004852]/15 pb-0 lg:pb-5">
                   <div className="flex flex-wrap items-baseline gap-x-1">
                     <span className="semibold text-[22px] sm:text-[32px] md:text-[42px] lg:fiftypixel greencolor leading-tight">
-                      {stat.value}
+                      {/* {stat.value} */}
+                      {stat.value.includes("&") ? (
+                        <>
+                          {stat.value.split("&")[0]}
+                          <span className="amp-glyph !font-thin">&</span>
+                          {stat.value.split("&")[1]}
+                        </>
+                      ) : (
+                        stat.value
+                      )}
                     </span>
                     {stat.unit && (
                       <span className="text-[12px] sm:text-[18px] lg:twentyeightpixel slimfontthin blackcolor whitespace-nowrap">

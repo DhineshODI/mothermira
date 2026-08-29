@@ -91,19 +91,10 @@ export default function ProjectGallery() {
     "FLOOR PLANS": [
       {
         id: 1,
-        src: "/images/project-detail/gallery/gallery-1.jpg",
+        src: "/images/project-detail/gallery/floorplan.jpeg",
         alt: "3 BHK Villa Ground Floor Plan",
       },
-      {
-        id: 2,
-        src: "/images/project-detail/gallery/gallery-2.jpg",
-        alt: "3 BHK Villa First Floor Plan",
-      },
-      {
-        id: 3,
-        src: "/images/project-detail/gallery/gallery-3.jpg",
-        alt: "4 BHK Villa Floor Plan",
-      },
+
     ],
   };
 

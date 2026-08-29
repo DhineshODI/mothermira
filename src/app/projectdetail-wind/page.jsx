@@ -45,25 +45,25 @@ export default function ProjectDetailTheWind() {
   const strengths = [
     {
       title: "STRATEGIC LOCATION",
-      desc: "Excellent connectivity to IT hubs and metro access",
+      desc: "Well-connected to Porur’s key IT hubs, workplaces and everyday essentials.",
       highlighted: true,
       icon: "/images/icons/Infrastructure.svg",
     },
     {
-      title: " VALUE LIVING",
-      desc: "Balanced pricing with strong long-term appreciation potential",
+      title: "SMART VALUE LIVING",
+      desc: "A thoughtfully planned villa community with strong potential for future value.",
       highlighted: false,
       icon: "/images/icons/Quality.svg",
     },
     {
       title: "PEACEFUL COMMUNITY",
-      desc: "Low-density gated environment for comfortable everyday living",
+      desc: "Low-density villa living surrounded by open spaces and thoughtfully planned amenities.",
       highlighted: false,
       icon: "/images/icons/Value.svg",
     },
     {
       title: "QUALITY INFRASTRUCTURE",
-      desc: "Well-Planned Amenities & Durable Infrastructure",
+      desc: "Modern infrastructure and essential services planned for effortless everyday living.",
       highlighted: false,
       icon: "/images/icons/CustomerSatisfaction.svg",
     },
@@ -143,6 +143,8 @@ export default function ProjectDetailTheWind() {
       { name: "Porur Metro", distance: "3.5 Kms", time: "8 Mins" },
       { name: "Alandur Metro", distance: "9 Kms", time: "20 Mins" },
     ],
+
+    ENTERTAIMENT: [],
   };
 
   const tabs = [
@@ -150,11 +152,17 @@ export default function ProjectDetailTheWind() {
     "EDUCATIONAL INSTITUTIONS",
     "COMMERCIAL",
     "METRO",
+    "ENTERTAIMENT",
   ];
 
   const sectionRef = useRef(null);
   const rowsRef = useRef([]);
 
+  const [activeIndex, setActiveIndex] = useState(null);
+  const handleCardClick = (index) => {
+    // Toggle the card open/closed on tap
+    setActiveIndex(activeIndex === index ? null : index);
+  };
   useGSAP(
     () => {
       const rows = rowsRef.current;
@@ -270,7 +278,7 @@ export default function ProjectDetailTheWind() {
               <p className="subheadingtext uppercase blackcolor">WHY PORUR</p>
             </TextFadeDown>
             <TextFadeDown delay={0.14}>
-              <h2 className="mainheading indicocolor uppercase">
+              <h2 className="mainheading orangeeecolor uppercase">
                 PORUR&apos;S GROWTH
                 <strong className="greencolor"> ADVANTAGE</strong>
               </h2>
@@ -321,7 +329,7 @@ export default function ProjectDetailTheWind() {
             </TextFadeUp>
             <TextFadeUp delay={0.17}>
               <h2 className="mainheading indicocolor uppercase">
-                Connected
+                Connected{" "}
                 <strong className="font-extrabold text-[#004852]">
                   Lifestyle
                 </strong>
@@ -433,8 +441,8 @@ export default function ProjectDetailTheWind() {
                 </h2>
               </TextFadeUp>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 aboutsssssection">
-              {strengths.map((item, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 aboutsssssection projectdetailpage">
+              {/* {strengths.map((item, index) => (
                 <div key={index}>
                   <TextFadeUp delay={index * 0.15}>
                     <div className="boxcardss group p-6 sm:p-7 rounded-2xl flex flex-col justify-between min-h-[160px] bg-[#C9A24B] text-[#0c3835] transition-all duration-500 ease-in-out hover:bg-[#004852] hover:text-white hover:-translate-y-1 hover:shadow-xl overflow-hidden">
@@ -462,7 +470,69 @@ export default function ProjectDetailTheWind() {
                     </div>
                   </TextFadeUp>
                 </div>
-              ))}
+              ))} */}
+
+              {strengths.map((item, index) => {
+                const isActive = activeIndex === index;
+
+                return (
+                  <div key={index} onClick={() => handleCardClick(index)}>
+                    <TextFadeUp delay={index * 0.15}>
+                      <div
+                        className={`boxcardss group p-6 sm:p-7 rounded-2xl flex flex-col justify-between min-h-[160px] transition-all duration-500 ease-in-out cursor-pointer overflow-hidden ${
+                          isActive
+                            ? "bg-[#004852] text-white -translate-y-1 shadow-xl"
+                            : "bg-[#C9A24B] text-[#0c3835] sm:hover:bg-[#004852] sm:hover:text-white sm:hover:-translate-y-1 sm:hover:shadow-xl"
+                        }`}
+                      >
+                        <div>
+                          <img
+                            src={item.icon}
+                            alt=""
+                            className={`transition-all duration-500 ease-in-out ${
+                              isActive
+                                ? "brightness-0 invert"
+                                : "group-hover:brightness-0 group-hover:invert"
+                            }`}
+                          />
+                        </div>
+
+                        <div>
+                          <h3
+                            className={`foundervoicesubtext greencolor mt-[20px] transition-colors duration-500 ease-in-out ${
+                              isActive
+                                ? "!text-white"
+                                : "group-hover:!text-white"
+                            }`}
+                          >
+                            {item.title}
+                          </h3>
+
+                          {item.desc && (
+                            <div
+                              className={`grid opacity-0 transition-all duration-500 ease-in-out ${
+                                isActive
+                                  ? "grid-rows-[1fr] opacity-100 mt-[10px]"
+                                  : "grid-rows-[0fr] group-hover:grid-rows-[1fr] group-hover:opacity-100 group-hover:mt-[10px]"
+                              }`}
+                            >
+                              <p
+                                className={`paratext overflow-hidden transition-colors duration-500 ease-in-out ${
+                                  isActive
+                                    ? "text-[#EDE8D0]"
+                                    : "text-[#0c3835]/80 group-hover:text-[#EDE8D0]"
+                                }`}
+                              >
+                                {item.desc}
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </TextFadeUp>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
