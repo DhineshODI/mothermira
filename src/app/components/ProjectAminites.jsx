@@ -145,62 +145,137 @@ export default function AmenitiesSection() {
       // },
     ],
 
-    "CLUBHOUSE & RECREATION": [
-      {
-        title: "Multi Purpose Hall",
-        image:
-          "/images/project-detail/aminites/Clubhouse/multi_purpose_hall_with_100_seating.jpg",
-      },
-      {
-        title: "Mini Theater",
-        image:
-          "/images/project-detail/aminites/Clubhouse/mini_theater_with_50_seating.jpg",
-      },
-      {
-        title: "Rooftop Party Area",
-        image:
-          "/images/project-detail/aminites/Clubhouse/party_roof_garden_in_club_house.jpg",
-      },
-      {
-        title: "Separate Restroom for Domestic Staff",
-        image:
-          "/images/project-detail/aminites/Clubhouse/separate_restroom_for_domestic_staff_and_drivers.jpg",
-      },
-      {
-        title: "Swimming Pool",
-        image: "/images/project-detail/aminites/Recreation/swimming_pool.jpg",
-      },
-      {
-        title: "Equipped Modern Gymnasium",
-        image:
-          "/images/project-detail/aminites/Recreation/equipped_modern_gymnasium.jpg",
-      },
-      // {
-      //   title: "Jogging Track",
-      //   image: "/images/project-detail/aminites/Recreation/jogging_track.jpg",
-      // },
-      {
-        title: "Indoor Games (Table Tennis & Pool)",
-        image:
-          "/images/project-detail/aminites/Recreation/indoor_games_–_table_tennis_&_pool_table.jpg",
-      },
-      {
-        title: "Children's Play Area",
-        image:
-          "/images/project-detail/aminites/Landscape/children’s_play_area.jpg",
-      },
+    // "CLUBHOUSE & RECREATION": [
+    //   {
+    //     title: "Multi Purpose Hall",
+    //     image:
+    //       "/images/project-detail/aminites/Clubhouse/multi_purpose_hall_with_100_seating.jpg",
+    //   },
+    //   {
+    //     title: "Mini Theater",
+    //     image:
+    //       "/images/project-detail/aminites/Clubhouse/mini_theater_with_50_seating.jpg",
+    //   },
+    //   {
+    //     title: "Rooftop Party Area",
+    //     image:
+    //       "/images/project-detail/aminites/Clubhouse/party_roof_garden_in_club_house.jpg",
+    //   },
+    //   {
+    //     title: "Separate Restroom for Domestic Staff",
+    //     image:
+    //       "/images/project-detail/aminites/Clubhouse/separate_restroom_for_domestic_staff_and_drivers.jpg",
+    //   },
+    //   {
+    //     title: "Swimming Pool",
+    //     image: "/images/project-detail/aminites/Recreation/swimming_pool.jpg",
+    //   },
+    //   {
+    //     title: "Equipped Modern Gymnasium",
+    //     image:
+    //       "/images/project-detail/aminites/Recreation/equipped_modern_gymnasium.jpg",
+    //   },
 
-      {
-        title: "Yoga Hall",
-        image: "/images/project-detail/aminites/Clubhouse/yoga-hall.jpg",
-      },
+    //   {
+    //     title: "Indoor Games (Table Tennis & Pool)",
+    //     image:
+    //       "/images/project-detail/aminites/Recreation/indoor_games_–_table_tennis_&_pool_table.jpg",
+    //   },
+    //   {
+    //     title: "Children's Play Area",
+    //     image:
+    //       "/images/project-detail/aminites/Landscape/children’s_play_area.jpg",
+    //   },
 
-      {
-        title: "Barbecue",
-        image: "/images/project-detail/aminites/Clubhouse/barbecue.jpg",
-      },
-    ],
+    //   {
+    //     title: "Yoga Hall",
+    //     image: "/images/project-detail/aminites/Clubhouse/yoga-hall.jpg",
+    //   },
 
+    //   {
+    //     title: "Barbecue",
+    //     image: "/images/project-detail/aminites/Clubhouse/barbecue.jpg",
+    //   },
+    // ],
+
+    // "CLUBHOUSE & RECREATION": [
+    //   {
+    //     title: "Barbecue",
+    //     image:
+    //       "/images/project-detail/aminites/clubhouse-new/barbeque-counterr.jpg",
+    //   },
+    //   {
+    //     title: "Gymnasium",
+    //     image: "/images/project-detail/aminites/clubhouse-new/gymnasium.jpg",
+    //   },
+    //   {
+    //     title: "Hydro Pneumatic Water Supply System",
+    //     image:
+    //       "/images/project-detail/aminites/clubhouse-new/hydro-pneumatic-water-supply-systemwtp.jpg",
+    //   },
+    //   {
+    //     title: "Indoor Games",
+    //     image: "/images/project-detail/aminites/clubhouse-new/indoor-games.jpg",
+    //   },
+    //   {
+    //     title: "Mini Theater",
+    //     image: "/images/project-detail/aminites/clubhouse-new/mini-theater.jpg",
+    //   },
+    //   {
+    //     title: "Mood Landscape Lighting",
+    //     image:
+    //       "/images/project-detail/aminites/clubhouse-new/mood-landscape-lighting.jpg",
+    //   },
+    //   {
+    //     title: "Multi Purpose Games Area For Kids & Adults",
+    //     image:
+    //       "/images/project-detail/aminites/clubhouse-new/multi-purpose-games-area-for-kids-adult.jpg",
+    //   },
+    //   {
+    //     title: "Multi Purpose Hall",
+    //     image:
+    //       "/images/project-detail/aminites/clubhouse-new/multi-purpose-hall.jpg",
+    //   },
+    //   {
+    //     title: "Multi Purpose Stimulation Area",
+    //     image:
+    //       "/images/project-detail/aminites/clubhouse-new/multi-purpose-stimulation-area.jpg",
+    //   },
+    //   {
+    //     title: "Outdoor Dining Counter",
+    //     image:
+    //       "/images/project-detail/aminites/clubhouse-new/outdoor-dining-counter.jpg",
+    //   },
+    //   {
+    //     title: "Party Roof Terrace",
+    //     image:
+    //       "/images/project-detail/aminites/clubhouse-new/party-roof-terrace.jpg",
+    //   },
+    //   {
+    //     title: "Power Back Up In Club House",
+    //     image:
+    //       "/images/project-detail/aminites/clubhouse-new/Power-back-up-in-club-house.jpg",
+    //   },
+    //   {
+    //     title: "Premium Lounge Seating",
+    //     image:
+    //       "/images/project-detail/aminites/clubhouse-new/premium-lounge-seating.jpg",
+    //   },
+    //   {
+    //     title: "Swimming Pool",
+    //     image:
+    //       "/images/project-detail/aminites/clubhouse-new/swimming-pool.jpg",
+    //   },
+    //   {
+    //     title: "Vertical Garden",
+    //     image:
+    //       "/images/project-detail/aminites/clubhouse-new/vertical-garden.jpg",
+    //   },
+    //   {
+    //     title: "Yoga Hall",
+    //     image: "/images/project-detail/aminites/clubhouse-new/yoga.jpg",
+    //   },
+    // ],
     RECREATION: [],
 
     LANDSCAPE: [
