@@ -43,10 +43,10 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/upcomingprojects"
+                    href="/projectdetail-wind"
                     className="hover:underline greencolor paratext  !text-[16px] !font-[400] max-sm:!text-[13px]"
                   >
-                    UPCOMING
+                    THE WIND
                   </Link>
                 </li>
                 <li>
@@ -61,7 +61,7 @@ export default function Footer() {
             </div>
 
             {/* OUR PROJECT */}
-            <div className="mb-2 marginnnnbotoomfooter">
+            {/* <div className="mb-2 marginnnnbotoomfooter">
               <h4 className="paratext boldfont greencolor uppercase mb-3 !text-[20px] max-sm:!text-[15px]">
                 Our Project
               </h4>
@@ -71,7 +71,7 @@ export default function Footer() {
               >
                 THE WIND - KOLAPAKKAM
               </Link>
-            </div>
+            </div> */}
 
             {/* EMAIL & PHONE */}
             <div className="space-y-1 pt-2 marginnnnbotoomfooter">
@@ -108,19 +108,19 @@ export default function Footer() {
                 Follow Us
               </h4>
               <div className="flex items-center gap-3">
-                <Link
+                {/* <Link
                   href="#"
                   className="w-11 h-11 rounded-full  flex items-center justify-center text-sm hover:opacity-80 transition"
                 >
                   <img src="/images/icons/Indeed.png" alt="Indeed" />
-                </Link>
+                </Link> */}
                 <Link
                   href="#"
                   className="w-11 h-11 rounded-full flex items-center justify-center text-sm hover:opacity-80 transition"
                 >
                   <img src="/images/icons/insta.png" alt="insta" />
                 </Link>
-                <Link
+                {/* <Link
                   href="#"
                   className="w-11 h-11 rounded-full  flex items-center justify-center text-sm hover:opacity-80 transition"
                 >
@@ -137,7 +137,7 @@ export default function Footer() {
                   className="w-11 h-11 rounded-full  flex items-center justify-center text-sm hover:opacity-80 transition"
                 >
                   <img src="/images/icons/threads.png" alt="" />
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

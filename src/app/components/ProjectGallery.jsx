@@ -94,7 +94,6 @@ export default function ProjectGallery() {
         src: "/images/project-detail/gallery/floorplan.jpeg",
         alt: "3 BHK Villa Ground Floor Plan",
       },
-
     ],
   };
 
@@ -182,30 +181,30 @@ export default function ProjectGallery() {
         </div>
 
         {/* Category Tabs */}
-<TextFadeUp delay={0.15}>
-  <div className="flex flex-wrap justify-center gap-3 mb-17 mobileeedisplayslider">
-    {tabs.map((tab) => {
-      const isActive = activeTab === tab;
+        {/* <TextFadeUp delay={0.15}> */}
+        <div className="flex flex-wrap justify-center gap-3 mb-17 mobileeedisplayslider">
+          {tabs.map((tab) => {
+            const isActive = activeTab === tab;
 
-      return (
-        <button
-          key={tab}
-          onClick={() => {
-            setActiveTab(tab);
-            setLightboxIndex(null);
-          }}
-          className={`px-8 py-1.5 rounded-full paratext uppercase transition-all duration-300 cursor-pointer ${
-            isActive
-              ? "bg-[#004852] text-[#EDE8D0] shadow-md semibold"
-              : "bg-[#E7DEC0] text-[#1f2933] hover:bg-[#E2DCC6] border border-[#1616163D]"
-          }`}
-        >
-          {tab}
-        </button>
-      );
-    })}
-  </div>
-</TextFadeUp>
+            return (
+              <button
+                key={tab}
+                onClick={() => {
+                  setActiveTab(tab);
+                  setLightboxIndex(null);
+                }}
+                className={`px-8 py-1.5 rounded-full paratext uppercase transition-all duration-300 cursor-pointer ${
+                  isActive
+                    ? "bg-[#004852] text-[#EDE8D0] shadow-md semibold"
+                    : "bg-[#E7DEC0] text-[#1f2933] hover:bg-[#E2DCC6] border border-[#1616163D]"
+                }`}
+              >
+                {tab}
+              </button>
+            );
+          })}
+        </div>
+        {/* </TextFadeUp> */}
 
         {/* 4-Column Image Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full projectgallerysectionsa">

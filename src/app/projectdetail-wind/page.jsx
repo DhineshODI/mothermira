@@ -144,7 +144,7 @@ export default function ProjectDetailTheWind() {
       { name: "Alandur Metro", distance: "9 Kms", time: "20 Mins" },
     ],
 
-    ENTERTAIMENT: [],
+    // ENTERTAIMENT: [],
   };
 
   const tabs = [
@@ -152,7 +152,7 @@ export default function ProjectDetailTheWind() {
     "EDUCATIONAL INSTITUTIONS",
     "COMMERCIAL",
     "METRO",
-    "ENTERTAIMENT",
+    // "ENTERTAIMENT",
   ];
 
   const sectionRef = useRef(null);
@@ -366,7 +366,7 @@ export default function ProjectDetailTheWind() {
               const isActive = activeTab === tab;
               return (
                 <button key={tab} onClick={() => setActiveTab(tab)}>
-                  <TextFadeUp delay={index * 0.15}>
+                  {/* <TextFadeUp delay={index * 0.15}> */}
                     <div
                       className={`px-7 py-1.5 rounded-full paratext uppercase transition-all duration-300 cursor-pointer ${
                         isActive
@@ -376,7 +376,7 @@ export default function ProjectDetailTheWind() {
                     >
                       {tab}
                     </div>
-                  </TextFadeUp>
+                  {/* </TextFadeUp> */}
                 </button>
               );
             })}

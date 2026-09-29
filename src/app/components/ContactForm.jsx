@@ -93,7 +93,7 @@ export default function ContactForm() {
 
       {/* NAME */}
       <div>
-        <label htmlFor="name" className="semibold uppercase text-white">
+        <label htmlFor="name" className="semibold text-white">
           Name <span className="text-[#FF0F1E]">*</span>
         </label>
         <input
@@ -102,7 +102,7 @@ export default function ContactForm() {
           autoComplete="name"
           value={form.name}
           onChange={handleChange}
-          placeholder="Enter your Name"
+          placeholder="Enter your name"
           aria-invalid={!!errors.name}
           aria-describedby={errors.name ? "name-error" : undefined}
           className={inputClass}
@@ -113,7 +113,7 @@ export default function ContactForm() {
       {/* PHONE & EMAIL */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="phone" className="semibold uppercase text-white">
+          <label htmlFor="phone" className="semibold text-white">
             Phone <span className="text-[#FF0F1E]">*</span>
           </label>
           <input
@@ -124,7 +124,7 @@ export default function ContactForm() {
             autoComplete="tel"
             value={form.phone}
             onChange={handleChange}
-            placeholder="Enter your Phone"
+            placeholder="Enter your phone"
             aria-invalid={!!errors.phone}
             aria-describedby={errors.phone ? "phone-error" : undefined}
             className={inputClass}
@@ -133,7 +133,7 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="email" className="semibold uppercase text-white">
+          <label htmlFor="email" className="semibold text-white">
             Email <span className="text-[#FF0F1E]">*</span>
           </label>
           <input
@@ -142,7 +142,7 @@ export default function ContactForm() {
             autoComplete="email"
             value={form.email}
             onChange={handleChange}
-            placeholder="Enter your Email"
+            placeholder="Enter your email"
             aria-invalid={!!errors.email}
             aria-describedby={errors.email ? "email-error" : undefined}
             className={inputClass}
@@ -153,7 +153,7 @@ export default function ContactForm() {
 
       {/* MESSAGE */}
       <div>
-        <label htmlFor="message" className="semibold uppercase text-white">
+        <label htmlFor="message" className="semibold text-white">
           Message
         </label>
         <textarea
@@ -161,7 +161,7 @@ export default function ContactForm() {
           rows={4}
           value={form.message}
           onChange={handleChange}
-          placeholder="Enter your Message"
+          placeholder="Enter your message"
           className={`${inputClass} resize-none`}
         />
       </div>

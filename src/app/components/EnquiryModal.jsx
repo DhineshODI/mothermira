@@ -15,7 +15,7 @@ import {
 function Field({ id, label, required, error, children, className = "" }) {
   return (
     <div className={className}>
-      <legend className="px-1.5 !text-[16px] sm:text-xs font-semibold uppercase texttttcolr  text-[#fff] mb-[6px]">
+      <legend className="px-1.5 !text-[16px] sm:text-xs  texttttcolr  text-[#fff] mb-[6px]">
         {label}
         {required && <span className="text-[#FF0F1E]"> *</span>}
       </legend>
@@ -210,7 +210,7 @@ export default function EnquiryModal({ config, onClose }) {
                 autoComplete="name"
                 value={form.name}
                 onChange={handleChange}
-                placeholder="Enter Your Name"
+                placeholder="Enter your name"
                 aria-invalid={!!errors.name}
                 aria-describedby={errors.name ? "name-error" : undefined}
                 className={inputClass}
@@ -224,7 +224,7 @@ export default function EnquiryModal({ config, onClose }) {
                 autoComplete="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="Enter your Email"
+                placeholder="Enter your email"
                 aria-invalid={!!errors.email}
                 aria-describedby={errors.email ? "email-error" : undefined}
                 className={inputClass}
@@ -233,7 +233,7 @@ export default function EnquiryModal({ config, onClose }) {
 
             <Field
               id="phone"
-              label="Phone Number"
+              label="Phone"
               required
               error={errors.phone}
               className={isSiteVisit ? "" : "sm:col-span-2"}
@@ -246,7 +246,7 @@ export default function EnquiryModal({ config, onClose }) {
                 autoComplete="tel"
                 value={form.phone}
                 onChange={handleChange}
-                placeholder="Enter your Phone Number"
+                placeholder="Enter your phone"
                 aria-invalid={!!errors.phone}
                 aria-describedby={errors.phone ? "phone-error" : undefined}
                 className={inputClass}
@@ -306,7 +306,7 @@ export default function EnquiryModal({ config, onClose }) {
           {project ? (
             <p className="text-xs uppercase tracking-wide text-[#EDE8D0]/70">
               Project:{" "}
-              <span className="font-semibold text-[#EDE8D0]">{project}</span>
+              <span className="text-[#EDE8D0]">{project}</span>
             </p>
           ) : null}
 

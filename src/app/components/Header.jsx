@@ -263,7 +263,7 @@ export default function Header({ sec }) {
   const navLinks = [
     { name: "ABOUT US", href: "/aboutus" },
     { name: "ONGOING", href: "/ourprojects" },
-    { name: "UPCOMING", href: "/upcoming" },
+    { name: "THE WIND", href: "/projectdetail-wind" },
     { name: "CONTACT US", href: "/contact-us" },
   ];
 

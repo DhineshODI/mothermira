@@ -569,9 +569,14 @@ background-color: #ede8d0; */
 }
 
 .builtttonalwayshome {
-  font-size: 160px;
+  /* font-size: 160px;
   line-height: 160px;
-  padding-top: 130px;
+  padding-top: 130px; */
+
+  padding-top: 120px;
+  font-size: 140px;
+  line-height: 158px;
+  letter-spacing: -5px;
 }
 
 .borderbuttonexplore::before {
@@ -938,17 +943,87 @@ background-color: #ede8d0; */
 }
 
 .keystrighthsectioncontent {
-  border-radius: 0;
+  /* border-radius: 0;
   padding: 5px 12px;
   font-size: 26px;
-  line-height: 26px;
+  line-height: 26px; */
+
+  border-radius: 0;
+  padding: 5px 16px;
+  font-size: 40px;
+  line-height: 40px;
 }
 
 .keystrighthsectionpara {
-  font-size: 28px;
-  line-height: 28px;
   width: 80%;
+  font-size: 36px;
+  line-height: 37px;
+  margin-top: 8px;
 }
+
+.newsectionlogoupdate {
+  position: relative;
+}
+
+.newprojectdetaillogo {
+  width: 215px;
+  height: auto;
+  position: absolute;
+  right: 30px;
+  top: -20px;
+}
+
+.newprojectdetaillogo img {
+}
+
+.greencolorss {
+  color: #004852;
+  text-shadow:
+    2px 2px #000000c7,
+    4px 4px 10px #00000052;
+  font-weight: 500;
+}
+
+.mobileeedisplayslidernewww {
+  scrollbar-width: thin;
+  height: 400px;
+  padding-right: 20px;
+  overflow-y: auto;
+  width: 114%;
+}
+
+.mobileeedisplayslidernewww::-webkit-scrollbar {
+  width: 6px;
+}
+
+.mobileeedisplayslidernewww::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.mobileeedisplayslidernewww::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.mobileeedisplayslidernewww::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.mobileeedisplayslidernewww {
+  scrollbar-width: thin;
+  scrollbar-color: #004852 #b2bdab61;
+}
+
+/* .buttonviewprojectsec {
+    position: absolute;
+    right: 336px;
+    bottom: 0;
+}
+
+.objectpositionproject {
+  position: relative;
+} */
 
 @media (max-width: 1900px) and (min-width: 1800px) {
   /* fonts-style */
@@ -1098,6 +1173,11 @@ background-color: #ede8d0; */
 
   .foundervoicesection {
     min-height: 845px;
+  }
+
+  .newprojectdetaillogo {
+    top: -32px;
+    right: 63px;
   }
 }
 
@@ -1267,6 +1347,12 @@ background-color: #ede8d0; */
   .imageesectionhome img {
     width: 90%;
     height: 340px;
+  }
+
+  .newprojectdetaillogo {
+    width: 205px;
+    top: -30px;
+    right: 50px;
   }
 }
 
@@ -1598,6 +1684,13 @@ background-color: #ede8d0; */
   .imageesectionhome img {
     width: 90%;
     height: 340px;
+  }
+
+  .newprojectdetaillogo {
+    width: 168px;
+
+    top: -23px;
+    right: 184px;
   }
 }
 
@@ -1964,6 +2057,12 @@ background-color: #ede8d0; */
   .imageesectionhome img {
     width: 90%;
     height: 320px;
+  }
+
+  .newprojectdetaillogo {
+    width: 160px;
+    top: -22px;
+    right: 105px;
   }
 }
 
@@ -2367,6 +2466,12 @@ background-color: #ede8d0; */
   .imageesectionhome img {
     width: 90%;
     height: 285px;
+  }
+
+  .newprojectdetaillogo {
+    width: 159px;
+    top: -17px;
+    right: 30px;
   }
 }
 
@@ -2883,6 +2988,12 @@ background-color: #ede8d0; */
   .imageesectionhome img {
     width: 90%;
     height: 265px;
+  }
+
+  .newprojectdetaillogo {
+    width: 160px;
+    top: -27px;
+    left: 351px;
   }
 }
 
@@ -3458,6 +3569,13 @@ background-color: #ede8d0; */
     width: 90%;
     height: 240px;
   }
+
+  .newprojectdetaillogo {
+    width: 150px;
+
+    top: -20px;
+    left: 345px;
+  }
 }
 
 @media (max-width: 768px) and (min-width: 600px) {
@@ -3975,7 +4093,7 @@ background-color: #ede8d0; */
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 895px;
+    height: 725px;
   }
 
   .imagetestisection2 {
@@ -4155,6 +4273,16 @@ background-color: #ede8d0; */
   .flexsectionnn {
     justify-content: flex-start;
   }
+
+  .newprojectdetaillogo {
+    width: 135px;
+    top: -25px;
+    left: 286px;
+  }
+
+  .newsectionlogoupdate .neeeeeee {
+    padding-bottom: 10px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -4188,8 +4316,8 @@ background-color: #ede8d0; */
     padding-bottom: 3%;
   }
   .paratext {
-    font-size: 15px;
-    line-height: 19px;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   .imageesectionhome img {
@@ -4299,8 +4427,8 @@ background-color: #ede8d0; */
   }
 
   .builtontrustpara {
-    font-size: 14px;
-    line-height: 19px;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   .videobanenrrcontent .hunderpixel {
@@ -4982,7 +5110,9 @@ background-color: #ede8d0; */
   }
 
   .flexxxxdeirection .relative {
-    height: 75px;
+    width: 100px;
+    height: 80px;
+    right: 0;
   }
 
   .flexxxxdeirection .relative img {

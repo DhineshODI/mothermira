@@ -245,6 +245,17 @@ export default function Ourprojects() {
             ))}
           </div>
         </div>
+
+        {/* <div className="buttonviewprojectsec">
+          <TextFadeUp delay={0.2} direction="left">
+            <SiteVisitButton
+              project="Mother Mira - The Wind"
+              className="project-button  cursor-pointer rounded-full border border-[#0048523D] bg-[#004852] text-[#EDE8D0] semibold paratext  buttonpading hover:bg-[#0c3835] transition-colors duration-300"
+            >
+              BOOK A SITE VISIT
+            </SiteVisitButton>
+          </TextFadeUp>
+        </div> */}
       </section>
 
       <TestimonialSlider />

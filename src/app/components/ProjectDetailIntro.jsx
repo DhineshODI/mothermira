@@ -67,8 +67,8 @@ export default function ProjectDetailIntro() {
         {/* Top Grid: Content & Stats */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12 leftsidesectionflexxxs">
           {/* Left Area: Title & Description */}
-          <div className="lg:col-span-8 space-y-4">
-            <TextFadeUp delay={0.15}>
+          <div className="lg:col-span-8 space-y-4 newsectionlogoupdate">
+            <TextFadeUp delay={0.15} className="neeeeeee" >
               <p className="subheadingtext uppercase blackcolor mb-0">
                 EXPERIENCE THE SMART
               </p>
@@ -78,9 +78,9 @@ export default function ProjectDetailIntro() {
                 <h2 className="secondheading greencolor leading-[100%]">
                   <strong>VALUE LIVING</strong>
                 </h2>
-                <div className="relative w-[135px] h-[100px]">
+                <div className="relative w-[135px] h-[100px] newprojectdetaillogo">
                   <img
-                    src="/images/project-detail/wind-detail-logo.png"
+                    src="/images/thewindnewlogo.png"
                     alt="The Wind Logo"
                     className="object-contain object-center"
                   />

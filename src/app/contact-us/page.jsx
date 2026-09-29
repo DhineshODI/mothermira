@@ -144,19 +144,19 @@ export default function ContactPage() {
                   Follow Us
                 </p>
                 <div className="flex items-center gap-3">
-                  <a
+                  {/* <a
                     href="#"
                     className="w-11 h-11 rounded-full  flex items-center justify-center text-sm hover:opacity-80 transition"
                   >
                     <img src="/images/icons/Indeed.png" alt="Indeed" />
-                  </a>
+                  </a> */}
                   <a
                     href="#"
                     className="w-11 h-11 rounded-full flex items-center justify-center text-sm hover:opacity-80 transition"
                   >
                     <img src="/images/icons/insta.png" alt="insta" />
                   </a>
-                  <a
+                  {/* <a
                     href="#"
                     className="w-11 h-11 rounded-full  flex items-center justify-center text-sm hover:opacity-80 transition"
                   >
@@ -173,7 +173,7 @@ export default function ContactPage() {
                     className="w-11 h-11 rounded-full  flex items-center justify-center text-sm hover:opacity-80 transition"
                   >
                     <img src="/images/icons/threads.png" alt="" />
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </TextFadeUp>

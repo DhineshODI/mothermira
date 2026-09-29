@@ -24,61 +24,114 @@ export default function ProjectSpecifications() {
 
   const specsData = {
     WATER: {
-      title: "WATER",
+      title: "WATER SUPPLY",
       subtitle: "SPECIFICATIONS",
-      image: "/images/project-detail/specification/water.jpg",
+      image: "/images/project-detail/specification/water-supply.jpg",
       points: [
-        "Hydro Pneumatic System with treated water",
-        "Separate Municipal water supply in kitchens",
-        "Provision for geysers in all bathrooms",
-        "Rainwater harvesting pits for water conservation",
+        "Hydropneumatic water supply system with treated water.",
+        // "Separate Municipal water supply in kitchens",
+        // "Provision for geysers in all bathrooms",
+        // "Rainwater harvesting pits for water conservation",
       ],
     },
 
-    KITCHEN: {
-      title: "KITCHEN",
+    RAINWATER: {
+      title: "RAINWATER HARVESTING",
       subtitle: "SPECIFICATIONS",
-      image: "/images/project-detail/specification/kitchen.jpg",
+      image: "/images/project-detail/specification/rainwater-harvesting.jpg",
       points: [
-        "Granite polished edge counter top",
-        "Stainless steel sink",
-        "Designer ceramic tiles two feet above counter",
-        "Superior quality anti-skid ceramic tiles on utility area",
+        "Rainwater harvesting pits for water conservation.",
+        // "Stainless steel sink",
+        // "Designer ceramic tiles two feet above counter",
+        // "Superior quality anti-skid ceramic tiles on utility area",
       ],
     },
 
-    PAINTING: {
-      title: "PAINTING",
+    INTERIOR: {
+      title: "INTERIOR WALL FINISH",
       subtitle: "SPECIFICATIONS",
-      image: "/images/project-detail/specification/painting.jpg",
+      image: "/images/project-detail/specification/interior-wall-finish.jpg",
       points: [
-        "Internal Walls: Superior wall putty with acrylic emulsion paint",
-        "External Walls: Plaster finish with weather shield exterior emulsion",
+        "DuraKote wall putty with a smooth finish.",
+        // "External Walls: Plaster finish with weather shield exterior emulsion",
       ],
     },
 
-    STRUCTURE: {
-      title: "STRUCTURE",
+    FLOORING: {
+      title: "FLOORING",
       subtitle: "SPECIFICATIONS",
-      image: "/images/project-detail/specification/structure.jpg",
+      image: "/images/project-detail/specification/flooring.jpg",
       points: [
-        "Ground + two levels RCC structure",
-        "Covered car park in ground floor",
+        "Somany, Kajaria or equivalent tiles in all rooms",
+        // "Covered car park in ground floor",
       ],
     },
 
-    PLASTERING: {
-      title: "PLASTERING",
+    STAIRCASE: {
+      title: "STAIRCASE",
       subtitle: "SPECIFICATIONS",
-      image: "/images/project-detail/specification/plastering.jpg",
+      image: "/images/project-detail/specification/staircase.jpg",
       points: [
-        "Internal & Ceiling: 12 mm thick double coat cement plaster with smooth finish",
-        "External: 18 mm thick double coat cement plaster",
+        "Granite finish to the staircase",
+        // "External: 18 mm thick double coat cement plaster",
+      ],
+    },
+    BATHROOMS: {
+      title: "BATHROOMS",
+      subtitle: "SPECIFICATIONS",
+      image: "/images/project-detail/specification/bathrooms.jpg",
+      points: ["Kohler CP fittings and sanitaryware."],
+    },
+    ELECTRICAL: {
+      title: "ELECTRICAL WIRING",
+      subtitle: "SPECIFICATIONS",
+      image: "/images/project-detail/specification/electrical-wiring.jpg",
+      points: [
+        "Orbit wires or equivalent",
+        // "External: 18 mm thick double coat cement plaster",
+      ],
+    },
+    SWITCHES: {
+      title: "SWITCHES",
+      subtitle: "SPECIFICATIONS",
+      image: "/images/project-detail/specification/switches.jpg",
+      points: [
+        "GM, Legrand or equivalent switches",
+        // "External: 18 mm thick double coat cement plaster",
+      ],
+    },
+    DOORS: {
+      title: "DOORS",
+      subtitle: "SPECIFICATIONS",
+      image: "/images/project-detail/specification/doors.jpg",
+      points: [
+        "Hawai, Sakthi Harmon or equivalent doors. ",
+        // "External: 18 mm thick double coat cement plaster",
+      ],
+    },
+    WINDOWS: {
+      title: "WINDOWS",
+      subtitle: "SPECIFICATIONS",
+      image: "/images/project-detail/specification/windows.jpg",
+      points: [
+        "Aluminium or UPVC windows.",
+        // "External: 18 mm thick double coat cement plaster",
       ],
     },
   };
 
-  const tabs = ["WATER", "KITCHEN", "PAINTING", "STRUCTURE", "PLASTERING"];
+  const tabs = [
+    "WATER",
+    "RAINWATER",
+    "INTERIOR",
+    "FLOORING",
+    "STAIRCASE",
+    "BATHROOMS",
+    "ELECTRICAL",
+    "SWITCHES",
+    "DOORS",
+    "WINDOWS",
+  ];
   const currentContent = specsData[activeTab];
 
   const sectionRef = useRef(null);
@@ -150,7 +203,7 @@ export default function ProjectSpecifications() {
         <div className="w-full bg-[#E7DEC0]/60 border border-[#004852]/15 rounded-3xl p-6 sm:p-8 md:p-10 mobileprojectttcsss">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center projectsectificationscontain">
             {/* Left Vertical Tabs */}
-            <div className="lg:col-span-2 flex flex-row lg:flex-col gap-4 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 mobileeedisplayslider">
+            <div className="lg:col-span-2 flex flex-row lg:flex-col gap-4 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 mobileeedisplayslider mobileeedisplayslidernewww">
               {tabs.map((tab, index) => {
                 const isActive = activeTab === tab;
 
@@ -172,13 +225,13 @@ export default function ProjectSpecifications() {
 
             {/* Middle Image Showcase */}
             <div className="lg:col-span-5 relative h-[100%] imagecordnerr imagebordererer">
-              <TextFadeUp key={activeTab} delay={0.1}>
-                <img
-                  className="h-[100%] rounded-[10px] object-cover"
-                  src={currentContent.image}
-                  alt={currentContent.title}
-                />
-              </TextFadeUp>
+              {/* <TextFadeUp key={activeTab} delay={0.1}> */}
+              <img
+                className="h-[100%] rounded-[10px] object-cover"
+                src={currentContent.image}
+                alt={currentContent.title}
+              />
+              {/* </TextFadeUp> */}
             </div>
 
             {/* Right Specifications Details Grid */}
@@ -186,26 +239,27 @@ export default function ProjectSpecifications() {
               key={activeTab}
               className="lg:col-span-5 flex flex-col justify-center space-y-4"
             >
-              <TextFadeUp delay={0.1}>
-                <h3 className="subheadingtext uppercase blackcolor">
-                  <strong className="greencolor">{currentContent.title}</strong>{" "}
-                  <span>{currentContent.subtitle}</span>
-                </h3>
-              </TextFadeUp>
+              {/* <TextFadeUp delay={0.1}> */}
+              <h3 className="subheadingtext uppercase blackcolor">
+                <strong className="greencolor">{currentContent.title}</strong>{" "} <br />
+                <span>{currentContent.subtitle}</span>
+              </h3>
+              {/* </TextFadeUp> */}
 
               {/* 2-Column Points Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 pt-2 rightsidecolumnlinee">
+              {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 pt-2 rightsidecolumnlinee"> */}
+              <div className="">
                 {currentContent.points.map((point, index) => (
                   <div key={index}>
-                    <TextFadeUp delay={index * 0.1}>
-                      <div className="border-b border-[#004852]/15 pb-3 flex items-start space-x-2 lastborderr">
-                        <span className="blackcolor paratext !text-[20px]">
-                          •
-                        </span>
+                    {/* <TextFadeUp delay={index * 0.1}> */}
+                    <div className=" border-[#004852]/15 pb-3 flex items-start space-x-2 lastborderr">
+                      <span className="blackcolor paratext !text-[20px]">
+                        •
+                      </span>
 
-                        <p className="blackcolor paratext">{point}</p>
-                      </div>
-                    </TextFadeUp>
+                      <p className="blackcolor paratext">{point}</p>
+                    </div>
+                    {/* </TextFadeUp> */}
                   </div>
                 ))}
               </div>

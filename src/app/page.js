@@ -32,7 +32,8 @@ export default function Home() {
     {
       title: "CUSTOMER SATISFACTION",
       description: "Built on transparency & reliability",
-      image: "/images/home/image4.jpg",
+      // image: "/images/home/image4.jpg",
+      image: "/images/home/image5.jpeg",
     },
   ];
 
@@ -63,7 +64,7 @@ export default function Home() {
         {/* Main Title Header */}
 
         <TextFadeUp delay={0.6}>
-          <h2 className="builtttonalwayshome semibold greencolor">
+          <h2 className="builtttonalwayshome greencolorss">
             Built on Trust Always
           </h2>
         </TextFadeUp>
@@ -283,6 +284,7 @@ export default function Home() {
         </div>
 
         <div className="absolute top-0 z-1000 inbodyimageee padingggtopimage">
+          {/* <img src="/images/perfectfamily-transperant.png" /> */}
           <img src="/images/perfectfamily-transperant.png" />
         </div>
       </section>
@@ -370,12 +372,12 @@ export default function Home() {
           <div className="text-left space-y-2 pl-2 detailsectionproject">
             {specs.map((item, idx) => (
               <div key={idx}>
-                <TextFadeUp delay={0.8}>
+                {/* <TextFadeUp delay={0.8}> */}
                   <p className="blackcolor paratext ">{item.label}</p>
                   <p className="builtontrustpara blackcolor uppercase boldfont">
                     {item.value}
                   </p>
-                </TextFadeUp>
+                {/* </TextFadeUp> */}
               </div>
             ))}
           </div>
