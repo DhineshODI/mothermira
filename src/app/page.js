@@ -30,7 +30,8 @@ export default function Home() {
       image: "/images/home/image3.jpg",
     },
     {
-      title: "CUSTOMER SATISFACTION",
+      // title: "CUSTOMER SATISFACTION",
+      title: "Goodwill",
       description: "Built on transparency & reliability",
       // image: "/images/home/image4.jpg",
       image: "/images/home/image5.jpeg",
@@ -230,7 +231,7 @@ export default function Home() {
                 <div className="max-w-6xl mx-auto p-6 md:p-10 paddingrightandleft">
                   <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-6 keystrengthsection">
                     {/* Left Side: Tag Title & Description */}
-                    <div className="md:col-span-5 flex flex-col items-start justify-center">
+                    <div className="md:col-span-5 flex flex-col items-start justify-center leftsidesetionkeystreghths">
                       {/* Badge Tag */}
                       <span className="inline-block bg-[#004852] uppercase px-4 py-1.5 mb-4 keystrighthsectioncontent text-[#fff] semibold rounded">
                         {item.title}
@@ -243,7 +244,7 @@ export default function Home() {
                     </div>
 
                     {/* Right Side: Rounded Card Image */}
-                    <div className="md:col-span-7 flex justify-end flexsectionnn">
+                    <div className="md:col-span-7 flex justify-end flexsectionnn rightsidesetionkeystreghths">
                       <div className="relative imageesectionhome overflow-hidden rounded-xl">
                         <img
                           src={item.image}

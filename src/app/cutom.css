@@ -1025,6 +1025,18 @@ background-color: #ede8d0; */
   position: relative;
 } */
 
+.keystrengthsection {
+  display: flex;
+}
+
+.rightsidesetionkeystreghths {
+  width: 56%;
+}
+
+.leftsidesetionkeystreghths {
+  width: 46%;
+}
+
 @media (max-width: 1900px) and (min-width: 1800px) {
   /* fonts-style */
 
@@ -1334,14 +1346,23 @@ background-color: #ede8d0; */
   .keystrighthsectioncontent {
     border-radius: 0;
     padding: 5px 12px;
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 30px;
+    line-height: 30px;
   }
 
   .keystrighthsectionpara {
-    font-size: 25px;
-    line-height: 25px;
-    width: 65%;
+    width: 88%;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .leftsidesetionkeystreghths {
+    width: 38%;
+  }
+
+  .keystrengthsection {
+    gap: 0;
+    justify-content: center;
   }
 
   .imageesectionhome img {
@@ -1569,8 +1590,9 @@ background-color: #ede8d0; */
   }
 
   .keystrengthsection {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 9%;
+    padding-right: 9%;
+    gap: 0;
   }
 
   .keyssectionbg {
@@ -1671,19 +1693,19 @@ background-color: #ede8d0; */
   .keystrighthsectioncontent {
     border-radius: 0;
     padding: 5px 12px;
-    font-size: 22px;
-    line-height: 22px;
+    font-size: 28px;
+    line-height: 28px;
   }
 
   .keystrighthsectionpara {
-    font-size: 22px;
-    line-height: 22px;
-    width: 70%;
+    width: 80%;
+    font-size: 27px;
+    line-height: 27px;
   }
 
   .imageesectionhome img {
     width: 90%;
-    height: 340px;
+    height: 305px;
   }
 
   .newprojectdetaillogo {
@@ -1916,6 +1938,8 @@ background-color: #ede8d0; */
   .keystrengthsection {
     padding-left: 9%;
     padding-right: 5%;
+    gap: 0;
+    justify-content: center;
   }
 
   .keyssectionbg {
@@ -2044,19 +2068,19 @@ background-color: #ede8d0; */
   .keystrighthsectioncontent {
     border-radius: 0;
     padding: 5px 12px;
-    font-size: 22px;
-    line-height: 22px;
+    font-size: 26px;
+    line-height: 26px;
   }
 
   .keystrighthsectionpara {
-    font-size: 22px;
-    line-height: 22px;
-    width: 70%;
+    width: 85%;
+    font-size: 26px;
+    line-height: 26px;
   }
 
   .imageesectionhome img {
     width: 90%;
-    height: 320px;
+    height: 290px;
   }
 
   .newprojectdetaillogo {
@@ -2289,8 +2313,9 @@ background-color: #ede8d0; */
   }
 
   .keystrengthsection {
-    padding-left: 9%;
+    padding-left: 10%;
     padding-right: 5%;
+    gap: 0;
   }
 
   .keyssectionbg {
@@ -2453,19 +2478,19 @@ background-color: #ede8d0; */
   .keystrighthsectioncontent {
     border-radius: 0;
     padding: 5px 12px;
-    font-size: 21px;
-    line-height: 21px;
+    font-size: 24px;
+    line-height: 24px;
   }
 
   .keystrighthsectionpara {
-    width: 73%;
-    font-size: 20px;
-    line-height: 20px;
+    width: 85%;
+    font-size: 24px;
+    line-height: 24px;
   }
 
   .imageesectionhome img {
     width: 90%;
-    height: 285px;
+    height: 260px;
   }
 
   .newprojectdetaillogo {
@@ -2717,8 +2742,9 @@ background-color: #ede8d0; */
   }
 
   .keystrengthsection {
-    padding-left: 0%;
-    padding-right: 0%;
+    padding-left: 6%;
+    padding-right: 5%;
+    gap: 0;
   }
 
   .keyssectionbg {
@@ -2975,19 +3001,19 @@ background-color: #ede8d0; */
   .keystrighthsectioncontent {
     border-radius: 0;
     padding: 5px 12px;
-    font-size: 21px;
-    line-height: 21px;
+    font-size: 23px;
+    line-height: 23px;
   }
 
   .keystrighthsectionpara {
-    width: 73%;
-    font-size: 20px;
-    line-height: 20px;
+    width: 85%;
+    font-size: 23px;
+    line-height: 23px;
   }
 
   .imageesectionhome img {
     width: 90%;
-    height: 265px;
+    height: 245px;
   }
 
   .newprojectdetaillogo {
@@ -3249,8 +3275,9 @@ background-color: #ede8d0; */
   }
 
   .keystrengthsection {
-    padding-left: 0%;
-    padding-right: 0%;
+    gap: 0;
+    padding-left: 1%;
+    padding-right: 1%;
   }
 
   .keyssectionbg {
@@ -3555,19 +3582,20 @@ background-color: #ede8d0; */
   .keystrighthsectioncontent {
     border-radius: 0;
     padding: 5px 10px;
-    font-size: 19px;
-    line-height: 19px;
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 5px;
   }
 
   .keystrighthsectionpara {
-    width: 100%;
-    font-size: 19px;
-    line-height: 19px;
+    width: 85%;
+    font-size: 22px;
+    line-height: 22px;
   }
 
   .imageesectionhome img {
     width: 90%;
-    height: 240px;
+    height: 215px;
   }
 
   .newprojectdetaillogo {
@@ -3840,6 +3868,7 @@ background-color: #ede8d0; */
     background-size: contain;
     height: 750px;
     background-position: bottom;
+    background-image: url("/images/home/newbgggtheprojectwind.jpg");
   }
 
   .aboutsectionbanner {
@@ -3880,8 +3909,9 @@ background-color: #ede8d0; */
   }
 
   .keystrengthsection {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 0;
+    padding-right: 0;
+    gap: 0;
   }
 
   .keyssectionbg {
@@ -4260,14 +4290,14 @@ background-color: #ede8d0; */
   }
 
   .keystrighthsectionpara {
-    width: 78%;
-    font-size: 19px;
-    line-height: 19px;
+    width: 82%;
+    font-size: 18px;
+    line-height: 18px;
   }
 
   .imageesectionhome img {
     width: 90%;
-    height: 240px;
+    height: 180px;
   }
 
   .flexsectionnn {
@@ -4640,6 +4670,7 @@ background-color: #ede8d0; */
     background-size: contain;
     height: 650px;
     padding-top: 20px !important;
+    background-image: url("/images/home/newbgggtheprojectwind.jpg");
   }
 
   .aboutsectionbanner {
@@ -4706,12 +4737,19 @@ background-color: #ede8d0; */
   }
 
   .keystrengthsection {
+    gap: 15px;
+    padding-bottom: 30px;
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 30px;
-    gap: 15px;
+    flex-direction: column;
   }
 
+  .leftsidesetionkeystreghths {
+    width: 100%;
+  }
+  .rightsidesetionkeystreghths {
+    width: 100%;
+  }
   .keyssectionbg {
     padding-bottom: 20px;
   }
@@ -5341,21 +5379,44 @@ background-color: #ede8d0; */
     padding: 5px 10px;
     font-size: 18px;
     line-height: 18px;
+    margin-bottom: 5px;
   }
 
   .keystrighthsectionpara {
-    width: 78%;
-    font-size: 19px;
-    line-height: 19px;
+    width: 87%;
+    font-size: 18px;
+    line-height: 18px;
   }
 
   .imageesectionhome img {
-    width: 90%;
-    height: 220px;
+    width: 100%;
+    height: auto;
   }
 
   .flexsectionnn {
     justify-content: flex-start;
+  }
+
+  .keyssectionbg .sticky:nth-of-type(1) {
+    top: 148px !important;
+  }
+
+  .keyssectionbg .sticky:nth-of-type(2) {
+    top: 95px !important;
+    top: 170px !important;
+  }
+
+  .keyssectionbg .sticky:nth-of-type(3) {
+    top: 108px !important;
+    top: 192px !important;
+  }
+
+  .keyssectionbg .sticky:last-child {
+    top: 118px !important;
+  }
+
+  .keyssectionbg .sticky:last-child .paddingrightandleft {
+    padding-top: 30px;
   }
 }
 
