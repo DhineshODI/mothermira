@@ -324,7 +324,7 @@ export default function Header({ sec }) {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 w-full px-9 sm:px-9 lg:px-9 transition-all duration-300 py-[20px] headdersectionmain ${
+        className={`sticky top-0 z-50 w-full px-9 sm:px-9 lg:px-9 transition-all duration-300 py-[20px] headdersectionmain testingheaderrrgit ${
           isSticky ? "stickyheader" : ""
         } ${sec}`}
       >
