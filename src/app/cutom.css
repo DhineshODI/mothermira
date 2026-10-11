@@ -421,8 +421,8 @@ background-color: #ede8d0; */
 }
 
 .motehrmiratextour {
-  margin-left: 15%;
   margin-bottom: 1.7%;
+  margin-left: 7%;
 }
 
 .motehrmirabuttonour {
@@ -445,8 +445,9 @@ background-color: #ede8d0; */
 
 .maxwidthcontent {
   width: max-content;
+  padding-top: 0;
   padding-left: 31%;
-  padding-top: 23%;
+  justify-content: flex-start;
 }
 
 .twentyfourpixel {
@@ -1037,6 +1038,21 @@ background-color: #ede8d0; */
   width: 46%;
 }
 
+.viewprojectpostionsss {
+  z-index: 100;
+  position: absolute;
+  bottom: 23%;
+  right: 8%;
+}
+
+.viewprojectpostionsss a {
+  color: #fff;
+  background-color: #f25f22;
+  border: 1px solid #0048523b;
+  font-size: 19px;
+  padding: 8px 23px;
+}
+
 @media (max-width: 1900px) and (min-width: 1800px) {
   /* fonts-style */
 
@@ -1163,7 +1179,12 @@ background-color: #ede8d0; */
   }
 
   .maxwidthcontent {
-    padding-left: 0%;
+    padding-left: 20%;
+  }
+
+  .viewprojectpostionsss {
+    bottom: 24%;
+    right: 11.4%;
   }
 
   .footerrimageSecondd {
@@ -1319,7 +1340,12 @@ background-color: #ede8d0; */
   }
 
   .maxwidthcontent {
-    padding-left: 0%;
+    padding-left: 16%;
+  }
+
+  .viewprojectpostionsss {
+    bottom: 24%;
+    right: 13%;
   }
 
   .footerrimageSecondd {
@@ -1714,6 +1740,15 @@ background-color: #ede8d0; */
     top: -23px;
     right: 184px;
   }
+
+  .viewprojectpostionsss {
+    bottom: 12%;
+    right: 18.4%;
+  }
+
+  .viewprojectpostionsss a {
+    font-size: 17px;
+  }
 }
 
 @media (max-width: 1400px) and (min-width: 1250px) {
@@ -2087,6 +2122,11 @@ background-color: #ede8d0; */
     width: 160px;
     top: -22px;
     right: 105px;
+  }
+
+  .viewprojectpostionsss {
+    bottom: 1%;
+    right: 15%;
   }
 }
 
@@ -2498,6 +2538,15 @@ background-color: #ede8d0; */
     top: -17px;
     right: 30px;
   }
+
+  .viewprojectpostionsss {
+    bottom: 4%;
+    right: 14%;
+  }
+
+  .viewprojectpostionsss a {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 1099px) and (min-width: 900px) {
@@ -2703,7 +2752,7 @@ background-color: #ede8d0; */
   }
   .motehrmirabuttonour {
     width: max-content;
-    margin-left: 8%;
+    margin-left: 4%;
     padding-top: 15px;
   }
 
@@ -3021,6 +3070,15 @@ background-color: #ede8d0; */
     top: -27px;
     left: 351px;
   }
+
+  .viewprojectpostionsss a {
+    font-size: 17px;
+  }
+
+  .viewprojectpostionsss {
+    bottom: 23.5%;
+    right: 8%;
+  }
 }
 
 @media (max-width: 900px) and (min-width: 768px) {
@@ -3233,10 +3291,10 @@ background-color: #ede8d0; */
     height: 600px;
   }
   .motehrmirabuttonour {
-    width: max-content;
-    margin-left: 02%;
     flex-wrap: wrap;
     column-gap: 2%;
+    width: 100%;
+    margin-left: 2%;
     padding-top: 0;
   }
 
@@ -3604,6 +3662,16 @@ background-color: #ede8d0; */
     top: -20px;
     left: 345px;
   }
+
+  .viewprojectpostionsss a {
+    padding: 8px 23px;
+    font-size: 16px;
+  }
+
+  .viewprojectpostionsss {
+    bottom: 29.5%;
+    right: -2%;
+  }
 }
 
 @media (max-width: 768px) and (min-width: 600px) {
@@ -3844,9 +3912,11 @@ background-color: #ede8d0; */
   .motehrmirabuttonour {
     flex-wrap: wrap;
     column-gap: 2%;
-    width: max-content;
+    width: 100%;
     margin-left: 0;
     padding-top: 0;
+    justify-content: center;
+    margin-bottom: 40px;
   }
 
   .imagedivposition {
@@ -4313,6 +4383,16 @@ background-color: #ede8d0; */
   .newsectionlogoupdate .neeeeeee {
     padding-bottom: 10px;
   }
+
+  .viewprojectpostionsss {
+    bottom: 25%;
+    right: 35%;
+  }
+
+  .viewprojectpostionsss a {
+    padding: 7px 28px 6px;
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -4629,6 +4709,7 @@ background-color: #ede8d0; */
     width: 100%;
     margin-left: 0;
     padding-top: 0;
+    margin-bottom: 50px;
   }
 
   .imagedivposition {
@@ -5417,6 +5498,32 @@ background-color: #ede8d0; */
 
   .keyssectionbg .sticky:last-child .paddingrightandleft {
     padding-top: 30px;
+  }
+
+  .viewprojectpostionsss a {
+    padding: 6px 15px;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  .viewprojectpostionsss {
+    bottom: 33%;
+    right: 22%;
+  }
+}
+
+@media (max-width: 365px) {
+  .viewprojectpostionsss a {
+    padding: 6px 15px;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  .viewprojectpostionsss {
+    bottom: 33%;
+    right: 22%;
   }
 }
 

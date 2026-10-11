@@ -115,7 +115,7 @@ export default function Ourprojects() {
       </section>
 
       <section className="w-full py-16 sm:py-24 px-4 sm:px-8 bg-[#EDE8D0] flex justify-center border-b border-[#16161629] objectpositionproject">
-        <div className="container max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <div className="container max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch relative">
           {/* Left & Center Main Showcase Area */}
           <div className="lg:col-span-8 flex flex-col sm:flex-row gap-4 sm:gap-6 relative">
             {/* 1. Left Vertical Banner */}
@@ -156,14 +156,14 @@ export default function Ourprojects() {
 
               {/* CTA Buttons */}
               <div className="flex  flex-wrap items-center gap-3 pt-2 motehrmirabuttonour">
-                <TextFadeUp delay={0.1} direction="left">
+                {/* <TextFadeUp delay={0.1} direction="left">
                   <Link
                     href="/projectdetail-wind"
                     className=" project-button1 cursor-pointer rounded-full border border-[#0048523D] greencolor semibold paratext  buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300"
                   >
                     VIEW PROJECT
                   </Link>
-                </TextFadeUp>
+                </TextFadeUp> */}
                 <TextFadeUp delay={0.15} direction="left">
                   <BrochureButton
                     project="Mother Mira - The Wind"
@@ -243,6 +243,17 @@ export default function Ourprojects() {
                 </TextFadeHorizontal>
               </div>
             ))}
+          </div>
+
+          <div className="viewprojectpostionsss">
+            <TextFadeUp delay={0.9} direction="left">
+              <Link
+                href="/projectdetail-wind"
+                className=" project-button1 cursor-pointer rounded-full border border-[#0048523D] greencolor semibold paratext  buttonpading hover:bg-[#0c3835] hover:!text-white transition-colors duration-300"
+              >
+                VIEW PROJECT
+              </Link>
+            </TextFadeUp>
           </div>
         </div>
 
