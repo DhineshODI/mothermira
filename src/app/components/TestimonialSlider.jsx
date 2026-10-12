@@ -24,8 +24,8 @@ export default function TestimonialSlider() {
     {
       id: 1,
       quote:
-        "Kolapakkam is a good locality. It has good connectivity to supermarket, DLF in 10 minutes, Porur Saravana Stores in 5 minutes and temples. orur Saravana Stores",
-      name: "karthick sundaram",
+        "The society has good connectivity, with auto rickshaws and buses readily available on time. Residents do not have to travel far to access these. The society's construction quality is good, with no issues of leakage or seepage anywhere. Security is also excellent; the building is very strong with no cracks, and the guards remain active at all times.",
+      name: "Rajeswari Ashok",
       designation: "Marketing Manager",
       image: "/images/testimonial1.jpg",
       youtubeUrl: "#",
@@ -33,8 +33,8 @@ export default function TestimonialSlider() {
     {
       id: 2,
       quote:
-        "Peaceful environment with excellent groundwater quality and peaceful neighborhood for living with families.",
-      name: "SURESH KUMAR",
+        "The people in the society are very pleasant and cooperative. The water facility is excellent, available 24 hours a day. There is also a reliable power backup system in place, which helps during power cuts. Additionally, the construction quality is very good, without any notable issues.",
+      name: "Sagi Suryakeerthi",
       designation: "IT Professional",
       image: "/images/testimonial2.jpg",
       youtubeUrl: "#",
@@ -42,8 +42,8 @@ export default function TestimonialSlider() {
     {
       id: 3,
       quote:
-        "Very happy with the construction quality and transparent documentation process provided by the developers.",
-      name: "PRIYA RAMESH",
+        "Kolapakkam is a good locality. It has good connectivity to supermarket, DLF in 10 minutes, Porur Saravana Stores in 5 minutes and temples.",
+      name: "Yuvan PONNUSAMY",
       designation: "Home Owner",
       image: "/images/testimonial3.jpg",
       youtubeUrl: "#",
@@ -51,8 +51,8 @@ export default function TestimonialSlider() {
     {
       id: 4,
       quote:
-        "Kolapakkam is a good locality. It has good connectivity to supermarket, DLF in 10 minutes, Porur Saravana Stores in 5 minutes and temples.",
-      name: "YUVAN PONNUSAMY",
+        "Just 10 mins Pallavaram Bus stand, just 15 mins Ajith Bus stop, just 10 mins Porur. Omega International School, Krish International School, Pon Vidyashram School, Super Market, Malls and Theater. All the benefits here, this is the hot area of Kolapakkam.",
+      name: "Anand",
       designation: "Marketing Manager",
       image: "/images/testimonial1.jpg",
       youtubeUrl: "#",
@@ -60,8 +60,8 @@ export default function TestimonialSlider() {
     {
       id: 5,
       quote:
-        "Kolapakkam is a good locality. It has good connectivity to supermarket, DLF in 10 minutes, Porur Saravana Stores in 5 minutes and temples.",
-      name: "YUVAN PONNUSAMY",
+        "It is a nice locality. Nearby Omega International School, metro station, and near Porur Saravana Store.",
+      name: "Siva M",
       designation: "Marketing Manager",
       image: "/images/testimonial1.jpg",
       youtubeUrl: "#",
@@ -69,8 +69,8 @@ export default function TestimonialSlider() {
     {
       id: 6,
       quote:
-        "Peaceful environment with excellent groundwater quality and peaceful neighborhood for living with families.",
-      name: "SURESH KUMAR",
+        "Kolapakkam. Kolapakkam is a very nice and beautiful locality. All basic amenities like hospitals, schools, colleges, and markets are available nearby.",
+      name: "V Saravanan",
       designation: "IT Professional",
       image: "/images/testimonial2.jpg",
       youtubeUrl: "#",
@@ -78,8 +78,8 @@ export default function TestimonialSlider() {
     {
       id: 7,
       quote:
-        "Very happy with the construction quality and transparent documentation process provided by the developers.",
-      name: "PRIYA RAMESH",
+        "Nice locality. This locality is near Omega School. Park facility is available on the campus.",
+      name: "RAVICHANDRAN SHANMUGAM",
       designation: "Home Owner",
       image: "/images/testimonial3.jpg",
       youtubeUrl: "#",
@@ -87,8 +87,28 @@ export default function TestimonialSlider() {
     {
       id: 8,
       quote:
-        "Kolapakkam is a good locality. It has good connectivity to supermarket, DLF in 10 minutes, Porur Saravana Stores in 5 minutes and temples.",
-      name: "YUVAN PONNUSAMY",
+        "Kolapakkam. It’s a very nice locality which is nearby School 6, ATM, and supermarket. It is 4 kilometers to Porur, and at the street end, Ajith Bus Stop is just at a walkable distance. Nearby temple and all facilities.",
+      name: "Suresh Venkatraman",
+      designation: "Marketing Manager",
+      image: "/images/testimonial1.jpg",
+      youtubeUrl: "#",
+    },
+
+    {
+      id: 9,
+      quote:
+        "Nice locality. Kundrathur is near the Kolapakkam locality. This is a nice locality.",
+      name: "Madhan Mayan",
+      designation: "Marketing Manager",
+      image: "/images/testimonial1.jpg",
+      youtubeUrl: "#",
+    },
+
+    {
+      id: 10,
+      quote:
+        "Very calm, secured, clean... Very calm, secured, clean air and water. Very good schools and neighborhood. Close to Porur junction.",
+      name: "Anand",
       designation: "Marketing Manager",
       image: "/images/testimonial1.jpg",
       youtubeUrl: "#",
@@ -139,7 +159,7 @@ export default function TestimonialSlider() {
           </p>
         </TextFadeUp>
 
-        <TextFadeUp delay={0.10}>
+        <TextFadeUp delay={0.1}>
           <div className="tesimonialslidersection">
             {/* LEFT COLUMN */}
             <div className="p-3 rounded-3xl border border-[#0c3835]/10 flex flex-col justify-center imagetestisection1">
