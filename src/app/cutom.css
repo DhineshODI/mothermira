@@ -769,12 +769,24 @@ background-color: #ede8d0; */
 }
 
 .testimonialcontent {
-  min-height: 220px;
+  /* min-height: 220px;
   padding-top: 35px;
   padding-right: 40px;
   font-size: 35px;
   line-height: 40px;
-  margin-bottom: 45px;
+  margin-bottom: 45px; */
+
+  scrollbar-width: thin;
+  min-height: 220px;
+  max-height: 230px;
+  margin-bottom: 30px;
+  padding-top: 0;
+  padding-right: 15px;
+  font-size: 35px;
+  line-height: 40px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #0c3835 #ced7d7;
 }
 
 .imagesizetes {
