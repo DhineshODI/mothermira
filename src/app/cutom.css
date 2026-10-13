@@ -1812,8 +1812,8 @@ background-color: #ede8d0; */
   }
 
   .testimonialcontent {
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 25px;
+    line-height: 31px;
   }
 
   .fourheading {
@@ -2614,8 +2614,8 @@ background-color: #ede8d0; */
   .testimonialcontent {
     min-height: 90px;
     padding-top: 0;
-    font-size: 22px;
-    line-height: 27px;
+    font-size: 18px;
+    line-height: 25px;
   }
 
   .fourheading {
@@ -3146,8 +3146,8 @@ background-color: #ede8d0; */
   .testimonialcontent {
     min-height: 90px;
     padding-top: 0;
-    font-size: 22px;
-    line-height: 27px;
+    font-size: 16px;
+    line-height: 23px;
   }
 
   .fourheading {
@@ -3739,8 +3739,8 @@ background-color: #ede8d0; */
   .testimonialcontent {
     min-height: 90px;
     padding-top: 0;
-    font-size: 22px;
-    line-height: 27px;
+    font-size: 17px;
+    line-height: 21px;
   }
 
   .fourheading {
@@ -4465,13 +4465,13 @@ background-color: #ede8d0; */
   }
 
   .testimonialcontent {
+    width: 100%;
     min-height: max-content;
     margin-bottom: 0;
     padding-top: 0;
-    padding-right: 10px;
-    font-size: 15px;
-    line-height: 18px;
-    width: 75%;
+    padding-right: 5px;
+    font-size: 14px;
+    line-height: 17px;
   }
 
   .fourheading {
