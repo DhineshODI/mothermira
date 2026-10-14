@@ -26,10 +26,30 @@ export default function TestimonialSlider() {
       quote:
         "Kolapakkam. It’s a very nice locality which is nearby School 6, ATM, and supermarket. It is 4 kilometers to Porur, and at the street end, Ajith Bus Stop is just at a walkable distance. Nearby temple and all facilities.",
       name: "Suresh Venkatraman",
-      designation: "Marketing Manager",
-      image: "/images/testimonials/YuvanPonnusamy.png",
+      designation: "Home Owner",
+      image: "/images/testimonials/SureshVenkatraman.png",
       youtubeUrl: "#",
     },
+
+    {
+      id: 6,
+      quote:
+        "Kolapakkam. Kolapakkam is a very nice and beautiful locality. All basic amenities like hospitals, schools, colleges, and markets are available nearby.",
+      name: "V Saravanan",
+      designation: "Home Owner",
+      image: "/images/testimonials/VSaravanan.png",
+      youtubeUrl: "#",
+    },
+    {
+      id: 1,
+      quote:
+        "The society has good connectivity, with auto rickshaws and buses readily available on time. Residents do not have to travel far to access these. The society's construction quality is good, with no issues of leakage or seepage anywhere. Security is also excellent; the building is very strong with no cracks, and the guards remain active at all times.",
+      name: "Rajeswari Ashok",
+      designation: "Home Owner",
+      image: "/images/testimonials/RajeswariAshok.png",
+      youtubeUrl: "#",
+    },
+
     {
       id: 3,
       quote:
@@ -39,31 +59,12 @@ export default function TestimonialSlider() {
       image: "/images/testimonials/YuvanPonnusamy.png",
       youtubeUrl: "#",
     },
-
-    {
-      id: 6,
-      quote:
-        "Kolapakkam. Kolapakkam is a very nice and beautiful locality. All basic amenities like hospitals, schools, colleges, and markets are available nearby.",
-      name: "V Saravanan",
-      designation: "IT Professional",
-      image: "/images/testimonials/VSaravanan.png",
-      youtubeUrl: "#",
-    },
-    {
-      id: 1,
-      quote:
-        "The society has good connectivity, with auto rickshaws and buses readily available on time. Residents do not have to travel far to access these. The society's construction quality is good, with no issues of leakage or seepage anywhere. Security is also excellent; the building is very strong with no cracks, and the guards remain active at all times.",
-      name: "Rajeswari Ashok",
-      designation: "Marketing Manager",
-      image: "/images/testimonials/RajeswariAshok.png",
-      youtubeUrl: "#",
-    },
     {
       id: 2,
       quote:
         "The people in the society are very pleasant and cooperative. The water facility is excellent, available 24 hours a day. There is also a reliable power backup system in place, which helps during power cuts. Additionally, the construction quality is very good, without any notable issues.",
       name: "Sagi Suryakeerthi",
-      designation: "IT Professional",
+      designation: "Home Owner",
       image: "/images/testimonials/SagiSuryakeerthi.png",
       youtubeUrl: "#",
     },
@@ -73,7 +74,7 @@ export default function TestimonialSlider() {
       quote:
         "Just 10 mins Pallavaram Bus stand, just 15 mins Ajith Bus stop, just 10 mins Porur. Omega International School, Krish International School, Pon Vidyashram School, Super Market, Malls and Theater. All the benefits here, this is the hot area of Kolapakkam.",
       name: "Anand",
-      designation: "Marketing Manager",
+      designation: "Home Owner",
       image: "/images/testimonials/AnandOne.png",
       youtubeUrl: "#",
     },
@@ -82,7 +83,7 @@ export default function TestimonialSlider() {
       quote:
         "It is a nice locality. Nearby Omega International School, metro station, and near Porur Saravana Store.",
       name: "M Siva",
-      designation: "Marketing Manager",
+      designation: "Home Owner",
       image: "/images/testimonials/MSiva.png",
       youtubeUrl: "#",
     },
@@ -91,7 +92,7 @@ export default function TestimonialSlider() {
       id: 7,
       quote:
         "Nice locality. This locality is near Omega School. Park facility is available on the campus.",
-      name: "Ravichandran Shanmugam"  ,
+      name: "Ravichandran Shanmugam",
       designation: "Home Owner",
       image: "/images/testimonials/RavichandranShanmugam.png",
       youtubeUrl: "#",
@@ -102,7 +103,7 @@ export default function TestimonialSlider() {
       quote:
         "Nice locality. Kundrathur is near the Kolapakkam locality. This is a nice locality.",
       name: "Madhan Mayan",
-      designation: "Marketing Manager",
+      designation: "Home Owner",
       image: "/images/testimonials/MadhanMayan.png",
       youtubeUrl: "#",
     },
@@ -112,7 +113,7 @@ export default function TestimonialSlider() {
       quote:
         "Very calm, secured, clean... Very calm, secured, clean air and water. Very good schools and neighborhood. Close to Porur junction.",
       name: "Anand",
-      designation: "Marketing Manager",
+      designation: "Home Owner",
       image: "/images/testimonials/AnandOne.png",
       youtubeUrl: "#",
     },
