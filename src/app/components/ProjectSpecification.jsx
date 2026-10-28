@@ -94,7 +94,7 @@ export default function ProjectSpecifications() {
     SWITCHES: {
       title: "SWITCHES",
       subtitle: "SPECIFICATIONS",
-      image: "/images/project-detail/specification/switches.jpg",
+      image: "/images/project-detail/specification/white-switches.jpg",
       points: [
         "GM, Legrand or equivalent switches",
         // "External: 18 mm thick double coat cement plaster",

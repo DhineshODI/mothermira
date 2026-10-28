@@ -121,7 +121,7 @@ export default function Ourprojects() {
             {/* 1. Left Vertical Banner */}
             <div className="bg-[#004852] text-white hidden sm:flex items-center justify-center min-w-[77px] w-14 py-8 greenbarsection">
               <span className="rotate-[-90deg] whitespace-nowrap premiumvillaamain text-[#EDE8D0]">
-                PREMIUM &nbsp; VILLA
+                PREMIUM &nbsp; VILLAS
               </span>
             </div>
 

@@ -42,7 +42,7 @@ export default function LivingExperienceBanner() {
       <div className="relative z-10 container max-w-7xl mx-auto text-center flex flex-col items-center videobanenrrcontent">
         {/* SUBTITLE */}
 
-        <TextFadeUp delay={0.6}>
+        <TextFadeUp delay={0.1}>
           <p className=" mb-2  uppercase blackcolor paragraphfont subheadingtext">
             CONNECT WITH US FOR THE BEST
           </p>
@@ -50,13 +50,13 @@ export default function LivingExperienceBanner() {
 
         {/* MAIN BOLD TITLE */}
 
-        <TextFadeUp delay={0.8}>
+        <TextFadeUp delay={0.2}>
           <h2 className="hunderpixel greencolor uppercase mb-8">
             <strong>LIVING EXPERIENCE </strong>
           </h2>
         </TextFadeUp>
 
-        <TextFadeUp delay={0.95}>
+        <TextFadeUp delay={0.3}>
           <p className="builtontrustpara blackcolor mb-[35px] !-mt-[10px] breakremove">
             Connect with our team to explore value-driven developments, clear
             investment options <br /> and find the right property suited to your
@@ -65,7 +65,7 @@ export default function LivingExperienceBanner() {
         </TextFadeUp>
 
         {/* PILL BUTTON */}
-        <TextFadeUp delay={0.99}>
+        <TextFadeUp delay={0.3}>
           <div
             className="inline-flex items-center gap-3 bg-[#004852] builtontrustpara text-[#EDE8D0] px-14 py-2.5 rounded-[15px]"
             style={{ boxShadow: "0px 12px 25px rgba(0, 0, 0, 0.35)" }}
