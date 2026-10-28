@@ -395,7 +395,7 @@ export default function ProjectDetailTheWind() {
             <div className="space-y-4">
               {locationData[activeTab].map((item, index) => (
                 <div key={index}>
-                  <TextFadeUp delay={index * 0.2}>
+                  {/* <TextFadeUp delay={index * 0.2}> */}
                     <div className="grid grid-cols-12 items-center text-xs sm:text-sm text-[#004852] tracking-wide py-1.5 mb-0">
                       {/* Location Name */}
                       <div className="col-span-6 sm:col-span-6 uppercase pr-2 semibold paratext blackcolor">
@@ -412,7 +412,7 @@ export default function ProjectDetailTheWind() {
                         {item.time}
                       </div>
                     </div>
-                  </TextFadeUp>
+                  {/* </TextFadeUp> */}
                 </div>
               ))}
             </div>
