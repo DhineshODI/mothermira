@@ -151,7 +151,7 @@ export default function AboutUs() {
       </section>
 
       <section
-        ref={sectionRef}
+        // ref={sectionRef}
         className="relative w-full min-h-[1000px] py-16 sm:py-24 px-4 sm:px-8 lg:px-16 flex flex-col items-center justify-center overflow-hidden missionsecid"
       >
         <div className="absolute inset-0 -z-10 w-full h-full">
@@ -163,7 +163,7 @@ export default function AboutUs() {
 
         {/* <TextFadeUp delay={0.1}> */}
 
-        <StaggerText delay={0.4} direction="down">
+        {/* <StaggerText delay={0.4} direction="down"> */}
           <div className="text-center z-10 mb-12 sm:mb-16 builttttbottom">
             <TextFadeUp delay={0.15} direction="left">
               <h2 className="fifththheading greencolor">
@@ -171,12 +171,12 @@ export default function AboutUs() {
               </h2>
             </TextFadeUp>
           </div>
-        </StaggerText>
+        {/* </StaggerText> */}
         {/* </TextFadeUp> */}
 
         <div className="z-10 container w-full max-w-7xl mx-auto space-y-8 aboutslidesection">
           <div
-            ref={(el) => (rowsRef.current[0] = el)}
+            // ref={(el) => (rowsRef.current[0] = el)}
             className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-start"
           >
             <div className="md:col-span-4">
@@ -199,7 +199,7 @@ export default function AboutUs() {
           <hr className="border-t border-[#0c3835]/20 my-6" />
 
           <div
-            ref={(el) => (rowsRef.current[1] = el)}
+            // ref={(el) => (rowsRef.current[1] = el)}
             className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-start"
           >
             <div className="md:col-span-4">
@@ -222,7 +222,7 @@ export default function AboutUs() {
           <hr className="border-t border-[#0c3835]/20 my-6" />
 
           <div
-            ref={(el) => (rowsRef.current[2] = el)}
+            // ref={(el) => (rowsRef.current[2] = el)}
             className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-start"
           >
             <div className="md:col-span-4">

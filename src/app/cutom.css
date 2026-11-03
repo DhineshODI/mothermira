@@ -1065,6 +1065,11 @@ background-color: #ede8d0; */
   padding: 8px 23px;
 }
 
+.bordderbottomtestimonail {
+  gap: 20px;
+  justify-content: flex-start;
+}
+
 @media (max-width: 1900px) and (min-width: 1800px) {
   /* fonts-style */
 
@@ -4653,6 +4658,10 @@ background-color: #ede8d0; */
     padding-top: 30px;
     font-size: 33px;
     line-height: 30px;
+    letter-spacing: -1px;
+    text-shadow:
+      1px 0px #000000c7,
+      4px 4px 10px #00000052;
   }
 
   /* fonts-style */

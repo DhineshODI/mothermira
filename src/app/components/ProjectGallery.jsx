@@ -27,12 +27,12 @@ export default function ProjectGallery() {
     EXTERIOR: [
       {
         id: 1,
-        src: "/images/project-detail/gallery/gallery-1.jpg",
+        src: "/images/project-detail/gallery/gallery-6.jpeg",
         alt: "Aerial View of Villa Project",
       },
       {
         id: 2,
-        src: "/images/project-detail/gallery/gallery-2.jpg",
+        src: "/images/project-detail/gallery/gallery-7.jpeg",
         alt: "Modern Villa Side Facade",
       },
       {
