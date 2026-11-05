@@ -39,7 +39,7 @@ export default function Home() {
   ];
 
   const specs = [
-    { label: "TOTAL UNITS", value: "140 VILLAS" },
+    { label: "TOTAL UNITS", value: "142 VILLAS" },
     { label: "SIZE IN SQ. FT.", value: "5.70 ACRES" },
     { label: "BEDROOMS", value: "3 & 4 BHK" },
     { label: "SIZE IN SQ. FT.", value: "1200 - 3000" },

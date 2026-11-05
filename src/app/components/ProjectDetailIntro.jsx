@@ -18,7 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function ProjectDetailIntro() {
   const stats = [
-    { value: "140", label: "NO. OF TOTAL UNITS" },
+    { value: "142", label: "NO. OF TOTAL UNITS" },
     { value: "3 & 4", unit: "BHK", label: "NO. OF BEDROOMS" },
     { value: "5.70", unit: "ACRES", label: "TOTAL SIZE IN ACRES" },
     { value: "1200-3000", unit: "SQ.FT.", label: "TOTAL SIZE IN SQ FT" },
