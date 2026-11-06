@@ -119,7 +119,7 @@ export default function ProjectDetailTheWind() {
       },
     ],
 
-    COMMERCIAL: [
+    "WORK AND SHOPPING": [
       { name: "DLF IT Park", distance: "7 Kms", time: "18 Mins" },
       { name: "L&T", distance: "6.5 Kms", time: "15 Mins" },
       { name: "Chennai Trade Centre", distance: "6.7 Kms", time: "15 Mins" },
@@ -147,10 +147,13 @@ export default function ProjectDetailTheWind() {
     // ENTERTAIMENT: [],
   };
 
+
+
   const tabs = [
     "MEDICAL FACILITIES",
     "EDUCATIONAL INSTITUTIONS",
-    "COMMERCIAL",
+    // "Work and Shopping",
+    "WORK AND SHOPPING",
     "METRO",
     // "ENTERTAIMENT",
   ];
@@ -367,15 +370,15 @@ export default function ProjectDetailTheWind() {
               return (
                 <button key={tab} onClick={() => setActiveTab(tab)}>
                   {/* <TextFadeUp delay={index * 0.15}> */}
-                    <div
-                      className={`px-7 py-1.5 rounded-full paratext uppercase transition-all duration-300 cursor-pointer ${
-                        isActive
-                          ? "bg-[#004852] text-[#EDE8D0] shadow-md semibold"
-                          : "bg-[#E7DEC0] text-[#1f2933] hover:bg-[#E2DCC6] border border-[#1616163D]"
-                      }`}
-                    >
-                      {tab}
-                    </div>
+                  <div
+                    className={`px-7 py-1.5 rounded-full paratext uppercase transition-all duration-300 cursor-pointer ${
+                      isActive
+                        ? "bg-[#004852] text-[#EDE8D0] shadow-md semibold"
+                        : "bg-[#E7DEC0] text-[#1f2933] hover:bg-[#E2DCC6] border border-[#1616163D]"
+                    }`}
+                  >
+                    {tab}
+                  </div>
                   {/* </TextFadeUp> */}
                 </button>
               );
@@ -396,22 +399,22 @@ export default function ProjectDetailTheWind() {
               {locationData[activeTab].map((item, index) => (
                 <div key={index}>
                   {/* <TextFadeUp delay={index * 0.2}> */}
-                    <div className="grid grid-cols-12 items-center text-xs sm:text-sm text-[#004852] tracking-wide py-1.5 mb-0">
-                      {/* Location Name */}
-                      <div className="col-span-6 sm:col-span-6 uppercase pr-2 semibold paratext blackcolor">
-                        {item.name}
-                      </div>
-
-                      {/* Distance */}
-                      <div className="col-span-3 sm:col-span-3 text-center border-l border-r border-[#004852]/20 pl-2 semibold paratext greencolor">
-                        {item.distance}
-                      </div>
-
-                      {/* Time */}
-                      <div className="col-span-3 sm:col-span-3 text-right border-l border-[#004852]/20 pl-2 semibold paratext greencolor">
-                        {item.time}
-                      </div>
+                  <div className="grid grid-cols-12 items-center text-xs sm:text-sm text-[#004852] tracking-wide py-1.5 mb-0">
+                    {/* Location Name */}
+                    <div className="col-span-6 sm:col-span-6 uppercase pr-2 semibold paratext blackcolor">
+                      {item.name}
                     </div>
+
+                    {/* Distance */}
+                    <div className="col-span-3 sm:col-span-3 text-center border-l border-r border-[#004852]/20 pl-2 semibold paratext greencolor">
+                      {item.distance}
+                    </div>
+
+                    {/* Time */}
+                    <div className="col-span-3 sm:col-span-3 text-right border-l border-[#004852]/20 pl-2 semibold paratext greencolor">
+                      {item.time}
+                    </div>
+                  </div>
                   {/* </TextFadeUp> */}
                 </div>
               ))}
