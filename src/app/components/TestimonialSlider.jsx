@@ -327,7 +327,7 @@ export default function TestimonialSlider() {
     {
       id: 8,
       quote:
-        "Kolapakkam. It’s a very nice locality which is nearby School 6, ATM, and supermarket. It is 4 kilometers to Porur, and at the street end, Ajith Bus Stop is just at a walkable distance. Nearby temple and all facilities.",
+        "Kolapakkam. It’s a very nice locality which is nearby Schools, ATM's, and Supermarkets. It is 4 kilometers to Porur, and at the street end, Ajith Bus Stop is just at a walkable distance. Nearby temple and all facilities.",
       name: "Suresh Venkatraman",
       designation: "Home Owner",
       rating: 4.7,
@@ -337,7 +337,7 @@ export default function TestimonialSlider() {
     {
       id: 6,
       quote:
-        "Kolapakkam. Kolapakkam is a very nice and beautiful locality. All basic amenities like hospitals, schools, colleges, and markets are available nearby.",
+        "Kolapakkam is a very nice and beautiful locality. All basic amenities like hospitals, schools, colleges, and markets are available nearby.",
       name: "V Saravanan",
       designation: "Home Owner",
       rating: 4.5,
@@ -377,7 +377,7 @@ export default function TestimonialSlider() {
     {
       id: 4,
       quote:
-        "Just 10 mins Pallavaram Bus stand, just 15 mins Ajith Bus stop, just 10 mins Porur. Omega International School, Krish International School, Pon Vidyashram School, Super Market, Malls and Theater. All the benefits here, this is the hot area of Kolapakkam.",
+        "Just 10 minutes from Pallavaram and 10 minutes from Porur. Omega International School, Krish International School, Pon Vidyashram School, Super Market, Malls and Theater. All the benefits here, this is the hot area of Kolapakkam.",
       name: "Anand",
       designation: "Home Owner",
       rating: 4.6,
@@ -459,7 +459,7 @@ export default function TestimonialSlider() {
 
         <TextFadeUp delay={0.15} direction="left">
           <h2 className="fifththheading greencolor uppercase">
-            Warm<span className="thinfont blackcolor"> Experince</span>
+            Warm<span className="thinfont blackcolor"> Experience</span>
           </h2>
         </TextFadeUp>
 
