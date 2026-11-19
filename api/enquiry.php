@@ -84,7 +84,9 @@ $label = $TYPES[$type];
 
 $name    = field($b, 'name');
 $email   = field($b, 'email');
-$phone   = preg_replace('/\D/', '', field($b, 'phone'));
+// E.164 from the international phone field, e.g. +919876543210
+$phone   = preg_replace('/[^\d+]/', '', field($b, 'phone'));
+$country = strtoupper(preg_replace('/[^A-Za-z]/', '', field($b, 'mobileCountry')));
 $project = field($b, 'project');
 
 // ---- validation (mirrors the client-side rules) ----
@@ -97,8 +99,11 @@ if ($name === '' || $nameLen < 2) {
 if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $errors['email'] = 'Enter a valid email address';
 }
-if (!preg_match('/^[6-9]\d{9}$/', $phone)) {
-    $errors['phone'] = 'Enter a valid 10-digit mobile number';
+if (!preg_match('/^\+[1-9]\d{7,14}$/', $phone)) {
+    $errors['phone'] = 'Enter a valid phone number';
+} elseif (strpos($phone, '+91') === 0 && !preg_match('/^\+91[6-9]\d{9}$/', $phone)) {
+    // India is stricter: mobile numbers are 10 digits starting 6/7/8/9.
+    $errors['phone'] = 'Enter a valid 10-digit mobile number starting 6, 7, 8 or 9';
 }
 if (($type === 'sitevisit' || $type === 'brochure') && $project === '') {
     $errors['project'] = 'Project is required';
@@ -112,11 +117,17 @@ if ($errors) {
 
 // ---- build the mail body ----
 $rows = [
-    'Name'    => $name,
-    'Email'   => $email,
-    'Phone'   => $phone,
-    'Project' => $project,
+    'Name'     => $name,
+    'Email'    => $email,
+    'Phone'    => $phone,
+    'WhatsApp' => 'https://wa.me/' . preg_replace('/\D/', '', $phone),
+    'Project'  => $project,
 ];
+
+// Only worth showing when it is not the default market.
+if ($country !== '' && $country !== 'IN') {
+    $rows['Country'] = $country;
+}
 
 if ($type === 'sitevisit') {
     $rows['Expected Date']  = field($b, 'expectedDate');
@@ -136,7 +147,10 @@ foreach ($rows as $k => $v) {
     if ($v === '') {
         continue;
     }
-    $html .= '<tr><td><strong>' . esc($k) . ':</strong></td><td>' . esc($v) . '</td></tr>';
+    $cell = (strpos($v, 'https://') === 0)
+        ? '<a href="' . esc($v) . '">' . esc($v) . '</a>'
+        : esc($v);
+    $html .= '<tr><td><strong>' . esc($k) . ':</strong></td><td>' . $cell . '</td></tr>';
     $text .= "$k: $v\n";
 }
 $html .= '</table>';

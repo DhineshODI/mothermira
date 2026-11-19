@@ -24,6 +24,12 @@ export default function SmoothScroll({ children }) {
           content: scrollRef.current,
           lerp: 0.1,
           smoothWheel: true,
+          // Lenis swallows wheel events, so the phone country dropdown
+          // can't be scrolled with the mouse unless it is excluded.
+          prevent: (node) =>
+            node?.classList?.contains(
+              'react-international-phone-country-selector-dropdown',
+            ) ?? false,
         },
       });
 

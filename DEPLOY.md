@@ -7,9 +7,12 @@ that ships inside the same folder — so the whole thing is a plain file upload.
 
 ```bash
 cd mothermira
-npm install          # only if node_modules is missing
+npm install          # required — the phone field added two dependencies
 npm run build:dev
 ```
+
+`react-international-phone` and `libphonenumber-js` power the country-code
+field, so `npm install` must run once before the first build after pulling.
 
 `build:dev` = `node scripts/build-export.mjs --base=/mother-mira-with-form`, which:
 
@@ -102,7 +105,9 @@ notification still reaches you.
 - `/mother-mira-with-form/ourprojects/` → **Download Brochure** → modal → submit →
   thank-you page auto-downloads `the-wind-brochure.pdf`
 - **Book a Site Visit** → modal with date/time → submit → thank-you page
-- Phone field: rejects anything not 10 digits starting 6/7/8/9
+- Phone field: country dropdown, opens on India. An Indian number must be 10
+  digits starting 6/7/8/9; other countries are checked against libphonenumber.
+  Try pasting `+971 50 123 4567` — the country should switch to the UAE.
 - Check the inbox for three mails, each with the project name in the subject
 - Check the address you typed into the form for three acknowledgements, and that
   the brochure one has the PDF attached
