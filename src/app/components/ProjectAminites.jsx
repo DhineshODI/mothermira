@@ -782,7 +782,7 @@ export default function AmenitiesSection() {
         </div>
 
         {/* Category Pills */}
-        <div className="flex flex-wrap justify-center gap-3 mb-17 mobileeedisplayslider">
+        <div className="flex flex-wrap justify-center gap-3 mb-17 mobileeedisplayslider projectaminitesstylee">
           {categories.map((cat) => (
             <button
               key={cat}

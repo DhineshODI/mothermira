@@ -74,7 +74,7 @@ export default function ContactPage() {
   return (
     <>
       <Header sec={"nonetranpserant"} />
-      <section className="relative w-full min-h-[800px] max-h-[800px] overflow-hidden flex flex-col items-center justify-between headertop aboutsectionbanner ">
+      <section className="relative w-full min-h-[800px] max-h-[800px] overflow-hidden flex flex-col items-center justify-between headertop contactusbanner aboutsectionbanner ">
         <div className="absolute inset-0 -z-10 w-full h-full">
           <img
             src="/images/contactusbanner.jpg"
@@ -180,7 +180,7 @@ export default function ContactPage() {
           </div>
 
           {/* RIGHT COLUMN: Dark Form Card */}
-          <TextFadeUp delay={0.15} direction="left">
+          <TextFadeUp delay={0.15} direction="left" className="contactactrightsideform">
             <div className="bg-[#004852] p-8 md:p-10 rounded-3xl shadow-xl formsectioncontact">
               <ContactForm />
             </div>
@@ -229,7 +229,7 @@ export default function ContactPage() {
                   MOTHER MIRA INDUSTRIES LTD
                 </p>
 
-                <p className="paratext blackcolor addressstyle mt-2">
+                <p className="paratext blackcolor addressstyle mt-2 addresssbreak">
                   New Door No. 3/931B, Old Door No. 3/556B,
                   <br />
                   Kundrathur Main Road, Madanandapuram,
@@ -268,7 +268,7 @@ export default function ContactPage() {
                 MOTHER MIRA, THE WIND.
               </p>
 
-              <p className="paratext blackcolor addressstyle mt-2">
+              <p className="paratext blackcolor addressstyle mt-2 addresssbreak">
                 No:1, 116/2A, BT Nagar, Kolapakkam (Porur),
                 <br />
                 Chennai - 600 122.

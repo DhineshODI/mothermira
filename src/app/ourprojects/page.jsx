@@ -115,7 +115,7 @@ export default function Ourprojects() {
       </section>
 
       <section className="w-full py-16 sm:py-24 px-4 sm:px-8 bg-[#EDE8D0] flex justify-center border-b border-[#16161629] objectpositionproject">
-        <div className="container max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch relative">
+        <div className="container max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch relative ongoinmpagestyleee">
           {/* Left & Center Main Showcase Area */}
           <div className="lg:col-span-8 flex flex-col sm:flex-row gap-4 sm:gap-6 relative">
             {/* 1. Left Vertical Banner */}

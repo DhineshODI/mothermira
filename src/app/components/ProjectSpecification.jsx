@@ -200,7 +200,7 @@ export default function ProjectSpecifications() {
         </div>
 
         {/* Specs Box Container */}
-        <div className="w-full bg-[#E7DEC0]/60 border border-[#004852]/15 rounded-3xl p-6 sm:p-8 md:p-10 mobileprojectttcsss">
+        <div className="w-full bg-[#E7DEC0]/60 border border-[#004852]/15 rounded-3xl p-6 sm:p-8 md:p-10 mobileprojectttcsss galleryslidersectionnnns">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center projectsectificationscontain">
             {/* Left Vertical Tabs */}
             <div className="lg:col-span-2 flex flex-row lg:flex-col gap-4 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 mobileeedisplayslider mobileeedisplayslidernewww">

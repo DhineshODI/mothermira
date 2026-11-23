@@ -338,7 +338,7 @@ export default function TestimonialSlider() {
       id: 6,
       quote:
         "Kolapakkam is a very nice and beautiful locality. All basic amenities like hospitals, schools, colleges, and markets are available nearby.",
-      name: "V Saravanan",
+      name: "V.Saravanan",
       designation: "Home Owner",
       rating: 4.5,
       image: "/images/testimonials/VSaravanan.png",
@@ -388,7 +388,7 @@ export default function TestimonialSlider() {
       id: 5,
       quote:
         "It is a nice locality. Nearby Omega International School, metro station, and near Porur Saravana Store.",
-      name: "M Siva",
+      name: "M.Siva",
       designation: "Home Owner",
       rating: 4.8,
       image: "/images/testimonials/MSiva.png",
@@ -452,7 +452,7 @@ export default function TestimonialSlider() {
     <section className="relative w-full bg-[#f4f3e8] py-20 px-4 sm:px-8 lg:px-16 overflow-hidden testimonialsection">
       <div className="container max-w-7xl mx-auto">
         <TextFadeUp delay={0.15} direction="left">
-          <p className="subheadingtext uppercase blackcolor">
+          <p className="subheadingtext uppercase blackcolor homeownerstext">
             HOMEOWNERS SHARE THEIR
           </p>
         </TextFadeUp>

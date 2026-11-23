@@ -76,6 +76,7 @@ html.has-scroll-dragging {
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "NeueHaasGrotDisp-95Black-Trial";
   src: url("/fonts/NeueHaasGrotDisp-95Black-Trial.otf") format("opentype");
@@ -185,6 +186,7 @@ body {
   font-weight: 400;
   font-size: 90px;
 }
+
 .secondheading strong {
   font-family: "Neue Haas Grotesk Bold";
 }
@@ -195,6 +197,7 @@ body {
   font-weight: 400;
   line-height: 110px;
 }
+
 .fourthheading strong {
   font-family: "Neue Haas Grotesk Bold";
 }
@@ -275,6 +278,7 @@ body {
 .footerrimagefirst {
   width: 45%;
 }
+
 .footerrimageSecondd {
   justify-content: center;
   gap: 30px;
@@ -287,6 +291,7 @@ body {
   margin-top: 50px;
   padding-top: 55px;
 }
+
 /* footer */
 
 /* about-us */
@@ -375,6 +380,7 @@ background-color: #ede8d0; */
 .founderwithd {
   width: 83%;
 }
+
 /* about-us */
 
 /* ourprojects */
@@ -591,6 +597,7 @@ background-color: #ede8d0; */
   left: 0;
   transform: translateY(-50%);
 }
+
 .borderbuttonexplore::after {
   content: "";
   background-color: #b4b7a3;
@@ -602,6 +609,7 @@ background-color: #ede8d0; */
   right: 0;
   transform: translateY(-50%);
 }
+
 .borderbuttonexplore .buttonpading {
   padding: 7px 28px 6px;
 }
@@ -740,6 +748,7 @@ background-color: #ede8d0; */
   padding: 15px 5px;
   overflow: hidden;
 }
+
 .imagetestisection2 {
   width: 62%;
   background-color: #fff;
@@ -821,13 +830,42 @@ background-color: #ede8d0; */
   padding-right: 20px;
 }
 
-.headdersectionmain {
+/* .headdersectionmain {
   background: transparent;
   position: fixed;
 }
 
 .stickyheader.headdersectionmain {
   z-index: 10000;
+}
+
+.headertop {
+  padding-top: 120px;
+} */
+
+.headdersectionmain {
+  position: fixed;
+  inset: 0px 0px auto;
+  z-index: 100;
+  background-color: transparent;
+  /* Transform matrum background rendume smooth-aa maarum */
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    backdrop-filter 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, background-color;
+}
+
+.stickyheader.headdersectionmain {
+  z-index: 10000;
+  /* Unga sticky background color-ai inga podunga (e.g., #f4f3e8 or white) */
+  background-color: #f4f3e8;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.headdersectionmain.is-hidden {
+  transform: translateY(-100%);
 }
 
 .headertop {
@@ -906,6 +944,7 @@ background-color: #ede8d0; */
 .stickyheader .headerbuttondiv:hover {
   color: #004852;
 }
+
 .headerbuttondiv:hover::before {
   width: 200px;
   height: 200px;
@@ -939,6 +978,7 @@ background-color: #ede8d0; */
 .headerbuttondiv.active {
   color: #ede8d0;
 }
+
 .stickyheader.transperantBg .headerbuttondiv.active {
   color: #ede8d0;
   color: #004852;
@@ -948,6 +988,7 @@ background-color: #ede8d0; */
   color: #ede8d0;
   color: #004852;
 }
+
 /* button-animationsss */
 
 .aboutslidesection {
@@ -1097,6 +1138,7 @@ background-color: #ede8d0; */
     font-size: 100px;
     line-height: 95px;
   }
+
   .salesfooterrr {
     font-size: 45px;
     line-height: 53px;
@@ -1231,6 +1273,12 @@ background-color: #ede8d0; */
   }
 }
 
+@media (max-width: 1900px) and (min-width: 1600px) {
+  .missionsecid {
+    min-height: 845px;
+  }
+}
+
 @media (max-width: 1800px) and (min-width: 1600px) {
   /* fonts-style */
 
@@ -1258,6 +1306,7 @@ background-color: #ede8d0; */
     font-size: 100px;
     line-height: 95px;
   }
+
   .salesfooterrr {
     font-size: 45px;
     line-height: 53px;
@@ -1418,6 +1467,22 @@ background-color: #ede8d0; */
     top: -30px;
     right: 50px;
   }
+
+  .homeownerstext {
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 1720px) and (min-width: 1601px) {
+  .leftsidesectioncontent {
+    top: 75%;
+    left: 31%;
+  }
+
+  .detailsectionproject {
+    top: 75%;
+    left: 67%;
+  }
 }
 
 @media (max-width: 1600px) and (min-width: 1400px) {
@@ -1446,6 +1511,7 @@ background-color: #ede8d0; */
     padding-top: 1%;
     padding-bottom: 1%;
   }
+
   .paratext {
     font-size: 16px;
     line-height: 22px;
@@ -1454,6 +1520,7 @@ background-color: #ede8d0; */
   .imageesectionhome img {
     height: 295px;
   }
+
   .thirdheading {
     font-size: 28px;
     line-height: 100%;
@@ -1463,6 +1530,7 @@ background-color: #ede8d0; */
     font-size: 84px;
     line-height: 90px;
   }
+
   .salesfooterrr {
     font-size: 35px;
     line-height: 46px;
@@ -1598,10 +1666,12 @@ background-color: #ede8d0; */
   .projectdetailabannerrr {
     height: 600px;
   }
+
   .motehrmirabuttonour {
     margin-left: 9%;
     padding-top: 15px;
   }
+
   .projecthomebannersec {
     height: 800px;
     background-size: cover;
@@ -1611,11 +1681,13 @@ background-color: #ede8d0; */
     min-height: 700px;
     max-height: 700px;
   }
+
   .aboutsectionbanner img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
   .projectbannercontainer {
     position: relative;
     height: 100%;
@@ -1650,6 +1722,7 @@ background-color: #ede8d0; */
   .buildontrusthomepage {
     height: 1100px;
   }
+
   .aboumiraaboutsection {
     background-color: #ede8d0;
     height: 1300px;
@@ -1664,6 +1737,7 @@ background-color: #ede8d0; */
     max-height: 800px !important;
     min-height: 800px !important;
   }
+
   .missionsecid img {
     object-fit: cover;
     height: 100%;
@@ -1766,6 +1840,10 @@ background-color: #ede8d0; */
   .viewprojectpostionsss a {
     font-size: 17px;
   }
+
+  .homeownerstext {
+    letter-spacing: 1px;
+  }
 }
 
 @media (max-width: 1400px) and (min-width: 1250px) {
@@ -1794,6 +1872,7 @@ background-color: #ede8d0; */
     padding-top: 1%;
     padding-bottom: 1%;
   }
+
   .paratext {
     font-size: 16px;
     line-height: 22px;
@@ -1802,6 +1881,7 @@ background-color: #ede8d0; */
   .imageesectionhome img {
     height: 280px;
   }
+
   .thirdheading {
     font-size: 28px;
     line-height: 100%;
@@ -1811,6 +1891,7 @@ background-color: #ede8d0; */
     font-size: 70px;
     line-height: 80px;
   }
+
   .salesfooterrr {
     font-size: 35px;
     line-height: 46px;
@@ -1947,6 +2028,7 @@ background-color: #ede8d0; */
   .projectdetailabannerrr {
     height: 600px;
   }
+
   .motehrmirabuttonour {
     margin-left: 14%;
     padding-top: 15px;
@@ -1957,6 +2039,7 @@ background-color: #ede8d0; */
     margin-bottom: 3.7%;
     margin-left: 11%;
   }
+
   .projecthomebannersec {
     height: 800px;
     background-size: cover;
@@ -1966,11 +2049,13 @@ background-color: #ede8d0; */
     min-height: 600px;
     max-height: 600px;
   }
+
   .aboutsectionbanner img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
   .projectbannercontainer {
     position: relative;
     height: 100%;
@@ -2006,6 +2091,7 @@ background-color: #ede8d0; */
   .buildontrusthomepage {
     height: 1100px;
   }
+
   .aboumiraaboutsection {
     height: 1100px;
   }
@@ -2019,6 +2105,7 @@ background-color: #ede8d0; */
     max-height: 800px !important;
     min-height: 800px !important;
   }
+
   .missionsecid img {
     object-fit: cover;
     height: 100%;
@@ -2109,6 +2196,7 @@ background-color: #ede8d0; */
     left: -81px;
     background-size: cover;
   }
+
   .footerbgsection {
     height: 770px;
   }
@@ -2145,6 +2233,16 @@ background-color: #ede8d0; */
     bottom: 1%;
     right: 15%;
   }
+
+  .greencolorss {
+    text-shadow:
+      1px 1px #000000c7,
+      4px 4px 10px #00000052;
+  }
+
+  .homeownerstext {
+    letter-spacing: 1px;
+  }
 }
 
 @media (max-width: 1250px) and (min-width: 1100px) {
@@ -2173,6 +2271,7 @@ background-color: #ede8d0; */
     padding-top: 1%;
     padding-bottom: 1%;
   }
+
   .paratext {
     font-size: 14px;
     line-height: 20px;
@@ -2181,6 +2280,7 @@ background-color: #ede8d0; */
   .imageesectionhome img {
     height: 250px;
   }
+
   .thirdheading {
     font-size: 25px;
     line-height: 100%;
@@ -2190,6 +2290,7 @@ background-color: #ede8d0; */
     font-size: 63px;
     line-height: 71px;
   }
+
   .salesfooterrr {
     font-size: 35px;
     line-height: 46px;
@@ -2329,6 +2430,7 @@ background-color: #ede8d0; */
   .projectdetailabannerrr {
     height: 600px;
   }
+
   .motehrmirabuttonour {
     width: max-content;
     margin-left: 8%;
@@ -2339,6 +2441,7 @@ background-color: #ede8d0; */
     margin-bottom: 3.7%;
     margin-left: 7%;
   }
+
   .projecthomebannersec {
     background-size: cover;
     height: 700px;
@@ -2348,11 +2451,13 @@ background-color: #ede8d0; */
     min-height: 600px;
     max-height: 600px;
   }
+
   .aboutsectionbanner img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
   .projectbannercontainer {
     position: relative;
     height: 100%;
@@ -2387,6 +2492,7 @@ background-color: #ede8d0; */
   .buildontrusthomepage {
     height: 1100px;
   }
+
   .aboumiraaboutsection {
     height: 1100px;
   }
@@ -2400,6 +2506,7 @@ background-color: #ede8d0; */
     max-height: 800px !important;
     min-height: 800px !important;
   }
+
   .missionsecid img {
     object-fit: cover;
     height: 100%;
@@ -2426,6 +2533,7 @@ background-color: #ede8d0; */
     padding-bottom: 30px;
     justify-content: space-around;
   }
+
   .projectdetailpage .boxcardss {
     justify-content: space-around;
     height: 240px;
@@ -2496,6 +2604,7 @@ background-color: #ede8d0; */
     left: -81px;
     background-size: cover;
   }
+
   .footerbgsection {
     height: 750px;
   }
@@ -2564,6 +2673,16 @@ background-color: #ede8d0; */
   .viewprojectpostionsss a {
     font-size: 16px;
   }
+
+  .greencolorss {
+    text-shadow:
+      1px 1px #000000c7,
+      4px 4px 10px #00000052;
+  }
+
+  .homeownerstext {
+    letter-spacing: 1px;
+  }
 }
 
 @media (max-width: 1099px) and (min-width: 900px) {
@@ -2583,6 +2702,10 @@ background-color: #ede8d0; */
     top: 70px;
   }
 
+  .kolappakampara br {
+    display: none;
+  }
+
   .headdersectionmain {
     padding-top: 2%;
     padding-bottom: 6px;
@@ -2594,6 +2717,7 @@ background-color: #ede8d0; */
     padding-top: 1%;
     padding-bottom: 1%;
   }
+
   .paratext {
     font-size: 16px;
     line-height: 22px;
@@ -2602,6 +2726,7 @@ background-color: #ede8d0; */
   .imageesectionhome img {
     height: 240px;
   }
+
   .thirdheading {
     font-size: 25px;
     line-height: 100%;
@@ -2611,6 +2736,7 @@ background-color: #ede8d0; */
     font-size: 63px;
     line-height: 71px;
   }
+
   .salesfooterrr {
     font-size: 30px;
     line-height: 35px;
@@ -2679,6 +2805,10 @@ background-color: #ede8d0; */
   .builtontrustpara {
     font-size: 17px;
     line-height: 21px;
+  }
+
+  .builtontrustpara br {
+    display: none;
   }
 
   .secondheading {
@@ -2767,6 +2897,7 @@ background-color: #ede8d0; */
   .projectdetailabannerrr {
     height: 600px;
   }
+
   .motehrmirabuttonour {
     width: max-content;
     margin-left: 4%;
@@ -2777,6 +2908,7 @@ background-color: #ede8d0; */
     margin-bottom: 3.7%;
     margin-left: 7%;
   }
+
   .projecthomebannersec {
     background-size: cover;
     height: 700px;
@@ -2786,18 +2918,20 @@ background-color: #ede8d0; */
     min-height: 500px;
     max-height: 500px;
   }
+
   .aboutsectionbanner img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
   .projectbannercontainer {
     position: relative;
     height: 100%;
   }
 
   .leftsidesectioncontent {
-    top: 63%;
+    top: 59%;
     left: 21%;
   }
 
@@ -2818,16 +2952,18 @@ background-color: #ede8d0; */
   }
 
   .detailsectionproject {
-    top: 63%;
+    top: 59%;
     left: 79%;
   }
 
   .aboutmiraimagepositionn {
     top: 200px;
   }
+
   .buildontrusthomepage {
     height: 900px;
   }
+
   .aboumiraaboutsection {
     height: 850px;
   }
@@ -2841,6 +2977,7 @@ background-color: #ede8d0; */
     max-height: 800px !important;
     min-height: 800px !important;
   }
+
   .missionsecid img {
     object-fit: cover;
     height: 100%;
@@ -2891,27 +3028,36 @@ background-color: #ede8d0; */
   }
 
   .ourprojectsimageposition {
-    width: 543px;
-    height: 291px;
+    width: 100%;
+    height: auto;
   }
 
   .maxwidthcontent {
-    flex-direction: row;
+    /* flex-direction: row;
     align-items: center;
     gap: 6%;
     width: 100%;
     display: flex;
     padding-top: 40px;
+    justify-content: center; */
+
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    gap: 4%;
+    width: 100%;
+    padding-top: 0;
+    display: flex;
   }
 
   .maxwidthcontent .border-b {
+    border: none;
     width: max-content;
     margin-bottom: 0;
-    border: none;
+    padding-bottom: 5px;
   }
 
-  .contactformsections {
+  .mothermiraourproject .contactformsections {
     padding-top: 75px;
   }
 
@@ -2921,7 +3067,7 @@ background-color: #ede8d0; */
   }
 
   .formsectioncontact {
-    width: 60%;
+    width: 100%;
   }
 
   .contactform input::placeholder,
@@ -2964,6 +3110,7 @@ background-color: #ede8d0; */
     top: 10px;
     left: -67px;
   }
+
   .footerbgsection {
     height: 700px;
   }
@@ -3003,6 +3150,7 @@ background-color: #ede8d0; */
   .headdersectionmain .gap-5 {
     gap: 10px;
   }
+
   .headerrrrcontainer {
     padding-right: 0;
   }
@@ -3020,6 +3168,7 @@ background-color: #ede8d0; */
     line-height: 25px;
     padding: 6px 17px;
   }
+
   .statscolumnss {
     flex-direction: row;
     gap: 4%;
@@ -3044,9 +3193,11 @@ background-color: #ede8d0; */
     display: flex;
     flex-direction: column;
   }
+
   .imagebordererer:before {
     content: none;
   }
+
   .imagebordererer {
     padding-left: 0;
   }
@@ -3093,8 +3244,46 @@ background-color: #ede8d0; */
   }
 
   .viewprojectpostionsss {
-    bottom: 23.5%;
-    right: 8%;
+    /* bottom: 16%;
+    right: 10%; */
+
+    bottom: 13.2%;
+    right: 10%;
+  }
+
+  .greencolorss {
+    text-shadow:
+      1px 1px #000000c7,
+      4px 4px 10px #00000052;
+    letter-spacing: -2px;
+  }
+
+  .homeownerstext {
+    letter-spacing: 1px;
+  }
+
+  .galleryslidersectionnnns {
+    height: max-content;
+  }
+  .galleryslidersectionnnns .mobileeedisplayslider {
+    height: max-content;
+  }
+
+  .galleryslidersectionnnns .mobileeedisplayslider.mobileeedisplayslidernewww {
+    padding-left: 5%;
+  }
+}
+
+@media (max-width: 1099px) and (min-width: 1024px) {
+  .ongoinmpagestyleee {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 912px) and (min-width: 901px) {
+  .addresssbreak br {
+    display: none;
   }
 }
 
@@ -3126,6 +3315,7 @@ background-color: #ede8d0; */
     padding-top: 1%;
     padding-bottom: 1%;
   }
+
   .paratext {
     font-size: 16px;
     line-height: 20px;
@@ -3134,6 +3324,7 @@ background-color: #ede8d0; */
   .imageesectionhome img {
     height: 240px;
   }
+
   .thirdheading {
     font-size: 23px;
     line-height: 100%;
@@ -3143,6 +3334,7 @@ background-color: #ede8d0; */
     font-size: 63px;
     line-height: 71px;
   }
+
   .salesfooterrr {
     font-size: 30px;
     line-height: 35px;
@@ -3168,6 +3360,7 @@ background-color: #ede8d0; */
   .imagesizetes {
     border-radius: 10px;
   }
+
   .videosectionz {
     height: 550px;
   }
@@ -3307,6 +3500,7 @@ background-color: #ede8d0; */
   .projectdetailabannerrr {
     height: 600px;
   }
+
   .motehrmirabuttonour {
     flex-wrap: wrap;
     column-gap: 2%;
@@ -3319,6 +3513,7 @@ background-color: #ede8d0; */
     margin-bottom: 3.7%;
     margin-left: 7%;
   }
+
   .projecthomebannersec {
     background-size: cover;
     height: 650px;
@@ -3328,11 +3523,13 @@ background-color: #ede8d0; */
     min-height: 500px;
     max-height: 500px;
   }
+
   .aboutsectionbanner img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
   .projectbannercontainer {
     position: relative;
     height: 100%;
@@ -3367,9 +3564,11 @@ background-color: #ede8d0; */
   .aboutmiraimagepositionn {
     top: 200px;
   }
+
   .buildontrusthomepage {
     height: 900px;
   }
+
   .aboumiraaboutsection {
     height: 800px;
   }
@@ -3383,6 +3582,7 @@ background-color: #ede8d0; */
     max-height: 800px !important;
     min-height: 800px !important;
   }
+
   .missionsecid img {
     object-fit: cover;
     height: 100%;
@@ -3425,6 +3625,7 @@ background-color: #ede8d0; */
   .ourprojectsimageposition {
     width: 543px;
     height: 291px;
+    width: auto;
   }
 
   .maxwidthcontent {
@@ -3455,7 +3656,7 @@ background-color: #ede8d0; */
   }
 
   .formsectioncontact {
-    width: 60%;
+    width: 100%;
   }
 
   .contactform input::placeholder,
@@ -3504,6 +3705,7 @@ background-color: #ede8d0; */
     top: 10px;
     left: -67px;
   }
+
   .footerbgsection {
     height: 730px;
   }
@@ -3530,6 +3732,7 @@ background-color: #ede8d0; */
   .imagetestisection2 {
     width: 90%;
   }
+
   .gridaminiteddd {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     padding-left: 2%;
@@ -3552,6 +3755,7 @@ background-color: #ede8d0; */
   .headdersectionmain .gap-5 {
     gap: 10px;
   }
+
   .headerrrrcontainer {
     padding-right: 0;
   }
@@ -3569,6 +3773,7 @@ background-color: #ede8d0; */
     line-height: 25px;
     padding: 6px 17px;
   }
+
   .statscolumnss {
     flex-direction: row;
     justify-content: center;
@@ -3595,9 +3800,11 @@ background-color: #ede8d0; */
     display: flex;
     flex-direction: column;
   }
+
   .imagebordererer:before {
     content: none;
   }
+
   .imagebordererer {
     padding-left: 0;
   }
@@ -3624,6 +3831,7 @@ background-color: #ede8d0; */
   .borderbuttonexplore::before {
     width: 35%;
   }
+
   .borderbuttonexplore::after {
     width: 35%;
   }
@@ -3689,6 +3897,25 @@ background-color: #ede8d0; */
     bottom: 29.5%;
     right: -2%;
   }
+
+  .greencolorss {
+    text-shadow:
+      1px 1px #000000c7,
+      4px 4px 10px #00000052;
+    letter-spacing: -1px;
+  }
+
+  .homeownerstext {
+    letter-spacing: 1px;
+  }
+
+  .galleryslidersectionnnns {
+    height: max-content;
+    padding-left: 5%;
+  }
+  .galleryslidersectionnnns .mobileeedisplayslider {
+    height: max-content;
+  }
 }
 
 @media (max-width: 768px) and (min-width: 600px) {
@@ -3719,6 +3946,7 @@ background-color: #ede8d0; */
     padding-top: 1%;
     padding-bottom: 1%;
   }
+
   .paratext {
     font-size: 14px;
     line-height: 16px;
@@ -3727,6 +3955,7 @@ background-color: #ede8d0; */
   .imageesectionhome img {
     height: 240px;
   }
+
   .thirdheading {
     font-size: 23px;
     line-height: 100%;
@@ -3736,6 +3965,7 @@ background-color: #ede8d0; */
     font-size: 46px;
     line-height: 44px;
   }
+
   .salesfooterrr {
     font-size: 28px;
     line-height: 33px;
@@ -3762,6 +3992,7 @@ background-color: #ede8d0; */
   .imagesizetes {
     border-radius: 10px;
   }
+
   .videosectionz {
     height: 600px;
   }
@@ -3818,6 +4049,7 @@ background-color: #ede8d0; */
   .videobanenrrcontent .hunderpixel {
     margin-bottom: 25px;
   }
+
   .secondheading {
     font-size: 37px;
     line-height: 100%;
@@ -3853,9 +4085,11 @@ background-color: #ede8d0; */
     font-size: 26px;
     line-height: 30px;
   }
+
   .mainheading.missionclasss br {
     display: none;
   }
+
   .mainheading.missionclasss strong {
     padding-left: 3px;
   }
@@ -3926,6 +4160,7 @@ background-color: #ede8d0; */
   .projectdetailabannerrr {
     height: 600px;
   }
+
   .motehrmirabuttonour {
     flex-wrap: wrap;
     column-gap: 2%;
@@ -3951,6 +4186,7 @@ background-color: #ede8d0; */
     margin-left: 1%;
     width: max-content;
   }
+
   .projecthomebannersec {
     background-size: contain;
     height: 750px;
@@ -3962,11 +4198,13 @@ background-color: #ede8d0; */
     min-height: 400px;
     max-height: 400px;
   }
+
   .aboutsectionbanner img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
   .projectbannercontainer {
     position: relative;
     height: 100%;
@@ -4014,9 +4252,11 @@ background-color: #ede8d0; */
   .aboutmiraimagepositionn {
     top: 331px;
   }
+
   .buildontrusthomepage {
     height: 800px;
   }
+
   .aboumiraaboutsection {
     height: 800px;
   }
@@ -4028,11 +4268,13 @@ background-color: #ede8d0; */
   .apastaphy {
     margin-top: 100px;
   }
+
   .missionsecid {
     height: 800px !important;
     max-height: 800px !important;
     min-height: 800px !important;
   }
+
   .missionsecid img {
     object-fit: contain;
     height: 100%;
@@ -4076,6 +4318,7 @@ background-color: #ede8d0; */
   .mobilimagee img {
     height: 465px;
   }
+
   .boxcardss {
     justify-content: space-around;
     width: 190px;
@@ -4125,7 +4368,7 @@ background-color: #ede8d0; */
   }
 
   .formsectioncontact {
-    width: 90%;
+    width: 100%;
   }
 
   .objectpositionproject {
@@ -4179,6 +4422,7 @@ background-color: #ede8d0; */
     top: 13px;
     left: -47px;
   }
+
   .footerbgsection {
     height: max-content;
     flex-direction: column-reverse;
@@ -4216,6 +4460,7 @@ background-color: #ede8d0; */
   .imagetestisection2 {
     width: 90%;
   }
+
   .gridaminiteddd {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     padding-left: 2%;
@@ -4239,6 +4484,7 @@ background-color: #ede8d0; */
   .headdersectionmain .gap-5 {
     gap: 10px;
   }
+
   .headerrrrcontainer {
     padding-right: 0;
   }
@@ -4257,6 +4503,7 @@ background-color: #ede8d0; */
     line-height: 25px;
     padding: 6px 17px;
   }
+
   .statscolumnss {
     flex-direction: row;
     justify-content: center;
@@ -4283,9 +4530,11 @@ background-color: #ede8d0; */
     display: flex;
     flex-direction: column;
   }
+
   .imagebordererer:before {
     content: none;
   }
+
   .imagebordererer {
     padding-left: 0;
     height: 300px;
@@ -4303,6 +4552,7 @@ background-color: #ede8d0; */
     display: flex;
     flex-direction: column;
   }
+
   .py-16 {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -4326,6 +4576,7 @@ background-color: #ede8d0; */
     width: 16px;
     height: 15px;
   }
+
   .greencolor.ourprojectsss.uppercase:last-child {
     padding-left: 0px;
   }
@@ -4333,6 +4584,7 @@ background-color: #ede8d0; */
   .borderbuttonexplore::before {
     width: 30%;
   }
+
   .borderbuttonexplore::after {
     width: 30%;
   }
@@ -4410,6 +4662,49 @@ background-color: #ede8d0; */
     padding: 7px 28px 6px;
     font-size: 14px;
   }
+  .greencolorss {
+    text-shadow:
+      1px 1px #000000c7,
+      4px 4px 10px #00000052;
+    letter-spacing: -2px;
+  }
+
+  .homeownerstext {
+    letter-spacing: 1px;
+  }
+
+  .videosectionz .breakremove br {
+    display: none;
+  }
+
+  .mobileeedisplayslider button {
+    flex-shrink: 0;
+  }
+
+  .projectaminitesstylee {
+    margin-bottom: 35px;
+  }
+  /* .galleryslidersectionnnns {
+    height: auto;
+  } */
+
+  .galleryslidersectionnnns {
+    height: max-content;
+  }
+  .galleryslidersectionnnns .mobileeedisplayslider {
+    height: max-content;
+  }
+
+  .projectgalleryyyyy {
+    justify-content: center;
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 640px) {
+  .proejectdetailbannerer {
+    height: 820px !important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -4442,6 +4737,7 @@ background-color: #ede8d0; */
     padding-top: 3%;
     padding-bottom: 3%;
   }
+
   .paratext {
     font-size: 16px;
     line-height: 20px;
@@ -4451,6 +4747,7 @@ background-color: #ede8d0; */
     width: 100%;
     height: 100%;
   }
+
   .thirdheading {
     font-size: 16px;
     line-height: 100%;
@@ -4460,6 +4757,7 @@ background-color: #ede8d0; */
     font-size: 30px;
     line-height: 32px;
   }
+
   .salesfooterrr {
     font-size: 20px;
     line-height: 23px;
@@ -4493,6 +4791,7 @@ background-color: #ede8d0; */
   .imagesizetes {
     border-radius: 10px;
   }
+
   .videosectionz {
     height: 380px;
   }
@@ -4561,6 +4860,7 @@ background-color: #ede8d0; */
   .videobanenrrcontent .hunderpixel {
     margin-bottom: 10px;
   }
+
   .secondheading {
     font-size: 26px;
     line-height: 100%;
@@ -4604,6 +4904,7 @@ background-color: #ede8d0; */
   .builttttbottom {
     margin-bottom: 15px;
   }
+
   .buildontrusthomepage .borderbuttonexplore.relative {
     margin-top: 30px;
   }
@@ -4619,6 +4920,7 @@ background-color: #ede8d0; */
   .buildontrusthomepage .borderbuttonexplore.relative a {
     padding: 8px 17px;
   }
+
   .wecreateee {
     margin-top: 20px;
   }
@@ -4626,9 +4928,11 @@ background-color: #ede8d0; */
   .wecreateee br {
     display: none;
   }
+
   .mainheading.missionclasss br {
     display: none;
   }
+
   .mainheading.missionclasss strong {
     padding-left: 3px;
   }
@@ -4642,6 +4946,7 @@ background-color: #ede8d0; */
     font-size: 25px;
     line-height: 100%;
   }
+
   .thitytwoexper {
     font-size: 85px;
     line-height: 100%;
@@ -4724,13 +5029,14 @@ background-color: #ede8d0; */
   .projectdetailabannerrr {
     height: 600px;
   }
+
   .motehrmirabuttonour {
     flex-wrap: wrap;
     column-gap: 2%;
     width: 100%;
     margin-left: 0;
     padding-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 
   .imagedivposition {
@@ -4743,10 +5049,12 @@ background-color: #ede8d0; */
     padding-left: 3px;
     padding-right: 7px;
   }
+
   .motehrmiratextour .inline-flex.items-center.py-2 img {
     width: 16px;
     height: 16px;
   }
+
   .motehrmiratextour {
     margin-bottom: 3.7%;
     margin-left: 1%;
@@ -4766,7 +5074,9 @@ background-color: #ede8d0; */
   .objectpositionproject .container {
     padding-left: 10px;
     padding-right: 10px;
+    row-gap: 15px;
   }
+
   .projecthomebannersec {
     background-position: bottom;
     background-size: contain;
@@ -4779,11 +5089,13 @@ background-color: #ede8d0; */
     min-height: 450px;
     max-height: 450px;
   }
+
   .aboutsectionbanner img {
     object-fit: cover;
     width: 100%;
     height: 100%;
   }
+
   .projectbannercontainer {
     position: relative;
     height: 100%;
@@ -4849,9 +5161,11 @@ background-color: #ede8d0; */
   .leftsidesetionkeystreghths {
     width: 100%;
   }
+
   .rightsidesetionkeystreghths {
     width: 100%;
   }
+
   .keyssectionbg {
     padding-bottom: 20px;
   }
@@ -4860,6 +5174,7 @@ background-color: #ede8d0; */
     padding: 5px 8px;
     margin-bottom: 10px;
   }
+
   .detailsectionproject {
     flex-wrap: wrap;
     gap: 20px;
@@ -4874,9 +5189,11 @@ background-color: #ede8d0; */
   .aboutmiraimagepositionn {
     top: 500px;
   }
+
   .buildontrusthomepage {
     height: 600px;
   }
+
   .aboumiraaboutsection {
     height: 800px;
   }
@@ -4894,11 +5211,13 @@ background-color: #ede8d0; */
   .apastaphy {
     margin-top: 35px;
   }
+
   .missionsecid {
     height: 800px !important;
     max-height: 800px !important;
     min-height: 800px !important;
   }
+
   .missionsecid img {
     object-fit: contain;
     height: 100%;
@@ -4952,6 +5271,7 @@ background-color: #ede8d0; */
   .mobilimagee img {
     height: auto;
   }
+
   .boxcardss {
     justify-content: space-around;
     width: 220px;
@@ -5103,6 +5423,7 @@ background-color: #ede8d0; */
     gap: 7px;
     top: 40%;
   }
+
   .footerbgsection {
     height: max-content;
     flex-direction: column-reverse;
@@ -5147,6 +5468,7 @@ background-color: #ede8d0; */
     width: 100%;
     border-radius: 15px;
   }
+
   .gridaminiteddd {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     padding-left: 5%;
@@ -5170,6 +5492,7 @@ background-color: #ede8d0; */
   .headdersectionmain .gap-5 {
     gap: 10px;
   }
+
   .headerrrrcontainer {
     padding-right: 0;
   }
@@ -5192,6 +5515,7 @@ background-color: #ede8d0; */
     line-height: 25px;
     padding: 6px 17px;
   }
+
   .statscolumnss {
     flex-flow: wrap;
     justify-content: center;
@@ -5224,9 +5548,11 @@ background-color: #ede8d0; */
     display: flex;
     gap: 10px;
   }
+
   .imagebordererer:before {
     content: none;
   }
+
   .imagebordererer {
     height: auto;
     padding-left: 0;
@@ -5258,10 +5584,12 @@ background-color: #ede8d0; */
   .flexxxxdeirection .relative img {
     height: 100%;
   }
+
   .rightsidecolumnlinee {
     display: flex;
     flex-direction: column;
   }
+
   .py-16 {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -5291,6 +5619,7 @@ background-color: #ede8d0; */
     width: 16px;
     height: 15px;
   }
+
   .greencolor.ourprojectsss.uppercase:last-child {
     padding-left: 0px;
   }
@@ -5299,6 +5628,7 @@ background-color: #ede8d0; */
     width: 30%;
     display: none;
   }
+
   .borderbuttonexplore::after {
     width: 30%;
     display: none;
@@ -5322,6 +5652,7 @@ background-color: #ede8d0; */
 
   .mobileprojectttcsss {
   }
+
   .donwloadbreochurebutton {
     padding: 5px 20px;
     font-size: 12px;
@@ -5331,6 +5662,7 @@ background-color: #ede8d0; */
   .googlemapsssbutton {
     margin-top: 20px;
   }
+
   .googlemapsssbutton button {
     font-size: 12px;
     line-height: 15px;
@@ -5382,6 +5714,7 @@ background-color: #ede8d0; */
   .projectdetailpage .mb-17 {
     margin-bottom: 20px;
   }
+
   .projectdetailpage .mb-10 {
     margin-bottom: 20px;
   }
@@ -5435,6 +5768,7 @@ background-color: #ede8d0; */
     gap: 5px;
     padding-bottom: 0;
   }
+
   /* menubarstyleeee */
 
   .menubarrrrrrrstyle {
@@ -5529,8 +5863,39 @@ background-color: #ede8d0; */
   }
 
   .viewprojectpostionsss {
-    bottom: 33%;
-    right: 22%;
+    bottom: 23%;
+    left: 2%;
+    position: unset;
+  }
+
+  .contactactrightsideform {
+    width: 100%;
+  }
+  .contactusbanner {
+    min-height: 280px;
+    max-height: 450px;
+  }
+
+  .contactusbanner.aboutsectionbanner img {
+    object-fit: contain;
+    object-position: bottom;
+    background-color: #eee8d0;
+  }
+
+  .galleryslidersectionnnns {
+    height: max-content;
+  }
+  .galleryslidersectionnnns .mobileeedisplayslider {
+    height: max-content;
+  }
+
+  .galleryslidersectionnnns .mobileeedisplayslidernewww button {
+    padding: 8px 17px;
+  }
+
+  .projectgalleryyyyy {
+    justify-content: center;
+    margin-bottom: 35px !important;
   }
 }
 
@@ -5545,6 +5910,30 @@ background-color: #ede8d0; */
   .viewprojectpostionsss {
     bottom: 33%;
     right: 22%;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 560px) {
+  .foundervoicesection img {
+    object-fit: cover;
+    object-position: -64%;
+    height: 100%;
+    background-color: #eee8d0;
+  }
+}
+
+@media (max-width: 389px) and (min-width: 300px) {
+  .enquiretext16 {
+    font-size: 11px;
+  }
+
+  .apastaphy {
+    margin-top: 60px;
+  }
+
+  .windbreadcrum a,
+  .windbreadcrum span {
+    font-size: 14px !important;
   }
 }
 

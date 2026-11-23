@@ -254,7 +254,7 @@ export default function ProjectDetailTheWind() {
             <hr className="border-t border-white/20 w-full mb-5" />
 
             {/* Breadcrumb Navigation */}
-            <nav className="flex items-center space-x-2">
+            <nav className="flex items-center space-x-2 windbreadcrum">
               <a href="/" className="text-[#FFFFFF80] paratext ">
                 Home
               </a>

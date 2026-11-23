@@ -333,7 +333,7 @@ export default function Home() {
               </TextFadeHorizontal>
 
               <TextFadeHorizontal direction="right" delay={0.9}>
-                <p className="blackcolor paratext mt-[12px] ml-[20px] brnone leftsidezero">
+                <p className="blackcolor paratext mt-[12px] ml-[20px] brnone leftsidezero kolappakampara">
                   Premium villas with quality construction, gated living, and
                   thoughtfully <br /> planned community infrastructure.
                 </p>

@@ -262,7 +262,7 @@ export default function AboutUs() {
           <div className="md:col-span-7 lg:col-span-6 space-y-6 apastaphy">
             {/* Label + Quote Icon */}
             <TextFadeUp delay={0.15} direction="right">
-              <div className="flex items-start space-x-3">
+              <div className="flex items-start space-x-3 founderssssvoicee">
                 <span className="foundervoicesubtext greencolor">
                   FOUNDER&apos;S VOICE
                 </span>

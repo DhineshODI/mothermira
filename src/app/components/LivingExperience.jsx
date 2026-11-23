@@ -72,14 +72,14 @@ export default function LivingExperienceBanner() {
           >
             <Link
               href="/contact-us/#enquirenow"
-              className="relative inline-block after:absolute after:left-0 after:-bottom-[0px] after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-500 hover:after:w-full"
+              className="relative inline-block after:absolute after:left-0 after:-bottom-[0px] after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-500 hover:after:w-full enquiretext16"
             >
               ENQUIRE NOW
             </Link>
 
             <span className="text-[#EDE8D0] boldfont">|</span>
 
-            <SiteVisitButton className="cursor-pointer relative inline-block after:absolute after:left-0 after:-bottom-[0px] after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-500 hover:after:w-full">
+            <SiteVisitButton className="cursor-pointer relative inline-block after:absolute after:left-0 after:-bottom-[0px] after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-500 hover:after:w-full enquiretext16">
               BOOK A SITE VISIT
             </SiteVisitButton>
           </div>

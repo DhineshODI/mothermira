@@ -182,7 +182,7 @@ export default function ProjectGallery() {
 
         {/* Category Tabs */}
         {/* <TextFadeUp delay={0.15}> */}
-        <div className="flex flex-wrap justify-center gap-3 mb-17 mobileeedisplayslider">
+        <div className="flex flex-wrap justify-center gap-3 mb-17 mobileeedisplayslider projectgalleryyyyy">
           {tabs.map((tab) => {
             const isActive = activeTab === tab;
 
