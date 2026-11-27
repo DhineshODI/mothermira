@@ -3,11 +3,12 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
-  normalizePhone,
+  EMPTY_PHONE,
   submitEnquiry,
   thankYouUrl,
   validateEnquiry,
 } from "../lib/enquiry";
+import PhoneField from "./PhoneField";
 
 /* ------------------------------------------------------------------ */
 /* Field wrapper — legend-on-border look                               */

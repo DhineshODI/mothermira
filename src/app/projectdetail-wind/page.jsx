@@ -364,14 +364,14 @@ export default function ProjectDetailTheWind() {
       <section className="w-full py-16 sm:py-24 px-4 sm:px-8 bg-[#EDE8D0] !pt-0 border-b border-[#16161629]">
         <div className="container max-w-5xl mx-auto flex flex-col items-center lg:!max-w-5xl">
           {/* Top Pills Filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-10 mobileeedisplayslider">
+          <div className="flex flex-wrap justify-center gap-3 mb-10 mobileeedisplayslider medicallfacilitiesss">
             {tabs.map((tab, index) => {
               const isActive = activeTab === tab;
               return (
                 <button key={tab} onClick={() => setActiveTab(tab)}>
                   {/* <TextFadeUp delay={index * 0.15}> */}
                   <div
-                    className={`px-7 py-1.5 rounded-full paratext uppercase transition-all duration-300 cursor-pointer ${
+                    className={`px-7 py-1.5 rounded-full buttonnntextsss paratext uppercase transition-all duration-300 cursor-pointer ${
                       isActive
                         ? "bg-[#004852] text-[#EDE8D0] shadow-md semibold"
                         : "bg-[#E7DEC0] text-[#1f2933] hover:bg-[#E2DCC6] border border-[#1616163D]"

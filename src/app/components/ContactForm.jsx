@@ -3,11 +3,12 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import {
-  normalizePhone,
+  EMPTY_PHONE,
   submitEnquiry,
   thankYouUrl,
   validateEnquiry,
 } from "../lib/enquiry";
+import PhoneField from "./PhoneField";
 
 const EMPTY = { name: "", phone: "", email: "", message: "" };
 

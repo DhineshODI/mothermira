@@ -1,17 +1,14 @@
 // Shared enquiry helpers: validation rules + API submit.
+import { phonePayload, validatePhone } from "./phone";
 
 export const API_URL =
   process.env.NEXT_PUBLIC_API_URL || "/api/enquiry.php";
 
 export const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// Indian mobile: exactly 10 digits, first digit 6/7/8/9
-export const PHONE_REGEX = /^[6-9]\d{9}$/;
-
-/** Strip everything but digits and cap at 10 characters. */
-export function normalizePhone(value = "") {
-  return String(value).replace(/\D/g, "").slice(0, 10);
-}
+// Phone rules now live in ./phone (E.164, any country). Re-exported so the
+// forms have a single import.
+export { EMPTY_PHONE, phonePayload, validatePhone } from "./phone";
 
 /**
  * Validate an enquiry payload.
@@ -32,11 +29,9 @@ export function validateEnquiry(form, type = "contact") {
   if (!email) errors.email = "Email is required";
   else if (!EMAIL_REGEX.test(email)) errors.email = "Enter a valid email address";
 
-  const phone = normalizePhone(form.phone);
-  if (!phone) errors.phone = "Phone number is required";
-  else if (phone.length !== 10) errors.phone = "Phone number must be 10 digits";
-  else if (!PHONE_REGEX.test(phone))
-    errors.phone = "Phone number must start with 6, 7, 8 or 9";
+  // form.phone is the { e164, iso2, dialCode } object from PhoneField.
+  const phoneError = validatePhone(form.phone);
+  if (phoneError) errors.phone = phoneError;
 
   if (type === "sitevisit" || type === "brochure") {
     if (!(form.project || "").trim()) errors.project = "Project is required";
@@ -63,7 +58,8 @@ export async function submitEnquiry(payload) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       ...payload,
-      phone: normalizePhone(payload.phone),
+      // { phone: "+919876543210", mobileCountry: "IN", mobileNational: "9876543210" }
+      ...phonePayload(payload.phone),
       pageUrl: typeof window !== "undefined" ? window.location.href : "",
     }),
   });

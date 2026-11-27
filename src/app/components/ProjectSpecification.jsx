@@ -200,7 +200,7 @@ export default function ProjectSpecifications() {
         </div>
 
         {/* Specs Box Container */}
-        <div className="w-full bg-[#E7DEC0]/60 border border-[#004852]/15 rounded-3xl p-6 sm:p-8 md:p-10 mobileprojectttcsss galleryslidersectionnnns">
+        <div className="w-full bg-[#E7DEC0]/60 border border-[#004852]/15 rounded-3xl p-6 sm:p-8 md:p-10 mobileprojectttcsss galleryslidersectionnnns medicallfacilitiesss">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center projectsectificationscontain">
             {/* Left Vertical Tabs */}
             <div className="lg:col-span-2 flex flex-row lg:flex-col gap-4 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 mobileeedisplayslider mobileeedisplayslidernewww">
@@ -211,7 +211,7 @@ export default function ProjectSpecifications() {
                   <button
                     key={index}
                     onClick={() => setActiveTab(tab)}
-                    className={`waterspec px-3 py-3.5 rounded-xl semibold addressstyle uppercase transition-all duration-300 text-center whitespace-nowrap cursor-pointer ${
+                    className={`waterspec px-3 py-3.5 buttonnntextsss paratext rounded-xl semibold addressstyle uppercase transition-all duration-300 text-center whitespace-nowrap cursor-pointer ${
                       isActive
                         ? "bg-[#004852] text-white shadow-md"
                         : "bg-[#E3DCB9]/50 text-[#004852] hover:bg-[#E3DCB9] border border-[#004852]/10"

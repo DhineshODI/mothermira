@@ -508,6 +508,12 @@ export default function TestimonialSlider() {
                 >
                   {testimonials.map((item) => (
                     <div key={item.id} className="outline-none">
+                      <div className="flex ietemratingggg">
+                        <p>
+                          <span> {item.rating}</span> / 5
+                        </p>
+                        <StarRating rating={item.rating} />
+                      </div>
                       <div className="min-h-[220px] flex flex-col justify-between testimonilaaaanewsec">
                         <div>
                           <h3 className="testimonialcontent semibold greencolor">
@@ -524,8 +530,6 @@ export default function TestimonialSlider() {
                               {item.designation}
                             </p>
                           </div>
-
-                          <StarRating rating={item.rating} />
                         </div>
                       </div>
                     </div>
