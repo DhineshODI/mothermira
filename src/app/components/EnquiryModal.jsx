@@ -45,7 +45,7 @@ const inputClass =
 const EMPTY = {
   name: "",
   email: "",
-  phone: "",
+  phone: EMPTY_PHONE,
   expectedDate: "",
   preferredTime: "",
   message: "",
@@ -93,7 +93,7 @@ export default function EnquiryModal({ config, onClose }) {
     const { id, value } = e.target;
     setForm((prev) => ({
       ...prev,
-      [id]: id === "phone" ? normalizePhone(value) : value,
+      [id]: value,
     }));
     setErrors((prev) => ({ ...prev, [id]: undefined }));
     if (status) setStatus(null);
@@ -239,18 +239,17 @@ export default function EnquiryModal({ config, onClose }) {
               error={errors.phone}
               className={isSiteVisit ? "" : "sm:col-span-2"}
             >
-              <input
+              <PhoneField
                 id="phone"
-                type="tel"
-                inputMode="numeric"
-                maxLength={10}
-                autoComplete="tel"
+                variant="dark"
                 value={form.phone}
-                onChange={handleChange}
+                onChange={(next) => {
+                  setForm((prev) => ({ ...prev, phone: next }));
+                  setErrors((prev) => ({ ...prev, phone: undefined }));
+                  if (status) setStatus(null);
+                }}
+                invalid={!!errors.phone}
                 placeholder="Enter your phone"
-                aria-invalid={!!errors.phone}
-                aria-describedby={errors.phone ? "phone-error" : undefined}
-                className={inputClass}
               />
             </Field>
 
