@@ -54,26 +54,31 @@ export default function PhoneField({
   };
 
   return (
-    <PhoneInput
-      defaultCountry={DEFAULT_COUNTRY}
-      preferredCountries={PREFERRED_COUNTRIES}
-      forceDialCode
-      allowMaskOverflow
-      value={value?.e164 || ""}
-      onChange={handleChange}
+    // Own wrapper: react-international-phone puts `className` on its own
+    // container div, so descendant selectors need an element we control.
+    <div
       className={`mm-phone mm-phone--${variant} ${invalid ? "mm-phone--invalid" : ""}`}
-      inputProps={{
-        id,
-        name: "phone",
-        type: "tel",
-        autoComplete: "tel",
-        inputMode: "tel",
-        placeholder,
-        "aria-invalid": invalid || undefined,
-        "aria-describedby": invalid ? `${id}-error` : undefined,
-        onPaste: handlePaste,
-        onBlur: handleBlur,
-      }}
-    />
+    >
+      <PhoneInput
+        defaultCountry={DEFAULT_COUNTRY}
+        preferredCountries={PREFERRED_COUNTRIES}
+        forceDialCode
+        allowMaskOverflow
+        value={value?.e164 || ""}
+        onChange={handleChange}
+        inputProps={{
+          id,
+          name: "phone",
+          type: "tel",
+          autoComplete: "tel",
+          inputMode: "tel",
+          placeholder,
+          "aria-invalid": invalid || undefined,
+          "aria-describedby": invalid ? `${id}-error` : undefined,
+          onPaste: handlePaste,
+          onBlur: handleBlur,
+        }}
+      />
+    </div>
   );
 }

@@ -6130,24 +6130,39 @@ legend .texttttcolr {
 
 /* ------------------------------------------------------------------ */
 /* International phone field (react-international-phone)              */
+/* The library sizes itself from its own CSS variables, so set those   */
+/* rather than fighting its rules with hand-written heights.           */
 /* ------------------------------------------------------------------ */
 .mm-phone {
   width: 100%;
+  /* 44px = the sibling inputs: py-3 (12+12) + text-sm line-height (20) */
+  --react-international-phone-height: 44px;
+  --react-international-phone-font-size: 14px;
+  --react-international-phone-border-radius: 0.75rem;
+  --react-international-phone-border-color: transparent;
 }
 
 .mm-phone .react-international-phone-input-container {
+  display: flex;
+  align-items: stretch;
   width: 100%;
-}
-
-.mm-phone .react-international-phone-input,
-.mm-phone .react-international-phone-country-selector-button {
-  height: 46px;
+  border-radius: var(--react-international-phone-border-radius);
+  overflow: hidden;
 }
 
 .mm-phone .react-international-phone-input {
-  width: 100%;
   flex: 1 1 auto;
   min-width: 0;
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+}
+
+.mm-phone .react-international-phone-country-selector,
+.mm-phone .react-international-phone-country-selector-button {
+  height: var(--react-international-phone-height);
+  border: 0;
+  border-radius: 0;
 }
 
 /* Dropdown must never be wider than a phone screen */
@@ -6156,12 +6171,10 @@ legend .texttttcolr {
   z-index: 1000;
 }
 
-/* --- light: white box, used on the contact page --- */
+/* --- light: white box, contact page --- */
 .mm-phone--light {
   --react-international-phone-background-color: #ffffff;
   --react-international-phone-text-color: #1f2933;
-  --react-international-phone-font-size: 14px;
-  --react-international-phone-border-color: transparent;
   --react-international-phone-country-selector-background-color: #ffffff;
   --react-international-phone-country-selector-background-color-hover: #f3f4f6;
   --react-international-phone-selected-dropdown-item-background-color: #ede8d0;
@@ -6169,37 +6182,38 @@ legend .texttttcolr {
 
 .mm-phone--light .react-international-phone-input-container {
   background: #ffffff;
-  border-radius: 0.75rem;
-  overflow: hidden;
-}
-
-.mm-phone--light .react-international-phone-input,
-.mm-phone--light .react-international-phone-country-selector-button {
-  border: 0;
 }
 
 .mm-phone--light .react-international-phone-input::placeholder {
   color: #9ca3af;
 }
 
-/* --- dark: transparent, used inside the enquiry modal --- */
+/* --- dark: transparent, enquiry modal --- */
 .mm-phone--dark {
+  /* modal inputs are py-1.5 + text-sm/sm:text-base */
+  --react-international-phone-height: 36px;
   --react-international-phone-background-color: transparent;
   --react-international-phone-text-color: #ffffff;
   --react-international-phone-font-size: 15px;
-  --react-international-phone-border-color: transparent;
+  --react-international-phone-border-radius: 0;
   --react-international-phone-country-selector-background-color: transparent;
-  --react-international-phone-country-selector-background-color-hover: rgba(237, 232, 208, 0.12);
+  --react-international-phone-country-selector-background-color-hover: rgba(
+    237,
+    232,
+    208,
+    0.12
+  );
   --react-international-phone-country-selector-arrow-color: #ede8d0;
   --react-international-phone-dropdown-item-background-color: #004852;
   --react-international-phone-dropdown-item-text-color: #ffffff;
   --react-international-phone-selected-dropdown-item-background-color: #0c3835;
 }
 
-.mm-phone--dark .react-international-phone-input,
-.mm-phone--dark .react-international-phone-country-selector-button {
-  border: 0;
+.mm-phone--dark .react-international-phone-input-container {
   background: transparent;
+}
+
+.mm-phone--dark .react-international-phone-country-selector-button {
   padding-left: 0;
 }
 
@@ -6212,11 +6226,6 @@ legend .texttttcolr {
 }
 
 /* --- error state --- */
-.mm-phone--invalid.mm-phone--light .react-international-phone-input-container {
+.mm-phone--invalid .react-international-phone-input-container {
   box-shadow: 0 0 0 1px #ff6b6b;
-}
-
-.mm-phone--invalid.mm-phone--dark .react-international-phone-input-container {
-  box-shadow: 0 0 0 1px #ff6b6b;
-  border-radius: 4px;
 }
