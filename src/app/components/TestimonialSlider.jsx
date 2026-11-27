@@ -444,7 +444,7 @@ export default function TestimonialSlider() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 2000,
   };
 
