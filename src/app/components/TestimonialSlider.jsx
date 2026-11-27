@@ -311,6 +311,244 @@ const StarRating = ({ rating = 5 }) => {
   );
 };
 
+// export default function TestimonialSlider() {
+//   const [nav1, setNav1] = useState(null);
+//   const [nav2, setNav2] = useState(null);
+
+//   const slider1 = useRef(null);
+//   const slider2 = useRef(null);
+
+//   useEffect(() => {
+//     setNav1(slider1.current);
+//     setNav2(slider2.current);
+//   }, []);
+
+//   const testimonials = [
+//     {
+//       id: 8,
+//       quote:
+//         "Kolapakkam. It’s a very nice locality which is nearby Schools, ATM's, and Supermarkets. It is 4 kilometers to Porur, and at the street end, Ajith Bus Stop is just at a walkable distance. Nearby temple and all facilities.",
+//       name: "Suresh Venkatraman",
+//       designation: "Home Owner",
+//       rating: 4.7,
+//       image: "/images/testimonials/SureshVenkatraman.png",
+//       youtubeUrl: "#",
+//     },
+//     {
+//       id: 6,
+//       quote:
+//         "Kolapakkam is a very nice and beautiful locality. All basic amenities like hospitals, schools, colleges, and markets are available nearby.",
+//       name: "V.Saravanan",
+//       designation: "Home Owner",
+//       rating: 4.5,
+//       image: "/images/testimonials/VSaravanan.png",
+//       youtubeUrl: "#",
+//     },
+//     {
+//       id: 1,
+//       quote:
+//         "The society has good connectivity, with auto rickshaws and buses readily available on time. Residents do not have to travel far to access these. The society's construction quality is good, with no issues of leakage or seepage anywhere. Security is also excellent; the building is very strong with no cracks, and the guards remain active at all times.",
+//       name: "Rajeswari Ashok",
+//       designation: "Home Owner",
+//       rating: 4.7,
+//       image: "/images/testimonials/RajeswariAshok.png",
+//       youtubeUrl: "#",
+//     },
+//     {
+//       id: 3,
+//       quote:
+//         "Kolapakkam is a good locality. It has good connectivity to supermarket, DLF in 10 minutes, Porur Saravana Stores in 5 minutes and temples.",
+//       name: "Yuvan Ponnusamy",
+//       designation: "Home Owner",
+//       rating: 4.5,
+//       image: "/images/testimonials/YuvanPonnusamy.png",
+//       youtubeUrl: "#",
+//     },
+//     {
+//       id: 2,
+//       quote:
+//         "The people in the society are very pleasant and cooperative. The water facility is excellent, available 24 hours a day. There is also a reliable power backup system in place, which helps during power cuts. Additionally, the construction quality is very good, without any notable issues.",
+//       name: "Sagi Suryakeerthi",
+//       designation: "Home Owner",
+//       rating: 4.9,
+//       image: "/images/testimonials/SagiSuryakeerthi.png",
+//       youtubeUrl: "#",
+//     },
+//     {
+//       id: 4,
+//       quote:
+//         "Just 10 minutes from Pallavaram and 10 minutes from Porur. Omega International School, Krish International School, Pon Vidyashram School, Super Market, Malls and Theater. All the benefits here, this is the hot area of Kolapakkam.",
+//       name: "Anand",
+//       designation: "Home Owner",
+//       rating: 4.6,
+//       image: "/images/testimonials/AnandOne.png",
+//       youtubeUrl: "#",
+//     },
+//     {
+//       id: 5,
+//       quote:
+//         "It is a nice locality. Nearby Omega International School, metro station, and near Porur Saravana Store.",
+//       name: "M.Siva",
+//       designation: "Home Owner",
+//       rating: 4.8,
+//       image: "/images/testimonials/MSiva.png",
+//       youtubeUrl: "#",
+//     },
+//     {
+//       id: 7,
+//       quote:
+//         "Nice locality. This locality is near Omega School. Park facility is available on the campus.",
+//       name: "Ravichandran Shanmugam",
+//       designation: "Home Owner",
+//       rating: 5,
+//       image: "/images/testimonials/RavichandranShanmugam.png",
+//       youtubeUrl: "#",
+//     },
+//     {
+//       id: 9,
+//       quote:
+//         "Nice locality. Kundrathur is near the Kolapakkam locality. This is a nice locality.",
+//       name: "Madhan Mayan",
+//       designation: "Home Owner",
+//       rating: 4.9,
+//       image: "/images/testimonials/MadhanMayan.png",
+//       youtubeUrl: "#",
+//     },
+//     {
+//       id: 10,
+//       quote:
+//         "Very calm, secured, clean... Very calm, secured, clean air and water. Very good schools and neighborhood. Close to Porur junction.",
+//       name: "Anand",
+//       designation: "Home Owner",
+//       rating: 4.8,
+//       image: "/images/testimonials/AnandOne.png",
+//       youtubeUrl: "#",
+//     },
+//   ];
+
+//   const navSettings = {
+//     slidesToShow: 3,
+//     swipeToSlide: true,
+//     focusOnSelect: true,
+//     vertical: true,
+//     verticalSwiping: true,
+//     arrows: false,
+//     centerMode: true,
+//     centerPadding: "0px",
+//   };
+
+//   const mainSettings = {
+//     dots: false,
+//     infinite: true,
+//     speed: 500,
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     arrows: false,
+//     autoplay: true,
+//     autoplaySpeed: 2000,
+//   };
+
+//   return (
+//     <section className="relative w-full bg-[#f4f3e8] py-20 px-4 sm:px-8 lg:px-16 overflow-hidden testimonialsection">
+//       <div className="container max-w-7xl mx-auto">
+//         <TextFadeUp delay={0.15} direction="left">
+//           <p className="subheadingtext uppercase blackcolor homeownerstext">
+//             HOMEOWNERS SHARE THEIR
+//           </p>
+//         </TextFadeUp>
+
+//         <TextFadeUp delay={0.15} direction="left">
+//           <h2 className="fifththheading greencolor uppercase">
+//             Warm<span className="thinfont blackcolor"> Experience</span>
+//           </h2>
+//         </TextFadeUp>
+
+//         <TextFadeUp delay={0.15} direction="left">
+//           <p className="builtontrustpara blackcolor mt-[15px] breakremove">
+//             Feedback from homeowners reflecting trust, quality development, and
+//             long-term value experienced <br /> across every Mother Mira project
+//           </p>
+//         </TextFadeUp>
+
+//         <TextFadeUp delay={0.1}>
+//           <div className="tesimonialslidersection">
+//             {/* LEFT COLUMN */}
+//             <div className="p-3 rounded-3xl border border-[#0c3835]/10 flex flex-col justify-center imagetestisection1">
+//               <Slider
+//                 asNavFor={nav1}
+//                 ref={slider2}
+//                 {...navSettings}
+//                 className="testimonial-thumb-slider"
+//               >
+//                 {testimonials.map((item) => (
+//                   <div
+//                     key={item.id}
+//                     className="py-0 px-0 outline-none cursor-pointer"
+//                   >
+//                     <div className="relative w-full imagesizetes rounded-2xl overflow-hidden border-2 border-transparent transition-all duration-300 thumbnail-card">
+//                       <img
+//                         src={item.image}
+//                         alt={item.name}
+//                         className="object-cover"
+//                       />
+//                     </div>
+//                   </div>
+//                 ))}
+//               </Slider>
+//             </div>
+
+//             {/* RIGHT COLUMN */}
+//             <div className="imagetestisection2">
+//               <div className="rounded-[2.5rem] p-8 sm:p-12 shadow-sm border border-[#0c3835]/10 relative borddrerer">
+//                 <Slider
+//                   asNavFor={nav2}
+//                   ref={slider1}
+//                   {...mainSettings}
+//                   className="testimonial-main-slider"
+//                 >
+//                   {testimonials.map((item) => (
+//                     <div key={item.id} className="outline-none">
+//                       <div className="flex ietemratingggg">
+//                         <p>
+//                           <span> {item.rating}</span> / 5
+//                         </p>
+//                         <StarRating rating={item.rating} />
+//                       </div>
+//                       <div className="min-h-[220px] flex flex-col justify-between testimonilaaaanewsec">
+//                         <div>
+//                           <h3 className="testimonialcontent semibold greencolor">
+//                             {item.quote}
+//                           </h3>
+//                         </div>
+
+//                         <div className="pt-6 pb-6 border-b border-dashed border-[#0c3835]/40 flex items-center justify-between bordderbottomtestimonail">
+//                           <div>
+//                             <h4 className="twentyfourpixel paratext blackcolor semibold">
+//                               {item.name}
+//                             </h4>
+//                             <p className="builtontrustpara blackcolor paratext mt-[4px] !text-[#8A8A8A]">
+//                               {item.designation}
+//                             </p>
+//                           </div>
+//                         </div>
+//                       </div>
+//                     </div>
+//                   ))}
+//                 </Slider>
+//               </div>
+
+              
+//             </div>
+//           </div>
+//         </TextFadeUp>
+//       </div>
+//     </section>
+//   );
+// }
+
+// import React, { useState, useRef, useEffect } from "react";
+// import Slider from "react-slick";
+
 export default function TestimonialSlider() {
   const [nav1, setNav1] = useState(null);
   const [nav2, setNav2] = useState(null);
@@ -535,6 +773,51 @@ export default function TestimonialSlider() {
                     </div>
                   ))}
                 </Slider>
+
+                {/* CUSTOM LEFT & RIGHT ARROWS */}
+                <div className="flex items-center justify-start gap-3 mt-6 arrowwbuttonssss">
+                  <button
+                    type="button"
+                    onClick={() => slider1.current?.slickPrev()}
+                    aria-label="Previous testimonial"
+                    className="w-11 h-11 rounded-full border border-[#0c3835]/30 flex items-center justify-center text-[#fff] bg-[#0c3835] hover:bg-[#fff] hover:text-[#0c3835] transition-all duration-300 cursor-pointer"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => slider1.current?.slickNext()}
+                    aria-label="Next testimonial"
+                    className="w-11 h-11 rounded-full border border-[#0c3835]/30 flex items-center justify-center text-[#fff] bg-[#0c3835] hover:bg-[#fff] hover:text-[#0c3835] transition-all duration-300 cursor-pointer"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M9 18l6-6-6-6" />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
