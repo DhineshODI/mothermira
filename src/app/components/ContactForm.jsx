@@ -10,7 +10,7 @@ import {
 } from "../lib/enquiry";
 import PhoneField from "./PhoneField";
 
-const EMPTY = { name: "", phone: "", email: "", message: "" };
+const EMPTY = { name: "", phone: EMPTY_PHONE, email: "", message: "" };
 
 const inputClass =
   "mt-2 w-full px-4 py-3 rounded-xl bg-white text-gray-800 placeholder-gray-400 focus:outline-none text-sm";
@@ -35,7 +35,7 @@ export default function ContactForm() {
     const { id, value } = e.target;
     setForm((prev) => ({
       ...prev,
-      [id]: id === "phone" ? normalizePhone(value) : value,
+      [id]: value,
     }));
     setErrors((prev) => ({ ...prev, [id]: undefined }));
     if (status) setStatus(null);
@@ -117,19 +117,20 @@ export default function ContactForm() {
           <label htmlFor="phone" className="semibold text-white">
             Phone <span className="text-[#FF0F1E]">*</span>
           </label>
-          <input
-            id="phone"
-            type="tel"
-            inputMode="numeric"
-            maxLength={10}
-            autoComplete="tel"
-            value={form.phone}
-            onChange={handleChange}
-            placeholder="Enter your phone"
-            aria-invalid={!!errors.phone}
-            aria-describedby={errors.phone ? "phone-error" : undefined}
-            className={inputClass}
-          />
+          <div className="mt-2">
+            <PhoneField
+              id="phone"
+              variant="light"
+              value={form.phone}
+              onChange={(next) => {
+                setForm((prev) => ({ ...prev, phone: next }));
+                setErrors((prev) => ({ ...prev, phone: undefined }));
+                if (status) setStatus(null);
+              }}
+              invalid={!!errors.phone}
+              placeholder="Enter your phone"
+            />
+          </div>
           <ErrorText id="phone" msg={errors.phone} />
         </div>
 
