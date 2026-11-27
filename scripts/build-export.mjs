@@ -20,8 +20,21 @@ const base = (arg ? arg.split("=")[1] : process.env.EXPORT_BASE || "").replace(
   ""
 );
 
-if (!base.startsWith("/")) {
-  console.error('EXPORT_BASE must start with "/", e.g. --base=/mother-mira-with-form');
+// "" = the domain root (https://example.com/). Anything else must be a path.
+if (base !== "" && !base.startsWith("/")) {
+  console.error(
+    'EXPORT_BASE must be "" for a domain root, or start with "/", e.g. --base=/mother-mira-with-form',
+  );
+  process.exit(1);
+}
+
+// --base= with nothing after it means root, but so does a missing flag. Make the
+// caller say so explicitly, so a forgotten flag can never silently ship a root
+// build into a sub-folder (every asset would 404).
+if (base === "" && !arg) {
+  console.error(
+    "Pass --base=/folder, or --base= (empty) to build for the domain root.",
+  );
   process.exit(1);
 }
 
@@ -37,7 +50,7 @@ process.env.NEXT_PUBLIC_API_URL =
   process.env.NEXT_PUBLIC_API_URL || `${base}/api/enquiry.php`;
 
 console.log(`\n▸ Static export`);
-console.log(`  base path : ${base}`);
+console.log(`  base path : ${base || "(domain root)"}`);
 console.log(`  api url   : ${process.env.NEXT_PUBLIC_API_URL}\n`);
 
 // A stale out/ can leave deleted routes behind.
@@ -56,4 +69,8 @@ if (existsSync(fileURLToPath(apiSrc))) {
   console.log("✓ api/ copied into out/api");
 }
 
-console.log(`\n✓ Done. Upload the contents of out/ to the "${base.slice(1)}" folder.\n`);
+console.log(
+  base
+    ? `\n✓ Done. Upload the contents of out/ to the "${base.slice(1)}" folder.\n`
+    : `\n✓ Done. Upload the contents of out/ to public_html (domain root).\n`,
+);

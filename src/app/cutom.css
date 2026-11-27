@@ -6245,8 +6245,8 @@ legend .texttttcolr {
   display: flex;
   align-items: stretch;
   width: 100%;
-  border-radius: var(--react-international-phone-border-radius);
-  overflow: hidden;
+  /* No overflow:hidden here — it clips the country dropdown to the field.
+     The children carry the rounded ends instead. */
 }
 
 .mm-phone .react-international-phone-input {
@@ -6254,19 +6254,30 @@ legend .texttttcolr {
   min-width: 0;
   width: 100%;
   border: 0;
-  border-radius: 0;
+  border-radius: 0 var(--react-international-phone-border-radius)
+    var(--react-international-phone-border-radius) 0;
 }
 
-.mm-phone .react-international-phone-country-selector,
+.mm-phone .react-international-phone-country-selector {
+  position: relative;
+  height: var(--react-international-phone-height);
+}
+
 .mm-phone .react-international-phone-country-selector-button {
   height: var(--react-international-phone-height);
   border: 0;
-  border-radius: 0;
+  border-radius: var(--react-international-phone-border-radius) 0 0
+    var(--react-international-phone-border-radius);
 }
 
 /* Dropdown must never be wider than a phone screen */
 .mm-phone .react-international-phone-country-selector-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
   width: min(300px, calc(100vw - 48px));
+  max-height: 280px;
+  overflow-y: auto;
   z-index: 1000;
 }
 
@@ -6327,4 +6338,5 @@ legend .texttttcolr {
 /* --- error state --- */
 .mm-phone--invalid .react-international-phone-input-container {
   box-shadow: 0 0 0 1px #ff6b6b;
+  border-radius: var(--react-international-phone-border-radius);
 }
