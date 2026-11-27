@@ -1,0 +1,127 @@
+name: Deploy to mothermira.com
+
+# Pushes to main go live. Use the "Run workflow" button for a manual deploy,
+# or set dry_run to build and verify without touching the server.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Build and verify only — do not upload"
+        type: boolean
+        default: false
+
+# Never let two deploys overlap; let a running one finish rather than
+# cancelling it half-way through an rsync.
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (domain root)
+        run: npm run build:prod
+
+      # A build missing any of these would take the live site down.
+      - name: Verify the build
+        run: |
+          set -e
+          for f in out/index.html out/contact-us/index.html out/thank-you/index.html \
+                   out/api/enquiry.php out/api/config.sample.php; do
+            [ -f "$f" ] || { echo "::error::missing $f"; exit 1; }
+          done
+          [ -d out/_next ] || { echo "::error::out/_next is missing"; exit 1; }
+
+          # A root build must reference /_next/, never /some-folder/_next/
+          if grep -oE '(src|href)="[^"]*/_next/' out/index.html | grep -qv '="/_next/'; then
+            echo "::error::_next paths are not root-relative — wrong base path"
+            exit 1
+          fi
+
+          # config.php holds credentials and must never be committed or shipped
+          if [ -f out/api/config.php ]; then
+            echo "::error::api/config.php is in the build — it must stay out of git"
+            exit 1
+          fi
+          echo "build verified: $(du -sh out | cut -f1)"
+
+      - name: Set up SSH
+        if: ${{ !inputs.dry_run }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p "${{ secrets.SSH_PORT }}" -H "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts 2>/dev/null
+
+      # Runs before anything is overwritten, and keeps the last 5.
+      - name: Back up the live site
+        if: ${{ !inputs.dry_run }}
+        run: |
+          ssh -p "${{ secrets.SSH_PORT }}" "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" bash -s <<'EOF'
+            set -e
+            DEPLOY_PATH="${{ secrets.DEPLOY_PATH }}"
+            mkdir -p ~/backups
+            STAMP=$(date +%Y%m%d-%H%M%S)
+            tar -czf ~/backups/live-$STAMP.tar.gz \
+                --exclude='./old' -C "$DEPLOY_PATH" . 2>/dev/null || true
+            ls -lh ~/backups/live-$STAMP.tar.gz
+            ls -1t ~/backups/live-*.tar.gz | tail -n +6 | xargs -r rm --
+          EOF
+
+      # --delete keeps the server clean, but excluded paths are protected from
+      # it too, which is what keeps config.php, the logs and /old/ alive.
+      - name: Upload
+        if: ${{ !inputs.dry_run }}
+        run: |
+          rsync -rlz --delete --omit-dir-times --no-perms \
+            --exclude='/api/config.php' \
+            --exclude='/api/*.log' \
+            --exclude='/old/' \
+            --exclude='/.well-known/' \
+            --exclude='/cgi-bin/' \
+            -e "ssh -p ${{ secrets.SSH_PORT }}" \
+            out/ "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.DEPLOY_PATH }}/"
+
+      # config.php is gitignored, so a first deploy onto a clean server has none.
+      - name: Check the mail config is present
+        if: ${{ !inputs.dry_run }}
+        run: |
+          ssh -p "${{ secrets.SSH_PORT }}" "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" \
+            "test -f '${{ secrets.DEPLOY_PATH }}/api/config.php'" \
+            && echo "api/config.php present" \
+            || echo "::warning::api/config.php is missing on the server — every form will 500 until you create it from api/config.sample.php"
+
+      - name: Smoke test
+        if: ${{ !inputs.dry_run }}
+        run: |
+          set -e
+          BASE="${{ secrets.SITE_URL }}"
+          fail=0
+          for p in "/" "/contact-us/" "/thank-you/"; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 "$BASE$p")
+            echo "  $code  $p"
+            [ "$code" = "200" ] || fail=1
+          done
+
+          # must not be readable over the web
+          code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 "$BASE/api/config.php")
+          echo "  $code  /api/config.php (403/404 expected)"
+          case "$code" in 403|404) ;; *) echo "::error::config.php is readable over the web"; fail=1 ;; esac
+
+          echo "  ping: $(curl -s --max-time 20 "$BASE/api/enquiry.php?ping=1" | head -c 200)"
+          exit $fail

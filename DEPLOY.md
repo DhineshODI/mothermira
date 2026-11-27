@@ -1,83 +1,168 @@
-# Deploying to https://dev.opendesignsin.com/mother-mira-with-form/
+# Deploying mothermira.com
 
-The site is exported as static HTML and the enquiry form posts to a PHP endpoint
-that ships inside the same folder — so the whole thing is a plain file upload.
+Pushes to `main` deploy automatically via GitHub Actions
+(`.github/workflows/deploy.yml`). The steps below are the **one-time setup**;
+after that, deploying is just merging to `main`.
 
-## 1. Build (run on your machine)
+The site is a static export, so the server needs no Node — only PHP, for the
+enquiry endpoint in `api/`.
+
+---
+
+## One-time setup
+
+### 1. Move the current live site to /old/
+
+Do this once, before the first automated deploy. The old site stays reachable
+at `https://mothermira.com/old/`, and the workflow is set never to touch it.
+
+SSH in (hPanel → Advanced → SSH Access for the host, port and username):
 
 ```bash
-cd mothermira
-npm install          # only if node_modules is missing
-npm run build:dev
+ssh -p 65002 u123456789@123.45.67.89
 ```
 
-`build:dev` = `node scripts/build-export.mjs --base=/mother-mira-with-form`, which:
+```bash
+cd ~/public_html          # or ~/domains/mothermira.com/public_html
 
-1. runs `next build` with `output: "export"`, `basePath: /mother-mira-with-form`, `trailingSlash: true`
-2. runs `scripts/fix-paths.mjs` — prefixes raw `/images/`, `/fonts/`, `/pdf/`, `/videos/`
-   references in the exported files (Next's basePath only rewrites `next/image`,
-   `next/link` and router URLs, not plain `<img src="...">` or CSS `url(...)`)
-3. copies `api/` into `out/api/`
-4. sets `NEXT_PUBLIC_API_URL=/mother-mira-with-form/api/enquiry.php` into the bundle
+# full archive first — this is the real safety net
+mkdir -p ~/backups
+tar -czf ~/backups/pre-launch-$(date +%Y%m%d-%H%M).tar.gz .
+ls -lh ~/backups/
 
-Result: the `out/` folder.
+# then move everything into old/, leaving old/ itself behind
+mkdir -p old
+find . -maxdepth 1 -mindepth 1 \
+  ! -name 'old' ! -name 'backups' ! -name '.well-known' ! -name 'cgi-bin' \
+  -exec mv -t old/ -- {} +
 
-Deploying to a different folder later? `npm run build:export -- --base=/some-folder`.
-
-## 2. Upload
-
-Upload **the contents of `out/`** into the `mother-mira-with-form` folder on the
-server (via cPanel File Manager or FTP), so you end up with:
-
-```
-public_html/mother-mira-with-form/
-├── index.html
-├── contact-us/index.html
-├── ourprojects/index.html
-├── thank-you/index.html
-├── _next/...
-├── images/  fonts/  pdf/
-└── api/
-    ├── enquiry.php
-    ├── config.php
-    └── PHPMailer/
+ls -la          # should be nearly empty now, with old/ holding the site
 ```
 
-## 3. Mail configuration
+Keep `/old/` out of search results — it is the same content on a second URL,
+which splits your ranking:
 
-`api/config.php` currently uses `'transport' => 'mail'` — the server's local PHP
-`mail()`. No credentials needed, so the form works as soon as it's uploaded.
-Enquiries go to **kavirajan@opendesignsin.com**.
+```bash
+printf 'Header set X-Robots-Tag "noindex, nofollow"\n' > old/.htaccess
+```
 
-For better deliverability, switch to SMTP:
+If the old site was WordPress, its own `.htaccess` moved into `old/` with it,
+so it no longer rewrites requests at the root. Check `old/index.php` still
+loads; a WordPress install usually needs its site URL updated before it will
+render from a sub-folder.
+
+### 2. SSH key for GitHub
+
+On your machine:
+
+```powershell
+ssh-keygen -t ed25519 -C "github-actions-mothermira" -f $env:USERPROFILE\.ssh\mothermira_deploy -N '""'
+```
+
+Put the **public** key (`mothermira_deploy.pub`) into hPanel → Advanced →
+SSH Access → Manage SSH keys → Import.
+
+Test it before handing it to GitHub:
+
+```powershell
+ssh -i $env:USERPROFILE\.ssh\mothermira_deploy -p 65002 u123456789@123.45.67.89 "echo connected; pwd"
+```
+
+### 3. Repository secrets
+
+GitHub → Settings → Secrets and variables → Actions → New repository secret:
+
+| Secret | Value | Where to find it |
+|---|---|---|
+| `SSH_HOST` | `123.45.67.89` | hPanel → SSH Access |
+| `SSH_PORT` | `65002` | hPanel → SSH Access |
+| `SSH_USER` | `u123456789` | hPanel → SSH Access |
+| `SSH_PRIVATE_KEY` | contents of `mothermira_deploy` (the file **without** `.pub`, including the BEGIN/END lines) | your machine |
+| `DEPLOY_PATH` | `/home/u123456789/domains/mothermira.com/public_html` | `pwd` inside `public_html` |
+| `SITE_URL` | `https://mothermira.com` | — |
+
+### 4. Create api/config.php on the server
+
+It holds the mailbox password, so it is gitignored and never shipped by the
+workflow — which also means the workflow can't create it. Once:
+
+```bash
+cd ~/domains/mothermira.com/public_html
+cp api/config.sample.php api/config.php
+nano api/config.php
+```
+
+Production values:
 
 ```php
-'transport' => 'smtp',
-'smtp_host' => 'mail.opendesignsin.com',
-'smtp_port' => 465,
-'smtp_secure' => 'ssl',
-'smtp_auth' => true,
-'smtp_user' => 'donotreply@opendesignsin.com',
-'smtp_pass' => '••••••',
+'smtp_host'   => 'smtp.office365.com',
+'smtp_port'   => 587,
+'smtp_secure' => 'tls',
+'smtp_user'   => 'sales@mothermira.com',
+'smtp_pass'   => '…',          // Office 365 requires From == this mailbox
+'smtp_from'   => 'sales@mothermira.com',
+'smtp_to'     => 'kavirajan@opendesignsin.com',
+'debug_log'   => false,        // true leaks error detail in HTTP responses
+'cors_origin' => '',           // same origin, no header needed
 ```
 
-Requirements: PHP 7.4+ with the `openssl` extension (needed only for SMTP).
+Deploys leave this file alone, so you set it once.
 
-## 4. Test checklist
+---
 
-- `/mother-mira-with-form/contact-us/` → submit → success message → `/thank-you/`
-- `/mother-mira-with-form/ourprojects/` → **Download Brochure** → modal → submit →
-  thank-you page auto-downloads `the-wind-brochure.pdf`
-- **Book a Site Visit** → modal with date/time → submit → thank-you page
-- Phone field: rejects anything not 10 digits starting 6/7/8/9
-- Check the inbox for three mails, each with the project name in the subject
+## Deploying
 
-If a submission returns a 500, `api/mail-error.log` will contain the reason
-(`'debug_log' => true` in config). Delete that file and set `debug_log` to
-`false` before going live.
+Merge to `main`. That's it — Actions builds and uploads.
 
-## 5. Before production
+Watch it under the repo's **Actions** tab. To deploy without a code change, or
+to test the build without touching the server, use **Run workflow** (it has a
+`dry_run` option).
 
-- `config.php`: set `'cors_origin'` to the live origin instead of `*`
-- `config.php`: `'debug_log' => false`, remove `api/mail-error.log`
-- Don't commit `config.php` once it holds a real SMTP password
+What a run does:
+
+1. `npm ci` and `npm run build:prod` (domain-root base path)
+2. **Verifies the build** — the key pages and `api/enquiry.php` exist, `_next/`
+   paths are root-relative, and `api/config.php` isn't in the bundle. A wrong
+   base path fails here rather than on the live site
+3. Tars the live site into `~/backups/live-<timestamp>.tar.gz`, keeping the last 5
+4. `rsync --delete`, protecting `api/config.php`, `api/*.log`, `/old/`,
+   `/.well-known/` and `/cgi-bin/`
+5. Curls the live pages and confirms `api/config.php` returns 403/404
+
+A red run at step 2 means nothing was uploaded. A red run at step 5 means it
+*was* uploaded and the site needs a look.
+
+---
+
+## Rollback
+
+```bash
+ls -1t ~/backups/live-*.tar.gz | head
+cd ~/domains/mothermira.com/public_html
+tar -xzf ~/backups/live-<timestamp>.tar.gz
+```
+
+The tarball only holds what was live at that moment, so it restores over the
+current files rather than clearing them first. For a clean restore, move the
+current folder aside first and extract into an empty one.
+
+Faster in practice: `git revert` the bad commit and push — a deploy takes
+about two minutes.
+
+---
+
+## Troubleshooting
+
+| Symptom | Cause → fix |
+|---|---|
+| Site unstyled, no JS | `_next/` built for the wrong base. Step 2 should have caught it — check you ran `build:prod`, not `build:dev` |
+| Every form returns 500 | `api/config.php` missing or wrong password. `?ping=1` reports the environment; `api/mail-error.log` has the reason when `debug_log` is on |
+| `{"error":"Method not allowed"}` in a browser | Correct — the endpoint is POST-only |
+| Changes not visible | Hostinger cache → hPanel → Dashboard → Clear cache, then Ctrl+Shift+R |
+| Workflow fails at "Set up SSH" | Public key not imported in hPanel, or `SSH_PRIVATE_KEY` is missing its BEGIN/END lines |
+| `rsync: command not found` | Rare on Hostinger. Swap the Upload step for `lftp` over FTP |
+| `/old/` disappeared | Only if someone removed the `--exclude='/old/'` line |
+
+Still open: `www` vs non-`www` needs a canonical choice and a 301, and
+`NEXT_PUBLIC_SITE_URL` isn't wired up yet, so there are no canonical tags or a
+sitemap.
